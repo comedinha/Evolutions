@@ -33,7 +33,7 @@
         </defense>
     </defenses>
     <elements>
-        <element phyisicalPercent="20"/>
+        <element physicalPercent="20"/>
         <element holyPercent="-15"/>
         <element firePercent="-10"/>
     </elements>

@@ -1,24 +1,24 @@
 local combat = createCombatObject()
 setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_HEALING)
 setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_MAGIC_BLUE)
-setCombatParam(combat, COMBAT_PARAM_AGGRESSIVE, false)
+setCombatParam(combat, COMBAT_PARAM_AGGRESSIVE, FALSE)
 setCombatParam(combat, COMBAT_PARAM_DISPEL, CONDITION_PARALYZE)
 
-setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
-function onGetFormulaValues(cid, level, maglevel)
-	local min = level / 5 + maglevel * 4 + 25
-	local max = level / 5 + maglevel * 8 + 50
-	return min, max
+function getCombatFormulas(cid, lv, maglv)
+	local formula_min = ((lv*3 + maglv*2) * 0.55) + 15
+	local formula_max = ((lv*4 + maglv*1) * 0.95) + 20
+
+	if(formula_max < formula_min) then
+		--Normalize values
+		local tmp = formula_max
+		formula_max = formula_min
+		formula_min = tmp
+	end
+	return formula_min, formula_max
 end
 
+setCombatCallback(combat, CALLBACK_PARAM_LEVELMAGICVALUE, "getCombatFormulas")
+
 function onCastSpell(cid, var)
-	if isPlayer(cid) == true then
-	if exhaustion.check(cid, 88774) then
-		return false
-	else
-		return doRemoveCondition(cid, CONDITION_PARALYZE), doCombat(cid, combat, var)
-	end
-	else
-		return doRemoveCondition(cid, CONDITION_PARALYZE), doCombat(cid, combat, var)
-	end
+	return doCombat(cid, combat, var)
 end

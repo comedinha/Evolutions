@@ -8,6 +8,7 @@ setConditionParam(condition, CONDITION_PARAM_DELAYED, 1)
 addDamageCondition(condition, 25, 3000, -45)
 setCombatCondition(combat, condition)
 
+
 function onCastSpell(cid, var)
 	return doCombat(cid, combat, var)
 end

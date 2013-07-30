@@ -9,7 +9,7 @@ local config = {
 	close = {"close", "closed", "2", "fechar"}
 }
 
-function onSay(cid, words, param, channel)
+function onSay(cid, words, param)
 	if(param == '') then
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
 		return true

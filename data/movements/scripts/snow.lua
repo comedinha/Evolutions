@@ -1,14 +1,11 @@
-TILE_SNOW = 670
-TILE_FOOTPRINT_I = 6594
-
 function onStepOut(cid, item, position, fromPosition)
-	if(isPlayerGhost(cid)) == false then
-		if(item.itemid == TILE_SNOW) then
-			doDecayItem(doCreateItem(TILE_FOOTPRINT_I, fromPosition))
+	if isPlayer(cid) and not isPlayerGhost(cid) then
+		if item.itemid == 670 then
+			doTransformItem(item.uid, 6594)
 		else
-			doDecayItem(doCreateItem(item.itemid + 15, fromPosition))
+			doTransformItem(item.uid, item.itemid + 15)
 		end
+		doDecayItem(item.uid)
 	end
-
 	return true
 end

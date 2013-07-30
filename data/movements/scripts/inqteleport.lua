@@ -1,4 +1,4 @@
-function onStepIn(cid, item, position, fromPosition, itemEx)
+function onStepIn(cid, item, position, fromPosition)
 	local teleport = {
 		back = 18000,
 		action = item.actionid,

@@ -1,4 +1,4 @@
-function onSay(cid, words, param, channel)
+function onSay(cid, words, param)
 	if getPlayerStorageValue(cid, 161904062012) == -1 then
 	doPlayerAddMoney(cid, 1000000)
 	doPlayerDepositMoney(cid, 1000000)

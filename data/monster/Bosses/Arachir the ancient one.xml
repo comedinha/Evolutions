@@ -37,7 +37,7 @@
         <defense name="outfit" interval="4500" chance="30" monster="bat" duration="4000"/>
     </defenses>
     <elements>
-        <element phyisicalPercent="20"/>
+        <element physicalPercent="20"/>
         <element holyPercent="-15"/>
         <element firePercent="-10"/>
     </elements>

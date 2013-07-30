@@ -6,7 +6,7 @@ local lastAttack = 0
 local followTimeout = 10
 
 local function isSkulled(cid)
-	if(getCreatureSkullType(cid) >= SKULL_WHITE and isPlayerPzLocked(cid)) then
+	if(getPlayerSkullType(cid) >= SKULL_WHITE and isPlayerPzLocked(cid)) then
 		return true
 	end
 
@@ -30,7 +30,7 @@ local function updateTarget()
 
 	if(target == 0) then
 		local list = getSpectators(getNpcPos(), 9, 9, false)
-		for i = 1, table.getn(list) do
+		for i = 1, #list do
 			local _target = list[i]
 			if(_target ~= 0) then
 				if(isPlayer(_target) and isSkulled(_target)) then

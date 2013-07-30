@@ -1,4 +1,4 @@
-function onSay(cid, words, param, channel)
+function onSay(cid, words, param)
 local storage = 6707
 local delaytime = 600
 local a = "data/txt/bugs.txt"

@@ -1,17 +1,17 @@
 local combat = createCombatObject()
 setCombatParam(combat, COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE)
-setCombatParam(combat, COMBAT_PARAM_BLOCKARMOR, true)
-setCombatParam(combat, COMBAT_PARAM_EFFECT, CONST_ME_HITAREA)
+setCombatParam(combat, COMBAT_PARAM_BLOCKARMOR, 1)
 setCombatParam(combat, COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_WEAPONTYPE)
-setCombatParam(combat, COMBAT_PARAM_USECHARGES, true)
+setCombatParam(combat, COMBAT_PARAM_USECHARGES, 1)
 
-function onGetFormulaValues(cid, level, skill, attack, element, factor)
-	local levelTotal, formula = level / 5, 0.1606
-	local normal, elemental = -(skill * attack * formula + levelTotal), math.ceil((skill * element * formula + levelTotal))
-	return normal/2, normal, -math.random(elemental/2, elemental)
+function onGetPlayerMinMaxValues(cid, skill, attack, factor)
+	local min = skill * attack / 15 + getPlayerLevel(cid) / 5 + 1
+	local max = skill * attack / 7  + getPlayerLevel(cid) / 5 + 6
+	return -min, -max
 end
+setCombatCallback(combat, CALLBACK_PARAM_SKILLVALUE, "onGetPlayerMinMaxValues")
 
-setCombatCallback(combat, CALLBACK_PARAM_SKILLVALUE, "onGetFormulaValues")
 function onCastSpell(cid, var)
 	return doCombat(cid, combat, var)
 end
+

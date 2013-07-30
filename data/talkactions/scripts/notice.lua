@@ -3,7 +3,7 @@ local config = {
 	clean = {"clean", "limpar"}
 }
 
-function onSay(cid, words, param, channel)
+function onSay(cid, words, param)
 	local t = string.explode(param, ",")	
 	if(table.isStrIn(param, config.add)) then
 		if getPlayerGroupId (cid) >= 5 then

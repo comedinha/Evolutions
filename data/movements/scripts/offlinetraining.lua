@@ -38,6 +38,6 @@ function callback1(cid, button, choice)
 	end
 end
 
-function onStepIn(cid, item, position, fromPosition, itemEx)
+function onStepIn(cid, item, position, fromPosition)
 	addDialog(modaldialog1, 1001, cid, callback1);
 end

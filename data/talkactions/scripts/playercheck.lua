@@ -31,7 +31,7 @@ function getItemsInContainer(cont, sep)
 	return text
 end
 
-function onSay(cid, words, param, channel)
+function onSay(cid, words, param)
 	local slotName = {"Cabeça", "Amuleto", "Backpack", "Armor", "Mao Direita", "Mao Esquerda", "Legs", "Pés", "Ring", "Ammo Slot"}
 	local t = string.explode(param, ",")
 	if(table.isStrIn(param, config.check)) then
