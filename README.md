@@ -17,3 +17,7 @@ The best tibian server
 #Equipe
 - Comedinha - Scripter, programação
 - Alisson - Mapper
+
+##Veja também
+- [ForgottenServer](https://github.com/otland/forgottenserver)
+- O servidor precisa da nova tfs para funcionar.
