@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Target Dummy" nameDescription="a target dummy" race="undead" experience="0" speed="0" manacost="0">
+	<health now="90000000" max="90000000"/>
+	<look type="304" corpse="9801"/>
+	<targetchange interval="5000" chance="8"/>
+	<strategy attack="100" defense="0"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="0"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-0" max="-5"/>		
+	</attacks>
+	<defenses armor="40" defense="45">
+		<defense name="healing" interval="10000" chance="10" min="99999999" max="99999999">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element earthPercent="-95"/>
+		<element holyPercent="-95"/>
+		<element firePercent="-95"/>
+		<element energyPercent="-95"/>
+		<element physicalPercent="-80"/>
+		<element icePercent="-95"/>
+		<element deathPercent="-95"/>
+	</elements>
+	<immunities>
+		<immunity invisible="1"/>
+		<immunity paralyze="1"/>
+	</immunities>
+	<voices interval="2500" chance="10">
+		<voice sentence="I hope you are enjoying your sparring Sir or Ma'am!"/>
+		<voice sentence="Threat level rising!"/>
+		<voice sentence="Engaging in hostile interaction!"/>
+		<voice sentence="Rrrtttarrrttarrrtta"/>
+		<voice sentence="Please feel free to hit me Sir or Ma'am!"/>
+		<voice sentence="klonk klonk klonk"/>
+		<voice sentence="Self-diagnosis running."/>
+		<voice sentence="Battle simulation proceeding."/>
+		<voice sentence="Repairs initiated!"/>
+	</voices>
+	<loot>
+		<item id="8309" countmax="3" chance1="500" chancemax="0"/> <!-- nails -->
+		<item id="2148" countmax="83" chance1="100000" chancemax="0"/> <!-- gps -->
+		<item id="1987" chance="100000">
+			<inside>
+				<item id="5880" chance="700"/> <!-- iron ore -->
+				<item id="9808" chance="900"/> <!-- rusty armor -->
+				<item id="2207" chance="1500"/> <!-- sword ring -->
+			</inside>
+		</item>
+	</loot>
+</monster>

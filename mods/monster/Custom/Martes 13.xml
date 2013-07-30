@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Martes 13" nameDescription="Ma sorte" race="fire" experience="2" speed="430" manacost="0">
+<health now="80000" max="80000"/>
+<look type="319" head="38" body="114" legs="0" feet="94" corpse="6068"/>
+<targetchange interval="5000" chance="20"/>
+<strategy attack="65" defense="5"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="0"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="1"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="0"/>
+</flags>
+<attacks>
+<attack name="melee" interval="2000" min="-1000" max="-1000"/>
+<attack name="physical" interval="1000" chance="13" radius="8" target="0" min="-400" max="-1400">
+<attribute key="areaEffect" value="mortarea"/>
+</attack>
+<attack name="speed" interval="1000" chance="12" radius="6" target="0" speedchange="-850" duration="60000">
+<attribute key="areaEffect" value="poison"/>
+</attack>
+<attack name="strength" interval="1000" chance="12" radius="3" target="0">
+<attribute key="areaEffect" value="blackspark"/>
+</attack>
+<attack name="fire" interval="1000" chance="34" range="7" radius="7" target="1" min="-100" max="-900">
+<attribute key="shootEffect" value="fire"/>
+<attribute key="areaEffect" value="firearea"/>
+</attack>
+<attack name="manadrain" interval="1000" chance="7" length="0" spread="3" min="-600" max="-1100">
+<attribute key="areaEffect" value="energyarea"/>
+</attack>
+<attack name="physical" interval="1000" chance="7" length="8" spread="3" min="-300" max="-900"/>
+<attack name="energy" interval="1000" chance="9" length="8" spread="0" min="-400" max="-600">
+<attribute key="areaEffect" value="redshimmer"/>
+</attack>
+<attack name="poisoncondition" interval="1000" chance="10" length="0" spread="0" min="-500" max="-1000">
+<attribute key="areaEffect" value="greenspark"/>
+</attack>
+<attack name="lifedrain" interval="1000" chance="15" length="8" spread="0" min="-500" max="-1000">
+<attribute key="areaEffect" value="redshimmer"/>
+</attack>
+</attacks>
+<defenses armor="188" defense="145">
+<defense name="healing" interval="1000" chance="15" min="100" max="300">
+<attribute key="areaEffect" value="blueshimmer"/>
+</defense>
+<defense name="speed" interval="2000" chance="8" speedchange="480" duration="6000">
+<attribute key="areaEffect" value="redshimmer"/>
+</defense>
+</defenses>
+<immunities>
+<immunity physical="0"/>
+<immunity energy="1"/>
+<immunity fire="1"/>
+<immunity poison="1"/>
+<immunity lifedrain="1"/>
+<immunity paralyze="1"/>
+<immunity outfit="1"/>
+<immunity drunk="1"/>
+<immunity invisible="1"/>
+</immunities>
+<loot capacity="5000">
+<item id="2349" countmax="1" chance="1200500"/>
+</loot>
+</monster> 

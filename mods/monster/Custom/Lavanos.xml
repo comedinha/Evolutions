@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lavanos" nameDescription="Lavanos" race="UNDEAD" experience="3" speed="700" manacost="0">
+<health now="80000" max="80000"/>
+<look type="303" head="10" body="50" legs="121" feet="115" corpse="6068"/>
+<targetchange interval="10000" chance="20"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="0"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="1"/>
+<flag staticattack="98"/>
+<flag targetdistance="1"/>
+<flag runonhealth="3500"/>
+</flags>
+<attacks>
+<attack name="melee" interval="2000" min="-1" max="-1000"/>
+<attack name="melee" interval="2000" chance="40" range="7" radius="6" target="0" min="-950" max="-990">
+<attribute key="areaEffect" value="blackspark"/>
+</attack>
+<attack name="melee" interval="3000" chance="34" range="7" radius="1" target="1" min="-820" max="-850">
+<attribute key="shootEffect" value="whirlwindsword"/>
+<attribute key="areaEffect" value="redspark"/>
+</attack>
+<attack name="energy" interval="4000" chance="30" length="8" spread="0" min="-800" max="-1100">
+<attribute key="areaEffect" value="mortarea"/>
+</attack>
+<attack name="physical" interval="3000" chance="20" range="14" radius="5" target="0" min="-500" max="-880">
+<attribute key="areaEffect" value="poff"/>
+</attack>
+<attack name="physical" interval="4000" chance="15" range="7" radius="13" target="0" min="-500" max="-650">
+<attribute key="areaEffect" value="yellowspark"/>
+</attack>
+<attack name="physical" interval="4000" chance="18" radius="14" target="0" min="-200" max="-600">
+<attribute key="areaEffect" value="bluebubble"/>
+</attack>
+<attack name="melee" interval="3000" chance="15" range="7" radius="4" target="0" min="-100" max="-1250">
+<attribute key="areaEffect" value="energyarea"/>
+</attack>
+</attacks>
+<defenses armor="55" defense="65">
+<defense name="healing" interval="3000" chance="35" min="100" max="200">
+<attribute key="areaEffect" value="blueshimmer"/>
+</defense>
+<defense name="speed" interval="4000" chance="80" speedchange="440" duration="6000">
+<attribute key="areaEffect" value="redshimmer"/>
+</defense>
+</defenses>
+<immunities>
+<immunity physical="0"/>
+<immunity energy="1"/>
+<immunity fire="1"/>
+<immunity poison="1"/>
+<immunity lifedrain="1"/>
+<immunity paralyze="1"/>
+<immunity outfit="1"/>
+<immunity drunk="1"/>
+<immunity invisible="1"/>
+</immunities>
+<summons maxSummons="2">
+<summon name="deathslicer" interval="3000" chance="52" max="4"/>
+</summons>
+<voices interval="5000" chance="30">
+<voice sentence="DIE!"/>
+<voice sentence="COME AND YOU WILL DIE" yell="1"/>
+<voice sentence="IS THAT THE BEST YOU HAVE TO OFFER, TIBIANS?" yell="1"/>
+<voice sentence="I AM LAVANOS OF THE TRIANGLE... AND I AM HERE TO CHALLENGE YOU ALL!" yell="1"/>
+<voice sentence="FLAWLESS VICTORY!"/>
+</voices>
+<loot capacity="5000">
+<item id="2349" countmax="1" chance="1200500"/>
+</loot>
+</monster> 

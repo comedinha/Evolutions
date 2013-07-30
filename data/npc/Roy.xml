@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Roy" script="data/npc/scripts/soft.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="128" head="40" body="37" legs="116" feet="95" addons="0"/>
+	<parameters>
+		<parameter key="message_greet" value="Ola, |PLAYERNAME|. Voce veio para {reparar} sua soft boots?."/>
+		<parameter key="message_farewell" value="Isto eh musica para meus ouvidos." />
+		<parameter key="message_walkaway" value="Yeah, se perca." />
+		<parameter key="message_onsendtrade" value="Yeah, compre algo." />
+		<parameter key="module_shop" value="1" />
+	<parameter key="shop_buyable" value="leather boots,2643,2;leather helmet,2461,12;leather legs,2649,10;sandals,2642,2;studded helmet,2482,63;studded legs,2468,60" />
+	</parameters>
+</npc>

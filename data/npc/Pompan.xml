@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Pompan" script="data/npc/scripts/default.lua" walkinterval="2000" floorchange="0">
+	<health now="185" max="185"/>
+	<look type="132" head="78" body="13" legs="32" feet="108" addons="0"/>
+	<parameters>
+		<parameter key="message_greet" value="Hi there!"/>
+		<parameter key="message_farewall" value="Good bye..."/>
+		<parameter key="message_walkaway" value="How rude!"/>
+	</parameters>
+</npc>

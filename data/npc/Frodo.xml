@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Frodo" script="data/npc/scripts/default.lua" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="134" head="114" body="113" legs="113" feet="113" corpse="2212"/>
+	<parameters>
+		<parameter key="module_shop" value="1" />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell ropes, shovels, backpacks, fishing rods and more." />
+		<parameter key="shop_buyable" value="vial,2006,10;flask,2006,10" />
+		<parameter key="shop_buyable" value="shovel,2554,20;pick,2553,25;backpack,1988,10;fishing rod,2580,100;torch,2050,2;rope,2120,50;machete,2120,35;scythe,2550,50;obsidian knife,5908,7000;machete,2420,20" />
+	</parameters>
+</npc>

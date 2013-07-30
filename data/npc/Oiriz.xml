@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Oiriz" script="data/npc/scripts/jewels.lua" walkinterval="2000">
+	<health now="100" max="100"/>
+	<look type="66" head="60" body="100" legs="82" feet="114" addons="1"/>
+	<parameters>
+		<parameter key="message_greet" value="Salutations, |PLAYERNAME|! I trade with various rare gems." />
+		<parameter key="message_needmoremoney" value="You don't have enough cash to afford it!"/>
+		<parameter key="message_decline" value="Then not."/>
+	</parameters>
+</npc>

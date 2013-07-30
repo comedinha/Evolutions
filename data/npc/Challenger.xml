@@ -1,0 +1,11 @@
+<npc name="Challenger" script="data/npc/scripts/challenger.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="300" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Eu sou o organizador do evento challenger, e posso te {levar} agora mesmo para o desafio em troca de um {golden falcon}, mas preste atencao, se voce morrer perdera tudo!" />
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="hi;golden falcon" />
+        <parameter key="keyword_reply1" value="Eu sou o organizador do evento challenger, e posso te levar agora mesmo para o desafio em troca de um {golden falcon}, mas preste atencao, se voce morrer perdera tudo!" />
+        <parameter key="keyword_reply2" value="Coloque o golden falcon na base verde e use para comecar." />
+	</parameters>
+</npc>

@@ -1,0 +1,4 @@
+<npc name="Maris" script="data/npc/scripts/default.lua" walkinterval="2000">
+    <health now="100" max="100"/>
+    <look type="130" head="77" body="101" legs="90" feet="116" addons="0"/>
+</npc>

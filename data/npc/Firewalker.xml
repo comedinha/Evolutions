@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<npc name="Firewalker" script="data/npc/scripts/firewalker.lua" access="3" lookdir="3"  walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="128" head="40" body="37" legs="116" feet="95" addons="0"/>
+	<parameters>
+		<parameter key="message_greet" value="Ola, |PLAYERNAME|. Voce vai querer {reparar} sua firewalker boots?."/>
+		<parameter key="message_farewell" value="Isto eh musica para meus ouvidos." />
+		<parameter key="message_walkaway" value="Yeah, se perca." />
+		<parameter key="message_onsendtrade" value="Yeah, compre algo." />
+		<parameter key="module_shop" value="1" />
+	</parameters>
+</npc>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Soldier" script="data/npc/scripts/soldier.lua" walkinterval="0" floorchange="0" speed="900">
+	<health now="150" max="150"/>
+	<look type="134" head="130" body="80" legs="155" feet="30" addons="3"/>
+</npc>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Thorphin" script="data/npc/scripts/thorphin.lua" walkinterval="0" floorchange="0">
+	<health now="185" max="185"/>
+    <look type="66" head="0" body="0" legs="0" feet="0" addons="0"/>
+	<parameters>
+		<parameter key="message_greet" value="Olá |PLAYERNAME|. Eu não posso mais te levar para {Zao}."/>
+		<parameter key="message_farewall" value="Vida Longa e prospera!"/>
+		<parameter key="message_walkaway" value="Vida longa e prospera!"/>
+		<parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="cidades;zao" />
+        <parameter key="keyword_reply1" value="Eu não posso mais te levar para {Zao}" />
+		<parameter key="keyword_reply2" value="A cidade foi atacada e dominada pelo exercito do Orshabaal. Acho que sou o unico sobrevivente." />
+
+	</parameters>
+</npc>

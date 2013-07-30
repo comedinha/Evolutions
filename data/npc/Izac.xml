@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Izac" script="data/npc/scripts/izac.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="128" head="114" body="119" legs="114" feet="114" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|. ! Eu posso te levar voando para {infernium}, {flam}, {saari}, {mirand theraan} e {dorion}. Para onde deseja voar?" />
+		<parameter key="message_decline" value="Vai custar |TOTALCOST| gold coins. Vai viajar?"/>
+		<parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="mistyc" />
+		<parameter key="keyword_reply1" value="Foi muito horrivel, não quero comentar sobre o assunto. Não posso te levar mais lá." />
+	</parameters>
+</npc>

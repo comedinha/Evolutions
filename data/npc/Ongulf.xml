@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Ongulf" script="data/npc/scripts/default.lua" walkinterval="2000" floorchange="0">
+	<health now="185" max="185"/>
+	<look type="70" head="95" body="23" legs="22" feet="116" addons="0"/>
+	<parameters>
+		<parameter key="message_greet" value="Hi!"/>
+		<parameter key="message_farewall" value="Bye..."/>
+		<parameter key="message_walkaway" value="How rude!"/>
+	</parameters>
+</npc>

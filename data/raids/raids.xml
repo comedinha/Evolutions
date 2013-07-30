@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raids>
+	<!--
+		executed on average once every 2 minutes
+
+		<raid name="Example" file="example.xml" interval2="2" margin="0" reftype="single" ref="no"/>
+			won't be executed again till Cave Rat gets killed
+
+		<raid name="Example2" file="example.xml" interval2="2" margin="0" reftype="block" ref="no"/>
+			will stay as 'running' until Cave Rat gets killed
+	-->
+	<raid name="Rats" file="Rats.xml" interval2="60" margin="0" reftype="single" ref="no"/>
+	<raid name="Giant Spider" file="Giant Spider.xml" interval2="800" margin="0" reftype="single" ref="no"/>
+	<raid name="ghazbaran" file="ghazbaran.xml" interval2="1300" margin="0" reftype="single" ref="no"/>
+	<raid name="Ferumbras" file="Ferumbras.xml" interval2="2000" margin="0" reftype="single" ref="no"/>
+	<raid name="Morgaroth" file="Morgaroth.xml" interval2="3000" margin="0" reftype="single" ref="no"/>
+</raids>

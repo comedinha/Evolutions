@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Green Phantom" nameDescription="a Green Phantom" race="undead" experience="12000" speed="270" manacost="0">
+  <health now="9600" max="9600"/>
+  <look type="319" corpse="5993"/>
+  <targetchange interval="5000" chance="10"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+  	<attack name="melee" interval="2000" skill="90" attack="115"/>
+	<attack name="death" interval="2000" chance="12" target="1" radius="4" min="0" max="-1100">
+		<attribute key="areaEffect" value="mortarea"/>
+		<attribute key="shootEffect" value="suddendeath"/>
+	</attack>
+  </attacks>
+  <defenses armor="38" defense="35">
+    <defense name="healing" interval="1000" chance="12" min="100" max="300">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+	<defense name="invisible" interval="4000" chance="25" duration="6000">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+  </defenses>
+	<elements>
+		<element phyisicalPercent="20"/>
+		<element holyPercent="-15"/>
+		<element firePercent="-10"/>
+	</elements>
+  <immunities>
+    <immunity lifedrain="1"/>
+    <immunity death="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="5000" chance="10">
+    <voice sentence="BU!"/>
+  </voices>
+    <summons maxSummons="2">
+		<summon name="Ghost" interval="2000" chance="30"/>
+	</summons>
+ <loot>
+    <item id="2148" countmax="93" chance1="100000"/>	-- gold coin
+	<item id="2152" countmax="5" chance1="50000"/> --Platinum
+	<item id="2216" chance="17111"/> --Ring of healing
+	<item id="7598" chance="16800"/> --Shp
+ </loot>
+</monster>

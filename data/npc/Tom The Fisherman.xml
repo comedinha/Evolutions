@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Tom The Fisherman" script="data/npc/scripts/tomfisherman.lua" walkinterval="0" floorchange="0">
+	<health now="150" max="150"/>
+	<look type="151" head="79" body="118" legs="115" feet="114" addons="3"/>
+	<parameters>
+		<parameter key="module_shop" value="3" />
+		<parameter key="shop_sellable" value="fish,2667,5;fishing rod,2580,10;mechanical fishing rod,10223,100;worm,3976,1;nail,8309,2" />
+		<parameter key="shop_buyable" value="fish,2667,5;fishing rod,2580,10;mechanical fishing rod,10223,100;worm,3976,1;nail,8309,2" />
+	</parameters>
+</npc>

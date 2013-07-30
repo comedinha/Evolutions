@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="King Arthas Apparition" nameDescription="a apparition" race="blood" experience="6" speed="340" manacost="0">
+  <health now="80000" max="80000"/>
+  <look type="332" head="95" body="95" legs="95" feet="95" addons="3" corpse="6080"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="130" attack="100"/>
+    <attack name="physical" interval="2000" chance="20" range="7" min="-0" max="-1100">
+    </attack>
+<attack name="melee" interval="2000" chance="15" range="7" radius="3" target="0" min="-0" max="-600">
+  <attribute key="areaEffect" value="blackspark"/>
+</attack>
+  </attacks>
+  <defenses armor="25" defense="30"/>
+    <elements>
+  <element firePercent="95"/>
+	  <element energyPercent="80"/>
+	    <element deathPercent="20"/>
+		  <element physicalPercent="25"/>
+		    <element holyPercent="-10"/>
+	</elements>
+  <immunities>
+    <immunity physical="0"/>
+    <immunity energy="1"/>
+    <immunity fire="1"/>
+    <immunity poison="1"/>
+    <immunity lifedrain="0"/>
+    <immunity paralyze="1"/>
+    <immunity outfit="1"/>
+    <immunity drunk="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <voices interval="1000" chance="10">
+    <voice sentence="LEAVE ALL OF DORION NOW!MORTALS!" yell="1"/>
+  </voices>
+<loot capacity="5000">
+<item id="2349" countmax="1" chance="1200500"/>
+</loot>
+</monster> 

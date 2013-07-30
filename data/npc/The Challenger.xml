@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="The Challenger" script="data/npc/scripts/thechallenger.lua" walkinterval="0" floorchange="0">
+<health now="200" max="200"/>
+<look type="9" head="79" body="94" legs="114" feet="77" addons="1"/>
+    <parameters>
+		<parameter key="message_greet" value="Voce recuperou todos os {blue note}s?" />
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="hi;premio" />
+        <parameter key="keyword_reply1" value="Voce recuperou todos os {blue note}s?" />
+        <parameter key="keyword_reply2" value="Nao vou te dizer o premio, mas garanto que eh coisa boa." />
+
+        <parameter key="module_shop" value="1"/>
+        <parameter key="shop_buyable" value="aol,2173,10000"/> 
+        <parameter key="shop_sellable" value="aol,2173,5000"/> 
+    </parameters>
+</npc>

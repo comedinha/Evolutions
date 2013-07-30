@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Chrak" nameDescription="a Chrak" race="venom" experience="160" speed="220" manacost="0">
+<health now="365" max="365"/>
+<look type="346" corpse="8593"/>
+<targetchange interval="5000" chance="12"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="1"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="1"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="0"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="0"/>
+</flags>
+<attacks>
+<attack name="melee" interval="2000" skill="30" attack="36"/>
+<attack name="poison" interval="1000" chance="12" range="1" radius="1" target="1" min="-5" max="-15">
+<attribute key="areaEffect" value="poison"/>
+</attack>
+</attacks>
+<defenses armor="16" defense="19"/>
+<elements>
+<element physicalPercent="1"/>
+<element holyPercent="1"/>
+<element deathPercent="10"/>
+<element firePercent="-1"/>
+<element energyPercent="-1"/>
+<element icePercent="15"/>
+<element earthPercent="1"/>
+</elements>
+<immunities>
+<immunity invisible="1"/>
+</immunities>
+<voices interval="5000" chance="10">
+<voice sentence="Zrp zrp!"/>
+</voices>
+<loot>
+<item id="2148" countmax="25" chance="36500"/><!-- gold coin -->
+<item id="11365" chance="5000"/><!-- terramite legs -->
+<item id="11364" chance="5000"/><!-- terramite eggs -->
+<item id="11363" chance="1000"/><!-- terramite shell -->
+</loot>
+</monster>

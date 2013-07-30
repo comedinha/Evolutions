@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="King Arthas VIII" script="data/npc/scripts/promotion.lua" walkinterval="5000" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="332" head="21" body="87" legs="107" feet="95" addons="0"/>
+    <parameters>
+        <parameter key="message_greet" value="Ola jovem |PLAYERNAME|! Sou o seu novo Rei! Eh novo na cidade?"/>
+        <parameter key="message_farewell" value="Volte quando quiser, |PLAYERNAME|!"/>
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="hail king;job;promote;historia" />
+        <parameter key="keyword_reply1" value="Eu te saudo, meu fiel |PLAYERNAME|." />
+        <parameter key="keyword_reply2" value="Eu sou o soberano, King Arthas VII, e meu dever eh trazer justica e paz a essa cidade, e em breve, o mundo todo." />
+        <parameter key="keyword_reply3" value="Posso te promover. Diga {promotion}." />
+		<parameter key="keyword_reply4" value="Meu pai King Arthas VII morreu em uma batalha com o poderoso Orshabaal, deixando seu reinado a mim." />
+    </parameters>
+</npc>

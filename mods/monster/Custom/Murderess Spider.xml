@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Murderess Spider" nameDescription="Murderess Spieder" race="venom" experience="8800" speed="320" manacost="0">
+  <health now="11200" max="11200"/>
+  <look type="208" head="20" body="30" legs="40" feet="50" corpse="5977"/>
+  <targetchange interval="5000" chance="8"/>
+  <strategy attack="100" defense="0"/>
+  <flags>
+    <flag summonable="0"/>
+    <flag attackable="1"/>
+    <flag hostile="1"/>
+    <flag illusionable="0"/>
+    <flag convinceable="0"/>
+    <flag pushable="0"/>
+    <flag canpushitems="1"/>
+    <flag canpushcreatures="1"/>
+    <flag targetdistance="1"/>
+    <flag staticattack="90"/>
+    <flag runonhealth="0"/>
+  </flags>
+  <attacks>
+    <attack name="melee" interval="2000" skill="120" attack="140"/>
+    <attack name="poison" interval="3000" chance="18" range="7" min="-600" max="-800">
+      <attribute key="shootEffect" value="earth"/>
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <attack name="speed" interval="2000" chance="15" range="7" speedchange="-1150" duration="25000">
+      <attribute key="shootEffect" value="poison"/>
+      <attribute key="areaEffect" value="poison"/>
+    </attack>
+    <attack name="poisonfield" interval="1000" chance="10" range="7" radius="4" target="1">
+      <attribute key="shootEffect" value="poison"/>
+    </attack>
+    <attack name="earth" interval="2000" chance="12" radius="4" target="0" min="-500" max="-650">
+      <attribute key="shootEffect" value="poison"/>
+    </attack>
+  </attacks>
+  <defenses armor="30" defense="33">
+    <defense name="healing" interval="1000" chance="17" min="400" max="650">
+      <attribute key="areaEffect" value="blueshimmer"/>
+    </defense>
+    <defense name="speed" interval="1000" chance="8" speedchange="345" duration="6000">
+      <attribute key="areaEffect" value="redshimmer"/>
+    </defense>
+  </defenses>
+  <immunities>
+    <immunity earth="1"/>
+    <immunity fire="1"/>
+    <immunity invisible="1"/>
+  </immunities>
+  <summons maxSummons="2">
+    <summon name="The old widow" interval="1000" chance="13" max="2"/>
+  </summons>
+  <loot>
+    <item id="2148" countmax="100" chance1="100000" chancemax="0"/>
+    <item id="2463" chance="40000"/>
+    <item id="2171" chance="4000"/>
+    <item id="8890" chance="5000"/>
+    <item id="5879" countmax="1" chance1="100000" chancemax="0"/>
+    <item id="1987" chance="100000">
+      <inside>
+        <item id="2457" countmax="1" chance="10000"/>
+        <item id="2148" countmax="40" chance1="100000" chancemax="0"/>
+        <item id="2476" chance="10000"/>
+        <item id="2477" chance="5000"/>
+        <item id="2478" chance="10000"/>
+        <item id="2169" chance="8000"/>
+        <item id="5886" countmax="5" chance="80000000"/>
+      </inside>
+    </item>
+  </loot>
+</monster>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="The Blacksmith" script="data/npc/scripts/loot2.lua" walkinterval="450" floorchange="0" access="5" level="1" maglevel="1">
+    <health now="150" max="150"/>
+    <look type="131" head="57" body="95" legs="95" feet="57" addons="3"/>
+    <parameters>
+        <parameter key="message_greet" value="HiHo |PLAYERNAME|. Eu compro apenas Armaduras, como Legs, Armors, Helmets e Boots. Se quiser vender armas va na Soya. Diga {trade}." />
+        <parameter key="message_needmoremoney" value="You do not have enough money."/>
+        <parameter key="message_decline" value="Is |TOTALCOST| gold coins too much for you? Get out of here!"/>
+    </parameters>
+</npc>
+

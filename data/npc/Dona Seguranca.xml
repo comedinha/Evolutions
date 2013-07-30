@@ -1,0 +1,7 @@
+<npc name="Dona Seguranca" script="data/npc/scripts/default.lua" walkinterval="2000" floorchange="0" access="5" level="1" maglevel="1">
+	<health now="150" max="150"/>
+	<look type="155" head="79" body="129" legs="115" feet="0" addons="3"/>
+	<parameters>
+		
+	</parameters>
+</npc>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Chuckles" script="data/npc/scripts/runes2.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="99" head="1" body="1" legs="1" feet="1"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I trade with runes, potions, wands and rods. If you need something, feel free to ask me for a trade."/>
+		<parameter key="message_decline" value="Then not."/>
+	</parameters>
+</npc>

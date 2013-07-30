@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quests>
+	<quest name="The Arena" startstorageid="42355" startstoragevalue="0" endvalue="1">
+		<mission name="Arena Combatant" storageid="42350" startvalue="-1" endvalue="10">
+			<missionstate id="0" description="You've entered the arena as combatant."/>
+		</mission>
+		<mission name="Greenshore difficulty" storageid="42361" startvalue="0" endvalue="1">
+			<missionstate id="0" description="You've completed the arena in the Greenshore difficulty"/>
+		</mission>
+		<mission name="Scrapper difficulty" storageid="42371" startvalue="0" endvalue="1">
+			<missionstate id="0" description="You've completed the arena in the Scrapper difficulty"/>
+		</mission>
+		<mission name="Warlord difficulty" storageid="42381" startvalue="0" endvalue="1">
+			<missionstate id="0" description="You've completed the arena in the Warlord difficulty"/>
+		</mission>
+		<mission name="Arena Master" storageid="42381" startvalue="0" endvalue="1">
+			<missionstate id="0" description="You've mastered all difficulty levels in the arena, congratulations!"/>
+		</mission>
+	</quest>
+	<quest name="The Specials Quests" startstorageid="11551" startstoragevalue="1">
+		<mission name="1 - Surprise" storageid="60001" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 1 e obteve uma red bag!"/>
+		</mission>
+		<mission name="2 - Minotaur Leather" storageid="60002" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 2 e obteve 50x minotaur leather!"/>
+		</mission>
+		<mission name="3 - Minotaur Leather" storageid="60003" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 3 e obteve 50x minotaur leather!"/>
+		</mission>
+		<mission name="4 - Chicken Feather" storageid="60004" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 4 e obteve 50x chicken feather!"/>
+		</mission>
+		<mission name="5 - Honeycomb" storageid="60005" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 5 e obteve 50x honeycomb!"/>
+		</mission>
+		<mission name="6 - Elane's Crossbow" storageid="60006" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 6 e obteve um Elane's crossbow!"/>
+		</mission>
+		<mission name="7 - Lizard Leather" storageid="60007" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 7 e obteve 100x lizard leather!"/>
+		</mission>
+		<mission name="8 - Enchanted Chicken Wing" storageid="60008" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 8 e obteve um enchanted chicken wing!"/>
+		</mission>
+		<mission name="9 - Piece of Royal Steel" storageid="60009" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 9 e obteve um piece of royal steel!"/>
+		</mission>
+		<mission name="10 - Iron One" storageid="60010" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 10 e obteve 100x iron one!"/>
+		</mission>
+		<mission name="11 - Huge Chunk of Crude Iron" storageid="60011" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 11 e obteve um huge chunk of crude iron!"/>
+		</mission>
+		<mission name="12 - Perfect Behemoth Fang" storageid="60012" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 12 e obteve 100x perfect behemoth fang!"/>
+		</mission>
+		<mission name="13 - Fighting Spirit" storageid="60013" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 13 e obteve um fighting spirit!"/>
+		</mission>
+		<mission name="14 - Spool of Yarn" storageid="60014" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 14 e obteve 10x spool of yarn!"/>
+		</mission>
+		<mission name="15 - Bear Paw" storageid="60015" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 15 e obteve 40x bear paw!"/>
+		</mission>
+		<mission name="16 - Wolf Paw" storageid="60016" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 16 e obteve 40x wolf paw!"/>
+		</mission>
+		<mission name="17 - Ceiron's Wolf Tooth Chain" storageid="60017" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 17 e obteve um Ceiron's wolf tooth chain!"/>
+		</mission>
+		<mission name="18 - Mermaid Comb" storageid="60018" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 18 e obteve um mermaid comb!"/>
+		</mission>
+		<mission name="19 - Ape Fur" storageid="60019" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 19 e obteve um ape fur!"/>
+		</mission>
+		<mission name="20 - Fish Fin" storageid="60020" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 20 e obteve um fish fin!"/>
+		</mission>
+		<mission name="21 - Mandrake" storageid="60021" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 21 e obteve um mandrake!"/>
+		</mission>
+		<mission name="22 - Surprise" storageid="60022" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 22 e obteve uma bag!"/>
+		</mission>
+		<mission name="23 - Jester Hat" storageid="60023" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 23 e obteve um jester hat!"/>
+		</mission>
+		<mission name="24 - Jester Staff" storageid="60024" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 24 e obteve um jester staff!"/>
+		</mission>
+		<mission name="25 - Claw of'The Noxious Spawn" storageid="60025" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 25 e obteve uma claw of'The Noxious Spawn!"/>
+		</mission>
+		<mission name="26 - Vampiric Crest" storageid="60026" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 26 e obteve um vampiric crest!"/>
+		</mission>
+		<mission name="27 - Widow's Mandibles" storageid="60027" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 27 e obteve um widow's mandibles!"/>
+		</mission>
+		<mission name="28 - Nettle Blossom" storageid="60028" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 28 e obteve um nettle blossom!"/>
+		</mission>
+		<mission name="29 - Fake Dwarven Beard" storageid="60029" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 29 e obteve uma fake dwarven beard!"/>
+		</mission>
+		<mission name="30 - Surprise" storageid="60030" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 30 e obteve uma red bag!"/>
+		</mission>
+		<mission name="31 - Life Ring" storageid="60031" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 31 e obteve um life ring!"/>
+		</mission>
+		<mission name="32 - Pirate Voodoo Doll" storageid="60032" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 32 e obteve um pirate voodoo doll!"/>
+		</mission>
+		<mission name="33 - Mandrake" storageid="60033" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 33 e obteve um mandrake!"/>
+		</mission>
+		<mission name="34 - Rope" storageid="60034" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 34 e obteve uma rope!"/>
+		</mission>
+		<mission name="35 - Voodoo Doll" storageid="60035" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 35 e obteve um voodoo doll!"/>
+		</mission>
+		<mission name="36 - Royal Helmet" storageid="60036" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 36 e obteve um royal helmet!"/>
+		</mission>
+		<mission name="37 - Pair of Soft Boots" storageid="60037" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 37 e obteve uma pair of soft boots!"/>
+		</mission>
+		<mission name="38 - Draken Boots" storageid="60038" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 38 e obteve uma draken boots!"/>
+		</mission>
+		<mission name="39 - Backpack of Holding" storageid="60039" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 39 e obteve uma backpack of holding!"/>
+		</mission>
+		<mission name="40 - Crystal Mace" storageid="60040" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 40 e obteve um crystal mace!"/>
+		</mission>
+		<mission name="41 - Stuffed Dragon" storageid="60041" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 41 e obteve um stuffed dragon!"/>
+		</mission>
+		<mission name="42 - Ceremonial Ankh" storageid="60042" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 42 e obteve um ceremonial ankh!"/>
+		</mission>
+		<mission name="43 - Necromancer Shield" storageid="60043" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 43 e obteve um necromancer shield!"/>
+		</mission>
+		<mission name="44 - Frozen Starlight" storageid="60044" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 44 e obteve um frozen starlight!"/>
+		</mission>
+		<mission name="45 - Daramian Waraxe" storageid="60045" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 45 e obteve um daramian waraxe!"/>
+		</mission>
+		<mission name="46 - Earthborn Titan Armor" storageid="60046" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 46 e obteve um earthborn titan armor!"/>
+		</mission>
+		<mission name="47 - Surprise" storageid="60047" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 47 e obteve uma red bag!"/>
+		</mission>
+		<mission name="48 - Crystal Coin" storageid="60048" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 48 e obteve um crystal coin!"/>
+		</mission>
+		<mission name="49 - Boots of Haste" storageid="60049" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 49 e obteve uma boots of haste!"/>
+		</mission>
+		<mission name="50 - ?" storageid="60050" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 50!"/>
+		</mission>
+		<mission name="51 - Helmet of the Ancients" storageid="60051" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 51 e obteve um helmet of the ancients!"/>
+		</mission>
+		<mission name="52 - Giant Sword" storageid="60052" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 52 e obteve uma giant sword!"/>
+		</mission>
+		<mission name="53 - Naginata" storageid="60053" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 53 e obteve uma naginata!"/>
+		</mission>
+		<mission name="54 - Great Axe" storageid="60054" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 54 e obteve um great axe!"/>
+		</mission>
+		<mission name="55 - Skull Staff" storageid="60055" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 55 e obteve um skull staff!"/>
+		</mission>
+		<mission name="56 - Dragon Shield" storageid="60056" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 56 e obteve um dragon shield!"/>
+		</mission>
+		<mission name="57 - Djinn Blade" storageid="60057" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 57 e obteve um djinn blade!"/>
+		</mission>
+		<mission name="58 - ?" storageid="60058" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 58!"/>
+		</mission>
+		<mission name="59 - Golden Armor" storageid="60059" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 59 e obteve uma golden armor!"/>
+		</mission>
+		<mission name="60 - Mastermind Shield" storageid="60060" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 60 e obteve um mastermind shield!"/>
+		</mission>
+		<mission name="61 - Golden Legs" storageid="60061" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 61 e obteve uma golden legs!"/>
+		</mission>
+		<mission name="62 - Knight Armor" storageid="60062" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 62 e obteve uma knight armor!"/>
+		</mission>
+		<mission name="63 - ?" storageid="60063" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 63!"/>
+		</mission>
+		<mission name="64 - Knight Legs" storageid="60064" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 64 e obteve uma knight legs!"/>
+		</mission>
+		<mission name="65 - ?" storageid="60065" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 65!"/>
+		</mission>
+		<mission name="66 - Crown Legs" storageid="60066" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 66 e obteve uma crown legs!"/>
+		</mission>
+		<mission name="67 - Ceremonial Mask" storageid="60067" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 67 e obteve um ceremonial mask!"/>
+		</mission>
+		<mission name="68 - Bunnyslippers" storageid="60068" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 68 e obteve um bunnyslippers!"/>
+		</mission>
+		<mission name="69 - Eagle Shield" storageid="60069" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 69 e obteve um eagle shield!"/>
+		</mission>
+		<mission name="70 - Demon Helmet" storageid="60070" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 70 e obteve um demon helmet!"/>
+		</mission>
+		<mission name="71 - Steel Boots" storageid="60071" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 71 e obteve uma steel boots!"/>
+		</mission>
+		<mission name="72 - Dwarven Armor" storageid="60072" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 72 e obteve uma dwarven armor!"/>
+		</mission>
+		<mission name="73 - Great Shield" storageid="60073" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 73 e obteve um great shield!"/>
+		</mission>
+		<mission name="74 - Vampire Shield" storageid="60074" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 74 e obteve um vampire shield!"/>
+		</mission>
+		<mission name="75 - Tempest Shield" storageid="60075" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Você fez a quest 75 e obteve um tempest shield!"/>
+		</mission>
+	</quest>
+	<quest name="The Portals" startstorageid="11551" startstoragevalue="0" endvalue="1">
+		<mission name="Portal 1" storageid="18002" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Você liberou o primeiro portal."/>
+		</mission>
+		<mission name="Portal 2" storageid="18004" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Você liberou o segundo portal."/>
+		</mission>
+		<mission name="Portal 3" storageid="18006" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Você liberou o terceiro portal."/>
+		</mission>
+		<mission name="Portal 4" storageid="18008" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Você liberou o quarto portal."/>
+		</mission>
+		<mission name="Portal 6" storageid="18010" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Você liberou o quinto portal."/>
+		</mission>
+		<mission name="Portal 7" storageid="18012" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Você liberou o sexto portal."/>
+		</mission>
+		<mission name="Portal 8" storageid="18014" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Você liberou o setimo portal."/>
+		</mission>
+		<mission name="Portal 9" storageid="18016" startvalue="0" endvalue="1">
+			<missionstate id="0" description="Você liberou o oitavo portal."/>
+		</mission>
+	</quest>
+</quests>

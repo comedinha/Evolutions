@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Oldrak" script="data/npc/scripts/oldrak.lua" walkinterval="2000" floorchange="0">
+    <look type="432" head="20" body="30" legs="40" feet="50" addons="3"/>
+    <parameters>
+        <parameter key="module_shop" value="1"/>
+        <parameter key="shop_sellable" value="hallowed axe,8293,10000;"/>
+        <parameter key="shop_buyable" value="hallowed axe,8293,50000;"/>
+        <parameter key="message_greet" value="Ola |PLAYERNAME|. Eu posso liberar o hallowed axe, item muito util em algumas quests. Diga, {offer}."/>
+        <parameter key="message_sendtrade" value="Pode compra-lo por 50k."/>
+        <parameter key="message_oncloseshop" value="Volte sempre!"/>
+    </parameters>
+</npc>

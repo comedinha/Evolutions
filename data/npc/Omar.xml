@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Omar" script="data/npc/scripts/default.lua" walkinterval="2000" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="289" head="114" body="0" legs="95" feet="114" addons="1"/>
+    <parameters>
+        <parameter key="message_greet" value="Ola, |PLAYERNAME|. Eu cuido dos caixoes dos mortos e tambem vendo flores."/>
+        <parameter key="message_farewell" value="Volte logo."/>
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="job;" />
+        <parameter key="keyword_reply1" value="Eu cuido dos caixoes dos mortos e tambem vendo flores." />
+
+        <parameter key="module_shop" value="1"/>
+        <parameter key="shop_buyable" value="indoor plant kit,3937,8;god flowers,2100,5;flower bowl,2102,6;honey flower,2103,5;potted flower,2104,5;" />
+        <parameter key="shop_sellable" value="" />
+    </parameters>
+</npc>

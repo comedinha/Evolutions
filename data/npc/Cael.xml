@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Cael" script="data/npc/scripts/default.lua" walkinterval="2000" floorchange="0">
+	<health now="185" max="185"/>
+    <look type="66" head="0" body="0" legs="0" feet="0" addons="0"/>
+	<parameters>
+		<parameter key="message_greet" value="Hello there!"/>
+		<parameter key="message_farewall" value="Good bye!"/>
+		<parameter key="message_walkaway" value="Good bye then!"/>
+	</parameters>
+</npc>

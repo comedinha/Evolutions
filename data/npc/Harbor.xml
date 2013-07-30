@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Harbor" script="data/npc/scripts/default.lua" walkinterval="1000" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="134" head="96" body="99" legs="99" feet="115" addons="2"/>
+    <parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|! Este eh o nosso exercito, qualquer aparicao de {Orshabaal} iremos atacar com todos os nossos recursos." />
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="orshabaal;ancient rune;" />
+        <parameter key="keyword_reply1" value="A dezenas de anos atras um Orshabaal atacou nossa aldeia, claro, tivemos que lutar e depois de dias de luta conseguimos derrotar a criatura. Ele vem para tentar roubar a {ancient rune}." />
+        <parameter key="keyword_reply2" value="Essa pedra esta segura aqui na vila por centenas de anos, ela nos protege de qualquer tipo de ameaca, exeto do orshabaal, um dos unicos monstros que a ancient rune nao consegue nos proteger." />
+
+        <parameter key="module_shop" value="1"/>
+        <parameter key="shop_sellable" value="chain helmet,2458,52;" />
+        <parameter key="shop_buyable" value="brass armor,2465,150;" />
+    </parameters>
+</npc>

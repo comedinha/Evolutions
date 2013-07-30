@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mod name="Custom Monsters" version="1.0" author="The Forgotten Server" contact="otland.net" enabled="yes">
+	<!-- Custom -->
+	<monster name="Azerus" file="Custom/Azerus.xml"/>
+	<monster name="Breeze" file="Custom/Breeze.xml"/>
+	<monster name="Butterfly" file="Custom/Butterfly.xml"/>
+	<monster name="Chrak" file="Custom/Chrak.xml"/>
+	<monster name="Deathfan" file="Custom/Deathfan.xml"/>
+	<monster name="Diseased Dan" file="Custom/Diseased Dan.xml"/>
+	<monster name="Dwarf Emperor" file="Custom/Dwarf Emperor.xml"/>
+	<monster name="Elite Trainer" file="Custom/Elite Trainer.xml"/>
+	<monster name="Feromous" file="Custom/Feromous.xml"/>
+	<monster name="Ghost Morgaroth" file="Custom/Ghost Morgaroth.xml"/>
+	<monster name="Green Phantom" file="Custom/Green Phantom.xml"/>
+	<monster name="King Arthas Apparition" file="Custom/King Arthas Apparition.xml"/>
+	<monster name="Lavanos" file="Custom/Lavanos.xml"/>
+	<monster name="Martes 13" file="Custom/Martes 13.xml"/>
+	<monster name="Murderess Spider" file="Custom/Murderess Spider.xml"/>
+	<monster name="Rainbow Morgaroth" file="Custom/Rainbow Morgaroth.xml"/>
+	<monster name="Target Dummy" file="Custom/Target Dummy.xml"/>
+	<monster name="Target Fighter" file="Custom/Target Fighter.xml"/>
+	<monster name="The Fastest Turtle" file="Custom/The Fastest Turtle.xml"/>
+	<monster name="Yalaharian Summoner" file="Custom/Yalaharian Summoner.xml"/>
+</mod>

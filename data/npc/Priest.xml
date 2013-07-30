@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<npc name="Priest" script="data/npc/scripts/wedding.lua" access="3" lookdir="2">
+<mana now="800" max="800"/>
+<health now="200" max="200"/>
+<look type="57" head="20" body="30" legs="40" feet="50"/>
+    <parameters>
+		<parameter key="message_greet" value="Seja bem vindo |PLAYERNAME|! Eu posso te {casar} ou te {divorciar}." />
+        <parameter key="module_keywords" value="1" />
+		
+        <parameter key="module_shop" value="1"/>
+		<parameter key="shop_buyable" value="anel,2121,5000;box,10503,5000"/> 
+    </parameters>
+</npc>

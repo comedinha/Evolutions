@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Numus" script="data/npc/scripts/bpruneshop.lua" walkinterval="1000" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="278" head="95" body="114" legs="114" feet="95" addons="3"/>
+    <parameters>
+        <parameter key="message_greet" value="Heeeeelo |PLAYERNAME|! Whaats youuur need? Im seeelling rune and potion and for backpack ruuuune just say(BUY BP SD ETC)"/>
+        <parameter key="message_farewell" value="Gooood bye, |PLAYERNAME|."/>
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="job;" />
+        <parameter key="keyword_reply1" value="I am the heeead alchemist of Dooorion. I keep the secret reciiiipies of our ancestors. Besides, I {trade} mana and health potions, spellboooooks, waaaaands, roooods and runes." />
+    </parameters>
+</npc>

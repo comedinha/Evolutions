@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <monster name="Diseased Dan" nameDescription="a Diseased Dan" race="venom" experience="300" speed="250" manacost="0">
+    <health now="2000" max="2000"/>
+    <look type="299" corpse="8951"/>
+    <targetchange interval="60000" chance="0"/>
+    <strategy attack="100" defense="0"/>
+    <flags>
+      <flag summonable="0"/>
+      <flag attackable="1"/>
+      <flag hostile="1"/>
+      <flag illusionable="0"/>
+      <flag convinceable="0"/>
+      <flag pushable="0"/>
+      <flag canpushitems="1"/>
+      <flag staticattack="83"/>
+      <flag lightlevel="0"/>
+      <flag lightcolor="0"/>
+      <flag targetdistance="1"/>
+      <flag runonhealth="1"/>
+    </flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="60" attack="65" poison="40"/>
+		<attack name="lifedrain" interval="2000" chance="14" min="-90" max="-140">
+            <attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="earth" interval="2000" chance="8" radius="3" target="0" min="-100" max="-175">
+            <attribute key="areaEffect" value="stones"/>
+		</attack>
+        <attack name="speed" interval="3000" chance="20" target="1" duration="4000" speedchange="-600">
+            <attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+	</attacks>
+	<defenses armor="10" defense="15">
+		<defense name="haste" interval="10000" chance="40">
+            <attribute key="areaEffect" value="greenshimmer"/>
+		</defense>
+		<defense name="healing" interval="5000" chance="20" min="50" max="80">
+            <attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+	    <element physicalPercent="-20"/>
+		<element energyPercent="-10"/>
+		<element earthPercent="30"/>
+		<element icePercent="-5"/>
+		<element holyPercent="-10"/>
+		<element deathPercent="5"/>
+		<element firePercent="85"/>
+	</elements>
+    <immunities>
+      <immunity paralyze="1"/>
+      <immunity invisible="1"/>
+    </immunities>
+    <voices interval="2000" chance="5">
+      <voice sentence="Tchhh!"/>
+      <voice sentence="Slurp!"/>
+    </voices>
+  <loot>
+    <item id="2148" countmax="70" chance1="100000" chancemax="0"/>
+    <item id="2148" countmax="59" chance1="100000" chancemax="0"/> --goldzzz
+    <item id="8472" chance="5100"/> --gsp
+    <item id="8473" chance="4900"/> --uhps
+    <item id="8873" chance="600"/>
+	<item id="1987" chance="100000">
+	  <inside>
+		<item id="8912" chance="1700"/> --springsprout rod
+		<item id="2467" chance="3200"/> --plate legs
+		<item id="8873" chance="500"/> --hibiscus dress
+		<item id="8891" chance="300"/> --pal armor
+	  </inside>
+	</item>
+  </loot>
+</monster>

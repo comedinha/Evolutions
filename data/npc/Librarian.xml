@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Librarian" script="data/npc/scripts/default.lua" walkinterval="5000" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="128" head="107" body="107" legs="114" feet="114" addons="2"/>
+    <parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|! Fique a vontade na escolha dos seus livros." />
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="hi;" />
+        <parameter key="keyword_reply1" value="Ola |PLAYERNAME|! Fique a vontade na escolha dos seus livros." />
+
+    </parameters>
+</npc>

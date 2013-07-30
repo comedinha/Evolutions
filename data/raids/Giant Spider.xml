@@ -1,0 +1,11 @@
+<raid>
+<announce delay="0" type="event" message="The mating season of the giant spiders is at hand. Leave the Monty Fields as fast as you can." />
+<announce delay="200000" type="event" message="Giant spiders have gathered in the Mystic city for their mating season. Beware!" />
+<singlespawn delay="200000" name="Giant Spider" x="440" y="154" z="7" />
+<singlespawn delay="200000" name="Giant Spider" x="440" y="153" z="7" />
+<singlespawn delay="200000" name="Giant Spider" x="440" y="152" z="7" />
+<singlespawn delay="200000" name="Giant Spider" x="440" y="151" z="7" />
+<singlespawn delay="200000" name="Giant Spider" x="439" y="151" z="7" />
+<singlespawn delay="200000" name="Giant Spider" x="439" y="153" z="7" />
+<singlespawn delay="200000" name="The Old Widow" ref="yes" x="439" y="154" z="7" />
+</raid>

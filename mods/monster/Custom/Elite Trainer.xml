@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Elite Trainer" nameDescription="an elite trainer" race="blood" experience="1600" speed="0" manacost="0">
+<health now="99994000" max="99994000"/>
+<look type="134" head="95" body="95" legs="95" feet="95" addons="3" corpse="6080"/>
+<targetchange interval="5000" chance="8"/>
+<strategy attack="100" defense="0"/>
+<flags>
+<flag summonable="0"/>
+<flag attackable="1"/>
+<flag hostile="1"/>
+<flag illusionable="0"/>
+<flag convinceable="0"/>
+<flag pushable="0"/>
+<flag canpushitems="1"/>
+<flag canpushcreatures="1"/>
+<flag targetdistance="1"/>
+<flag staticattack="90"/>
+<flag runonhealth="0"/>
+</flags>
+<attacks>
+<attack name="melee" interval="1000" min="-1" max="-5"/>
+<attack name="physical" interval="1000" chance="100" range="7" min="-0" max="-5">
+<attribute key="shootEffect" value="spear"/>
+</attack>
+</attacks>
+<defenses armor="5" defense="5"/>
+<elements>
+<element firePercent="-40"/>
+<element energyPercent="-40"/>
+<element deathPercent="-40"/>
+<element physicalPercent="-40"/>
+<element holyPercent="-40"/>
+<element icePercent="-40"/>
+<element earthPercent="-40"/>
+</elements>
+<immunities>
+<immunity physical="0"/>
+<immunity energy="0"/>
+<immunity fire="0"/>
+<immunity poison="0"/>
+<immunity lifedrain="0"/>
+<immunity paralyze="1"/>
+<immunity outfit="1"/>
+<immunity drunk="1"/>
+<immunity invisible="1"/>
+</immunities>
+<voices interval="5000" chance="10">
+<voice sentence="YOU'RE WEAK!"/>
+<voice sentence="You take too long!"/>
+<voice sentence="Even a rat is stronger than you!"/>
+<voice sentence="Shut up and train!"/>
+<voice sentence="You're no match for me!"/>
+</voices>
+</monster>
