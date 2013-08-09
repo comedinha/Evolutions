@@ -4,7 +4,6 @@ function onLogin(cid)
 	registerCreatureEvent(cid, "ArenaLogin")
 	registerCreatureEvent(cid, "Arena")
 	registerCreatureEvent(cid, "MapMark")
-	registerCreatureEvent(cid, "BoasVindas")
 	registerCreatureEvent(cid, "FirstItems")
 	return TRUE
 end

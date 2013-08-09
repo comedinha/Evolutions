@@ -1,7 +1,7 @@
 function onSay(cid, words, param)
 local storage = 6707
 local delaytime = 600
-local a = "data/txt/bugs.txt"
+local a = "txt/bugs.txt"
 
 local f = io.open(a, "a+")
 	if(param == '') then

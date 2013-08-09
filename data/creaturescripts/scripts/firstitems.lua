@@ -33,19 +33,19 @@ function onLogin(cid)
 	if getPlayerStorageValue(cid, 11551) == -1 then
 		if getPlayerVocation(cid) == 1 then
 			-- Sorcerer
-			for i = 1, table.getn(sorcItems), 1 do
+			for i = 1, #sorcItems, 1 do
 				doPlayerAddItem(cid, sorcItems[i], 1, FALSE)
 			end
 		
 		elseif getPlayerVocation(cid) == 2 then
 			-- Druid
-			for i = 1, table.getn(druidItems), 1 do
+			for i = 1, #druidItems, 1 do
 				doPlayerAddItem(cid, druidItems[i], 1, FALSE)
 			end
 		
 		elseif getPlayerVocation(cid) == 3 then
 			-- Paladin
-			for i = 1, table.getn(pallyItems), 1 do
+			for i = 1, #pallyItems, 1 do
 				doPlayerAddItem(cid, pallyItems[i], 1, FALSE)
 			end
 			-- 20 arrows
@@ -55,7 +55,7 @@ function onLogin(cid)
 		
 		elseif getPlayerVocation(cid) == 4 then
 			-- Knight
-			for i = 1, table.getn(kinaItems), 1 do
+			for i = 1, #kinaItems, 1 do
 				doPlayerAddItem(cid, kinaItems[i], 1, FALSE)
 			end
 		end

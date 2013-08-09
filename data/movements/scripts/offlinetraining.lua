@@ -2,42 +2,22 @@ modaldialog1 = {
 	title = "Offline Training",
 	message = "Para qual sala você quer ir?",
 	buttons = {
-		{ id = 1, value = "Ir" },
+		{ id = 1, text = "ir" },
 	},
 	buttonEnter = 1,
+	buttonEscape = 2,
 	choices = {
-		{ id = 1, value = "Sword" },
-		{ id = 2, value = "Axe" },
-		{ id = 3, value = "Club" },
-		{ id = 4, value = "Distance" },
-		{ id = 5, value = "Magic Level" }
+		{ id = 1, text = "Sword" },
+		{ id = 2, text = "Axe" },
+		{ id = 3, text = "Club" },
+		{ id = 4, text = "Distance" },
+		{ id = 5, text = "Magic Level" }
 	},
-	popup = false
+	popup = true
 }
 
-
-function callback1(cid, button, choice)
-	if button == 1 or button == 29 or button == 0 then
-		local pos = 0
-		if (choice == 1) then
-			pos = {x=98, y=45, z=15}
-		end
-		if (choice == 2) then
-			pos = {x=108, y=45, z=15}
-		end
-		if (choice == 3) then
-			pos = {x=117, y=45, z=15}
-		end
-		if (choice == 4) then
-			pos = {x=98, y=55, z=15}
-		end
-		if (choice == 5) then
-			pos = {x=117, y=55, z=15}
-		end
-		doTeleportThing(cid, pos)
-	end
-end
-
 function onStepIn(cid, item, position, fromPosition)
-	addDialog(modaldialog1, 1001, cid, callback1);
+	doPlayerAddDialog(cid, 1001, modaldialog1)
+	registerCreatureEvent(cid, "ModalOffline")
+	return true
 end

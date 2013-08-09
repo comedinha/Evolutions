@@ -6,12 +6,18 @@
 
 	<!-- Custom -->
 	<!-- Others -->
-	<event type="think" name="MapMark" event="script" value="mapmark.lua"/>
-	<event type="login" name="Sorteio" event="script" value="sorteio.lua"/>  
-	<event type="login" name="Arena" event="script" value="arena.lua"/>
-	<event type="login" name="BoasVindas" event="script" value="boasvindas.lua"/>
+	<event type="think" name="MapMark" script="mapmark.lua"/>
+	<event type="login" name="Sorteio" script="sorteio.lua"/>
+	<event type="login" name="Arena" script="arena.lua"/>
+
+	<!-- Modal -->
+	<event type="modalwindow" name="ModalSorteio" script="modal/sorteio.lua"/>
+	<event type="modalwindow" name="ModalOffline" script="modal/offline.lua"/>
+	<event type="modalwindow" name="ModalRank" script="modal/rank.lua"/>
+	<event type="modalwindow" name="ModalGuild" script="modal/guild.lua"/>
+	<event type="modalwindow" name="ModalTP" script="modal/tp.lua"/>
 	
 	<!-- Arena -->
-	<event type="kill" name="ArenaKill" event="script" value="arenakill.lua"/>
-	<event type="login" name="ArenaLogin" event="script" value="loginarena.lua"/>
+	<event type="kill" name="ArenaKill" script="arenakill.lua"/>
+	<event type="login" name="ArenaLogin" script="loginarena.lua"/>
 </creaturescripts>

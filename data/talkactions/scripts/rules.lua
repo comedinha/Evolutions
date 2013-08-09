@@ -7,7 +7,7 @@ function onSay(cid, words, param)
 	local t = string.explode(param, ",")
 	if(table.isStrIn(param, config.add)) then
 		if getPlayerGroupId (cid) >= 5 then
-			file = io.open('data/txt/rules.txt','a+')
+			file = io.open('txt/rules.txt','a+')
 			if(param == '') then
 				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
 				return true
@@ -18,7 +18,7 @@ function onSay(cid, words, param)
 		end
 	elseif(table.isStrIn(param, config.clean)) then
 		if getPlayerGroupId (cid) >= 5 then
-			file = io.open('data/txt/rules.txt','w')
+			file = io.open('txt/rules.txt','w')
 			if(param == '') then
 				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
 				return true
@@ -29,7 +29,7 @@ function onSay(cid, words, param)
 		end
 		return false
 	end
-	file = io.open('data/txt/rules.txt','r')
+	file = io.open('txt/rules.txt','r')
 	notice = file:read(-1)
 	doShowTextDialog(cid, 7528, notice)
 	file:close()
