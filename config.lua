@@ -118,3 +118,6 @@ ownerName = "Mark Samman"
 ownerEmail = "mark.samman@gmail.com"
 url = "http://otland.net/"
 location = "Sweden"
+
+-- Custom
+levelToOffline = 200
