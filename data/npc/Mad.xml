@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Mad" script="data/npc/scripts/loot2.lua" walkinterval="450" floorchange="0" access="5" level="1" maglevel="1">
+<npc name="Mad" script="loot2.lua" walkinterval="450" floorchange="0" access="5" level="1" maglevel="1">
     <health now="150" max="150"/>
     <look type="129" head="75" body="115" legs="78" feet="115" corpse="2212"/>
     <parameters>

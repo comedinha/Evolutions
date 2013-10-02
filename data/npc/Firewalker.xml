@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<npc name="Firewalker" script="data/npc/scripts/firewalker.lua" access="3" lookdir="3"  walkinterval="2000" floorchange="0">
+<npc name="Firewalker" script="firewalker.lua" access="3" lookdir="3"  walkinterval="2000" floorchange="0">
 	<health now="100" max="100"/>
 	<look type="128" head="40" body="37" legs="116" feet="95" addons="0"/>
 	<parameters>

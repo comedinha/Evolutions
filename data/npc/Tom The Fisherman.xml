@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Tom The Fisherman" script="data/npc/scripts/tomfisherman.lua" walkinterval="0" floorchange="0">
+<npc name="Tom The Fisherman" script="tomfisherman.lua" walkinterval="0" floorchange="0">
 	<health now="150" max="150"/>
 	<look type="151" head="79" body="118" legs="115" feet="114" addons="3"/>
 	<parameters>

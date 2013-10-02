@@ -1,4 +1,4 @@
-<npc name="Challenger" script="data/npc/scripts/challenger.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
+<npc name="Challenger" script="challenger.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
 	<health now="150" max="150"/>
 	<look type="300" head="114" body="119" legs="114" feet="114" corpse="2212"/>
 	<parameters>

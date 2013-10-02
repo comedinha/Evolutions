@@ -1,4 +1,4 @@
-<npc name="Capitao Coruja" script="data/npc/scripts/coruja.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
+<npc name="Capitao Coruja" script="coruja.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
 	<health now="150" max="150"/>
 	<look type="129" head="114" body="119" legs="114" feet="114" corpse="2212"/>
 	<parameters>

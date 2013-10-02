@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Ermes" script="data/npc/scripts/ermes.lua" walkinterval="2000" floorchange="0">
+<npc name="Ermes" script="ermes.lua" walkinterval="2000" floorchange="0">
 	<health now="150" max="150"/>
 	<look type="472" head="114" body="0" legs="114" feet="0" addons="3"/>
 	<parameters>

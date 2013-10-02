@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Izac" script="data/npc/scripts/izac.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
+<npc name="Izac" script="izac.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
 	<health now="150" max="150"/>
 	<look type="128" head="114" body="119" legs="114" feet="114" corpse="2212"/>
 	<parameters>

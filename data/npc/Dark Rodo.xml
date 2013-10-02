@@ -1,4 +1,4 @@
-<npc name="Dark Rodo" script="data/npc/scripts/runes.lua" access="5" lookdir="1">
+<npc name="Dark Rodo" script="runes.lua" access="5" lookdir="1">
 	<health now="1000" max="1000"/>
 		<look type="133" head="0" body="86" legs="0" feet="38" addons="3"/>
 	<parameters>

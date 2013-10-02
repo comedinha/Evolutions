@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Numus" script="data/npc/scripts/bpruneshop.lua" walkinterval="1000" floorchange="0">
+<npc name="Numus" script="bpruneshop.lua" walkinterval="1000" floorchange="0">
     <health now="100" max="100"/>
     <look type="278" head="95" body="114" legs="114" feet="95" addons="3"/>
     <parameters>

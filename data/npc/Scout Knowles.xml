@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Scout Knowles" script="data/npc/scripts/Perac.lua" floorchange="0" access="5" level="1" maglevel="1">
+<npc name="Scout Knowles" script="Perac.lua" floorchange="0" access="5" level="1" maglevel="1">
 	<health now="150" max="150"/>
 	<look type="129" head="120" body="120" legs="114" feet="114" addons="3"/>
 	<parameters>

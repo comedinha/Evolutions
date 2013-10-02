@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Pietro" script="data/npc/scripts/default.lua" floorchange="0" access="5" level="1" maglevel="1">
+<npc name="Pietro" script="default.lua" floorchange="0" access="5" level="1" maglevel="1">
 	<health now="150" max="150"/>
 	<look type="128" head="20" body="100" legs="50" feet="99" corpse="2212"/>
 	<parameters>

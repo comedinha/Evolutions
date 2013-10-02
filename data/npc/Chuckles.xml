@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Chuckles" script="data/npc/scripts/runes2.lua" walkinterval="2000" floorchange="0">
+<npc name="Chuckles" script="runes2.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100"/>
 	<look type="99" head="1" body="1" legs="1" feet="1"/>
 	<parameters>

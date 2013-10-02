@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Kenny" script="data/npc/scripts/kenny.lua" walkinterval="2000" floorchange="0">
+<npc name="Kenny" script="kenny.lua" walkinterval="2000" floorchange="0">
     <health now="100" max="100"/>
     <look type="251" head="77" body="77" legs="77" feet="77" addons="3"/>
     <parameters>

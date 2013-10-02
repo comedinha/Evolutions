@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="King Arthas VIII" script="data/npc/scripts/promotion.lua" walkinterval="5000" floorchange="0">
+<npc name="King Arthas VIII" script="promotion.lua" walkinterval="5000" floorchange="0">
     <health now="100" max="100"/>
     <look type="332" head="21" body="87" legs="107" feet="95" addons="0"/>
     <parameters>
