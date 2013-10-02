@@ -8,13 +8,13 @@ local messages = {
 }
 
 local i = 0
-function onThink(interval, lastExecution)
-local message = messages[(i % #messages) + 1]
--- broadcastMessage("Obrigado por entrar no nosso TS!", MESSAGE_STATUS_CONSOLE_ORANGE) --Avalible for TestServ
-broadcastMessage("" .. message, MESSAGE_STATUS_CONSOLE_ORANGE)
-broadcastMessage("Encontrou algum bug? /bugreport e resolveremos", MESSAGE_STATUS_CONSOLE_ORANGE)
--- broadcastMessage("Exclusivo TS: Digite /testserv e ganhe 1kk no banco!", MESSAGE_STATUS_CONSOLE_ORANGE) --Avalible for TestServ
+function onTime()
+	local message = messages[(i % #messages) + 1]
+	-- broadcastMessage("Obrigado por entrar no nosso TS!", MESSAGE_STATUS_CONSOLE_ORANGE) --Avalible for TestServ
+	broadcastMessage("" .. message, MESSAGE_STATUS_CONSOLE_ORANGE)
+	broadcastMessage("Encontrou algum bug? /bugreport e resolveremos", MESSAGE_STATUS_CONSOLE_ORANGE)
+	-- broadcastMessage("Exclusivo TS: Digite /testserv e ganhe 1kk no banco!", MESSAGE_STATUS_CONSOLE_ORANGE) --Avalible for TestServ
 
-i = i + 1
-return TRUE
+	i = i + 1
+	return TRUE
 end

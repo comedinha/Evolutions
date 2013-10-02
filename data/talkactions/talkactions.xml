@@ -5,6 +5,11 @@
 	<talkaction words="/ipban" script="ipban.lua" />
 	<talkaction words="/unban" script="unban.lua" />
 
+	<talkaction words="/up" script="up.lua" />
+	<talkaction words="/down" script="down.lua" />
+	
+	<talkaction words="/t" script="teleport_home.lua" />
+
 	<!-- player talkactions -->
 	<talkaction words="!buypremium" script="buyprem.lua"/>
 	<talkaction words="!leavehouse" script="leavehouse.lua"/>
@@ -12,6 +17,7 @@
 	<talkaction words="!changesex" script="changesex.lua"/>
 	<talkaction words="!uptime" script="uptime.lua"/>
 	<talkaction words="!deathlist" script="deathlist.lua"/>
+	<talkaction words="!kills" script="kills.lua"/>
 
 	<!-- test talkactions -->
 	<talkaction words="!z" script="magiceffect.lua"/>

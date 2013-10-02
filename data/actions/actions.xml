@@ -87,6 +87,8 @@
 	<action itemid="9748" function="decreaseItemId"/>
 	<action itemid="9749" function="increaseItemId"/>
 	<action itemid="9750" function="decreaseItemId"/>
+	<action itemid="19691" function="increaseItemId"/>
+	<action itemid="19692" function="decreaseItemId"/>
 
 	<!-- Food -->
 	<action itemid="2328" script="other/food.lua"/>
@@ -146,6 +148,7 @@
 	<action itemid="6115" script="other/constructionkits.lua"/>
 	<action itemid="6372" script="other/constructionkits.lua"/>
 	<action itemid="6373" script="other/constructionkits.lua"/>
+	<action fromid="7904" toid="7907" script="other/bed_modification_kits.lua"/>
 	<action itemid="8692" script="other/constructionkits.lua"/>
 	<action itemid="9974" script="other/constructionkits.lua"/>
 	<action itemid="11124" script="other/constructionkits.lua"/>
@@ -156,6 +159,7 @@
 	<action itemid="14329" script="other/constructionkits.lua"/>
 	<action itemid="16075" script="other/constructionkits.lua"/>
 	<action itemid="16099" script="other/constructionkits.lua"/>
+	<action itemid="20252" script="other/bed_modification_kits.lua"/>
 	<action itemid="20254" script="other/constructionkits.lua"/>
 	<action itemid="20255" script="other/constructionkits.lua"/>
 	<action itemid="20257" script="other/constructionkits.lua"/>
@@ -211,12 +215,18 @@
 	<action itemid="2694" script="other/createbread.lua"/>
 
 	<!-- Windows -->
-	<action fromid="6436" toid="6447" script="other/windows.lua"/>
+	<action fromid="5303" toid="5304" script="other/windows.lua"/>
+	<action fromid="6436" toid="6449" script="other/windows.lua"/>
 	<action fromid="6450" toid="6473" script="other/windows.lua"/>
 	<action fromid="6788" toid="6791" script="other/windows.lua"/>
 	<action fromid="7025" toid="7032" script="other/windows.lua"/>
-	<action fromid="10264" toid="10267" script="other/windows.lua" />
-	<action fromid="10488" toid="10491" script="other/windows.lua" />
+	<action fromid="10264" toid="10267" script="other/windows.lua"/>
+	<action fromid="10488" toid="10491" script="other/windows.lua"/>
+	<action fromid="19427" toid="19428" script="other/windows.lua"/>
+	<action fromid="19440" toid="19441" script="other/windows.lua"/>
+	<action fromid="19443" toid="19450" script="other/windows.lua"/>
+	<action fromid="19974" toid="19975" script="other/windows.lua"/>
+	<action fromid="20180" toid="20185" script="other/windows.lua"/>
 
 	<!-- Doors -->
 	<action fromid="1209" toid="1214" script="other/doors.lua"/>
@@ -266,6 +276,7 @@
 	<action itemid="6572" script="other/partytrumpet.lua"/>
 	<action itemid="6576" script="other/fireworksrocket.lua"/>
 	<action itemid="6578" script="other/partyhat.lua"/>
+	<action fromid="18488" toid="18492" script="other/skilltrainer.lua"/>
 
 	<!-- Internal -->
 	<action itemid="14405" function="market"/>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Halvar" script="data/npc/scripts/arena.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="300" head="0" body="0" legs="0" feet="0" corpse="5995"/>
+	<parameters />
+</npc>

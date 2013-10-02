@@ -74,7 +74,7 @@ if(Modules == nil) then
 
 		if(isPlayerPremiumCallback == nil or isPlayerPremiumCallback(cid) == true or parameters.premium == false) then
 			local promotedVoc = getPromotedVocation(getPlayerVocation(cid))
-			if(getPlayerStorageValue(cid, 30018) == TRUE) then
+			if(getPlayerStorageValue(cid, 30018) == 1) then
 				npcHandler:say("You are already promoted!", cid)
 			elseif(getPlayerLevel(cid) < parameters.level) then
 				npcHandler:say("I am sorry, but I can only promote you once you have reached level " .. parameters.level .. ".", cid)
@@ -495,10 +495,10 @@ if(Modules == nil) then
 
 		local msg = "I can bring you to "
 		--local i = 1
-		local maxn = table.maxn(module.destinations)
+		local maxn = #module.destinations
 		for i, destination in pairs(module.destinations) do
 			msg = msg .. destination
-			if(i == maxn -1) then
+			if(i == maxn - 1) then
 				msg = msg .. " and "
 			elseif(i == maxn) then
 				msg = msg .. "."

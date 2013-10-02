@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Alissow" script="data/npc/scripts/Alissow.lua" walkinterval="5000" floorchange="0">
+<npc name="Alissow" script="Alissow.lua" walkinterval="5000" floorchange="0">
     <health now="100" max="100"/>
     <look type="289" head="114" body="114" legs="91" feet="91" addons="3"/>
     <parameters>

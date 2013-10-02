@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Antonio" script="data/npc/scripts/default.lua" walkinterval="1000" floorchange="0">
+    <health now="100" max="100"/>
+    <look type="128" head="96" body="99" legs="76" feet="115" addons="1"/>
+    <parameters>
+		<parameter key="message_greet" value="|PLAYERNAME|! Humph. Um turista. Saia logo daqui, esse lugar nao eh para turistas como voce. Se nao conhece a nossa vila saia logo." />
+        <parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="hi;smallville;perigos;monstros;trade;turista;bye;" />
+        <parameter key="keyword_reply1" value="|PLAYERNAME|! Humph. Um turista. Saia logo daqui, esse lugar nao eh para turistas como voce. Se nao conhece a nossa vila saia logo." />
+        <parameter key="keyword_reply2" value="Essa vila esconde muitos perigos. Voce nao sera capaz de sobreviver aqui. SAIA. Turista." />
+        <parameter key="keyword_reply3" value="Nao irei lhe avisar sobre os perigos desse lugar. Se quiser descobrir, morra tentando." />
+        <parameter key="keyword_reply4" value="|PLAYERNAME|, Existe uma lenda sobre um monstro que habita as florestas dessa vila, pergunte a outros moradores daqui. " />
+        <parameter key="keyword_reply5" value="Nao tenho nada pra lhe vender!" />
+        <parameter key="keyword_reply6" value="Todos os turistas que sairam para explorar por essa vila nao voltaram. Entao eh melhor voce ir, antes que seja tarde demais." />
+        <parameter key="keyword_reply7" value="Eh melhor ir embora." />
+
+        <parameter key="module_shop" value="1"/>
+        <parameter key="shop_sellable" value="chain helmet,2458,17;" />
+        <parameter key="shop_buyable" value="brass armor,2465,450;" />
+    </parameters>
+</npc>

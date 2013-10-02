@@ -2,7 +2,7 @@
 <globalevents>
 	<globalevent type="startup" name="ServerStartup" script="startup.lua"/>
 	<globalevent type="record" name="PlayerRecord" script="record.lua"/>
-	<globalevent name="information" interval="600000" script="information.lua"/>
+	<globalevent name="information" time="00:05:00" script="information.lua"/>
 	<!--
 	<globalevent name="timer_example" time="12:00:00" script="my_script.lua"/>
 	-->
