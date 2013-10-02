@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<npc name="Barak" script="data/npc/scripts/barak.lua" walkinterval="2000" floorchange="0">
-    <look type="541" head="113" body="113" legs="113" feet="113" addons="3"/>
-    <parameters>
-        <parameter key="message_greet" value="Ola |PLAYERNAME|. Eu posso te conseguir algo?"/>
-        <parameter key="message_oncloseshop" value="Volte sempre!"/>
-    </parameters>
-</npc>
