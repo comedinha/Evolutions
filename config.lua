@@ -64,15 +64,14 @@ checkExpiredMarketOffersEachMinutes = 60
 maxMarketOffersAtATimePerPlayer = 100
 
 -- MySQL
-mysqlHost = "192.95.40.172"
+mysqlHost = "127.0.0.1"
 mysqlUser = "root"
-mysqlPass = "34603460"
+mysqlPass = ""
 mysqlDatabase = "theforgottenserver"
 mysqlPort = 3306
 
 -- Misc.
 allowChangeOutfit = "yes"
-displayGamemastersWithOnlineCommand = "no"
 displayOnOrOffAtCharlist = "no"
 freePremium = "no"
 kickIdlePlayerAfterMinutes = 15

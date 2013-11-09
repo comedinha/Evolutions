@@ -57,16 +57,16 @@
     </voices>
   <loot>
     <item id="2148" countmax="70" chance1="100000" chancemax="0"/>
-    <item id="2148" countmax="59" chance1="100000" chancemax="0"/> --goldzzz
-    <item id="8472" chance="5100"/> --gsp
-    <item id="8473" chance="4900"/> --uhps
+    <item id="2148" countmax="59" chance1="100000" chancemax="0"/>
+    <item id="8472" chance="5100"/>
+    <item id="8473" chance="4900"/>
     <item id="8873" chance="600"/>
 	<item id="1987" chance="100000">
 	  <inside>
-		<item id="8912" chance="1700"/> --springsprout rod
-		<item id="2467" chance="3200"/> --plate legs
-		<item id="8873" chance="500"/> --hibiscus dress
-		<item id="8891" chance="300"/> --pal armor
+		<item id="8912" chance="1700"/>
+		<item id="2467" chance="3200"/>
+		<item id="8873" chance="500"/>
+		<item id="8891" chance="300"/>
 	  </inside>
 	</item>
   </loot>

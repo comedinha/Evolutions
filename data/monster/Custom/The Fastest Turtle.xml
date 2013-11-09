@@ -49,13 +49,8 @@
 		<voice sentence="where is my leader? Is he on the cover of a book? I am Confused..." yell="1"/>
 	</voices>
 	<loot>
-		<item id="2148" count="100" chance="100000"/> --Gold
-		<item id="2148" count="50" chance="100000"/> -- Gold
-
-		<item id="1987" chance="100000">
-		<inside>
-			<item id="2151" countmax="13" chance1="6500" chancemax="0"/> --Talons
-		</inside>
-		</item>
+		<item id="2148" count="100" chance="100000"/><!-- gold coin -->
+		<item id="2148" count="50" chance="100000"/><!-- gold coin -->
+		<item id="2151" countmax="13" chance="6500"/><!-- Talons -->
 	</loot>
 </monster>

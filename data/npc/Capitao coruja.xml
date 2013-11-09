@@ -1,8 +1,0 @@
-<npc name="Capitao Coruja" script="coruja.lua" walkinterval="0" floorchange="0" access="5" level="1" maglevel="1">
-	<health now="150" max="150"/>
-	<look type="129" head="114" body="119" legs="114" feet="114" corpse="2212"/>
-	<parameters>
-		<parameter key="message_greet" value="Ola |PLAYERNAME|. ! Eu posso te levar para {Dorion}, {yalahar}, {alfon}, {venonh}, {anknor}, {smallville} e {goroma}.. Onde deseja ir?" />
-		<parameter key="message_decline" value="Vai custar |TOTALCOST| gold coins. Vai viajar? Voce pode ir em outras cidades indo ao tapete do meu primo!"/>
-	</parameters>
-</npc>
