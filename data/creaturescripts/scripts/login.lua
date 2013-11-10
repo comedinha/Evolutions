@@ -14,11 +14,15 @@ function onLogin(cid)
 	end
 	player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
 
-	registerCreatureEvent(cid, "PlayerDeath")
-	registerCreatureEvent(cid, "ArenaKill")
-	registerCreatureEvent(cid, "ArenaLogin")
-	registerCreatureEvent(cid, "Arena")
-	registerCreatureEvent(cid, "MapMark")
-	registerCreatureEvent(cid, "FirstItems")
+	player:registerEvent(cid, "PlayerDeath")
+	if player:isUsingOtClient() then
+		player:registerEvent("ExtendedOpcode")
+		player:sendExtendedOpcode(0x00, "")
+	end
+	player:registerEvent(cid, "ArenaKill")
+	player:registerEvent(cid, "ArenaLogin")
+	player:registerEvent(cid, "Arena")
+	player:registerEvent(cid, "MapMark")
+	player:registerEvent(cid, "FirstItems")
 	return true
 end

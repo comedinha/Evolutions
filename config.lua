@@ -26,11 +26,11 @@ gameProtocolPort = 7172
 adminProtocolPort = 7171
 statusProtocolPort = 7171
 maxPlayers = "1000"
-motd = "Welcome to The Forgotten Server!"
+motd = "Welcome to The Alissow Server!"
 onePlayerOnlinePerAccount = "yes"
 allowClones = "no"
-serverName = "Forgotten"
-loginMessage = "Welcome to The Forgotten Server!"
+serverName = "Alissow"
+loginMessage = "Welcome to The Alissow Server!"
 adminLogsEnabled = "no"
 statusTimeout = 60000
 replaceKickOnLogin = "yes"
@@ -57,7 +57,6 @@ mapName = "Xedegux"
 mapAuthor = "Alissow and XedeguX"
 
 -- Market
-marketEnabled = "yes"
 marketOfferDuration = 30 * 24 * 60 * 60
 premiumToCreateMarketOffer = "yes"
 checkExpiredMarketOffersEachMinutes = 60
@@ -72,7 +71,6 @@ mysqlPort = 3306
 
 -- Misc.
 allowChangeOutfit = "yes"
-displayOnOrOffAtCharlist = "no"
 freePremium = "no"
 kickIdlePlayerAfterMinutes = 15
 maxMessageBuffer = 4
@@ -113,10 +111,10 @@ startupDatabaseOptimization = "no"
 passwordType = "sha1"
 
 -- Status server information
-ownerName = "Mark Samman"
-ownerEmail = "mark.samman@gmail.com"
-url = "http://otland.net/"
-location = "Sweden"
+ownerName = "Bruno Carvalho"
+ownerEmail = "comedinhass@gmail.com"
+url = "http://sotserv.com/"
+location = "Brazil"
 
 -- Custom
 levelToOffline = 200
