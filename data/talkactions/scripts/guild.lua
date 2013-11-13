@@ -8,14 +8,18 @@ modaldialog3 = {
 	buttonEnter = 1,
 	buttonEscape = 2,
 	choices = {
-		--{ id = 1, text = "Membros Online" },
-		{ id = 2, text = "Comandos" },
-		--{ id = 3, text = "Balance" }
+		{ id = 1, text = "Membros Online" },
+		{ id = 2, text = "Balance" }
 	},
 	popup = false
 }
 
 function onSay(cid, words, param)
-	doPlayerAddDialog(cid, 1003, modaldialog3)
-	registerCreatureEvent(cid, "ModalGuild")
+	if getPlayerGuildId(cid) <= 0 then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE,"Você não está em nenhuma guild.")
+		return true
+	else
+		doPlayerAddDialog(cid, 1003, modaldialog3)
+		registerCreatureEvent(cid, "ModalGuild")
+	end
 end

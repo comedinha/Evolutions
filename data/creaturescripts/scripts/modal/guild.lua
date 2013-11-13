@@ -1,6 +1,3 @@
-local commands = [[[ -- Guilds Commands -- ]
-Have guild commands for tfs 1.0?]]
-
 function CountGuildMembers(GuildName) -- function by vodkart
 	local count = 0
 	local lista = db.getResult("SELECT `name`, `rank_id` FROM `players` WHERE `rank_id` IN (SELECT `id` FROM `guild_ranks` WHERE `guild_id` = " .. getGuildId(GuildName) .. ");")  
@@ -18,7 +15,7 @@ function onModalWindow(cid, modalWindowId, buttonId, choiceId)
 					doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE,"Você precisa estar em uma Guild.")
 					return true
 				end
-				for _, cid in pairs(getPlayersOnline()) do
+				for _, cid in pairs(getOnlinePlayers()) do
 					if getPlayerGuildName(cid) == GuildName then
 						table.insert(players, cid)
 					end
@@ -29,12 +26,8 @@ function onModalWindow(cid, modalWindowId, buttonId, choiceId)
 				end
 				doShowTextDialog(cid, 2533, str)
 			elseif (choiceId == 2) then
-				str = commands
-				doShowTextDialog(cid, 2529, str)
-			elseif (choiceId == 3) then
-				local result = db.getResult('SELECT `name`, `balance` FROM `guilds` WHERE `id` = ' .. getPlayerGuildId(cid))
-				if getPlayerGuildId(cid) == false then
-					doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE,"Você não está em nenhuma guild.")
+				local result = db.getResult('SELECT `name`, `balance` FROM `guilds` WHERE `id` = ' .. guild)
+				if(result:getID() == -1) then
 					return false
 				end
 
