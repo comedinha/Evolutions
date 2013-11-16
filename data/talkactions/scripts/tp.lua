@@ -17,6 +17,9 @@ modaldialog4 = {
 }
 
 function onSay(cid, words, param)
+	if not Player(cid):getGroup():getAccess() then
+		return false
+	end
 	doPlayerAddDialog(cid, 1004, modaldialog4)
 	registerCreatureEvent(cid, "ModalTP")
 end

@@ -4,11 +4,6 @@ enterPosition = {x = 393, y = 667, z = 6}
 blockEnterItemID = 1387
 gateid = 9485
 
-local config = {
-	open = {"open", "abir", "1"},
-	close = {"close", "closed", "2", "fechar"}
-}
-
 function onSay(cid, words, param)
 	if(param == '') then
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
@@ -17,28 +12,31 @@ function onSay(cid, words, param)
 
 	local world = getWorldType()
 	param = param:lower()
-	if(table.isStrIn(param, config.open)) then
+	if param == 'open' then
 		if(getTileItemById(blockEnterItemPosition, blockEnterItemID).uid == 0) then
-			local tp = doCreateTeleport(blockEnterItemID, enterPosition, blockEnterItemPosition)
-			doItemSetAttribute(tp)
+			doCreateTeleport(blockEnterItemID, enterPosition, blockEnterItemPosition)
 			local itemgate = getTileItemById(gate, gateid)
 			if(itemgate.uid ~= 0) then
 				doRemoveItem(itemgate.uid)
 			end
-			doBroadcastMessage("Event created by "..getCreatureName(cid).." Open in temple.")
-			else
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "O portal já está aberto.")
+			for _, tmpPlayer in ipairs(Game.getPlayers()) do
+				Player(cid):channelSay(tmpPlayer, TALKTYPE_BROADCAST, "Event created! Portal open in temple.", 0)
+			end
+		else
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "The portal is already open.")
 		end
-	elseif(table.isStrIn(param, config.close)) then
+	elseif param == 'close' then
 		if(getTileItemById(gate, gateid).uid == 0) then
 			doCreateItem(gateid, 1, gate)
 			local item = getTileItemById(blockEnterItemPosition, blockEnterItemID)
 			if(item.uid ~= 0) then
 				doRemoveItem(item.uid)
 			end
-			doBroadcastMessage("Event created by "..getCreatureName(cid).." closed.")
-			else
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "O portal não está aberto.")
+			for _, tmpPlayer in ipairs(Game.getPlayers()) do
+				Player(cid):channelSay(tmpPlayer, TALKTYPE_BROADCAST, "Portal closed!", 0)
+			end
+		else
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "The portal is not open.")
 		end
 	end
 	return true

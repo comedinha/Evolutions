@@ -1,9 +1,3 @@
-local config = {
-	check = {"check", "viwer", "verificar", "ver"},
-	delete = {"del", "delete", "deletar"},
-	search = {"search", "procurar"}
-}
-
 function getItemsInContainer(cont, sep)
 	local text = ""
 	local tsep = ""
@@ -18,13 +12,13 @@ function getItemsInContainer(cont, sep)
 			if item.type > 0 then
 				count = "("..item.type.."x)"
 			end
-			text = text.."\n"..tsep..getItemNameById(item.itemid).." "..count.." ("..item.itemid..")"
+			text = text.."\n"..tsep..getItemName(item.itemid).." "..count.." ("..item.itemid..")"
 		else
 			if getContainerSize(item.uid) > 0 then
-				text = text.."\n"..tsep..getItemNameById(item.itemid).." ("..item.itemid..")"
+				text = text.."\n"..tsep..getItemName(item.itemid).." ("..item.itemid..")"
 				text = text..getItemsInContainer(item, sep+2).." ("..item.itemid..")"
 			else
-				text = text.."\n"..tsep..getItemNameById(item.itemid).." ("..item.itemid..")"
+				text = text.."\n"..tsep..getItemName(item.itemid).." ("..item.itemid..")"
 			end
 		end
 	end
@@ -32,21 +26,25 @@ function getItemsInContainer(cont, sep)
 end
 
 function onSay(cid, words, param)
+	if(param == '') then
+		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
+		return false
+	end
 	local slotName = {"Cabeça", "Amuleto", "Backpack", "Armor", "Mao Direita", "Mao Esquerda", "Legs", "Pés", "Ring", "Ammo Slot"}
-	local t = string.explode(param, ",")
-	if(table.isStrIn(param, config.check)) then
-		if getPlayerGroupId (cid) >= 5 then
-			local player = getPlayerByNameWildcard(t[2])
-			if isPlayer(player) == TRUE then
-				local text = getPlayerName(player).."'s Equipment: "
+	local t = param:split(', ')
+	if(t[1] == 'check') then
+		if getPlayerGroupId(cid) >= 2 then
+			local p = Player(t[2])
+			if p then
+				local text = p:getName().."'s Equipment: "
 				for i=1, 10 do
 					text = text.."\n\n"
-					local item = getPlayerSlotItem(player, i)
+					local item = getPlayerSlotItem(p:getName(), i)
 					if item.itemid > 0 then
 						if isContainer(item.uid) == TRUE then
-							text = text..slotName[i]..": "..getItemNameById(item.itemid).." ("..item.itemid..") "..getItemsInContainer(item, 1)
+							text = text..slotName[i]..": "..getItemName(item.itemid).." ("..item.itemid..") "..getItemsInContainer(item, 1)
 						else
-							text = text..slotName[i]..": "..getItemNameById(item.itemid).." ("..item.itemid..")"
+							text = text..slotName[i]..": "..getItemName(item.itemid).." ("..item.itemid..")"
 						end
 					else
 						text = text..slotName[i]..": Empty"
@@ -54,46 +52,56 @@ function onSay(cid, words, param)
 				end
 				doShowTextDialog(cid, 6579, text)
 			else
-				doPlayerSendCancel(cid, "This player is not online.")
+				doPlayerSendCancel(cid, "This player is not online or not exist.")
 			end
 		end
-	elseif(table.isStrIn(param, config.delete)) then
-		if getPlayerGroupId(cid) >= 5 then
-			local player = getPlayerByNameWildcard(t[3])
-			if isPlayer(player) == TRUE then
+	elseif(t[1] == 'delete') then
+		if getPlayerGroupId(cid) == 3 then
+			local p = Player(t[2])
+			if p then
 				count = t[4]
 				if(not t[4]) then
 					count = 1
 				end
-				if getPlayerItemCount(player, t[2]) > 0 then
-					if doPlayerRemoveItem(player, t[2], count) then
-						doPlayerSendCancel(cid, "Item Deletado.")
+				if getPlayerItemCount(p:getName(), t[3]) > 0 then
+					if doPlayerRemoveItem(p:getId(), t[3], count) then
+						doPlayerSendCancel(cid, "Deleted Item.")
 					else
-						doPlayerSendCancel(cid, "Este player não esta quantidade.")
+						doPlayerSendCancel(cid, "This player does not have this amount of item.")
 					end
 				else
-					doPlayerSendCancel(cid, "Este player não tem o item.")
+					doPlayerSendCancel(cid, "This player does not have the item.")
 				end
+			else
+				doPlayerSendCancel(cid, "This player is not online or not exist.")
 			end
 		end
-	elseif(table.isStrIn(param, config.search)) then
-		if getPlayerGroupId (cid) >= 5 then
-			local player = getPlayerByNameWildcard(t[3])
-			local result = db.getResult("SELECT name, online FROM players WHERE id IN (SELECT player_id FROM player_items WHERE itemtype = ".. t[2] ..");")
-			local msg = "Resultados da busca pelo item ".. t[2] .." em seu banco de dados:\n\n"
+	elseif(t[1] == 'search') then
+		local t = param:split(',')
+		if getPlayerGroupId(cid) == 3 then
+			id = isItem(t[2])
+			if type(t[2]) == 'string' then
+				id = getItemIdByName(t[2])
+			end
+			if not id then
+				doPlayerSendCancel(cid, "The "..t[2].." not exist. ")
+				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Using item name not put space after the comma.")
+				return false
+			end
+			local result = db.getResult("SELECT name FROM players WHERE id IN (SELECT player_id FROM player_items WHERE itemtype = ".. id ..");")
+			local msg = "Search results by item ".. getItemName(id) .." in your database:\n\n"
 			if result:getID() ~= -1 then
 				while true do
 					local name = result:getDataString("name")
-					local online = result:getDataInt("online")
-					msg = msg .. name .." [".. (online == 1 and "Online" or "Offline") .."]\n"
+					msg = msg .. name .."\n"
 					if not result:next() then
 						break
 					end
 				end
 			else
-				msg = msg .. "O item não foi encontrado em nenhum jogador."
+				msg = msg .. "The item was not found in any player."
 			end
-			doShowTextDialog(cid, t[2], msg)
+			doShowTextDialog(cid, id, msg)
 		end
 	end
 	return true

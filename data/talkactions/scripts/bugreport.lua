@@ -1,23 +1,20 @@
 function onSay(cid, words, param)
-local storage = 6707
-local delaytime = 600
-local a = "txt/bugs.txt"
-
-local f = io.open(a, "a+")
 	if(param == '') then
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
-		return true
+		return false
 	end
 
-	local exhaust = exhaustion.get(cid, storage)
-	if(not exhaust) then
-		exhaustion.set(cid, storage, delaytime)
-		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Your report has been received successfully!")
-		f:write("\n"..getPlayerName(cid).." reported a bug at " .. os.date("%d %B %Y - %X ", os.time()) .."\n"..param.." [x="..getPlayerPosition(cid).x..", y="..getPlayerPosition(cid).y..", z="..getPlayerPosition(cid).z.."].\n")
-		f:close()
-	else
-		doPlayerSendCancel(cid, "You are exhausted.")
+	local storage = getPlayerStorageValue(cid, 141120131140)
+	if(storage-os.time() >= 0) then
+		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Exausted, try in "..storage-os.time().."!")
+		return false
 	end
-	return true
+
+	setPlayerStorageValue(cid, 141120131140, os.time() + 180)
+	file = io.open("txt/bugs.txt", "a+")
+	file:write("\n"..getPlayerName(cid).." reported a bug at " .. os.date("%d %B %Y - %X ", os.time()) .."\n"..param.." [x="..getPlayerPosition(cid).x..", y="..getPlayerPosition(cid).y..", z="..getPlayerPosition(cid).z.."].\n")
+	file:close()
+	doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Your report has been received successfully!")
+	return false
 end
 

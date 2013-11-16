@@ -15,7 +15,6 @@
 	<event type="modalwindow" name="ModalSorteio" script="modal/sorteio.lua"/>
 	<event type="modalwindow" name="ModalOffline" script="modal/offline.lua"/>
 	<event type="modalwindow" name="ModalRank" script="modal/rank.lua"/>
-	<event type="modalwindow" name="ModalGuild" script="modal/guild.lua"/>
 	<event type="modalwindow" name="ModalTP" script="modal/tp.lua"/>
 	
 	<!-- Arena -->

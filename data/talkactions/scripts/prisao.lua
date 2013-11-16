@@ -1,4 +1,4 @@
-grouprequired = 3
+grouprequired = 2
 jailedstoragevalue_time = 1338
 jailedstoragevalue_bool = 1339
 local jailpos = { 
@@ -24,7 +24,7 @@ function checkJailList(param)
 				setPlayerStorageValue(player, jailedstoragevalue_time, 0)
 				setPlayerStorageValue(player, jailedstoragevalue_bool, 0)
 				table.remove(jail_list,targetID)
-				doPlayerSendTextMessage(player, MESSAGE_STATUS_CONSOLE_ORANGE, 'Você saiu da cadeia, tente não fazer coisas malvadas da próxima vez para não ser preso novamente. Cuide-se amigo.')
+				doPlayerSendTextMessage(player, MESSAGE_STATUS_CONSOLE_ORANGE, 'You got out of jail, try not to do evil things next time to avoid being arrested again. Take care friend.')
 			end
 		else
 			table.remove(jail_list,targetID)
@@ -33,11 +33,14 @@ function checkJailList(param)
 end
 
 function onSay(cid, words, param)
+	if not Player(cid):getGroup():getAccess() then
+		return false
+	end
 	if(param == '') then
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
-		return true
+		return false
 	end
-	local t = string.explode(param, ",")
+	local t = param:split(", ")
 	if jail_list_work == 0 then
 		jail_list_work = addEvent(checkJailList, 1000, {})
 	end
@@ -67,40 +70,32 @@ function onSay(cid, words, param)
 		jail_time = default_jail
 	end
 	
-	if (words == '!prender' or words == '/prender') then
-		if getPlayerGroupId(cid) >= grouprequired then
-			if isPlayer(isplayer) == TRUE then
-					doTeleportThing(isplayer, jailpos[math.random(#jailpos)], TRUE)
-					setPlayerStorageValue(isplayer, jailedstoragevalue_time, os.time()+jail_time)
-					setPlayerStorageValue(isplayer, jailedstoragevalue_bool, 1)
-					table.insert(jail_list,isplayer)
-					doPlayerSendTextMessage (cid, MESSAGE_STATUS_CONSOLE_ORANGE, 'Você prendeu o player: '.. getCreatureName(isplayer) ..' ate ' .. os.date("%H:%M:%S", getPlayerStorageValue(isplayer, jailedstoragevalue_time)) .. ' (agora é: ' .. os.date("%H:%M:%S", os.time()) .. ').')
-					doPlayerSendTextMessage (isplayer, MESSAGE_STATUS_CONSOLE_ORANGE, 'Voce foi preso por '.. getCreatureName(cid) ..' ate ' .. os.date("%H:%M:%S", getPlayerStorageValue(isplayer, jailedstoragevalue_time)) .. ' (agora é: ' .. os.date("%H:%M:%S", os.time()) .. ').')
-			else
-				doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Este jogador não existe ou esta offline.")
-			end
+	if (words == '/prender') then
+		if isPlayer(isplayer) == TRUE then
+			doTeleportThing(isplayer, jailpos[math.random(#jailpos)], TRUE)
+			setPlayerStorageValue(isplayer, jailedstoragevalue_time, os.time()+jail_time)
+			setPlayerStorageValue(isplayer, jailedstoragevalue_bool, 1)
+			table.insert(jail_list,isplayer)
+			doPlayerSendTextMessage (cid, MESSAGE_STATUS_CONSOLE_ORANGE, 'You arrested the player '.. getCreatureName(isplayer) ..' until ' .. os.date("%H:%M:%S", getPlayerStorageValue(isplayer, jailedstoragevalue_time)) .. ' (now is: ' .. os.date("%H:%M:%S", os.time()) .. ').')
+			doPlayerSendTextMessage (isplayer, MESSAGE_STATUS_CONSOLE_ORANGE, 'You were arrested for '.. getCreatureName(cid) ..' until ' .. os.date("%H:%M:%S", getPlayerStorageValue(isplayer, jailedstoragevalue_time)) .. ' (now is: ' .. os.date("%H:%M:%S", os.time()) .. ').')
 		else
-			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Você não tem permissão para prender players.")
+			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "This player does not exist or is offline.")
 		end
-	elseif (words == '!desprender' or words == '/desprender') then
-		if getPlayerGroupId(cid) >= grouprequired then
-			if isPlayer(isplayer) == TRUE then
-				if getPlayerStorageValue(isplayer, jailedstoragevalue_bool) == 1 then
-					doTeleportThing(isplayer, unjailpos, TRUE)
-					setPlayerStorageValue(isplayer, jailedstoragevalue_time, 0)
-					setPlayerStorageValue(isplayer, jailedstoragevalue_bool, 0)
-					table.remove(jail_list,targetID)
-					doPlayerSendTextMessage(isplayer, MESSAGE_STATUS_CONSOLE_ORANGE, 'O player '.. getCreatureName(cid) ..' te tirou da prisão. Te vejo em breve!!!')
-					doPlayerSendTextMessage (cid, MESSAGE_STATUS_CONSOLE_ORANGE, 'Você tirou da prisão o player: '.. getCreatureName(isplayer) ..'.')
-				else
-					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Este jogador não está preso.")
-				end
+	elseif (words == '/desprender') then
+		if isPlayer(isplayer) == TRUE then
+			if getPlayerStorageValue(isplayer, jailedstoragevalue_bool) == 1 then
+				doTeleportThing(isplayer, unjailpos, TRUE)
+				setPlayerStorageValue(isplayer, jailedstoragevalue_time, 0)
+				setPlayerStorageValue(isplayer, jailedstoragevalue_bool, 0)
+				table.remove(jail_list,targetID)
+				doPlayerSendTextMessage(isplayer, MESSAGE_STATUS_CONSOLE_ORANGE, 'The player '.. getCreatureName(cid) ..' brought you out of jail. See you soon!')
+				doPlayerSendTextMessage (cid, MESSAGE_STATUS_CONSOLE_ORANGE, 'You removed out the player '.. getCreatureName(isplayer) ..'of the jail.')
 			else
-				doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Este jogador não existe ou esta offline.")
+				doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "This player is not stuck.")
 			end
 		else
-			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Você não tem permissão para prender players.")
+			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "This player does not exist or is offline.")
 		end
 	end
-	return true
+	return false
 end 

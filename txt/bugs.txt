@@ -1,1 +1,4 @@
 Server Bugs
+
+Comedinha reported a bug at 15 November 2013 - 20:50:39 
+chao bugado [x=63, y=54, z=6].
