@@ -302,6 +302,20 @@ function doMonsterChangeTarget(cid)
 	monster:searchTarget(1)
 	return true
 end
+function doConvinceCreature(cid, target)
+	local creature = Creature(cid)
+	if creature == nil then
+		return false
+	end
+
+	local targetCreature = Creature(target)
+	if targetCreature == nil then
+		return false
+	end
+
+	targetCreature:setMaster(creature)
+	return true
+end
 
 function getTownId(townName) local t = Town(townName) return t ~= nil and t:getId() or false end
 function getTownName(townId) local t = Town(townId) return t ~= nil and t:getName() or false end
@@ -439,7 +453,7 @@ function doSetItemText(uid, text)
 	end
 	return true
 end
-function doSetItemSpecialDesrciption(uid, desc)
+function doSetItemSpecialDescription(uid, desc)
 	local item = Item(uid)
 	if item == nil then
 		return false
@@ -453,6 +467,11 @@ function doSetItemSpecialDesrciption(uid, desc)
 	return true
 end
 function doDecayItem(uid) local i = Item(uid) return i ~= nil and i:decay() or false end
+
+function setHouseOwner(id, guid) local h = House(id) return h ~= nil and h:setOwnerGuid(guid) or false end
+function getHouseRent(id) local h = House(id) return h ~= nil and h:getRent() or nil end
+function getHouseAccessList(id, listId) local h = House(id) return h ~= nil and h:getAccessList(listId) or nil end
+function setHouseAccessList(id, listId, listText) local h = House(id) return h ~= nil and h:setAccessList(listId, listText) or false end
 
 function getTilePzInfo(position)
 	local t = Tile(position)
@@ -570,3 +589,5 @@ function getWorldCreatures(type)
 	end
 	return Game.getPlayerCount() + Game.getMonsterCount() + Game.getNpcCount()
 end
+
+saveData = saveServer

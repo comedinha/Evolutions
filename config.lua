@@ -1,6 +1,3 @@
--- Banishments
-banDays = 7
-
 -- Combat settings
 worldType = "pvp"
 hotkeyAimbotEnabled = "yes"
@@ -8,13 +5,10 @@ protectionLevel = 1
 killsToRedSkull = 3
 killsToBlackSkull = 6
 pzLocked = 60000
-criticalHitChance = 0
 removeAmmoWhenUsingDistanceWeapon = "yes"
 removeChargesFromRunes = "yes"
-removeChargesFromWeapons = "yes"
 timeToDecreaseFrags = 24 * 60 * 60 * 1000
 whiteSkullTime = 15 * 60 * 1000
-oldConditionAccuracy = "no"
 stairJumpExhaustion = 2000
 experienceByKillingPlayers = "no"
 
@@ -30,7 +24,6 @@ motd = "Welcome to The Alissow Server!"
 onePlayerOnlinePerAccount = "yes"
 allowClones = "no"
 serverName = "Alissow"
-loginMessage = "Welcome to The Alissow Server!"
 adminLogsEnabled = "no"
 statusTimeout = 60000
 replaceKickOnLogin = "yes"
@@ -41,8 +34,6 @@ maxPacketsPerSecond = 25
 -- death penalty formula. For the old formula, set it to 10. For
 -- no skill/experience loss, set it to 0.
 deathLosePercent = -1
-deathListEnabled = "yes"
-maxDeathRecords = 5
 
 -- Houses
 housePriceEachSQM = 1000
@@ -84,17 +75,6 @@ rateLoot = 2
 rateMagic = 3
 rateSpawn = 1
 
--- Server save
--- NOTE: serverSaveHour is the hour of the day when the server save will occur,
--- if you would rather save the server with intervals, disable server save and
--- use autoSaveEachMinutes.
-serverSaveEnabled = "no"
-serverSaveHour = 10
-shutdownAtServerSave = "yes"
-cleanMapAtServerSave = "yes"
-autoSaveEachMinutes = 0
-saveGlobalStorage = "no"
-
 -- Monsters
 deSpawnRange = 2
 deSpawnRadius = 50
@@ -107,12 +87,9 @@ staminaSystem = "yes"
 defaultPriority = "high"
 startupDatabaseOptimization = "no"
 
--- Storage
-passwordType = "sha1"
-
 -- Status server information
-ownerName = "Bruno Carvalho"
-ownerEmail = "comedinhass@gmail.com"
+ownerName = ""
+ownerEmail = ""
 url = "http://sotserv.com/"
 location = "Brazil"
 

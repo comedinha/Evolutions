@@ -1,3 +1,3 @@
-while true; do ./theforgottenserver; done
+while true; do ./tfs; done
 
 

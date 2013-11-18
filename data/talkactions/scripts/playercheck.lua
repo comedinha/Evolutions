@@ -9,14 +9,14 @@ function getItemsInContainer(cont, sep)
 	for i=0, getContainerSize(cont.uid)-1 do
 		local item = getContainerItem(cont.uid, i)
 		if isContainer(item.uid) == FALSE then
-			if item.type > 0 then
-				count = "("..item.type.."x)"
+			if item.type > 1 then
+				count = " ("..item.type.."x)"
 			end
-			text = text.."\n"..tsep..getItemName(item.itemid).." "..count.." ("..item.itemid..")"
+			text = text.."\n"..tsep..getItemName(item.itemid)..""..count.." ("..item.itemid..")"
 		else
 			if getContainerSize(item.uid) > 0 then
 				text = text.."\n"..tsep..getItemName(item.itemid).." ("..item.itemid..")"
-				text = text..getItemsInContainer(item, sep+2).." ("..item.itemid..")"
+				text = text..getItemsInContainer(item, sep+2)..""
 			else
 				text = text.."\n"..tsep..getItemName(item.itemid).." ("..item.itemid..")"
 			end
@@ -41,10 +41,14 @@ function onSay(cid, words, param)
 					text = text.."\n\n"
 					local item = getPlayerSlotItem(p:getName(), i)
 					if item.itemid > 0 then
+						count = ''
+						if item.type > 1 then
+							count = " ("..item.type.."x)"
+						end
 						if isContainer(item.uid) == TRUE then
-							text = text..slotName[i]..": "..getItemName(item.itemid).." ("..item.itemid..") "..getItemsInContainer(item, 1)
+							text = text..slotName[i]..": "..getItemName(item.itemid)..""..count.." ("..item.itemid..") "..getItemsInContainer(item, 1)
 						else
-							text = text..slotName[i]..": "..getItemName(item.itemid).." ("..item.itemid..")"
+							text = text..slotName[i]..": "..getItemName(item.itemid)..""..count.." ("..item.itemid..")"
 						end
 					else
 						text = text..slotName[i]..": Empty"
@@ -76,15 +80,12 @@ function onSay(cid, words, param)
 				doPlayerSendCancel(cid, "This player is not online or not exist.")
 			end
 		end
-	elseif(t[1] == 'search') then
+	elseif(type(t[1]) == 'string') then
 		local t = param:split(',')
 		if getPlayerGroupId(cid) == 3 then
-			id = isItem(t[2])
-			if type(t[2]) == 'string' then
-				id = getItemIdByName(t[2])
-			end
+			id = getItemIdByName(t[1])
 			if not id then
-				doPlayerSendCancel(cid, "The "..t[2].." not exist. ")
+				doPlayerSendCancel(cid, "The "..t[1].." not exist. ")
 				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Using item name not put space after the comma.")
 				return false
 			end

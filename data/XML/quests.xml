@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quests>
-	<quest name="The Arena" startstorageid="42355" startstoragevalue="0" endvalue="1">
+	<quest name="The Arena" startstorageid="42355" startstoragevalue="1" endvalue="1">
 		<mission name="Arena Combatant" storageid="42350" startvalue="-1" endvalue="10">
 			<missionstate id="0" description="You've entered the arena as combatant."/>
 		</mission>

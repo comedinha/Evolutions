@@ -376,11 +376,8 @@ TALKTYPE_PRIVATE = TALKTYPE_PRIVATE_TO
 TALKTYPE_PRIVATE_RED = TALKTYPE_PRIVATE_RED_TO
 
 -- for internal use
-TALKTYPE_RVR_CHANNEL = 256
-TALKTYPE_RVR_ANSWER = 257
-TALKTYPE_RVR_CONTINUE = 258
-TALKTYPE_CHANNEL_R2 = 259
-TALKTYPE_CHANNEL_W = 260
+TALKTYPE_CHANNEL_R2 = 256
+TALKTYPE_CHANNEL_W = 257
 --
 
 MESSAGE_STATUS_CONSOLE_BLUE = 4
@@ -610,80 +607,65 @@ configKeys = {
 	AIMBOT_HOTKEY_ENABLED = 3,
 	REMOVE_AMMO = 4,
 	REMOVE_RUNE_CHARGES = 5,
-	REMOVE_WEAPON_CHARGES = 6,
-	EXPERIENCE_FROM_PLAYERS = 7,
-	SHUTDOWN_AT_SERVERSAVE = 8,
-	CLEAN_MAP_AT_SERVERSAVE = 9,
-	SERVERSAVE_ENABLED = 10,
-	FREE_PREMIUM = 11,
-	ADMIN_LOGS_ENABLED = 12,
-	SAVE_GLOBAL_STORAGE = 13,
-	REPLACE_KICK_ON_LOGIN = 14,
-	OLD_CONDITION_ACCURACY = 15,
-	FREE_MEMORY_AT_SHUTDOWN = 16,
-	ALLOW_CLONES = 17,
-	BIND_ONLY_GLOBAL_ADDRESS = 18,
-	OPTIMIZE_DATABASE = 19,
-	MARKET_PREMIUM = 20,
-	STAMINA_SYSTEM = 21,
+	EXPERIENCE_FROM_PLAYERS = 6,
+	FREE_PREMIUM = 7,
+	ADMIN_LOGS_ENABLED = 8,
+	REPLACE_KICK_ON_LOGIN = 9,
+	ALLOW_CLONES = 10,
+	BIND_ONLY_GLOBAL_ADDRESS = 11,
+	OPTIMIZE_DATABASE = 12,
+	MARKET_PREMIUM = 13,
+	STAMINA_SYSTEM = 14,
 
 	MAP_NAME = 1,
 	HOUSE_RENT_PERIOD = 2,
-	LOGIN_MSG = 3,
-	FIRST_MSG = 4,
-	SERVER_NAME = 5,
-	OWNER_NAME = 6,
-	OWNER_EMAIL = 7,
-	URL = 8,
-	LOCATION = 9,
-	IP = 10,
-	MOTD = 11,
-	WORLD_TYPE = 12,
-	MYSQL_HOST = 13,
-	MYSQL_USER = 14,
-	MYSQL_PASS = 15,
-	MYSQL_DB = 16,
-	DEFAULT_PRIORITY = 17,
-	PASSWORDTYPE = 18,
-	MAP_AUTHOR = 19,
+	SERVER_NAME = 3,
+	OWNER_NAME = 4,
+	OWNER_EMAIL = 5,
+	URL = 6,
+	LOCATION = 7,
+	IP = 8,
+	MOTD = 9,
+	WORLD_TYPE = 10,
+	MYSQL_HOST = 11,
+	MYSQL_USER = 12,
+	MYSQL_PASS = 13,
+	MYSQL_DB = 14,
+	DEFAULT_PRIORITY = 15,
+	MAP_AUTHOR = 16,
 
-	LOGIN_TRIES = 0,
-	SQL_PORT = 1,
-	MAX_PLAYERS = 2,
-	PZ_LOCKED = 3,
-	DEFAULT_DESPAWNRANGE = 4,
-	DEFAULT_DESPAWNRADIUS = 5,
-	RATE_EXPERIENCE = 6,
-	RATE_SKILL = 7,
-	RATE_LOOT = 8,
-	RATE_MAGIC = 9,
-	RATE_SPAWN = 10,
-	SERVERSAVE_H = 11,
-	HOUSE_PRICE = 12,
-	KILLS_TO_RED = 13,
-	KILLS_TO_BLACK = 14,
-	MAX_MESSAGEBUFFER = 15,
-	ACTIONS_DELAY_INTERVAL = 16,
-	EX_ACTIONS_DELAY_INTERVAL = 17,
-	CRITICAL_HIT_CHANCE = 18,
-	KICK_AFTER_MINUTES = 19,
-	PROTECTION_LEVEL = 20,
-	DEATH_LOSE_PERCENT = 21,
-	PASSWORD_TYPE = 22,
-	STATUSQUERY_TIMEOUT = 23,
-	FRAG_TIME = 24,
-	WHITE_SKULL_TIME = 25,
-	AUTO_SAVE_EACH_MINUTES = 26,
-	ADMIN_PORT = 27,
-	GAME_PORT = 28,
-	LOGIN_PORT = 29,
-	STATUS_PORT = 30,
-	STAIRHOP_DELAY = 31,
-	MARKET_OFFER_DURATION = 32,
-	CHECK_EXPIRED_MARKET_OFFERS_EACH_MINUTES = 33,
-	MAX_MARKET_OFFERS_AT_A_TIME_PER_PLAYER = 34,
-	EXP_FROM_PLAYERS_LEVEL_RANGE = 35,
-	MAX_PACKETS_PER_SECOND = 36
+	SQL_PORT = 0,
+	MAX_PLAYERS = 1,
+	PZ_LOCKED = 2,
+	DEFAULT_DESPAWNRANGE = 3,
+	DEFAULT_DESPAWNRADIUS = 4,
+	RATE_EXPERIENCE = 5,
+	RATE_SKILL = 6,
+	RATE_LOOT = 7,
+	RATE_MAGIC = 8,
+	RATE_SPAWN = 9,
+	HOUSE_PRICE = 10,
+	KILLS_TO_RED = 11,
+	KILLS_TO_BLACK = 12,
+	MAX_MESSAGEBUFFER = 13,
+	ACTIONS_DELAY_INTERVAL = 14,
+	EX_ACTIONS_DELAY_INTERVAL = 15,
+	KICK_AFTER_MINUTES = 16,
+	PROTECTION_LEVEL = 17,
+	DEATH_LOSE_PERCENT = 18,
+	STATUSQUERY_TIMEOUT = 19,
+	FRAG_TIME = 20,
+	WHITE_SKULL_TIME = 21,
+	ADMIN_PORT = 22,
+	GAME_PORT = 23,
+	LOGIN_PORT = 24,
+	STATUS_PORT = 25,
+	STAIRHOP_DELAY = 26,
+	MARKET_OFFER_DURATION = 27,
+	CHECK_EXPIRED_MARKET_OFFERS_EACH_MINUTES = 28,
+	MAX_MARKET_OFFERS_AT_A_TIME_PER_PLAYER = 29,
+	EXP_FROM_PLAYERS_LEVEL_RANGE = 30,
+	MAX_PACKETS_PER_SECOND = 31
 }
 
 ropeSpots = {384, 418, 8278, 8592, 13189, 14435, 14436, 15635, 19518}
@@ -735,38 +717,6 @@ ITEM_WILDGROWTH = 1499
 ITEM_WILDGROWTH_PERSISTENT = 2721
 ITEM_WILDGROWTH_SAFE = 11099
 
-function doPlayerGiveItem(cid, itemid, count, charges)
-	local isFluidContainer = isItemFluidContainer(itemid)
-	if isFluidContainer and charges == nil then
-		charges = 1
-	end
-
-	while count > 0 do
-		local tempcount = 1
-		if isItemStackable(itemid) then
-			tempcount = math.min(100, count)
-		end
-
-		local ret = doPlayerAddItem(cid, itemid, tempcount, true, charges)
-		if ret == false then
-			ret = doCreateItem(itemid, tempcount, getPlayerPosition(cid))
-		end
-
-		if ret then
-			if isFluidContainer then
-				count = count - 1
-			elseif isItemRune(itemid) then
-				return LUA_NO_ERROR
-			else
-				count = count - tempcount
-			end
-		else
-			return LUA_ERROR
-		end
-	end
-	return LUA_NO_ERROR
-end
-
 function doCreatureSayWithRadius(cid, text, type, radiusx, radiusy, position)
 	if position == nil then
 		position = getCreaturePosition(cid)
@@ -778,50 +728,6 @@ function doCreatureSayWithRadius(cid, text, type, radiusx, radiusy, position)
 			doCreatureSay(cid, text, type, false, spectator, position)
 		end
 	end
-end
-
-function doPlayerTakeItem(cid, itemid, count)
-	if getPlayerItemCount(cid,itemid) < count then
-		return LUA_ERROR
-	end
-
-	while count > 0 do
-		local tempcount = 0
-		if isItemStackable(itemid) then
-			tempcount = math.min (100, count)
-		else
-			tempcount = 1
-		end
-
-		local ret = doPlayerRemoveItem(cid, itemid, tempcount)
-		if ret ~= LUA_ERROR then
-			count = count - tempcount
-		else
-			return LUA_ERROR
-		end
-	end
-
-	if count ~= 0 then
-		return LUA_ERROR
-	end
-	return LUA_NO_ERROR
-end
-
-function doPlayerBuyItem(cid, itemid, count, cost, charges)
-	if doPlayerRemoveMoney(cid, cost) then
-		return doPlayerGiveItem(cid, itemid, count, charges)
-	end
-	return LUA_ERROR
-end
-
-function doPlayerSellItem(cid, itemid, count, cost)
-	if doPlayerTakeItem(cid, itemid, count) == LUA_NO_ERROR then
-		if not doPlayerAddMoney(cid, cost) then
-			error('Could not add money to ' .. getPlayerName(cid) .. '(' .. cost .. 'gp)')
-		end
-		return LUA_NO_ERROR
-	end
-	return LUA_ERROR
 end
 
 function getBlessingsCost(level)
@@ -852,26 +758,6 @@ function isPremium(cid)
 	return getPlayerPremiumDays(cid) > 0
 end
 
-function getMonthDayEnding(day)
-	if day == "01" or day == "21" or day == "31" then
-		return "st"
-	elseif day == "02" or day == "22" then
-		return "nd"
-	elseif day == "03" or day == "23" then
-		return "rd"
-	else
-		return "th"
-	end
-end
-
-function getMonthString(m)
-	return os.date("%B", os.time{year = 1970, month = m, day = 1})
-end
-
-function getArticle(str)
-	return str:find("[AaEeIiOoUuYy]") == 1 and "an" or "a"
-end
-
 function isNumber(str)
 	return tonumber(str) ~= nil
 end
@@ -887,58 +773,35 @@ function getDistanceBetween(firstPosition, secondPosition)
 end
 
 function isSorcerer(cid)
-	if not isPlayer(cid) then
-		debugPrint("isSorcerer: Player not found.")
+	local player = Player(cid)
+	if player == nil then
 		return false
 	end
-	return isInArray({1, 5}, getPlayerVocation(cid))
+	return isInArray({1, 5}, player:getVocation():getId())
 end
 
 function isDruid(cid)
-	if not isPlayer(cid) then
-		debugPrint("isDruid: Player not found.")
+	local player = Player(cid)
+	if player == nil then
 		return false
 	end
-	return isInArray({2, 6}, getPlayerVocation(cid))
+	return isInArray({2, 6}, player:getVocation():getId())
 end
 
 function isPaladin(cid)
-	if not isPlayer(cid) then
-		debugPrint("isPaladin: Player not found.")
+	local player = Player(cid)
+	if player == nil then
 		return false
 	end
-	return isInArray({3, 7}, getPlayerVocation(cid))
+	return isInArray({3, 7}, player:getVocation():getId())
 end
 
 function isKnight(cid)
-	if not isPlayer(cid) then
-		debugPrint("isKnight: Player not found.")
+	local player = Player(cid)
+	if player == nil then
 		return false
 	end
-	return isInArray({4, 8}, getPlayerVocation(cid))
-end
-
-function doPlayerBuyItemContainer(cid, containerid, itemid, count, cost, charges)
-	if not doPlayerRemoveMoney(cid, cost) then
-		return LUA_ERROR
-	end
-
-	for i = 1, count do
-		local container = doCreateItemEx(containerid, 1)
-		for x = 1, getContainerCapById(containerid) do
-			doAddContainerItem(container, itemid, charges)
-		end
-
-		if doPlayerAddItemEx(cid, container, true) ~= RETURNVALUE_NOERROR then
-			return LUA_ERROR
-		end
-	end
-	return LUA_NO_ERROR
-end
-
-function getCount(string)
-	local b, e = string:find("%d+")
-	return b and e and tonumber(string:sub(b, e)) or -1
+	return isInArray({4, 8}, player:getVocation():getId())
 end
 
 function getTibianTime()
