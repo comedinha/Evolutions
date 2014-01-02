@@ -59,6 +59,7 @@ mysqlUser = "root"
 mysqlPass = ""
 mysqlDatabase = "theforgottenserver"
 mysqlPort = 3306
+mysqlSock = ""
 
 -- Misc.
 allowChangeOutfit = "yes"

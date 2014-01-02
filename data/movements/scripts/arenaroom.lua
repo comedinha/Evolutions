@@ -9,7 +9,6 @@ function onStepIn(cid, item, position, fromPosition)
 		checkArenaRooms({})
 	end
 	local arena_room = item.actionid
-	print(arena_room)
 	local player_arena = getPlayerStorageValue(cid, 42355)
 	if getPlayerStorageValue(cid, arena_room+player_arena*10-1) == 1 or arena_room+player_arena*10-1 == 42299 then
 		if getGlobalStorageValue(cid, arena_room) == 0 then
@@ -20,7 +19,6 @@ function onStepIn(cid, item, position, fromPosition)
 				end
 			end
 			local spawn_pos = getThingPos(arena_room)
-			print(spawn_pos)
 			local monster = doSummonCreature(arena_monsters[arena_room+player_arena*10], {x=spawn_pos.x-1,y=spawn_pos.y-1,z=spawn_pos.z})
 			setGlobalStorageValue(arena_room+100, monster)
 			doTeleportThing(cid, spawn_pos, TRUE)

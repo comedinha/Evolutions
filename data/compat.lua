@@ -35,6 +35,8 @@ function getCreatureHealth(cid) local c = Creature(cid) return c ~= nil and c:ge
 function getCreatureMaxHealth(cid) local c = Creature(cid) return c ~= nil and c:getMaxHealth() or false end
 function getCreaturePosition(cid) local c = Creature(cid) return c ~= nil and c:getPosition() or false end
 function getCreatureOutfit(cid) local c = Creature(cid) return c ~= nil and c:getOutfit() or false end
+function getCreatureSpeed(cid) local c = Creature(cid) return c ~= nil and c:getSpeed() or false end
+function getCreatureBaseSpeed(cid) local c = Creature(cid) return c ~= nil and c:getBaseSpeed() or false end
 
 function getCreatureTarget(cid)
 	local c = Creature(cid)
@@ -54,6 +56,19 @@ function getCreatureMaster(cid)
 	return false
 end
 
+function getCreatureSummons(cid)
+	local c = Creature(cid)
+	if c == nil then
+		return false
+	end
+
+	local result = {}
+	for _, summon in ipairs(c:getSummons()) do
+		result[#result + 1] = summon:getId()
+	end
+	return result
+end
+
 getCreaturePos = getCreaturePosition
 
 function doCreatureAddHealth(cid, health) local c = Creature(cid) return c ~= nil and c:addHealth(health) or false end
@@ -61,6 +76,7 @@ function doRemoveCreature(cid) local c = Creature(cid) return c ~= nil and c:rem
 function doCreatureSetLookDir(cid, direction) local c = Creature(cid) return c ~= nil and c:setDirection(direction) or false end
 function doCreatureSay(cid, text, type, ...) local c = Creature(cid) return c ~= nil and c:say(text, type, ...) or false end
 function doCreatureChangeOutfit(cid, outfit) local c = Creature(cid) return c ~= nil and c:setOutfit(outfit) or false end
+function doSetCreatureDropLoot(cid, doDrop) local c = Creature(cid) return c ~= nil and c:setDropLoot(doDrop) or false end
 
 doSetCreatureDirection = doCreatureSetLookDir
 
@@ -104,6 +120,18 @@ function getPlayerLossPercent(cid) local p = Player(cid) return p ~= nil and p:g
 function getPlayerMount(cid, mountId) local p = Player(cid) return p ~= nil and p:hasMount(mountId) or false end
 function getPlayerPremiumDays(cid) local p = Player(cid) return p ~= nil and p:getPremiumDays() or false end
 function getPlayerBlessing(cid, blessing) local p = Player(cid) return p ~= nil and p:hasBlessing(blessing) or false end
+function getPlayerParty(cid)
+	local player = Player(cid)
+	if player == nil then
+		return false
+	end
+
+	local party = player:getParty()
+	if party == nil then
+		return nil
+	end
+	return party:getLeader():getId()
+end
 function getPlayerGuildId(cid)
 	local player = Player(cid)
 	if player == nil then
@@ -169,7 +197,7 @@ function getPlayerFood(cid)
 end
 function canPlayerLearnInstantSpell(cid, name) local p = Player(cid) return p ~= nil and p:canLearnSpell(name) or false end
 function getPlayerLearnedInstantSpell(cid, name) local p = Player(cid) return p ~= nil and p:hasLearnedSpell(name) or false end
-function isPlayerGhost(cid) local p = Player(cid) return p ~= nil and p:isGhost() or false end
+function isPlayerGhost(cid) local p = Player(cid) return p ~= nil and p:isInGhostMode() or false end
 function isPlayerPzLocked(cid) local p = Player(cid) return p ~= nil and p:isPzLocked() or false end
 function getPlayersByIPAddress(ip, mask)
 	if mask == nil then mask = 0xFFFFFFFF end
@@ -198,6 +226,34 @@ function getPlayersByAccountNumber(accountNumber)
 	end
 	return result
 end
+function getPlayerGUIDByName(name)
+	local player = Player(name)
+	if player ~= nil then
+		return player:getGuid()
+	end
+
+	local resultId = db.storeQuery("SELECT `id` FROM `players` WHERE `name` = " .. db.escapeString(name))
+	if resultId ~= false then
+		local guid = result.getDataInt(resultId, "id")
+		result.free(resultId)
+		return guid
+	end
+	return 0
+end
+function getAccountNumberByPlayerName(name)
+	local player = Player(name)
+	if player ~= nil then
+		return player:getAccountId()
+	end
+
+	local resultId = db.storeQuery("SELECT `account_id` FROM `players` WHERE `name` = " .. db.escapeString(name))
+	if resultId ~= false then
+		local accountId = result.getDataInt(resultId, "account_id")
+		result.free(resultId)
+		return accountId
+	end
+	return 0
+end
 
 getPlayerAccountBalance = getPlayerBalance
 getIpByName = getIPByPlayerName
@@ -211,6 +267,8 @@ function doPlayerSetVocation(cid, vocation) local p = Player(cid) return p ~= ni
 function doPlayerSetTown(cid, town) local p = Player(cid) return p ~= nil and p:setTown(Town(town)) or false end
 function setPlayerGroupId(cid, groupId) local p = Player(cid) return p ~= nil and p:setGroup(Group(groupId)) or false end
 function doPlayerSetSex(cid, sex) local p = Player(cid) return p ~= nil and p:setSex(sex) or false end
+function doPlayerSetGuildLevel(cid, level) local p = Player(cid) return p ~= nil and p:setGuildLevel(level) or false end
+function doPlayerSetGuildNick(cid, nick) local p = Player(cid) return p ~= nil and p:setGuildNick(nick) or false end
 function doShowTextDialog(cid, itemId, text) local p = Player(cid) return p ~= nil and p:showTextDialog(itemId, text) or false end
 function doPlayerAddItemEx(cid, uid, ...) local p = Player(cid) return p ~= nil and p:addItemEx(Item(uid), ...) or false end
 function doPlayerAddPremiumDays(cid, days) local p = Player(cid) return p ~= nil and p:addPremiumDays(days) or false end
@@ -239,7 +297,69 @@ function doSendTutorial(cid, tutorialId) local p = Player(cid) return p ~= nil a
 function doAddMapMark(cid, pos, type, description) local p = Player(cid) return p ~= nil and p:addMapMark(pos, type, description or "") or false end
 function doPlayerSendTextMessage(cid, type, text, ...) local p = Player(cid) return p ~= nil and p:sendTextMessage(type, text, ...) or false end
 function doSendAnimatedText() debugPrint("Deprecated function.") return true end
-function doPlayerAddExp(cid, exp, ...) local p = Player(cid) return p ~= nil and p:addExperience(exp, ...) or false end
+function doPlayerAddExp(cid, exp, useMult, ...)
+	local player = Player(cid)
+	if player == nil then
+		return false
+	end
+
+	if useMult then
+		exp = exp * Game.getExperienceStage(player:getLevel())
+	end
+	return player:addExperience(exp, ...)
+end
+function doPlayerAddManaSpent(cid, mana) local p = Player(cid) return p ~= nil and p:addManaSpent(mana * configManager.getNumber(configKeys.RATE_MAGIC)) or false end
+function doPlayerAddSkillTry(cid, skillid, n) local p = Player(cid) return p ~= nil and p:addSkillTries(skillid, n * configManager.getNumber(configKeys.RATE_SKILL)) or false end
+function doPlayerAddMana(cid, mana, ...) local p = Player(cid) return p ~= nil and p:addMana(mana, ...) or false end
+function doPlayerJoinParty(cid, leaderId)
+	local player = Player(cid)
+	if player == nil then
+		return false
+	end
+
+	if player:getParty() ~= nil then
+		player:sendTextMessage(MESSAGE_INFO_DESCR, "You are already in a party.")
+		return true
+	end
+
+	local leader = Player(leaderId)
+	if leader == nil then
+		return false
+	end
+
+	local party = leader:getParty()
+	if party == nil or party:getLeader() ~= leader then
+		return true
+	end
+
+	for _, invitee in ipairs(party:getInvitees()) do
+		if player ~= invitee then
+			return true
+		end
+	end
+
+	party:addMember(player)
+	return true
+end
+function getPartyMembers(cid)
+	local player = Player(cid)
+	if player == nil then
+		return false
+	end
+
+	local party = player:getParty()
+	if party == nil then
+		return false
+	end
+
+	local result = {party:getLeader():getId()}
+	for _, member in ipairs(party:getMembers()) do
+		result[#result + 1] = member:getId()
+	end
+	return result
+end
+
+doPlayerSendDefaultCancel = doPlayerSendCancel
 
 function getMonsterTargetList(cid)
 	local monster = Monster(cid)
@@ -573,8 +693,9 @@ function getThing(uid)
 end
 
 function getConfigInfo(info)
-	if (type(info) ~= 'string') then return nil end
-
+	if type(info) ~= "string" then
+		return nil
+	end
 	dofile('config.lua')
 	return _G[info]
 end
@@ -591,3 +712,14 @@ function getWorldCreatures(type)
 end
 
 saveData = saveServer
+
+function getGlobalStorageValue(key)
+	return Game.getStorageValue(key) or -1
+end
+
+function setGlobalStorageValue(key, value)
+	Game.setStorageValue(key, value)
+	return true
+end
+
+getWorldType = Game.getWorldType
