@@ -3,7 +3,6 @@
 	<!-- Amazons -->
 	<monster name="Amazon" file="Amazons/amazon.xml"/>
 	<monster name="Valkyrie" file="Amazons/valkyrie.xml"/>
-	<monster name="Witch" file="Amazons/witch.xml"/>
 
 	<!-- Annelids -->
 	<monster name="Carrion Worm" file="Annelids/carrion worm.xml"/>
@@ -676,6 +675,7 @@
 	<monster name="Mad Scientist" file="Sorcerers/mad scientist.xml"/>
 	<monster name="Raging Mage" file="Sorcerers/raging mage.xml"/>
 	<monster name="Warlock" file="Sorcerers/warlock.xml"/>
+	<monster name="Witch" file="Sorcerers/witch.xml"/>
 
 	<!-- Traps -->
 	<monster name="Deathslicer" file="Traps/deathslicer.xml"/>
