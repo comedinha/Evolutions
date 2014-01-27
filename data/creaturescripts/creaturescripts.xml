@@ -9,7 +9,6 @@
 	<!-- Others -->
 	<event type="think" name="MapMark" script="mapmark.lua"/>
 	<event type="login" name="Sorteio" script="sorteio.lua"/>
-	<event type="login" name="Arena" script="arena.lua"/>
 
 	<!-- Modal -->
 	<event type="modalwindow" name="ModalSorteio" script="modal/sorteio.lua"/>
@@ -18,6 +17,6 @@
 	<event type="modalwindow" name="ModalTP" script="modal/tp.lua"/>
 	
 	<!-- Arena -->
-	<event type="kill" name="ArenaKill" script="arenakill.lua"/>
-	<event type="login" name="ArenaLogin" script="loginarena.lua"/>
+	<event type="login" name="Arena" script="arena.lua"/>
+	<event type="kill" name="Arena" script="arena.lua"/>
 </creaturescripts>

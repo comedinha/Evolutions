@@ -41,7 +41,7 @@
 		<item id="2148" countmax="40" chance="50000"/><!-- gold coin -->
 		<item id="2676" countmax="12" chance="25000"/><!-- banana -->
 		<item id="12427" chance="4761"/><!-- kongra's shoulderpad -->
-		<item id="2200" chance="980"/><!-- protection amulet -->
+		<item id="2200" subtype="250" chance="980"/><!-- protection amulet -->
 		<item id="5883" chance="980"/><!-- ape fur -->
 		<item id="2463" chance="943"/><!-- plate armor -->
 		<item id="7618" chance="564"/><!-- health potion -->

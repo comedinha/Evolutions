@@ -80,13 +80,12 @@ function onSay(cid, words, param)
 				doPlayerSendCancel(cid, "This player is not online or not exist.")
 			end
 		end
-	elseif(type(t[1]) == 'string') then
+	else
 		local t = param:split(',')
 		if getPlayerGroupId(cid) == 3 then
 			id = getItemIdByName(t[1])
 			if not id then
 				doPlayerSendCancel(cid, "The "..t[1].." not exist. ")
-				doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Using item name not put space after the comma.")
 				return false
 			end
 			local result = db.getResult("SELECT name FROM players WHERE id IN (SELECT player_id FROM player_items WHERE itemtype = ".. id ..");")

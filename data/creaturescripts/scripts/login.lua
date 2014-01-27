@@ -16,7 +16,6 @@ function onLogin(cid)
 
 	player:registerEvent(cid, "PlayerDeath")
 	player:registerEvent(cid, "ArenaKill")
-	player:registerEvent(cid, "ArenaLogin")
 	player:registerEvent(cid, "Arena")
 	player:registerEvent(cid, "MapMark")
 	player:registerEvent(cid, "FirstItems")

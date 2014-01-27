@@ -1,53 +1,113 @@
 local food =
 {
-	[2328] = {84, "Gulp."},  [2362] = {48, "Yum."}, [2666] = {180, "Munch."}, [2667] = {144, "Munch."},
-	[2668] = {120, "Mmmm."}, [2669] = {204, "Munch."}, [2670] = {48, "Gulp."}, [2671] = {360, "Chomp."},
-	[2672] = {720, "Chomp."}, [2673] = {60, "Yum."}, [2674] = {72, "Yum."}, [2675] = {156, "Yum."},
-	[2676] = {96, "Yum."}, [2677] = {12, "Yum."}, [2678] = {216, "Slurp."}, [2679] = {12, "Yum."},
-	[2680] = {24, "Yum."}, [2681] = {108, "Yum."}, [2682] = {240, "Yum."}, [2683] = {204, "Munch."},
-	[2684] = {60, "Crunch."}, [2685] = {72, "Munch."}, [2686] = {108, "Crunch."}, [2687] = {24, "Crunch."},
-	[2688] = {24, "Mmmm."}, [2689] = {120, "Crunch."}, [2690] = {72, "Crunch."}, [2691] = {96, "Crunch."},
-	[2695] = {72, "Gulp."}, [2696] = {108, "Smack."}, [2787] = {108, "Crunch."},  [2788] = {48, "Munch."},
-	[2789] = {264, "Munch."}, [2790] = {360, "Crunch."}, [2791] = {108, "Crunch."},  [2792] = {72, "Crunch."},
-	[2793] = {144, "Crunch."}, [2794] = {36, "Crunch."}, [2795] = {432, "Crunch."},  [2796] = {300, "Crunch."},
-	[5097] = {48, "Yum."}, [5678] = {96, "Gulp."}, [6125] = {96, "Gulp."},  [6278] = {120, "Mmmm."},
-	[6279] = {180, "Mmmm."}, [6393] = {144, "Mmmm."}, [6394] = {180, "Mmmm."},  [6501] = {240, "Mmmm."},
-	[6541] = {72, "Gulp."}, [6542] = {72, "Gulp."}, [6543] = {72, "Gulp."},  [6544] = {72, "Gulp."},
-	[6545] = {72, "Gulp."}, [6569] = {12, "Mmmm."}, [6574] = {60, "Mmmm."}, [7158] = {300, "Munch."},
-	[7159] = {180, "Munch."}, [7245] = {84, "Munch."}, [7372] = {0, "Slurp."},  [7373] = {0, "Slurp."},
-	[7374] = {0, "Slurp."},  [7375] = {0, "Slurp."}, [7376] = {0, "Slurp."}, [7377] = {0, "Slurp."}, 
-	[7909] = {48, "Crunch."}, [7963] = {720, "Munch."}, [8112] = {108, "Urgh."}, [8838] = {120, "Gulp."},
-	[8839] = {60, "Yum."},  [8840] = {12, "Yum."}, [8841] = {12, "Urgh."}, [8842] = {84, "Munch."}, 
-	[8843] = {60, "Crunch."}, [8844] = {12, "Gulp."}, [8845] = {60, "Munch."}, [8847] = {132, "Yum."},
-	[9005] = {88, "Slurp."}, [9114] = {60, "Crunch."}, [10454] = {0, "Your head begins to feel better."},
-	[11246] = {310, "Yum."}, [11429] = {150, "Mmmm."}, [12415] = {360, "Yum."}, [12416] = {130, "Munch."},
-	[12417] = {60, "Crunch."}, [12418] = {80, "Crunch."}, [12637] = {660, "Gulp."}, [12638] = {260, "Yum."},
-	[12639] = {18, "Munch."}, [13297] = {240, "Crunch."}, [15405] = {660, "Munch."}, [15488] = {180, "Munch."},
-	[18305] = {510, "Gulp!"}, [18306] = {510, "Phew!"}, [18397] = {396, "Munch."}
+	[2362] = {5, "Crunch."}, -- carrot
+	[2666] = {15, "Munch."}, -- meat
+	[2667] = {12, "Munch."}, -- fish
+	[2668] = {10, "Mmmm."}, -- salmon
+	[2669] = {17, "Munch."}, -- northern pike
+	[2670] = {4, "Gulp."}, -- shrimp
+	[2671] = {30, "Chomp."}, -- ham
+	[2672] = {60, "Chomp."}, -- dragon ham
+	[2673] = {5, "Yum."}, -- pear
+	[2674] = {6, "Yum."}, -- red apple
+	[2675] = {13, "Yum."}, -- orange
+	[2676] = {8, "Yum."}, -- banana
+	[2677] = {1, "Yum."}, -- blueberry
+	[2678] = {18, "Slurp."}, -- coconut
+	[2679] = {1, "Yum."}, -- cherry
+	[2680] = {2, "Yum."}, -- strawberry
+	[2681] = {9, "Yum."}, -- grapes
+	[2682] = {20, "Yum."}, -- melon
+	[2683] = {17, "Munch."}, -- pumpkin
+	[2684] = {5, "Crunch."}, -- carrot
+	[2685] = {6, "Munch."}, -- tomato
+	[2686] = {9, "Crunch."}, -- corncob
+	[2687] = {2, "Crunch."}, -- cookie
+	[2688] = {2, "Munch."}, -- candy cane
+	[2689] = {10, "Crunch."}, -- bread
+	[2690] = {3, "Crunch."}, -- roll
+	[2691] = {8, "Crunch."}, -- brown bread
+	[2695] = {6, "Gulp."}, -- egg
+	[2696] = {9, "Smack."}, -- cheese
+	[2787] = {9, "Munch."}, -- white mushroom
+	[2788] = {4, "Munch."}, -- red mushroom
+	[2789] = {22, "Munch."}, -- brown mushroom
+	[2790] = {30, "Munch."}, -- orange mushroom
+	[2791] = {9, "Munch."}, -- wood mushroom
+	[2792] = {6, "Munch."}, -- dark mushroom
+	[2793] = {12, "Munch."}, -- some mushrooms
+	[2794] = {3, "Munch."}, -- some mushrooms
+	[2795] = {36, "Munch."}, -- fire mushroom
+	[2796] = {5, "Munch."}, -- green mushroom
+	[5097] = {4, "Yum."}, -- mango
+	[6125] = {8, "Gulp."}, -- tortoise egg
+	[6278] = {10, "Mmmm."}, -- cake
+	[6279] = {15, "Mmmm."}, -- decorated cake
+	[6393] = {12, "Mmmm."}, -- valentine's cake
+	[6394] = {15, "Mmmm."}, -- cream cake
+	[6501] = {20, "Mmmm."}, -- gingerbread man
+	[6541] = {6, "Gulp."}, -- coloured egg (yellow)
+	[6542] = {6, "Gulp."}, -- coloured egg (red)
+	[6543] = {6, "Gulp."}, -- coloured egg (blue)
+	[6544] = {6, "Gulp."}, -- coloured egg (green)
+	[6545] = {6, "Gulp."}, -- coloured egg (purple)
+	[6569] = {1, "Mmmm."}, -- candy
+	[6574] = {5, "Mmmm."}, -- bar of chocolate
+	[7158] = {15, "Munch."}, -- rainbow trout
+	[7159] = {13, "Munch."}, -- green perch
+	[7372] = {2, "Yum."}, -- ice cream cone (crispy chocolate chips)
+	[7373] = {2, "Yum."}, -- ice cream cone (velvet vanilla)
+	[7374] = {2, "Yum."}, -- ice cream cone (sweet strawberry)
+	[7375] = {2, "Yum."}, -- ice cream cone (chilly cherry)
+	[7376] = {2, "Yum."}, -- ice cream cone (mellow melon)
+	[7377] = {2, "Yum."}, -- ice cream cone (blue-barian)
+	[7909] = {4, "Crunch."}, -- walnut
+	[7910] = {4, "Crunch."}, -- peanut
+	[7963] = {60, "Munch."}, -- marlin
+	[8112] = {9, "Urgh."}, -- scarab cheese
+	[8838] = {10, "Gulp."}, -- potato
+	[8839] = {5, "Yum."}, -- plum
+	[8840] = {1, "Yum."}, -- raspberry
+	[8841] = {1, "Urgh."}, -- lemon
+	[8842] = {7, "Munch."}, -- cucumber
+	[8843] = {5, "Crunch."}, -- onion
+	[8844] = {1, "Gulp."}, -- jalapeño pepper
+	[8845] = {5, "Munch."}, -- beetroot
+	[8847] = {11, "Yum."}, -- chocolate cake
+	[9005] = {7, "Slurp."}, -- yummy gummy worm
+	[9114] = {5, "Crunch."}, -- bulb of garlic
+	[9996] = {0, "Slurp."}, -- banana chocolate shake
+	[10454] = {0, "Your head begins to feel better."}, -- headache pill
+	[11246] = {15, "Yum."}, -- rice ball
+	[11370] = {3, "Urgh."}, -- terramite eggs
+	[11429] = {10, "Mmmm."}, -- crocodile steak
+	[12415] = {20, "Yum."}, -- pineapple
+	[12416] = {10, "Munch."}, -- aubergine
+	[12417] = {8, "Crunch."}, -- broccoli
+	[12418] = {9, "Crunch."}, -- cauliflower
+	[12637] = {55, "Gulp."}, -- ectoplasmic sushi
+	[12638] = {18, "Yum."}, -- dragonfruit
+	[12639] = {2, "Munch."}, -- peas
+	[13297] = {20, "Crunch."}, -- haunch of boar
+	[15405] = {55, "Munch."}, -- sandfish
+	[15487] = {14, "Urgh."}, -- larvae
+	[15488] = {15, "Munch."}, -- deepling filet
+	[16014] = {60, "Mmmm."}, -- anniversary cake
+	[18397] = {33, "Munch."}, -- mushroom pie
+	[19737] = {10, "Urgh."}, -- insectoid eggs
+	[20100] = {15, "Smack."}, -- soft cheese
+	[20101] = {12, "Smack."} -- rat cheese
 }
-
 function onUse(cid, item, frompos, item2, topos)
-	if(item.itemid == 6280) then
-		if(fromPosition.x == CONTAINER_POSITION) then
-			fromPosition = getThingPosition(cid)
-		end
-
-		doCreatureSay(cid, getPlayerName(cid) .. " blew out the candle.", TALKTYPE_ORANGE_1)
-		doTransformItem(item.uid, item.itemid - 1)
-
-		doSendMagicEffect(fromPosition, CONST_ME_POFF)
-		return true
-	end
-
-	if(food[item.itemid] ~= nil) then
+	if food[item.itemid] ~= nil then
 		if (getPlayerFood(cid) + food[item.itemid][1]) >= 400 then
 			doPlayerSendCancel(cid, "You are full.")
 		else
-			doPlayerFeed(cid, food[item.itemid][1])
+			doPlayerFeed(cid, food[item.itemid][1] * 4)
 			doCreatureSay(cid, food[item.itemid][2], TALKTYPE_ORANGE_1)
 			doRemoveItem(item.uid, 1)
 		end
-		return TRUE
+		return true
 	end
-	return FALSE
+	return false
 end

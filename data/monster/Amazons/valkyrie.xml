@@ -47,7 +47,7 @@
 		<item id="12399" chance="5555"/><!-- girlish hair decoration -->
 		<item id="3965" chance="5000"/><!-- hunting spear -->
 		<item id="12400" chance="3333"/><!-- protective charm -->
-		<item id="2200" chance="1162"/><!-- protection amulet -->
+		<item id="2200" subtype="250" chance="1162"/><!-- protection amulet -->
 		<item id="2463" chance="813"/><!-- plate armor -->
 		<item id="2229" chance="735"/><!-- skull -->
 		<item id="7618" chance="526"/><!-- health potion -->
