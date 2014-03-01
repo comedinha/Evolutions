@@ -21,7 +21,7 @@ function onModalWindow(cid, modalWindowId, buttonId, choiceId)
 				for i = 0, #items do
 				if (items[i].chance > math.random(1, 2)) then
 					doPlayerAddItem(cid, items[i].id, items[i].count)
-					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Seu Item é "..getItemNameById(items[i].id).."!")
+					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Seu Item é "..getItemName(items[i].id).."!")
 					end
 				end
 			end

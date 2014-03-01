@@ -283,7 +283,7 @@
 	
 	<!-- Creating -->
 	<action itemid="16018" script="other/artistic.lua"/> -- Artistc
-	<action itemid="6277" script="other/createfood.lua"/> -- Create Foods
+	<action itemid="6277" script="other/createbread.lua"/> -- Create Foods
 	<action itemid="8848" script="other/cookie.lua"/> -- Create Cookie
 	
 	<!-- Doors -->
