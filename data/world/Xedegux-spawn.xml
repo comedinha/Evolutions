@@ -12170,13 +12170,17 @@
 		<monster name="Behemoth" x="-10" y="-2" z="8" spawntime="60" />
 		<monster name="Cyclops" x="-9" y="-1" z="8" spawntime="60" />
 		<monster name="Giant Spider" x="8" y="0" z="8" spawntime="60" />
-		<monster name="Banshee" x="-7" y="1" z="8" spawntime="30" />
-		<monster name="Hero" x="-6" y="1" z="8" spawntime="60" />
+		<monster name="Demon" x="-7" y="1" z="8" spawntime="60" />
+		<monster name="Demon" x="-6" y="1" z="8" spawntime="60" />
 		<monster name="spider" x="8" y="1" z="8" spawntime="60" />
 		<monster name="Warlock" x="-7" y="2" z="8" spawntime="30" />
 		<monster name="Demon" x="-6" y="4" z="8" spawntime="30" />
 		<monster name="Insectoid Scout" x="4" y="4" z="8" spawntime="30" />
 		<monster name="Spidris" x="5" y="4" z="8" spawntime="30" />
+		<monster name="Tarantula" x="-2" y="5" z="8" spawntime="60" />
+		<monster name="spider" x="0" y="5" z="8" spawntime="60" />
+		<monster name="Giant Spider" x="-2" y="6" z="8" spawntime="60" />
+		<monster name="Tarantula" x="-1" y="6" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="42" centery="48" centerz="8" radius="5">
 		<monster name="Carrion Worm" x="4" y="-1" z="8" spawntime="60" />

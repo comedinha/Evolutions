@@ -41,7 +41,8 @@ function getArenaMonsterIdByName(name)
 end
 
 function onKill(cid, target)
-        print(target)
+        print('target')
+	print(target)
 	local room = getArenaMonsterIdByName(getCreatureName(target))
 	if room > 0 then
 		setPlayerStorageValue(cid, room, 1)

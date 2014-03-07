@@ -1049,36 +1049,12 @@
 	<movevent event="StepIn" actionid="15000" script="offlinetrainingtile.lua"/>
 	<movevent event="StepIn" fromaid="50001" toaid="50075" script="mensagens.lua"/>
 	<movevent event="StepIn" actionid="16000" script="offlinetraining.lua"/>
-	<movevent event="StepIn" actionid="16001" script="inqstorage.lua"/>
-	<movevent event="StepIn" actionid="16003" script="inqstorage.lua"/>
-	<movevent event="StepIn" actionid="16005" script="inqstorage.lua"/>
-	<movevent event="StepIn" actionid="16007" script="inqstorage.lua"/>
-	<movevent event="StepIn" actionid="16009" script="inqstorage.lua"/>
-	<movevent event="StepIn" actionid="16011" script="inqstorage.lua"/>
-	<movevent event="StepIn" actionid="16002" script="inqteleport.lua"/>
-	<movevent event="StepIn" actionid="16004" script="inqteleport.lua"/>
-	<movevent event="StepIn" actionid="16006" script="inqteleport.lua"/>
-	<movevent event="StepIn" actionid="16008" script="inqteleport.lua"/>
-	<movevent event="StepIn" actionid="16010" script="inqteleport.lua"/>
-	<movevent event="StepIn" actionid="16012" script="inqteleport.lua"/>
+	<movevent event="StepIn" fromaid="16001" toaid="16009" script="inqstorage.lua"/>
+	<movevent event="StepIn" fromaid="16011" toaid="16019" script="inqteleport.lua"/>
 	<movevent event="StepIn" fromaid="17001" toaid="17075" script="teleportarea.lua"/>
 	<movevent event="StepIn" actionid="18000" script="teleportback.lua"/>
-	<movevent event="StepIn" actionid="18001" script="tilestorage.lua"/>
-	<movevent event="StepIn" actionid="18003" script="tilestorage.lua"/>
-	<movevent event="StepIn" actionid="18005" script="tilestorage.lua"/>
-	<movevent event="StepIn" actionid="18007" script="tilestorage.lua"/>
-	<movevent event="StepIn" actionid="18009" script="tilestorage.lua"/>
-	<movevent event="StepIn" actionid="18011" script="tilestorage.lua"/>
-	<movevent event="StepIn" actionid="18013" script="tilestorage.lua"/>
-	<movevent event="StepIn" actionid="18015" script="tilestorage.lua"/>
-	<movevent event="StepIn" actionid="18002" script="teleport.lua"/>
-	<movevent event="StepIn" actionid="18004" script="teleport.lua"/>
-	<movevent event="StepIn" actionid="18006" script="teleport.lua"/>
-	<movevent event="StepIn" actionid="18008" script="teleport.lua"/>
-	<movevent event="StepIn" actionid="18010" script="teleport.lua"/>
-	<movevent event="StepIn" actionid="18012" script="teleport.lua"/>
-	<movevent event="StepIn" actionid="18014" script="teleport.lua"/>
-	<movevent event="StepIn" actionid="18016" script="teleport.lua"/>
+	<movevent event="StepIn" fromaid="18001" toaid="18075" script="teleport.lua"/>
+	<movevent event="StepIn" fromaid="19001" toaid="19075" script="tilestorage.lua"/>
 
 	<!-- Arena -->
 	<movevent event="StepIn" actionid="42360" script="arenagoblet.lua"/>

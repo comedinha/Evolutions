@@ -1,7 +1,7 @@
 function onStepIn(cid, item, position, fromPosition)
 	local piso = {
 		action = item.actionid,
-		storage = item.actionid +1,
+		storage = item.actionid -1000,
 	}
 	if(item.actionid == piso.action) then
 		if(not isPlayer(cid)) then

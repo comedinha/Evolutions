@@ -54,7 +54,7 @@ function onStepIn(cid, item, position, fromPosition)
 					doRemoveCreature(monster_uid)
 				end
 			end
-			local spawn_pos = getThingPos(item.uid)
+			local spawn_pos = getThingPos(arena_room)
 			local monster = doSummonCreature(arena_monsters[arena_room+getPlayerStorageValue(cid, 42355)*10], {x=spawn_pos.x-1,y=spawn_pos.y-1,z=spawn_pos.z})
 			setGlobalStorageValue(arena_room+100, monster)
 			doTeleportThing(cid, spawn_pos, TRUE)
@@ -88,7 +88,7 @@ function checkArenaRooms(param)
 				setGlobalStorageValue(i, 0)
 				doPlayerSendTextMessage(player,MESSAGE_STATUS_CONSOLE_ORANGE,'You have been kicked from arena! You have only ' .. arena_room_max_time .. ' seconds for one room.')
 			elseif player_storage - 10 <= os.time() then
-				doPlayerSendTextMessage(player,MESSAGE_EVENT_DEFAULT,'Masz ' .. player_storage - os.time() .. ' sekund, zeby przejsc do kolejnego pokoju!')
+				doPlayerSendTextMessage(player,MESSAGE_EVENT_DEFAULT,'You have ' .. player_storage - os.time() .. ' seconds to go to the next room!')
 			end
 		else
 			setGlobalStorageValue(i, 0)
