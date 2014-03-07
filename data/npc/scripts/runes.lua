@@ -68,10 +68,10 @@ function creatureSayCallback(cid, type, msg)
 	if(msgcontains(msg, 'first rod') or msgcontains(msg, 'first wand')) then
 		if(isSorcerer(cid) or isDruid(cid)) then
 			if(getPlayerStorageValue(cid, 30002) <= 0) then
-				selfSay('So you ask me for a {' .. getItemNameById(items[getPlayerVocation(cid)]) .. '} to begin your advanture?', cid)
+				selfSay('So you ask me for a {' .. getItemName(items[getPlayerVocation(cid)]) .. '} to begin your advanture?', cid)
 				talkState[talkUser] = 1
 			else
-				selfSay('What? I have already gave you one {' .. getItemNameById(items[getPlayerVocation(cid)]) .. '}!', cid)
+				selfSay('What? I have already gave you one {' .. getItemName(items[getPlayerVocation(cid)]) .. '}!', cid)
 			end
 		else
 			selfSay('Sorry, you aren\'t a druid either a sorcerer.', cid)
@@ -110,7 +110,7 @@ function playerBuyAddonNPC(cid, message, keywords, parameters, node)
         if table.maxn(itemsTable) > 0 then
             for i = 1, table.maxn(itemsTable) do
                 local item = itemsTable[i]
-                items_list = items_list .. item[2] .. ' ' .. getItemNameById(item[1])
+                items_list = items_list .. item[2] .. ' ' .. getItemName(item[1])
                 if i ~= table.maxn(itemsTable) then
                     items_list = items_list .. ', '
                 end

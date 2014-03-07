@@ -87,7 +87,7 @@ function playerBuyAddonNPC(cid, message, keywords, parameters, node)
         if table.maxn(itemsTable) > 0 then
             for i = 1, table.maxn(itemsTable) do
                 local item = itemsTable[i]
-                items_list = items_list .. item[2] .. ' ' .. getItemNameById(item[1])
+                items_list = items_list .. item[2] .. ' ' .. getItemName(item[1])
                 if i ~= table.maxn(itemsTable) then
                     items_list = items_list .. ', '
                 end

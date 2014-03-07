@@ -18,5 +18,5 @@
 	
 	<!-- Arena -->
 	<event type="login" name="Arena" script="arena.lua"/>
-	<event type="kill" name="Arena" script="arena.lua"/>
+	<event type="kill" name="ArenaKill" script="arena.lua"/>
 </creaturescripts>

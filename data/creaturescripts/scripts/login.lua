@@ -14,9 +14,10 @@ function onLogin(cid)
 	end
 	player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
 
-	player:registerEvent(cid, "PlayerDeath")
-	player:registerEvent(cid, "Arena")
-	player:registerEvent(cid, "MapMark")
-	player:registerEvent(cid, "FirstItems")
+	player:registerEvent("PlayerDeath")
+	player:registerEvent("Arena")
+	player:registerEvent("ArenaKill")
+	player:registerEvent("MapMark")
+	player:registerEvent("FirstItems")
 	return true
 end

@@ -21,7 +21,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 	
 		local additem = doPlayerAddItemEx(cid, reward, 0)
 		if additem == RETURNVALUE_NOERROR then
-			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You found ' .. getItemNameById(getThing(reward).itemid) .. '.')
+			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You found ' .. getItemName(getThing(reward).itemid) .. '.')
 			setPlayerStorageValue(cid, 42361, 1)
 		else
 			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You do not have enough place in your backpack or lifting, in order to take away this object.')
@@ -53,7 +53,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		end
 		local additem = doPlayerAddItemEx(cid, reward, 0)
 		if additem == RETURNVALUE_NOERROR then
-			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You found ' .. getItemNameById(getThing(reward).itemid) .. '.')
+			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You found ' .. getItemName(getThing(reward).itemid) .. '.')
 			setPlayerStorageValue(cid, 42371, 1)
 		else
 			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You do not have enough place in your backpack or lifting, in order to take away this object.')
@@ -82,11 +82,11 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		end
 		local additem = doPlayerAddItemEx(cid, reward, 0)
 		if additem == RETURNVALUE_NOERROR then
-			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You found ' .. getItemNameById(getThing(reward).itemid) .. '.')
+			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You found ' .. getItemName(getThing(reward).itemid) .. '.')
 			setPlayerStorageValue(cid, 42381, 1)
 		else
 			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You do not have enough place in your backpack or lifting, in order to take away this object.')
 		end
 	end
-	return TRUE
+	return true
 end
