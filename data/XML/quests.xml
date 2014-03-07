@@ -17,7 +17,7 @@
 			<missionstate id="1" description="You've mastered all difficulty levels in the arena, congratulations!"/>
 		</mission>
 	</quest>
-	<quest name="The Specials Quests" startstorageid="11551" startstoragevalue="1">
+	<quest name="The Specials Quests" startstorageid="11551" startstoragevalue="1" endvalue="75">
 		<mission name="1 - Surprise" storageid="60001" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce fez a quest 1 e obteve uma red bag!"/>
 		</mission>
@@ -244,7 +244,7 @@
 			<missionstate id="1" description="Voce fez a quest 75 e obteve um tempest shield!"/>
 		</mission>
 	</quest>
-	<quest name="The Portals" startstorageid="11552" startstoragevalue="0" endvalue="1">
+	<quest name="The Portals" startstorageid="11552" startstoragevalue="0" endvalue="8">
 		<mission name="Portal 1" storageid="18001" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce liberou o primeiro portal."/>
 		</mission>
@@ -257,16 +257,16 @@
 		<mission name="Portal 4" storageid="18004" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce liberou o quarto portal."/>
 		</mission>
-		<mission name="Portal 6" storageid="18005" startvalue="0" endvalue="1">
+		<mission name="Portal 5" storageid="18005" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce liberou o quinto portal."/>
 		</mission>
-		<mission name="Portal 7" storageid="18006" startvalue="0" endvalue="1">
+		<mission name="Portal 6" storageid="18006" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce liberou o sexto portal."/>
 		</mission>
-		<mission name="Portal 8" storageid="18007" startvalue="0" endvalue="1">
+		<mission name="Portal 7" storageid="18007" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce liberou o setimo portal."/>
 		</mission>
-		<mission name="Portal 9" storageid="18008" startvalue="0" endvalue="1">
+		<mission name="Portal 8" storageid="18008" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce liberou o oitavo portal."/>
 		</mission>
 	</quest>
