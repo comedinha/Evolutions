@@ -84,6 +84,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		if additem == RETURNVALUE_NOERROR then
 			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You found ' .. getItemName(getThing(reward).itemid) .. '.')
 			setPlayerStorageValue(cid, 42381, 1)
+			setPlayerStorageValue(cid, 42356, 1)
 		else
 			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR,'You do not have enough place in your backpack or lifting, in order to take away this object.')
 		end

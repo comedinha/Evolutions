@@ -45,7 +45,6 @@ function onStepIn(cid, item, position, fromPosition)
 		checkArenaRooms({})
 	end
 	local arena_room = item.actionid
-	local player_arena = getPlayerStorageValue(cid, 42355)
 	if getPlayerStorageValue(cid, arena_room+getPlayerStorageValue(cid, 42355)*10-1) == 1 or arena_room+getPlayerStorageValue(cid, 42355)*10-1 == 42299 then
 		if getGlobalStorageValue(cid, arena_room) == -1 or getGlobalStorageValue(cid, arena_room) == 0 then
 			local monster_uid = getGlobalStorageValue(arena_room+100)
@@ -60,6 +59,10 @@ function onStepIn(cid, item, position, fromPosition)
 			doTeleportThing(cid, spawn_pos, TRUE)
 			setGlobalStorageValue(arena_room, cid)
 			setGlobalStorageValue(arena_room-1, 0)
+			if getGlobalStorageValue(cid, 42356) == -1 then
+				setPlayerStorageValue(cid, 42356, 0)
+				setPlayerStorageValue(cid, 42357, 1)
+			end
 			setPlayerStorageValue(cid, 42350, os.time()+arena_room_max_time)
 		else
 			doTeleportThing(cid, fromPosition, TRUE)

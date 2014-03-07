@@ -65,7 +65,7 @@ function onLogin(cid)
 		doPlayerAddItem(cid, 2173, 1, FALSE) -- amulet of loss
 		doPlayerAddItem(cid, 2643, 1, FALSE) -- leather boots
 		doPlayerAddItem(cid, 2647, 1, FALSE) -- plate legs
-		setPlayerStorageValue(cid, 11551, 1)
+		setPlayerStorageValue(cid, 11551, 0)
 	end
 	return true
 end

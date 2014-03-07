@@ -582,6 +582,7 @@ function onUse(cid, item, frompos, item2, topos)
 		else
 			doPlayerSendTextMessage(cid,25,"It is empty.")
 		end
-	return TRUE
 	end
+	setPlayerStorageValue(cid, 11551, 1)
+	return true
 end

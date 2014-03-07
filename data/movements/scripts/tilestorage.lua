@@ -12,6 +12,7 @@ function onStepIn(cid, item, position, fromPosition)
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Você descobriu esta área!")
 			setPlayerStorageValue(cid,piso.action,1)
 			setPlayerStorageValue(cid,piso.storage,1)
+			setPlayerStorageValue(cid, 11552, 1)
 		end
 		return true
 	end
