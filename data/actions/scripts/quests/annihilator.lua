@@ -1,8 +1,8 @@
 local playerPosition = {
-	{x = 247, y = 72, z = 7, stackpos = STACKPOS_TOP_CREATURE},
-	{x = 246, y = 72, z = 7, stackpos = STACKPOS_TOP_CREATURE},
-	{x = 245, y = 72, z = 7, stackpos = STACKPOS_TOP_CREATURE},
-	{x = 244, y = 72, z = 7, stackpos = STACKPOS_TOP_CREATURE}
+	{x = 185, y = 86, z = 8, stackpos = STACKPOS_TOP_CREATURE},
+	{x = 186, y = 86, z = 8, stackpos = STACKPOS_TOP_CREATURE},
+	{x = 187, y = 86, z = 8, stackpos = STACKPOS_TOP_CREATURE},
+	{x = 188, y = 86, z = 8, stackpos = STACKPOS_TOP_CREATURE}
 }
 
 local newPosition = {
