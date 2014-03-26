@@ -20,7 +20,7 @@ function onSay(cid, words, param)
 				doRemoveItem(itemgate.uid)
 			end
 			for _, tmpPlayer in ipairs(Game.getPlayers()) do
-				Player(cid):channelSay(tmpPlayer, TALKTYPE_BROADCAST, "Event created! Portal open in temple.", 0)
+				Player(tmpPlayer):channelSay(cid, TALKTYPE_BROADCAST, "Event created! Portal open in temple.", 0)
 			end
 		else
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "The portal is already open.")
@@ -33,7 +33,7 @@ function onSay(cid, words, param)
 				doRemoveItem(item.uid)
 			end
 			for _, tmpPlayer in ipairs(Game.getPlayers()) do
-				Player(cid):channelSay(tmpPlayer, TALKTYPE_BROADCAST, "Portal closed!", 0)
+				Player(tmpPlayer):channelSay(cid, TALKTYPE_BROADCAST, "Portal closed!", 0)
 			end
 		else
 			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "The portal is not open.")

@@ -4,17 +4,18 @@ local messages = {
 "Dica: Explore o mapa e você poderá encontrar grandes riquezas.",
 "Dica: Não se engane, os portais abaixo do templo de dorion não são as unicas áreas para caçar, há centenas de outros lugares em Dorion e em outras cidades!",
 "Alissow Sv 5.0 =D",
-"Quer ser premium? Fale trade para o npc alissow e compre o seu!"
+"Quer ser premium? Fale trade para o npc alissow e compre o seu!",
+"Dica: Voce ja andou por Venonh? é muito legal por lá"
 }
 
 local i = 0
-function onTime()
+function onThink(interval, lastExecution)
 	local message = messages[(i % #messages) + 1]
 	-- broadcastMessage("Obrigado por entrar no nosso TS!", MESSAGE_STATUS_CONSOLE_ORANGE) --Avalible for TestServ
 	broadcastMessage("" .. message, MESSAGE_STATUS_CONSOLE_ORANGE)
-	broadcastMessage("Encontrou algum bug? /bugreport e resolveremos", MESSAGE_STATUS_CONSOLE_ORANGE)
+	broadcastMessage("Encontrou algum bug? !bugreport. Ficaremos gratos e você pode ser até recompensado em nosso shop!", MESSAGE_STATUS_CONSOLE_ORANGE)
 	-- broadcastMessage("Exclusivo TS: Digite /testserv e ganhe 1kk no banco!", MESSAGE_STATUS_CONSOLE_ORANGE) --Avalible for TestServ
 
 	i = i + 1
-	return TRUE
+	return true
 end

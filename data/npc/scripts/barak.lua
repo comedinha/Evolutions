@@ -33,7 +33,7 @@ function playerBuyAddonNPC(cid, message, keywords, parameters, node)
     elseif (parameters.confirm == true) then
 		local addonNode = node:getParent()
 		local addoninfo = addonNode:getParameters()
-		if (getPlayerStorageValue(cid, parameters.storageID) == 1) then
+		if (getPlayerStorageValue(cid, addoninfo.storageID) == 1) then
 			doPlayerAddOutfit(cid, addoninfo.outfit_male, addoninfo.addon)
 			doPlayerAddOutfit(cid, addoninfo.outfit_female, addoninfo.addon)
 			setPlayerStorageValue(cid,addoninfo.storageGain,1)
@@ -54,10 +54,10 @@ end
 local noNode = KeywordNode:new({'no'}, playerBuyAddonNPC, {decline = true})
 local yesNode = KeywordNode:new({'yes'}, playerBuyAddonNPC, {confirm = true})
 
-local outfit_node = keywordHandler:addKeyword({'first'}, playerBuyAddonNPC, {premium = false, quest = 'anhi', outfit_female = 433, outfit_male = 432, addon = 1, storageID = 5010, storageGain = 10065}) 
+local outfit_node = keywordHandler:addKeyword({'first'}, playerBuyAddonNPC, {premium = false, quest = 'annihilator', outfit_female = 542, outfit_male = 541, addon = 1, storageID = 5010, storageGain = 10065}) 
 	outfit_node:addChildKeywordNode(yesNode) 
 	outfit_node:addChildKeywordNode(noNode) 
-local outfit_node = keywordHandler:addKeyword({'second'}, playerBuyAddonNPC, {premium = false, quest = 'demon oak', outfit_female = 433, outfit_male = 432, addon = 2, storageID = 50090, storageGain = 10066}) 
+local outfit_node = keywordHandler:addKeyword({'second'}, playerBuyAddonNPC, {premium = false, quest = 'demon oak', outfit_female = 542, outfit_male = 541, addon = 2, storageID = 50090, storageGain = 10066}) 
 	outfit_node:addChildKeywordNode(yesNode) 
 	outfit_node:addChildKeywordNode(noNode) 
 	

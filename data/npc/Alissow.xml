@@ -12,12 +12,12 @@
         <parameter key="keyword_reply4" value="No server existem magias para todos os leveis, tanto as originais quanto as novas, de ataque, defesa, heal, party, etc. Voce pode comprar um Spellbook no NPC Dark Rodo para ver todas as magias que existem no server." />
         <parameter key="keyword_reply5" value="Para adquirir a promotion fale com o King Arthas. Diga Hail King e depois Promotion, ele ira te dizer quanto custa." />
         <parameter key="keyword_reply6" value="Para comprar premium fale {hi} para mim e compre um premium scroll. 90 dias custam 5000 gold e voce pode comprar ate 360 dias de premium." />
-	<parameter key="keyword_reply7" value="Os addons podem ser conquistados em quests ou falando com os npcs, basta dizer {addon}. Você precisa insistir." />
-	<parameter key="keyword_reply8" value="As montarias podem ser conseguidas com a NPC Julie e com monstros que podem ser encontrados pelo mapa." />
-	<parameter key="keyword_reply9" value="Existem alguns npcs que vendem bless, eles estão espalhados pela cidade." />
+		<parameter key="keyword_reply7" value="Os addons podem ser conquistados em quests ou falando com os npcs, basta dizer {addon}. Você precisa insistir." />
+		<parameter key="keyword_reply8" value="As montarias podem ser conseguidas com a NPC Julie e com monstros que podem ser encontrados pelo mapa." />
+		<parameter key="keyword_reply9" value="Existem alguns npcs que vendem bless, eles estão espalhados pela cidade." />
 
         <parameter key="module_shop" value="1"/>
-        <parameter key="shop_buyable" value="aol,2173,10000;premium scroll,16101,5000"/> 
-        <parameter key="shop_sellable" value="aol,2173,5000;premium scroll,16101,2500"/> 
+        <parameter key="shop_buyable" value="aol,2173,10000;premium scroll,16101,750000"/> 
+        <parameter key="shop_sellable" value="aol,2173,5000;premium scroll,16101,500000"/> 
     </parameters>
 </npc>

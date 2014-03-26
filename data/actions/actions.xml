@@ -261,25 +261,19 @@
 	<!-- Quests -->
 	<action uniqueid="3540" script="quests/vochest.lua"/> -- Vocations
 	<action fromuid="60001" touid="60075" script="quests/scripted.lua"/>  -- Quests gerais
-	<action uniqueid="30016" script="quests/DHQ.lua"/>  -- ?
-	<action uniqueid="5567" script="quests/challenge.lua"/>  -- ?
+	<action uniqueid="30016" script="quests/DHQ.lua"/>  -- remove stone
 	<action fromuid="5610" touid="5618" script="quests/inquisition.lua" /> -- inquisition
 	<action fromaid="42361" toaid="42365" script="quests/arenareward.lua"/> -- Arena
 	<action fromaid="42371" toaid="42375" script="quests/arenareward.lua"/> -- Arena
 	<action fromaid="42381" toaid="42385" script="quests/arenareward.lua"/> -- Arena
-	<action uniqueid="17756" script="quests/apocaquest.lua" /> -- Spirit cloak
-	<action uniqueid="17757" script="quests/murderess.lua" /> -- Greenwood coat
-	<action uniqueid="5997" script="quests/bomb.lua"/> -- Bomb Quest
+	<action uniqueid="5997" script="quests/apocaquest.lua"/> -- Apoca Quest
 	<action fromuid="12901" touid="12904" script="quests/DOQChests.lua" /> -- Demon legs (Demon Oak)
 	<action itemid="8293" script="quests/demonoak.lua"/> -- (Demon Oak)
 	<action fromuid="5006" touid="5009" script="quests/annichest.lua" /> -- Anni Quest
 	<action fromuid="5306" touid="5308" script="quests/poichest.lua" /> -- POI Quest
-	<action actionid="3542" script="quests/yalahari.lua"/> -- Yalahari Quest
 	<action uniqueid="1900" script="quests/desert quest.lua" /> -- Desert Quest
 	<action fromuid="15901" touid="15904" script="quests/solaraxequest.lua" /> -- Solar axe
-	<action uniqueid="14656" script="quests/firewalker.lua" /> -- firewalker boots
-	<action uniqueid="17956" script="quests/blue legs.lua" /> -- Blue legs
-	<action uniqueid="8977" script="quests/teltime.lua" /> - Tel Time
+	<action uniqueid="8977" script="quests/teltime.lua" /> - Tell Time
 	
 	<!-- Creating -->
 	<action itemid="16018" script="other/artistic.lua"/> -- Artistc
@@ -291,6 +285,24 @@
 	<action actionid="42366" script="other/arenadoors.lua"/> -- Arena
 	<action actionid="42376" script="other/arenadoors.lua"/> -- Arena
 	<action actionid="42386" script="other/arenadoors.lua"/> -- Arena
+	
+	<!-- Taming Items -->
+    <action itemid="5907" script="other/taming.lua"/>
+	<action itemid="13247" script="other/taming.lua"/>
+	<action fromid="13291" toid="13295" script="other/taming.lua"/>
+	<action itemid="13298" script="other/taming.lua"/>
+	<action itemid="13305" script="other/taming.lua"/>
+	<action itemid="13307" script="other/taming.lua"/>
+	<action itemid="13508" script="other/taming.lua"/>
+	<action fromid="13535" toid="13539" script="other/taming.lua"/>
+	<action fromid="13938" toid="13939" script="other/taming.lua"/>
+	<action itemid="13498" script="other/taming.lua"/>
+	<action fromid="15545" toid="15546" script="other/taming.lua"/>
+	<action fromid="18447" toid="18449" script="other/taming.lua"/>
+	<action itemid="18516" script="other/taming.lua"/>
+	<action itemid="20138" script="other/taming.lua"/>
+	<action itemid="21452" script="other/taming.lua"/>
+	<action itemid="22608" script="other/taming.lua"/>
 	
 	<!-- Other -->
 	<action uniqueid="55100" script="other/DOQgravestone.lua" /> -- (Demon Oak)
@@ -304,4 +316,7 @@
 	<action actionid="4851" script="other/castlelever.lua"/> -- Castle Mountain
 	<action actionid="4840" script="other/minalever.lua"/> -- Minas Mountain
 	<action actionid="4841" script="other/minalever.lua"/> -- Minas Mountain
+	<action itemid="16101" script="other/premium.lua"/> -- Premium Scroll
+	<action itemid="6561" script="other/checkblessings.lua"/>
+	<action itemid="12424" script="other/checkblessings.lua"/>
 </actions>

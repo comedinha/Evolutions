@@ -167,7 +167,7 @@ function onUse(cid, item, frompos, item2, topos)
 	elseif item.uid == 60019 then
 		if getPlayerStorageValue(cid,60019) == -1 then
 			doPlayerSendTextMessage(cid,25,"You have found a ape fur.")
-			doPlayerAddItem(cid,5883,1)
+			doPlayerAddItem(cid,5883,100)
 			setPlayerStorageValue(cid, 11551, getPlayerStorageValue(cid, 11551)+1)
 			setPlayerStorageValue(cid,60019,1)
 		else
@@ -455,6 +455,15 @@ function onUse(cid, item, frompos, item2, topos)
 		else
 			doPlayerSendTextMessage(cid,25,"It is empty.")
 		end
+	elseif item.uid == 60050 then
+		if getPlayerStorageValue(cid,60050) == -1 then
+			doPlayerSendTextMessage(cid,25,"You have found a blue legs.")
+			doPlayerAddItem(cid,7730,1)
+			setPlayerStorageValue(cid, 11551, getPlayerStorageValue(cid, 11551)+1)
+			setPlayerStorageValue(cid,60050,1)
+		else
+			doPlayerSendTextMessage(cid,25,"It is empty.")
+		end
 	elseif item.uid == 60051 then
 		if getPlayerStorageValue(cid,60051) == -1 then
 			doPlayerSendTextMessage(cid,25,"You have found a helmet of the ancients.")
@@ -518,6 +527,15 @@ function onUse(cid, item, frompos, item2, topos)
 		else
 			doPlayerSendTextMessage(cid,25,"It is empty.")
 		end
+	elseif item.uid == 60058 then
+		if getPlayerStorageValue(cid,60058) == -1 then
+			doPlayerSendTextMessage(cid,25,"You have found a spirit cloak.")
+			doPlayerAddItem(cid,8870,1)
+			setPlayerStorageValue(cid, 11551, getPlayerStorageValue(cid, 11551)+1)
+			setPlayerStorageValue(cid,60058,1)
+		else
+			doPlayerSendTextMessage(cid,25,"It is empty.")
+		end
 	elseif item.uid == 60059 then
 		if getPlayerStorageValue(cid,60059) == -1 then
 			doPlayerSendTextMessage(cid,25,"You have found a golden armor.")
@@ -554,12 +572,30 @@ function onUse(cid, item, frompos, item2, topos)
 		else
 			doPlayerSendTextMessage(cid,25,"It is empty.")
 		end
+	elseif item.uid == 60063 then
+		if getPlayerStorageValue(cid,60063) == -1 then
+			doPlayerSendTextMessage(cid,25,"You have found a greenwood coat.")
+			doPlayerAddItem(cid,8869,1)
+			setPlayerStorageValue(cid, 11551, getPlayerStorageValue(cid, 11551)+1)
+			setPlayerStorageValue(cid,60063,1)
+		else
+			doPlayerSendTextMessage(cid,25,"It is empty.")
+		end
 	elseif item.uid == 60064 then
 		if getPlayerStorageValue(cid,60064) == -1 then
 			doPlayerSendTextMessage(cid,25,"You have found a knight legs.")
 			doPlayerAddItem(cid,2477,1)
 			setPlayerStorageValue(cid, 11551, getPlayerStorageValue(cid, 11551)+1)
 			setPlayerStorageValue(cid,60064,1)
+		else
+			doPlayerSendTextMessage(cid,25,"It is empty.")
+		end
+	elseif item.uid == 60065 then
+		if getPlayerStorageValue(cid,60065) == -1 then
+			doPlayerSendTextMessage(cid,25,"You have found a firewalker boots.")
+			doPlayerAddItem(cid,9933,1)
+			setPlayerStorageValue(cid, 11551, getPlayerStorageValue(cid, 11551)+1)
+			setPlayerStorageValue(cid,60065,1)
 		else
 			doPlayerSendTextMessage(cid,25,"It is empty.")
 		end

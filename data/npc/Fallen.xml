@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Fallen" script="tapete fallen.lua" walkinterval="5000" floorchange="0" speechbubble="1">
+	<health now="150" max="150"/>
+	<look type="128" head="114" body="240" legs="114" feet="114" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|! Eu posso te levar voando para {infernium}, {flam}, {saari} e {dorion}. Para onde deseja voar?" />
+		<parameter key="module_keywords" value="1" />
+        <parameter key="keywords" value="mistyc" />
+		<parameter key="keyword_reply1" value="Foi muito horrivel, nao quero comentar sobre o assunto. Nao posso te levar mais la." />
+	</parameters>
+</npc>

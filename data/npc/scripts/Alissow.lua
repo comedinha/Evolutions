@@ -19,8 +19,8 @@ function greetCallback(cid)
 return true
 end
 
-local node1 = keywordHandler:addKeyword({'bless'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to buy the first blessing for 2000 (plus level depending amount) gold?'})
-	node1:addChildKeyword({'yes'}, StdModule.bless, {npcHandler = npcHandler, number = 6, premium = true, baseCost = 2000, levelCost = 200, startLevel = 1, endLevel = 30})
+local node1 = keywordHandler:addKeyword({'bless'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to buy the sixth blessing (Twist of Fate) for 2000 (plus level depending amount) gold?'})
+	node1:addChildKeyword({'yes'}, StdModule.bless, {npcHandler = npcHandler, number = 6, premium = false, baseCost = 2000, levelCost = 200, startLevel = 1, endLevel = 30})
 	node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Too expensive, eh?'})
 	
 function creatureSayCallback(cid, type, msg)
@@ -30,11 +30,11 @@ function creatureSayCallback(cid, type, msg)
 
 	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
 	if(msgcontains(msg, 'morar') and msgcontains(msg, 'aqui') or msgcontains(msg, 'set') and msgcontains(msg, 'my') and msgcontains(msg, 'town')) then
-		selfSay('Você deseja morar em Dorion?', cid)
+		selfSay('Voce deseja morar em Dorion?', cid)
 		talkState[talkUser] = 1
 	elseif(msgcontains(msg, 'yes')) then
 		if(talkState[talkUser] == 1) then
-			selfSay('Aqui agora você irá renascer em Dorion!', cid)
+			selfSay('Aqui agora você ira renascer em Dorion!', cid)
 			doPlayerSetTown(cid, 1)
 		end
 		talkState[talkUser] = 0

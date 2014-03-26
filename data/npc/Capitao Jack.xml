@@ -1,0 +1,7 @@
+<npc name="Capitao Jack" script="capitao jack.lua" walkinterval="5000" floorchange="0" speechbubble="1">
+	<health now="150" max="150"/>
+	<look type="129" head="114" body="50" legs="114" feet="114" corpse="2212"/>
+	<parameters>
+		<parameter key="message_greet" value="Ola |PLAYERNAME|! Eu posso te levar para {Dorion}, {Yalahar}, {Alfon}, {Venonh}, {Anknor}, {Roshamuul} e {Smallville}. Onde deseja ir?" />
+	</parameters>
+</npc>

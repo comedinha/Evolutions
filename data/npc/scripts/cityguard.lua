@@ -24,7 +24,7 @@ local function updateTarget()
 	if(not isPlayer(target)) then
 		goToOrigPos()
 	elseif(not isSkulled(target)) then
-		say("Now, behave in the future.")
+		selfSay("Now, behave in the future.")
 		goToOrigPos()
 	end
 
@@ -38,7 +38,7 @@ local function updateTarget()
 						if(selfFollow(_target)) then
 							target = _target
 							if(target ~= prevTarget) then
-								say("We do not tolerate people like you here!")
+								selfSay("We do not tolerate people like you here!")
 							end
 
 							prevTarget = target
@@ -83,7 +83,7 @@ function onThink()
 	end
 
 	if(math.abs(myPos.x - origPos.x) > maxChaseDistance or math.abs(myPos.y - origPos.y) > maxChaseDistance) then
-		say("I'll catch you next time.")
+		selfSay("I'll catch you next time.")
 		goToOrigPos()
 		return
 	end
@@ -93,7 +93,7 @@ function onThink()
 	end
 
 	if(os.clock() - lastAttack > followTimeout) then
-		say("You got me this time, but just wait.")
+		selfSay("You got me this time, but just wait.")
 		goToOrigPos()
 		return
 	end

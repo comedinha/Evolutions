@@ -9,5 +9,5 @@
 
 	<!-- Custom -->
 	<!-- Others -->
-	<globalevent name="information" time="00:05:00" script="information.lua"/>
+	<globalevent name="information" interval="900000" script="information.lua"/>
 </globalevents>

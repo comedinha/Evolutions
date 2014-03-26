@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Pac" script="pac.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100"/>
+	<look type="131" head="43" body="76" legs="38" feet="58" addons="0"/>
+    <parameters> 
+	<parameter key="message_greet" value="Seja bem vindo |PLAYERNAME|!  Você veio atras do {bonus}? ou veio atras do umbral {upgrade}?" />
+    </parameters> 
+</npc>

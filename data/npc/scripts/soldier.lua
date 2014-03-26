@@ -1,3 +1,7 @@
+local keywordHandler = KeywordHandler:new()
+local npcHandler = NpcHandler:new(keywordHandler)
+NpcSystem.parseParameters(npcHandler)
+
 local focuses = {}
 local function isFocused(cid)
 	for i, v in pairs(focuses) do

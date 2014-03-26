@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <houses>
-	<house name="Pharao Flat I" houseid="29" entryx="278" entryy="204" entryz="7" rent="0" townid="3" size="19" />
-	<house name="Pharao Flat II" houseid="30" entryx="278" entryy="210" entryz="7" rent="0" townid="3" size="19" />
-	<house name="Pharao Flat III" houseid="31" entryx="279" entryy="204" entryz="7" rent="0" townid="3" size="24" />
-	<house name="Pharao Flat IV" houseid="32" entryx="279" entryy="210" entryz="7" rent="0" townid="3" size="24" />
-	<house name="Pharao Flat V" houseid="33" entryx="278" entryy="206" entryz="6" rent="0" townid="3" size="10" />
-	<house name="Pharao Flat VI" houseid="34" entryx="278" entryy="207" entryz="6" rent="0" townid="3" size="17" />
-	<house name="Pharao Flat VII" houseid="35" entryx="279" entryy="210" entryz="5" rent="0" townid="3" size="16" />
-	<house name="Pharao House #1" houseid="36" entryx="260" entryy="199" entryz="7" rent="0" townid="3" size="37" />
-	<house name="Pharao House #2" houseid="37" entryx="260" entryy="201" entryz="6" rent="0" townid="3" size="5" />
+	<house name="Saari Flat I" houseid="29" entryx="278" entryy="204" entryz="7" rent="0" townid="3" size="19" />
+	<house name="Saari Flat II" houseid="30" entryx="278" entryy="210" entryz="7" rent="0" townid="3" size="19" />
+	<house name="Saari Flat III" houseid="31" entryx="279" entryy="204" entryz="7" rent="0" townid="3" size="24" />
+	<house name="Saari Flat IV" houseid="32" entryx="279" entryy="210" entryz="7" rent="0" townid="3" size="24" />
+	<house name="Saari Flat V" houseid="33" entryx="278" entryy="206" entryz="6" rent="0" townid="3" size="10" />
+	<house name="Saari Flat VI" houseid="34" entryx="278" entryy="207" entryz="6" rent="0" townid="3" size="17" />
+	<house name="Saari Flat VII" houseid="35" entryx="279" entryy="210" entryz="5" rent="0" townid="3" size="16" />
+	<house name="Saari House #1" houseid="36" entryx="260" entryy="199" entryz="7" rent="0" townid="3" size="37" />
+	<house name="Saari House #2" houseid="37" entryx="260" entryy="201" entryz="6" rent="0" townid="3" size="5" />
 	<house name="Alfon Flat I" houseid="38" entryx="62" entryy="282" entryz="7" rent="0" townid="4" size="27" />
 	<house name="Alfon Flat II" houseid="39" entryx="62" entryy="287" entryz="7" rent="0" townid="4" size="27" />
 	<house name="Alfon Flat III" houseid="40" entryx="62" entryy="292" entryz="7" rent="0" townid="4" size="27" />
@@ -110,11 +110,11 @@
 	<house name="Dorion Mage Guildhall" houseid="1410" entryx="125" entryy="195" entryz="7" rent="0" guildhall="true" townid="1" size="700" />
 	<house name="Dallas House #2" houseid="1411" entryx="116" entryy="186" entryz="7" rent="0" townid="1" size="43" />
 	<house name="Dallas House #3" houseid="1412" entryx="132" entryy="183" entryz="7" rent="0" townid="1" size="26" />
-	<house name="Pharao House #3" houseid="1413" entryx="223" entryy="197" entryz="7" rent="0" townid="3" size="27" />
-	<house name="Pharao House #4" houseid="1414" entryx="216" entryy="198" entryz="7" rent="0" townid="3" size="27" />
-	<house name="Pharao House #5" houseid="1415" entryx="216" entryy="194" entryz="7" rent="0" townid="3" size="27" />
-	<house name="Pharao House #6" houseid="1416" entryx="223" entryy="195" entryz="7" rent="0" townid="3" size="27" />
-	<house name="Pharao House #7" houseid="1417" entryx="258" entryy="216" entryz="7" rent="0" townid="3" size="55" />
+	<house name="Saari House #3" houseid="1413" entryx="223" entryy="197" entryz="7" rent="0" townid="3" size="27" />
+	<house name="Saari House #4" houseid="1414" entryx="216" entryy="198" entryz="7" rent="0" townid="3" size="27" />
+	<house name="Saari House #5" houseid="1415" entryx="216" entryy="194" entryz="7" rent="0" townid="3" size="27" />
+	<house name="Saari House #6" houseid="1416" entryx="223" entryy="195" entryz="7" rent="0" townid="3" size="27" />
+	<house name="Saari House #7" houseid="1417" entryx="258" entryy="216" entryz="7" rent="0" townid="3" size="55" />
 	<house name="Dorion Paladin Guildhall" houseid="1427" entryx="33" entryy="22" entryz="7" rent="0" guildhall="true" townid="1" size="129" />
 	<house name="Mecan House #1" houseid="1428" entryx="42" entryy="18" entryz="7" rent="0" townid="1" size="24" />
 	<house name="Mecan House #2" houseid="1429" entryx="44" entryy="25" entryz="7" rent="0" townid="1" size="19" />
@@ -122,11 +122,11 @@
 	<house name="Mecan House #4" houseid="1431" entryx="59" entryy="23" entryz="7" rent="0" townid="1" size="56" />
 	<house name="Mecan House #5" houseid="1432" entryx="59" entryy="22" entryz="6" rent="0" townid="1" size="29" />
 	<house name="Mecan House #6" houseid="1433" entryx="72" entryy="24" entryz="7" rent="0" townid="1" size="48" />
-	<house name="Mountain House #1" houseid="1435" entryx="274" entryy="108" entryz="5" rent="0" townid="2" size="23" />
-	<house name="Mountain House #2" houseid="1436" entryx="274" entryy="102" entryz="5" rent="0" townid="2" size="45" />
-	<house name="Mountain House #3" houseid="1437" entryx="282" entryy="117" entryz="5" rent="0" townid="2" size="31" />
-	<house name="Mountain House #4" houseid="1438" entryx="293" entryy="120" entryz="5" rent="0" townid="2" size="36" />
-	<house name="Mountain House #5" houseid="1439" entryx="293" entryy="126" entryz="5" rent="0" townid="2" size="40" />
+	<house name="Mirand Theraan House #1" houseid="1435" entryx="274" entryy="108" entryz="5" rent="0" townid="2" size="23" />
+	<house name="Mirand Theraan House #2" houseid="1436" entryx="274" entryy="102" entryz="5" rent="0" townid="2" size="45" />
+	<house name="Mirand Theraan House #3" houseid="1437" entryx="282" entryy="117" entryz="5" rent="0" townid="2" size="31" />
+	<house name="Mirand Theraan House #4" houseid="1438" entryx="293" entryy="120" entryz="5" rent="0" townid="2" size="36" />
+	<house name="Mirand Theraan House #5" houseid="1439" entryx="293" entryy="126" entryz="5" rent="0" townid="2" size="40" />
 	<house name="Castle House #1" houseid="1440" entryx="330" entryy="129" entryz="5" rent="0" townid="2" size="14" />
 	<house name="Castle House #2" houseid="1441" entryx="330" entryy="122" entryz="5" rent="0" townid="2" size="14" />
 	<house name="Castle House #3" houseid="1442" entryx="338" entryy="122" entryz="5" rent="0" townid="2" size="14" />
@@ -135,52 +135,52 @@
 	<house name="Castle House #6" houseid="1445" entryx="330" entryy="127" entryz="4" rent="0" townid="2" size="32" />
 	<house name="Castle House #7" houseid="1446" entryx="339" entryy="127" entryz="4" rent="0" townid="2" size="31" />
 	<house name="Castle House #8" houseid="1447" entryx="339" entryy="123" entryz="4" rent="0" townid="2" size="29" />
-	<house name="Mountain House #6" houseid="1448" entryx="312" entryy="88" entryz="5" rent="0" townid="2" size="27" />
-	<house name="Mountain House #7" houseid="1449" entryx="314" entryy="85" entryz="5" rent="0" townid="2" size="58" />
-	<house name="Mountain Mage Guildhall" houseid="1450" entryx="304" entryy="85" entryz="5" rent="0" guildhall="true" townid="2" size="143" />
-	<house name="Mountain House #8" houseid="1451" entryx="296" entryy="85" entryz="5" rent="0" townid="2" size="57" />
-	<house name="Mountain House #9" houseid="1452" entryx="285" entryy="86" entryz="5" rent="0" townid="2" size="8" />
-	<house name="Mountain House #10" houseid="1453" entryx="285" entryy="87" entryz="4" rent="0" townid="2" size="9" />
-	<house name="Venom House #1" houseid="1454" entryx="257" entryy="366" entryz="6" rent="0" townid="5" size="39" />
-	<house name="Venom House #2" houseid="1455" entryx="270" entryy="370" entryz="6" rent="0" townid="5" size="36" />
-	<house name="Venom House #3" houseid="1456" entryx="266" entryy="368" entryz="5" rent="0" townid="5" size="21" />
-	<house name="Venom House #4" houseid="1457" entryx="270" entryy="368" entryz="5" rent="0" townid="5" size="14" />
-	<house name="Venom House #5" houseid="1458" entryx="273" entryy="370" entryz="6" rent="0" townid="5" size="14" />
-	<house name="Venom House #6" houseid="1459" entryx="269" entryy="374" entryz="7" rent="0" townid="5" size="8" />
-	<house name="Venom House #7" houseid="1460" entryx="268" entryy="378" entryz="7" rent="0" townid="5" size="7" />
-	<house name="Venom House #8" houseid="1461" entryx="270" entryy="375" entryz="7" rent="0" townid="5" size="9" />
-	<house name="Venom House #9" houseid="1462" entryx="270" entryy="379" entryz="7" rent="0" townid="5" size="9" />
-	<house name="Venom House #10" houseid="1463" entryx="289" entryy="375" entryz="6" rent="0" townid="5" size="55" />
-	<house name="Venom House #11" houseid="1464" entryx="284" entryy="379" entryz="5" rent="0" townid="5" size="37" />
-	<house name="Venom House #12" houseid="1465" entryx="297" entryy="378" entryz="6" rent="0" townid="5" size="25" />
-	<house name="Venom House #13" houseid="1466" entryx="274" entryy="364" entryz="7" rent="0" townid="5" size="14" />
-	<house name="Venom House #14" houseid="1467" entryx="270" entryy="364" entryz="7" rent="0" townid="5" size="14" />
-	<house name="Venom House #15" houseid="1468" entryx="262" entryy="370" entryz="7" rent="0" townid="5" size="17" />
-	<house name="Venom House #16" houseid="1469" entryx="289" entryy="362" entryz="6" rent="0" townid="5" size="19" />
-	<house name="Venom House #17" houseid="1470" entryx="298" entryy="366" entryz="7" rent="0" townid="5" size="13" />
-	<house name="Venom House #18" houseid="1471" entryx="303" entryy="376" entryz="7" rent="0" townid="5" size="27" />
-	<house name="Venom House #19" houseid="1472" entryx="314" entryy="378" entryz="6" rent="0" townid="5" size="19" />
-	<house name="Venom House #20" houseid="1473" entryx="318" entryy="378" entryz="6" rent="0" townid="5" size="19" />
-	<house name="Venom House #21" houseid="1474" entryx="324" entryy="378" entryz="6" rent="0" townid="5" size="17" />
-	<house name="Venom House #22" houseid="1475" entryx="314" entryy="376" entryz="5" rent="0" townid="5" size="9" />
-	<house name="Venom House #23" houseid="1476" entryx="318" entryy="376" entryz="5" rent="0" townid="5" size="11" />
-	<house name="Venom House #24" houseid="1477" entryx="324" entryy="376" entryz="5" rent="0" townid="5" size="11" />
-	<house name="Venom House #25" houseid="1478" entryx="322" entryy="383" entryz="5" rent="0" townid="5" size="17" />
-	<house name="Venom House #26" houseid="1479" entryx="321" entryy="384" entryz="5" rent="0" townid="5" size="9" />
-	<house name="Venom House #27" houseid="1480" entryx="316" entryy="387" entryz="5" rent="0" townid="5" size="14" />
-	<house name="Venom House #28" houseid="1481" entryx="313" entryy="381" entryz="6" rent="0" townid="5" size="28" />
-	<house name="Venom House #29" houseid="1483" entryx="317" entryy="380" entryz="6" rent="0" townid="5" size="18" />
-	<house name="Venom House #30" houseid="1484" entryx="322" entryy="380" entryz="6" rent="0" townid="5" size="29" />
-	<house name="Venom House #31" houseid="1485" entryx="324" entryy="380" entryz="7" rent="0" townid="5" size="24" />
-	<house name="Venom House #32" houseid="1486" entryx="318" entryy="380" entryz="7" rent="0" townid="5" size="23" />
-	<house name="Venom House #33" houseid="1487" entryx="317" entryy="379" entryz="7" rent="0" townid="5" size="19" />
-	<house name="Venom House #34" houseid="1488" entryx="317" entryy="376" entryz="7" rent="0" townid="5" size="19" />
-	<house name="Venom House #35" houseid="1489" entryx="320" entryy="376" entryz="7" rent="0" townid="5" size="14" />
-	<house name="Venom House #36" houseid="1490" entryx="324" entryy="378" entryz="7" rent="0" townid="5" size="14" />
-	<house name="Venom House #37" houseid="1491" entryx="307" entryy="397" entryz="7" rent="0" townid="5" size="34" />
-	<house name="Venom House #38" houseid="1492" entryx="314" entryy="397" entryz="7" rent="0" townid="5" size="26" />
-	<house name="Venom Paladin Guildhall" houseid="1493" entryx="307" entryy="410" entryz="6" rent="0" guildhall="true" townid="5" size="253" />
-	<house name="Mountain Druid Guildhall" houseid="1494" entryx="330" entryy="89" entryz="4" rent="0" guildhall="true" townid="2" size="143" />
+	<house name="Mirand Theraan House #6" houseid="1448" entryx="312" entryy="88" entryz="5" rent="0" townid="2" size="27" />
+	<house name="Mirand Theraan House #7" houseid="1449" entryx="314" entryy="85" entryz="5" rent="0" townid="2" size="58" />
+	<house name="Mirand Theraan Mage Guildhall" houseid="1450" entryx="304" entryy="85" entryz="5" rent="0" guildhall="true" townid="2" size="143" />
+	<house name="Mirand Theraan House #8" houseid="1451" entryx="296" entryy="85" entryz="5" rent="0" townid="2" size="57" />
+	<house name="Mirand Theraan House #9" houseid="1452" entryx="285" entryy="86" entryz="5" rent="0" townid="2" size="8" />
+	<house name="Mirand Theraan House #10" houseid="1453" entryx="285" entryy="87" entryz="4" rent="0" townid="2" size="9" />
+	<house name="Venonh House #1" houseid="1454" entryx="257" entryy="366" entryz="6" rent="0" townid="5" size="39" />
+	<house name="Venonh House #2" houseid="1455" entryx="270" entryy="370" entryz="6" rent="0" townid="5" size="36" />
+	<house name="Venonh House #3" houseid="1456" entryx="266" entryy="368" entryz="5" rent="0" townid="5" size="21" />
+	<house name="Venonh House #4" houseid="1457" entryx="270" entryy="368" entryz="5" rent="0" townid="5" size="14" />
+	<house name="Venonh House #5" houseid="1458" entryx="273" entryy="370" entryz="6" rent="0" townid="5" size="14" />
+	<house name="Venonh House #6" houseid="1459" entryx="269" entryy="374" entryz="7" rent="0" townid="5" size="8" />
+	<house name="Venonh House #7" houseid="1460" entryx="268" entryy="378" entryz="7" rent="0" townid="5" size="7" />
+	<house name="Venonh House #8" houseid="1461" entryx="270" entryy="375" entryz="7" rent="0" townid="5" size="9" />
+	<house name="Venonh House #9" houseid="1462" entryx="270" entryy="379" entryz="7" rent="0" townid="5" size="9" />
+	<house name="Venonh House #10" houseid="1463" entryx="289" entryy="375" entryz="6" rent="0" townid="5" size="55" />
+	<house name="Venonh House #11" houseid="1464" entryx="284" entryy="379" entryz="5" rent="0" townid="5" size="37" />
+	<house name="Venonh House #12" houseid="1465" entryx="297" entryy="378" entryz="6" rent="0" townid="5" size="25" />
+	<house name="Venonh House #13" houseid="1466" entryx="274" entryy="364" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Venonh House #14" houseid="1467" entryx="270" entryy="364" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Venonh House #15" houseid="1468" entryx="262" entryy="370" entryz="7" rent="0" townid="5" size="17" />
+	<house name="Venonh House #16" houseid="1469" entryx="289" entryy="362" entryz="6" rent="0" townid="5" size="19" />
+	<house name="Venonh House #17" houseid="1470" entryx="298" entryy="366" entryz="7" rent="0" townid="5" size="13" />
+	<house name="Venonh House #18" houseid="1471" entryx="303" entryy="376" entryz="7" rent="0" townid="5" size="27" />
+	<house name="Venonh House #19" houseid="1472" entryx="314" entryy="378" entryz="6" rent="0" townid="5" size="19" />
+	<house name="Venonh House #20" houseid="1473" entryx="318" entryy="378" entryz="6" rent="0" townid="5" size="19" />
+	<house name="Venonh House #21" houseid="1474" entryx="324" entryy="378" entryz="6" rent="0" townid="5" size="17" />
+	<house name="Venonh House #22" houseid="1475" entryx="314" entryy="376" entryz="5" rent="0" townid="5" size="9" />
+	<house name="Venonh House #23" houseid="1476" entryx="318" entryy="376" entryz="5" rent="0" townid="5" size="11" />
+	<house name="Venonh House #24" houseid="1477" entryx="324" entryy="376" entryz="5" rent="0" townid="5" size="11" />
+	<house name="Venonh House #25" houseid="1478" entryx="322" entryy="383" entryz="5" rent="0" townid="5" size="17" />
+	<house name="Venonh House #26" houseid="1479" entryx="321" entryy="384" entryz="5" rent="0" townid="5" size="9" />
+	<house name="Venonh House #27" houseid="1480" entryx="316" entryy="387" entryz="5" rent="0" townid="5" size="14" />
+	<house name="Venonh House #28" houseid="1481" entryx="313" entryy="381" entryz="6" rent="0" townid="5" size="28" />
+	<house name="Venonh House #29" houseid="1483" entryx="317" entryy="380" entryz="6" rent="0" townid="5" size="18" />
+	<house name="Venonh House #30" houseid="1484" entryx="322" entryy="380" entryz="6" rent="0" townid="5" size="29" />
+	<house name="Venonh House #31" houseid="1485" entryx="324" entryy="380" entryz="7" rent="0" townid="5" size="24" />
+	<house name="Venonh House #32" houseid="1486" entryx="318" entryy="380" entryz="7" rent="0" townid="5" size="23" />
+	<house name="Venonh House #33" houseid="1487" entryx="317" entryy="379" entryz="7" rent="0" townid="5" size="19" />
+	<house name="Venonh House #34" houseid="1488" entryx="317" entryy="376" entryz="7" rent="0" townid="5" size="19" />
+	<house name="Venonh House #35" houseid="1489" entryx="320" entryy="376" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Venonh House #36" houseid="1490" entryx="324" entryy="378" entryz="7" rent="0" townid="5" size="14" />
+	<house name="Venonh House #37" houseid="1491" entryx="307" entryy="397" entryz="7" rent="0" townid="5" size="34" />
+	<house name="Venonh House #38" houseid="1492" entryx="314" entryy="397" entryz="7" rent="0" townid="5" size="26" />
+	<house name="Venonh Paladin Guildhall" houseid="1493" entryx="307" entryy="410" entryz="6" rent="0" guildhall="true" townid="5" size="253" />
+	<house name="Mirand Theraan Druid Guildhall" houseid="1494" entryx="330" entryy="89" entryz="4" rent="0" guildhall="true" townid="2" size="143" />
 	<house name="Dorion Druid Guildhall" houseid="1498" entryx="67" entryy="67" entryz="6" rent="0" guildhall="true" townid="1" size="93" />
 	<house name="Dorion House #1" houseid="1499" entryx="67" entryy="73" entryz="5" rent="0" townid="1" size="39" />
 	<house name="Dorion House #3" houseid="1501" entryx="68" entryy="85" entryz="6" rent="0" townid="1" size="149" />

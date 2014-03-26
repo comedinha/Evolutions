@@ -1,14 +1,26 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition)
+local playerPos = {
+	{x=156,y=99,z=10}, -- Position of player 1
+	{x=155,y=99,z=10}, -- Position of player 2
+	{x=157,y=99,z=10}, -- Position of player 3
+	{x=155,y=100,z=10}, -- Position of player 4
+	{x=157,y=100,z=10} -- Position of player 5
+}
 
-   	if item.uid == 17756 then
-   		queststatus = getPlayerStorageValue(cid,50090)
-   		if queststatus == -1 then
-   			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR, "You have found Spirit cloak.")
-   			doPlayerAddItem(cid,8870,1)
-   			setPlayerStorageValue(cid,50090,1)
-   		else
-   			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR, "It is empty.")
-   		end
+local newPlayerPos = {x=199,y=90,z=10} -- Positon where the players should get teleported when using the switch
+
+function onUse(cid, item, frompos, item2, topos)
+local playersTeleport = {}
+	for i, v in ipairs(playerPos) do
+	local players = getTopCreature(v).uid or getTopCreature(v)
+		if isPlayer(players) ~= TRUE then
+			return false
+		else
+			table.insert(playersTeleport, players)
+		end
 	end
-   	return 1
+	for i, v in ipairs(playersTeleport) do
+		doTeleportThing(v, newPlayerPos)
+		doPlayerSendTextMessage(cid, 19, "Boa sorte!")
+	end
+	return true
 end

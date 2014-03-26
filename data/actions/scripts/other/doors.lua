@@ -1,6 +1,6 @@
 function onUse(cid, item, fromPosition, itemEx, toPosition)
 	if isInArray(questDoors, item.itemid) == TRUE then
-		if getPlayerStorageValue(cid, item.actionid) ~= -1 then
+		if (getPlayerStorageValue(cid, item.actionid) ~= -1 or item.actionid == 100) then
 			doTransformItem(item.uid, item.itemid + 1)
 			doTeleportThing(cid, toPosition, TRUE)
 		else

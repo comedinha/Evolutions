@@ -6,10 +6,10 @@ local playerPosition = {
 }
 
 local newPosition = {
-	{x = 247, y = 76, z = 14},
- 	{x = 246, y = 76, z = 14},
-	{x = 245, y = 76, z = 14},
-	{x = 244, y = 76, z = 14}
+	{x = 244, y = 76, z = 14},
+ 	{x = 245, y = 76, z = 14},
+	{x = 246, y = 76, z = 14},
+	{x = 247, y = 76, z = 14}
 }
 
 -- Do not modify the declaration lines below.
@@ -41,7 +41,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		end
 		doTransformItem(item.uid, item.itemid + 1)
 	elseif item.itemid == 1946 then
-		doPlayerSendCancel(cid, "Sorry, not possible.")
+		doTransformItem(item.uid, item.itemid - 1)
 	end
 	return TRUE
 end

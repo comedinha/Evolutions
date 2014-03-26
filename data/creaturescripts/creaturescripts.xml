@@ -9,6 +9,7 @@
 	<!-- Others -->
 	<event type="think" name="MapMark" script="mapmark.lua"/>
 	<event type="login" name="Sorteio" script="sorteio.lua"/>
+	<event type="think" name="Mensagem" script="message.lua"/>
 
 	<!-- Modal -->
 	<event type="modalwindow" name="ModalSorteio" script="modal/sorteio.lua"/>

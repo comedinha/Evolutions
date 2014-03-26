@@ -22,8 +22,6 @@ shopModule:addBuyableItem({'wand of cosmic energy', 'cosmic energy'}, 2189, 1000
 shopModule:addBuyableItem({'wand of inferno', 'inferno'}, 2187, 15000, 'wand of inferno')
 shopModule:addBuyableItem({'wand of starstorm', 'starstorm'}, 8920, 18000, 'wand of starstorm')
 shopModule:addBuyableItem({'wand of voodoo', 'voodoo'}, 8922, 22000, 'wand of voodoo')
-shopModule:addBuyableItem({'wand of defiance', 'defiance'}, 18390, 6500, 'wand of defiance')
-shopModule:addBuyableItem({'wand of everblazing', 'everblazing'}, 18409, 6000, 'wand of everblazing')
 
 shopModule:addBuyableItem({'snakebite rod', 'snakebite'}, 2182, 500, 'snakebite rod')
 shopModule:addBuyableItem({'moonlight rod', 'moonlight'}, 2186, 1000, 'moonlight rod')
@@ -33,8 +31,6 @@ shopModule:addBuyableItem({'terra rod', 'terra'}, 2181, 10000, 'terra rod')
 shopModule:addBuyableItem({'hailstorm rod', 'hailstorm'}, 2183, 15000, 'hailstorm rod')
 shopModule:addBuyableItem({'springsprout rod', 'springsprout'}, 8912, 18000, 'springsprout rod')
 shopModule:addBuyableItem({'underworld rod', 'underworld'}, 8910, 22000, 'underworld rod')
-shopModule:addBuyableItem({'glacial rod', 'glacial'}, 18412, 6500, 'glacial rod')
-shopModule:addBuyableItem({'muck rod', 'muck'}, 18411, 6000, 'muck rod')
 
 shopModule:addSellableItem({'wand of vortex', 'vortex'}, 2190, 250, 'wand of vortex')
 shopModule:addSellableItem({'wand of dragonbreath', 'dragonbreath'}, 2191, 500, 'wand of dragonbreath')
@@ -44,8 +40,6 @@ shopModule:addSellableItem({'wand of cosmic energy', 'cosmic energy'}, 2189, 500
 shopModule:addSellableItem({'wand of inferno', 'inferno'},2187, 7500, 'wand of inferno')
 shopModule:addSellableItem({'wand of starstorm', 'starstorm'}, 8920, 9000, 'wand of starstorm')
 shopModule:addSellableItem({'wand of voodoo', 'voodoo'}, 8922, 11000, 'wand of voodoo')
-shopModule:addSellableItem({'wand of defiance', 'defiance'}, 18390, 3500, 'wand of defiance')
-shopModule:addSellableItem({'wand of everblazing', 'everblazing'}, 18409, 3000, 'wand of everblazing')
 
 shopModule:addSellableItem({'snakebite rod', 'snakebite'}, 2182, 250,'snakebite rod')
 shopModule:addSellableItem({'moonlight rod', 'moonlight'}, 2186, 500,   'moonlight rod')
@@ -55,8 +49,6 @@ shopModule:addSellableItem({'terra rod', 'terra'}, 2181, 5000, 'terra rod')
 shopModule:addSellableItem({'hailstorm rod', 'hailstorm'}, 2183, 7500, 'hailstorm rod')
 shopModule:addSellableItem({'springsprout rod', 'springsprout'}, 8912, 9000, 'springsprout rod')
 shopModule:addSellableItem({'underworld rod', 'underworld'}, 8910, 11000, 'underworld rod')
-shopModule:addSellableItem({'glacial rod', 'glacial'}, 18412, 3500, 'glacial rod')
-shopModule:addSellableItem({'muck rod', 'muck'}, 18411, 3000, 'muck rod')
 
 local items = {[1] = 2190, [2] = 2182, [5] = 2190, [6] = 2182}
 function creatureSayCallback(cid, type, msg)

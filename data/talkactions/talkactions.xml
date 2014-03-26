@@ -34,7 +34,6 @@
 	<talkaction words="/hide" script="hide.lua" />
 
 	<!-- player talkactions -->
-	<talkaction words="!buypremium" script="buyprem.lua"/>
 	<talkaction words="!buyhouse" script="buyhouse.lua"/>
 	<talkaction words="!leavehouse" script="leavehouse.lua"/>
 	<talkaction words="!changesex" script="changesex.lua"/>
@@ -65,4 +64,6 @@
 	<talkaction words="!rules" separator=" " script="rules.lua" />
 	<talkaction words="!bugreport" separator=" " script="bugreport.lua" />
 	<talkaction words="!rank" script="rank.lua" />
+	<talkaction words="!shop" script="znoteshop.lua" />
+	<talkaction words="!removeskull" script="removeskull.lua" />
 </talkactions>

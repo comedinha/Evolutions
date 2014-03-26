@@ -45,6 +45,7 @@ shopModule:addBuyableItem({'convince creature'}, 2290, 80, 1, 'convince creature
 shopModule:addBuyableItem({'chameleon'}, 2291, 210, 1, 'chameleon rune')
 shopModule:addBuyableItem({'desintegrate'}, 2310, 80,  3, 'desintegreate rune')
 shopModule:addBuyableItem({'blank rune'}, 2260, 2,  1, 'blank rune')
+shopModule:addBuyableItem({'avalanche rune'}, 2274, 135,  3, 'avalanche rune')
 
 shopModule:addBuyableItemContainer({'bp slhp'}, 2000, 8704, 400, 1, 'backpack of small health potions')
 shopModule:addBuyableItemContainer({'bp hp'}, 2000, 7618, 900, 1, 'backpack of health potions')

@@ -165,8 +165,8 @@
 		<mission name="49 - Boots of Haste" storageid="60049" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce fez a quest 49 e obteve uma boots of haste!"/>
 		</mission>
-		<mission name="50 - ?" storageid="60050" startvalue="0" endvalue="1">
-			<missionstate id="1" description="Voce fez a quest 50!"/>
+		<mission name="50 - Blue Legs" storageid="60050" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Voce fez a quest 50 e obteve uma blue legs!"/>
 		</mission>
 		<mission name="51 - Helmet of the Ancients" storageid="60051" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce fez a quest 51 e obteve um helmet of the ancients!"/>
@@ -189,8 +189,8 @@
 		<mission name="57 - Djinn Blade" storageid="60057" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce fez a quest 57 e obteve um djinn blade!"/>
 		</mission>
-		<mission name="58 - ?" storageid="60058" startvalue="0" endvalue="1">
-			<missionstate id="1" description="Voce fez a quest 58!"/>
+		<mission name="58 - Spirit Cloak" storageid="60058" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Voce fez a quest 58 e obteve uma spirit cloak!"/>
 		</mission>
 		<mission name="59 - Golden Armor" storageid="60059" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce fez a quest 59 e obteve uma golden armor!"/>
@@ -204,14 +204,14 @@
 		<mission name="62 - Knight Armor" storageid="60062" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce fez a quest 62 e obteve uma knight armor!"/>
 		</mission>
-		<mission name="63 - ?" storageid="60063" startvalue="0" endvalue="1">
-			<missionstate id="1" description="Voce fez a quest 63!"/>
+		<mission name="63 - Greenwood Coat" storageid="60063" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Voce fez a quest 63 e obteve uma greenwood coat!"/>
 		</mission>
 		<mission name="64 - Knight Legs" storageid="60064" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce fez a quest 64 e obteve uma knight legs!"/>
 		</mission>
-		<mission name="65 - ?" storageid="60065" startvalue="0" endvalue="1">
-			<missionstate id="1" description="Voce fez a quest 65!"/>
+		<mission name="65 - Firewalker Boots" storageid="60065" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Voce fez a quest 65 e obteve uma firewalker boots!"/>
 		</mission>
 		<mission name="66 - Crown Legs" storageid="60066" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce fez a quest 66 e obteve uma crown legs!"/>

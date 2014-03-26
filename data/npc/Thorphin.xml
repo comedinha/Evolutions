@@ -9,7 +9,7 @@
 		<parameter key="module_keywords" value="1" />
         <parameter key="keywords" value="cidades;zao" />
         <parameter key="keyword_reply1" value="Eu não posso mais te levar para {Zao}" />
-		<parameter key="keyword_reply2" value="A cidade foi atacada e dominada pelo exercito do Orshabaal. Acho que sou o unico sobrevivente." />
+		<parameter key="keyword_reply2" value="A cidade foi atacada e dominada pelo exercito do Orshabaal. Ouvi falar que em Alfon tem um barco que te pode levar nos Lizards." />
 
 	</parameters>
 </npc>
