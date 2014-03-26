@@ -64,6 +64,5 @@
 	<talkaction words="!rules" separator=" " script="rules.lua" />
 	<talkaction words="!bugreport" separator=" " script="bugreport.lua" />
 	<talkaction words="!rank" script="rank.lua" />
-	<talkaction words="!shop" script="znoteshop.lua" />
 	<talkaction words="!removeskull" script="removeskull.lua" />
 </talkactions>

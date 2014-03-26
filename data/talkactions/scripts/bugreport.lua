@@ -1,5 +1,5 @@
 local text = true
-local site = "znote"
+local site = "none"
 
 function onSay(cid, words, param)
 	if(param == '') then
