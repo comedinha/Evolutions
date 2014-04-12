@@ -48,8 +48,22 @@
 		oven kit,6372,500;
 		bookcase kit,6373,500;
 		amazon disguise kit,7700,500;
+		green bed kit,7904,1000;
+		yellow bed kit,7905,1000;
+		red bed kit,7906,1000;
+		blue bed kit,7907,1000;
 		cuckoo clock,1877,500;
 		chimney kit,8692,500;
+		crystal table kit,9974,150;
+		lizard weapon rack kit,11126,500;
+		dragon statue kit,11133,1000;
+		dragon throne kit,11205,1000;
+		round table kit,14328,25;
+		square table kit,14329,25;
+		canopy bed kit,20252,1000;
+		venorean cabinet kit,20254,90;
+		venorean wardrobe kit,20255,50;
+		venorean drawer kit,20257,40;
 		blue tapestry,1872,500;
 		green tapestry,1860,500;
 		orange tapestry,1866,500;
@@ -75,11 +89,9 @@
 		wall mirror,1845,750;
 		wall mirror,1848,750;
 		wall mirror,1851,750;
-		green bed kit,7904,1000;
-		yellow bed kit,7905,1000;
-		red bed kit,7906,1000;
-		canopy bed kit,20252,1000;
-		blue bed kit,7907,1000;
-		wooden stake,5941,10000;" />
+		wooden stake,5941,10000;
+		trophy stand,7936,50;
+		box,1738,10;
+		chest,1740,10"/>
 	</parameters>
 </npc>

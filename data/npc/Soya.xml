@@ -5,39 +5,38 @@
 	<parameters>
 		<parameter key="module_shop" value="1"/>
 		<parameter key="message_greet" value="Hello |PLAYERNAME|. I buy swords, clubs and axes."/>
-		<parameter key="shop_sellable" value="magic longsword,2390,150000;
+		<parameter key="shop_sellable" value="magic longsword,2390,460;
 		noble axe,7456,10000;
-		warlord sword,2408,100000;
-		magic sword,2400,150000;
-		giant sword,2393,10000;
+		warlord sword,2408,360;
+		magic sword,2400,350;
+		giant sword,2393,17000;
 		bright sword,2407,6000;
-		ice rapier,2396,4000;
+		ice rapier,2396,1000;
 		fire sword,2392,4000;
 		serpent sword,2409,900;
 		spike sword,2383,1000;
 		two handed sword,2377,450;
-		broadsword,2413,350;
+		broadsword,2413,500;
 		short sword,2406,10;
 		sword,2376,25;
-		dragon lance,2414,10000;
-		stonecutter axe,2431,150000;
+		dragon lance,2414,9000;
+		stonecutter axe,2431,320;
 		guardian halberd,2427,11000;
-		fire axe,2432,10000;
-		knight axe,2430,2500;
+		fire axe,2432,8000;
+		knight axe,2430,2000;
 		double axe,2387,260;
 		halberd,2381,400;
-		battle axe,2378,100;
+		battle axe,2378,80;
 		hatchet,2388,25;
 		war hammer,2391,1200;
-		thunder hammer,2421,7000000;
 		skull staff,2436,6000;
 		dragon hammer,2434,2000;
-		clerical mace,2423,540;
+		clerical mace,2423,170;
 		battle hammer,2417,120;
 		mace,2398,30;
 		angelic axe,7436,5000;
 		butcher's axe,7412,18000;
-		crystalline axe,18451,2000000;
+		crystalline axe,18451,1000000;
 		deepling axe,15404,40000;
 		guardian axe,15454,9000;
 		heavy trident,13838,1500;
@@ -74,6 +73,10 @@
 		shiny blade,18465,2000000;
 		twiceslicer,12613,28000;
 		wyvern fang,7408,1500;
-		Zaoan sword,11307,30000"/>
+		Zaoan sword,11307,30000;
+		dragon slayer,7402,15000;
+		drakinata,11305,10000;
+		sai,11306,16500;
+		glorious axe,7454,2500"/>
 	</parameters>
 </npc>

@@ -234,8 +234,8 @@
 		<mission name="72 - Dwarven Armor" storageid="60072" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce fez a quest 72 e obteve uma dwarven armor!"/>
 		</mission>
-		<mission name="73 - Great Shield" storageid="60073" startvalue="0" endvalue="1">
-			<missionstate id="1" description="Voce fez a quest 73 e obteve um great shield!"/>
+		<mission name="73 - Legion Helmet" storageid="60073" startvalue="0" endvalue="1">
+			<missionstate id="1" description="Voce fez a quest 73 e obteve um legion helmet!"/>
 		</mission>
 		<mission name="74 - Vampire Shield" storageid="60074" startvalue="0" endvalue="1">
 			<missionstate id="1" description="Voce fez a quest 74 e obteve um vampire shield!"/>

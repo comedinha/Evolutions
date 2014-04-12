@@ -19,6 +19,6 @@ function onLogin(cid)
 	player:registerEvent("ArenaKill")
 	player:registerEvent("MapMark")
 	player:registerEvent("FirstItems")
-	player:registerEvent("Mensagem")
+	player:registerEvent("Functions")
 	return true
 end

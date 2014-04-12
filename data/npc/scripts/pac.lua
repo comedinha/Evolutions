@@ -8,20 +8,6 @@ function onCreatureDisappear(cid)            npcHandler:onCreatureDisappear(cid)
 function onCreatureSay(cid, type, msg)            npcHandler:onCreatureSay(cid, type, msg)        end
 function onThink()                    npcHandler:onThink()                    end
 
-local level = {
-	[25] = 5,
-	[50] = 10,
-	[100] = 20,
-	[150] = 30,
-	[200] = 50
-}
-
-local item = {
-	crude = {22398, 22401, 22404, 22407, 22410, 22413, 22416, 22419, 22422},
-	normal = {22399, 22402, 22405, 22408, 22411, 22414, 22417, 22420, 22423},
-	master = {22400, 22403, 22406, 22409, 22412, 22415, 22418, 22421, 22424}
-}
-
 function creatureSayCallback(cid, type, msg)
     if(not npcHandler:isFocused(cid)) then
         return false
@@ -29,29 +15,155 @@ function creatureSayCallback(cid, type, msg)
 
     local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
 
-    if(msgcontains(msg, 'upgradee')) then
-        selfSay('Voce tem algum umbral item para um upgrade?', cid)
+    if(msgcontains(msg, 'bonus')) then
+        selfSay('Completou alguma quest para o bonus?', cid)
         talkState[talkUser] = 1
     elseif(msgcontains(msg, 'yes') and talkState[talkUser] == 1) then
-        if(getPlayerItemCount(cid, 10022) >= 1) then
-            if(doPlayerRemoveMoney(cid, 30000) == TRUE) then
-                doPlayerRemoveItem(cid, 10022, 1)
-                doPlayerAddItem(cid, 9933)
-                selfSay('Here you are.', cid)
-            else
-                selfSay('Desculpe, volte quando tiver dinheiro.', cid)
-            end
-        else
-            selfSay('desculpe, voce nao tem este item.', cid)
+        if getPlayerStorageValue(cid, 11551) >= 25 then
+			if(getPlayerStorageValue(cid, 11555) == -1) then
+				setPlayerStorageValue(cid, 11555, 0)
+				doPlayerAddItem(cid, 2160, 10)
+				selfSay('Here you are.', cid)
+			end
+		end
+		if getPlayerStorageValue(cid, 11551) >= 50 then
+			if(getPlayerStorageValue(cid, 11555) == 0) then
+				setPlayerStorageValue(cid, 11555, 1)
+				doPlayerAddItem(cid, 2160, 50)
+				selfSay('Here you are.', cid)
+			end
+		end
+		if getPlayerStorageValue(cid, 11551) >= 75 then
+			if(getPlayerStorageValue(cid, 11555) == 1) then
+				setPlayerStorageValue(cid, 11555, 2)
+				doPlayerAddItem(cid, 2160, 100)
+				selfSay('Here you are.', cid)
+			else
+				selfSay('Voce nao tem nada para ganhar', cid)
+			end
         end
+		selfSay('Voce completou '..getPlayerStorageValue(cid, 11551)..' quests. E pegou '.. getPlayerStorageValue(cid, 11555)+1 ..' bonus', cid)
         talkState[talkUser] = 0
-    elseif(msgcontains(msg, 'no') and isInArray({1}, talkState[talkUser]) == TRUE) then
+    elseif(msgcontains(msg, 'no') and isInArray({1}, talkState[talkUser]) == true) then
         talkState[talkUser] = 0
         selfSay('Ok then.', cid)
     end
 
     return true
 end
+
+function playerUpgradeUmbral(cid, message, keywords, parameters, node)
+    if(not npcHandler:isFocused(cid)) then
+        return false
+    end
+    if (parameters.confirm ~= true) and (parameters.decline ~= true) then
+        if(getPlayerPremiumDays(cid) == 1) and (parameters.premium == true) then
+            npcHandler:say('Sorry, but this addon is only for vip players!', cid)
+            npcHandler:resetNpc()
+            return true
+        end
+        if (getPlayerStorageValue(cid, parameters.storageID) ~= -1) then
+            npcHandler:say('Voce ja atualizou algum item e nao pode atualizar outro!', cid)
+            npcHandler:resetNpc()
+            return true
+        end
+        local text = ''
+        if (parameters.cost > 0) then
+            text = parameters.cost .. ' gp'
+		end
+        npcHandler:say('Did you bring me ' .. text .. ' for ' .. keywords[1] .. '?', cid)
+        return true
+    elseif (parameters.confirm == true) then
+		local upgradeNode = node:getParent()
+		local upgradeinfo = upgradeNode:getParameters()
+		print(upgradeinfo.cost)
+		print(upgradeinfo.item)
+        if(getPlayerMoney(cid) >= upgradeinfo.cost) and (getPlayerItemCount(cid, upgradeinfo.item) >= 1) then
+			doPlayerRemoveMoney(cid, upgradeinfo.cost)
+			doPlayerRemoveItem(cid,upgradeinfo.item,1)
+			doPlayerAddItem(cid, upgradeinfo.item+1)
+            setPlayerStorageValue(cid,upgradeinfo.storageID,1)
+            npcHandler:say('Here you are.', cid)
+        else
+            npcHandler:say('You do not have needed items or cash!', cid)
+        end
+        npcHandler:resetNpc()
+        return true
+    elseif (parameters.decline == true) then
+        npcHandler:say('Not interested? Maybe other addon?', cid)
+        npcHandler:resetNpc()
+        return true
+    end
+    return false
+end
+
+local noNode = KeywordNode:new({'no'}, playerUpgradeUmbral, {decline = true})
+local yesNode = KeywordNode:new({'yes'}, playerUpgradeUmbral, {confirm = true})
+
+local upgrade_node = keywordHandler:addKeyword({'crude umbral blade'}, playerUpgradeUmbral, {premium = false, cost = 500000, item = 22398, storageID = 12001})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+local upgrade_node = keywordHandler:addKeyword({'umbral blade'}, playerUpgradeUmbral, {premium = false, cost = 1000000, item = 22399, storageID = 12002})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+	
+local upgrade_node = keywordHandler:addKeyword({'crude umbral slayer'}, playerUpgradeUmbral, {premium = false, cost = 500000, item = 22401, storageID = 12001})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+local upgrade_node = keywordHandler:addKeyword({'umbral slayer'}, playerUpgradeUmbral, {premium = false, cost = 1000000, item = 22402, storageID = 12002})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+	
+local upgrade_node = keywordHandler:addKeyword({'crude umbral axe'}, playerUpgradeUmbral, {premium = false, cost = 500000, item = 22404, storageID = 12001})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+local upgrade_node = keywordHandler:addKeyword({'umbral axe'}, playerUpgradeUmbral, {premium = false, cost = 1000000, item = 22405, storageID = 12002})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+	
+local upgrade_node = keywordHandler:addKeyword({'crude umbral chopper'}, playerUpgradeUmbral, {premium = false, cost = 500000, item = 22407, storageID = 12001})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+local upgrade_node = keywordHandler:addKeyword({'umbral chopper'}, playerUpgradeUmbral, {premium = false, cost = 1000000, item = 22408, storageID = 12002})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+	
+local upgrade_node = keywordHandler:addKeyword({'crude umbral mace'}, playerUpgradeUmbral, {premium = false, cost = 500000, item = 22410, storageID = 12001})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+local upgrade_node = keywordHandler:addKeyword({'umbral mace'}, playerUpgradeUmbral, {premium = false, cost = 1000000, item = 22411, storageID = 12002})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+	
+local upgrade_node = keywordHandler:addKeyword({'crude umbral hammer'}, playerUpgradeUmbral, {premium = false, cost = 500000, item = 22413, storageID = 12001})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+local upgrade_node = keywordHandler:addKeyword({'umbral hammer'}, playerUpgradeUmbral, {premium = false, cost = 1000000, item = 22414, storageID = 12002})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+	
+local upgrade_node = keywordHandler:addKeyword({'crude umbral bow'}, playerUpgradeUmbral, {premium = false, cost = 500000, item = 22416, storageID = 12001})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+local upgrade_node = keywordHandler:addKeyword({'umbral bow'}, playerUpgradeUmbral, {premium = false, cost = 1000000, item = 22417, storageID = 12002})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+	
+local upgrade_node = keywordHandler:addKeyword({'crude umbral crossbow'}, playerUpgradeUmbral, {premium = false, cost = 500000, item = 22419, storageID = 12001})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+local upgrade_node = keywordHandler:addKeyword({'umbral crossbow'}, playerUpgradeUmbral, {premium = false, cost = 1000000, item = 22420, storageID = 12002})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+	
+local upgrade_node = keywordHandler:addKeyword({'crude umbral spellbook'}, playerUpgradeUmbral, {premium = false, cost = 500000, item = 22422, storageID = 12001})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+local upgrade_node = keywordHandler:addKeyword({'umbral spellbook'}, playerUpgradeUmbral, {premium = false, cost = 1000000, item = 22423, storageID = 12002})
+    upgrade_node:addChildKeywordNode(yesNode)
+    upgrade_node:addChildKeywordNode(noNode)
+	
+keywordHandler:addKeyword({'upgrade'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Basta dizer o nome de seu umbral item para eu ver se faco o upgrade.'})
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())

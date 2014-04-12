@@ -76,6 +76,5 @@
 		<item id="11304" chance="770"/><!-- zaoan legs -->
 		<item id="11301" chance="490"/><!-- zaoan armor -->
 		<item id="12647" chance="80" /><!-- snake god's wristguard -->
-		<item id="12607" chance="110" /><!-- elite draken mail -->
 	</loot>
 </monster>

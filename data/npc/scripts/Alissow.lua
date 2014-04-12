@@ -19,7 +19,7 @@ function greetCallback(cid)
 return true
 end
 
-local node1 = keywordHandler:addKeyword({'bless'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to buy the sixth blessing (Twist of Fate) for 2000 (plus level depending amount) gold?'})
+local node1 = keywordHandler:addKeyword({'twist of fate'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to buy the sixth blessing (Twist of Fate) for 2000 (plus level depending amount) gold?'})
 	node1:addChildKeyword({'yes'}, StdModule.bless, {npcHandler = npcHandler, number = 6, premium = false, baseCost = 2000, levelCost = 200, startLevel = 1, endLevel = 30})
 	node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, reset = true, text = 'Too expensive, eh?'})
 	
@@ -30,19 +30,27 @@ function creatureSayCallback(cid, type, msg)
 
 	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
 	if(msgcontains(msg, 'morar') and msgcontains(msg, 'aqui') or msgcontains(msg, 'set') and msgcontains(msg, 'my') and msgcontains(msg, 'town')) then
-		selfSay('Voce deseja morar em Dorion?', cid)
+		selfSay('Aqui agora você ira renascer em Dorion!', cid)
+		doPlayerSetTown(cid, 1)
+	elseif(msgcontains(msg, 'buy') and msgcontains(msg, 'all')) then
+		selfSay('Você quer todas as blesses por 50k? No npc Comedinha elas custam 25k', cid)
 		talkState[talkUser] = 1
+		return true
 	elseif(msgcontains(msg, 'yes')) then
 		if(talkState[talkUser] == 1) then
-			selfSay('Aqui agora você ira renascer em Dorion!', cid)
-			doPlayerSetTown(cid, 1)
+			if(getPlayerMoney(cid) >= 50000) then
+				selfSay('Aqui está!', cid)
+				doPlayerRemoveMoney(cid, 50000)
+				for b = 1, 6 do
+					doPlayerAddBlessing(cid, b)
+				end
+			end
 		end
 		talkState[talkUser] = 0
 	elseif(msgcontains(msg, 'no') and isInArray({1}, talkState[talkUser])) then
 		selfSay('Ok then.', cid)
 		talkState[talkUser] = 0
 	end
-		return true
 end
 
 function playerBuyAddonNPC(cid, message, keywords, parameters, node)

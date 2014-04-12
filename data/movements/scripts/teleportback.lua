@@ -5,7 +5,7 @@ function onStepIn(cid, item, position, fromPosition)
 	}
 
 	if(item.actionid == teleport.action) then
-		if(not isPlayer(cid)) then
+		if not isPlayer(cid) or isPlayerPzLocked(cid) then
 			doTeleportThing(cid, fromPosition, false)
 			return true
 		end

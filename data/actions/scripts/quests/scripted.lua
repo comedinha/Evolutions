@@ -664,8 +664,8 @@ function onUse(cid, item, frompos, item2, topos)
 		end
 	elseif item.uid == 60073 then
 		if getPlayerStorageValue(cid,60073) == -1 then
-			doPlayerSendTextMessage(cid,25,"You have found a great shield.")
-			doPlayerAddItem(cid,2522,1)
+			doPlayerSendTextMessage(cid,25,"You have found a legion helmet.")
+			doPlayerAddItem(cid,2480,1)
 			setPlayerStorageValue(cid, 11551, getPlayerStorageValue(cid, 11551)+1)
 			setPlayerStorageValue(cid,60073,1)
 		else

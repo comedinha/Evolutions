@@ -112,7 +112,6 @@
 	<action itemid="8847" script="other/food.lua"/>
 	<action itemid="9005" script="other/food.lua"/>
 	<action itemid="9114" script="other/food.lua"/>
-	<action itemid="9996" script="other/food.lua"/>
 	<action itemid="10454" script="other/food.lua"/>
 	<action itemid="11246" script="other/food.lua"/>
 	<action itemid="11370" script="other/food.lua"/>
@@ -256,6 +255,7 @@
 	<action fromid="13020" toid="13023" script="other/doors.lua" />
 	<action itemid="14405" function="market"/>
 	<action fromid="18488" toid="18492" script="other/skilltrainer.lua" />
+	<action itemid="9930" script="other/rustremover.lua"/>
 	
 	<!-- Custom's -->
 	<!-- Quests -->
@@ -267,9 +267,8 @@
 	<action fromaid="42371" toaid="42375" script="quests/arenareward.lua"/> -- Arena
 	<action fromaid="42381" toaid="42385" script="quests/arenareward.lua"/> -- Arena
 	<action uniqueid="5997" script="quests/apocaquest.lua"/> -- Apoca Quest
-	<action fromuid="12901" touid="12904" script="quests/DOQChests.lua" /> -- Demon legs (Demon Oak)
+	<action fromuid="12901" touid="12904" script="quests/DOQChests.lua" /> -- Demon Oak
 	<action itemid="8293" script="quests/demonoak.lua"/> -- (Demon Oak)
-	<action fromuid="5006" touid="5009" script="quests/annichest.lua" /> -- Anni Quest
 	<action fromuid="5306" touid="5308" script="quests/poichest.lua" /> -- POI Quest
 	<action uniqueid="1900" script="quests/desert quest.lua" /> -- Desert Quest
 	<action fromuid="15901" touid="15904" script="quests/solaraxequest.lua" /> -- Solar axe
@@ -319,4 +318,7 @@
 	<action itemid="16101" script="other/premium.lua"/> -- Premium Scroll
 	<action itemid="6561" script="other/checkblessings.lua"/>
 	<action itemid="12424" script="other/checkblessings.lua"/>
+	<action fromid="9992" toid="10001" script="other/food_special.lua"/>
+	<action itemid="12540" script="other/food_special.lua"/>
+	<action fromid="12542" toid="12544" script="other/food_special.lua"/>
 </actions>

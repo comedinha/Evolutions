@@ -6,6 +6,46 @@
 		<parameter key="module_shop" value="1" />
 		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell ropes, shovels, backpacks, fishing rods and more." />
 		<parameter key="shop_buyable" value="vial,2006,10;flask,2006,10" />
-		<parameter key="shop_buyable" value="shovel,2554,20;pick,2553,25;backpack,1988,10;fishing rod,2580,100;torch,2050,2;rope,2120,50;machete,2120,35;scythe,2550,50;obsidian knife,5908,7000;machete,2420,20" />
+		<parameter key="shop_buyable" value="shovel,2554,20;
+		pick,2553,25;
+		backpack,1988,10;
+		fishing rod,2580,100;
+		torch,2050,2;
+		rope,2120,50;
+		machete,2120,35;
+		scythe,2550,50;
+		obsidian knife,5908,7000;
+		machete,2420,20;
+		bag,1987,5;
+		beach backpack,5949,20;
+		beach bag,5949,5;
+		blue backpack,2002,20;
+		blue bag,1995,5;
+		brocade backpack,9774,20;
+		brocade bag,9775,5;
+		camouflage bag,3939,5;
+		camouflage backpack,3940,20;
+		camouflage bag,3939,5;
+		crown backpack,10522,800;
+		dragon backpack,11243,200;
+		expedition backpack,11241,20;
+		expedition bag,11242,5;
+		fur backpack,7342,20;
+		fur bag,7343,5;
+		golden backpack,2004,20;
+		golden bag,1997,5;
+		green backpack,1998,20;
+		green bag,1991,5;
+		grey bag,1996,5;
+		grey backpack,2003,20;
+		minotaur backpack,11244,200;
+		orange backpack,10519,20;
+		orange bag,10520,5;
+		purple bag,1994,5;
+		purple backpack,2001,20;
+		red bag,1993,5;
+		red backpack,2000,20;
+		yellow bag,1992,5;
+		yellow backpack,1999,20"/>
 	</parameters>
 </npc>

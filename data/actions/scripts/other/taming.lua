@@ -68,11 +68,6 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 	if(mount == nil or getPlayerMount(cid, mount.ID)) then
 		return false
 	end
-	
-	if isSummon(itemEx.uid) then
-		doCreatureSay(cid, "You cant tame your own summon!", TALKTYPE_ORANGE_1)
-		return true
-	end
 
 	local rand = math.random(1, 100)
 	--Monster Mount

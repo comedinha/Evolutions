@@ -12,11 +12,11 @@ function onStepIn(cid, item, position, fromPosition)
 		[17009] = {x=124, y=143, z=14},
 		[17010] = {x=125, y=143, z=14}
 	}
-	
+
 	if(not isPlayer(cid)) then
 		return true
 	end
-	
+
 	doTeleportThing(cid, teleport[item.actionid])
 	doCreatureSay(cid, "LOL?", TALKTYPE_SAY)
 	return true

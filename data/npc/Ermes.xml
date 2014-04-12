@@ -5,7 +5,7 @@
 	<parameters>
 		<parameter key="module_shop" value="1"/>
 		<parameter key="message_greet" value="Ola |PLAYERNAME|. Eu vendo itens especiais. Diga {trade}."/>
-		<parameter key="shop_buyable" value="crystal table kit,9974,150;heavy trident,13838,2000;shiny blade,18465,3000000;crystalline axe,18451,3000000"/>
-		<parameter key="shop_sellable" value="heavy trident,13838,1500"/>
+		<parameter key="shop_buyable" value="shiny blade,18465,6000000;
+		crystalline axe,18451,6000000"/>
 	</parameters>
 </npc>

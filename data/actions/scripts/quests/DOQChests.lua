@@ -21,8 +21,8 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
    	elseif item.uid == 12903 then
    		queststatus = getPlayerStorageValue(cid,50090)
    		if queststatus == -1 then
-   			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR, "You have found a royal crossbow.")
-   			doPlayerAddItem(cid,8851,1)
+   			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR, "You have found a thorn spitter.")
+   			doPlayerAddItem(cid,16111,1)
    			setPlayerStorageValue(cid,50090,1)
    		else
    			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR, "It is empty.")
@@ -30,8 +30,8 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
    	elseif item.uid == 12904 then
    		queststatus = getPlayerStorageValue(cid,50090)
    		if queststatus == -1 then
-   			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR, "You have found a Spellbook of Dark Mysteries.")
-   			doPlayerAddItem(cid,8918,1)
+   			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR, "You have found a spellbook of ancient arcana.")
+   			doPlayerAddItem(cid,16112,1)
    			setPlayerStorageValue(cid,50090,1)
    		else
    			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR, "It is empty.")

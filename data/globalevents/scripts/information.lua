@@ -3,9 +3,9 @@ local messages = {
 "Dica: Utilize o Spellbook para saber quais magias você pode usar em determinados leveis.",
 "Dica: Explore o mapa e você poderá encontrar grandes riquezas.",
 "Dica: Não se engane, os portais abaixo do templo de dorion não são as unicas áreas para caçar, há centenas de outros lugares em Dorion e em outras cidades!",
-"Alissow Sv 5.0 =D",
+"Alissow 5.1 :3",
 "Quer ser premium? Fale trade para o npc alissow e compre o seu!",
-"Dica: Voce ja andou por Venonh? é muito legal por lá"
+"Dica: Voce ja andou por Venonh? é muito legal por la"
 }
 
 local i = 0

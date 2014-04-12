@@ -4,7 +4,49 @@
 	<look type="129" head="120" body="120" legs="114" feet="114" addons="3"/>
 	<parameters>
 		<parameter key="module_shop" value="3" />
-		<parameter key="shop_sellable" value="crossbow,2455,150;bow,2456,130" />
-		<parameter key="shop_buyable" value="crossbow,2455,360;bow,2456,200;spear,2389,20;power bolt,2547,200;burst arrow,2546,56;poison arrow,2545,18;bolt,2543,3;arrow,2544,2;Assassin Star,7368,500;crystal crossbow,18453,35000;mycological bow,18454,36000;crystalline arrow,18304,50;drill bolt,18304,45" />
+		<parameter key="shop_buyable" value="crossbow,2455,500;
+		crystal crossbow,18453,70000;
+		ornate crossbow,15644,24000;
+		spear,2389,18;
+		royal spear,7378,30;
+		throwing star,2399,42;
+		assassin star,7368,250;
+		arrow,2544,2;
+		burst arrow,2546,24;
+		earth arrow,7850,10;
+		envenomed arrow,18437,24;
+		flaming arrow,7840,10;
+		poison arrow,2545,10;
+		flash arrow,7838,10;
+		sniper arrow,7364,10;
+		bolt,2543,4;
+		power bolt,2547,10;
+		drill bolt,18304,24;
+		mycological bow,18454,70000;
+		elvish bow,7438,3000;
+		bow,2456,400"/>
+		<parameter key="shop_sellable" value="crossbow,2455,250;
+		crystal crossbow,18453,35000;
+		ornate crossbow,15644,12000;
+		spear,2389,9;
+		royal spear,7378,15;
+		throwing star,2399,21;
+		assassin star,7368,100;
+		arrow,2544,1;
+		burst arrow,2546,12;
+		earth arrow,7850,5;
+		envenomed arrow,18437,12;
+		flaming arrow,7840,5;
+		poison arrow,2545,5;
+		flash arrow,7838,5;
+		sniper arrow,7364,5;
+		bolt,2543,2;
+		power bolt,2547,5;
+		mycological bow,18454,35000;
+		composite hornbow,8855,25000;
+		hive bow,15643,28000;
+		silkweaver bow,8857,12000;
+		elvish bow,7438,2000;
+		bow,2456,200"/>
 	</parameters>
 </npc>

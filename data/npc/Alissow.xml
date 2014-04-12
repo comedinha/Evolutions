@@ -5,8 +5,8 @@
     <parameters>
 	<parameter key="message_greet" value="Seja bem vindo |PLAYERNAME|! Posso te ajudar? Diga {ajuda}. Eu tambem vendo alguns itens e blessings, diga {trade} ou {bless}. Se quiser tambem morar aqui e so dizer {set my town}." />
         <parameter key="module_keywords" value="1" />
-        <parameter key="keywords" value="ajuda;mapa;monstros;magias;promotion;premium;addons;montarias;blessing" />
-        <parameter key="keyword_reply1" value="Deseja saber sobre {premium}, {promotion}, {mapa}, {monstros}, {magias}, {addons}, {montarias} ou {blessing}?" />
+        <parameter key="keywords" value="ajuda;mapa;monstros;magias;promotion;premium;addons;montarias;bless" />
+        <parameter key="keyword_reply1" value="Deseja saber sobre {premium}, {promotion}, {mapa}, {monstros}, {magias}, {addons}, {montarias} ou {bless}?" />
         <parameter key="keyword_reply2" value="O mapa tem 11 cidades. Dorion, Yalahar, Alfon, Venonh, Anknor, Smallville, Infernium, Flam, Saari, Mirand Theraan e Mistyc. Pode-se acessalas atraves do barco com o Capitao coruja ou no tapete magico com o Izac." />
         <parameter key="keyword_reply3" value="Existem mais de 10000 (Dez mil) monstros espalhados pelo mapa, pelomenos metade deles esta na cidade de Yalahar por ser uma cidade muito grande. Mas nas outras cidades tambem tem bastantes monstros e o que nao vai faltar eh lugar para upar." />
         <parameter key="keyword_reply4" value="No server existem magias para todos os leveis, tanto as originais quanto as novas, de ataque, defesa, heal, party, etc. Voce pode comprar um Spellbook no NPC Dark Rodo para ver todas as magias que existem no server." />
@@ -14,10 +14,10 @@
         <parameter key="keyword_reply6" value="Para comprar premium fale {hi} para mim e compre um premium scroll. 90 dias custam 5000 gold e voce pode comprar ate 360 dias de premium." />
 		<parameter key="keyword_reply7" value="Os addons podem ser conquistados em quests ou falando com os npcs, basta dizer {addon}. Você precisa insistir." />
 		<parameter key="keyword_reply8" value="As montarias podem ser conseguidas com a NPC Julie e com monstros que podem ser encontrados pelo mapa." />
-		<parameter key="keyword_reply9" value="Existem alguns npcs que vendem bless, eles estão espalhados pela cidade." />
+		<parameter key="keyword_reply9" value="Existem alguns npcs que vendem bless, eles estao espalhados pela cidade. Eu vendo todas elas por 50k, basta dizer {buy all}. Ou caso queira, eu vendo a {twist of fate}." />
 
         <parameter key="module_shop" value="1"/>
-        <parameter key="shop_buyable" value="aol,2173,10000;premium scroll,16101,750000"/> 
-        <parameter key="shop_sellable" value="aol,2173,5000;premium scroll,16101,500000"/> 
+        <parameter key="shop_buyable" value="aol,2173,10000;premium scroll,16101,10000"/> 
+        <parameter key="shop_sellable" value="aol,2173,5000;premium scroll,16101,5000"/> 
     </parameters>
 </npc>

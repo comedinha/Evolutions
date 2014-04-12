@@ -38,7 +38,7 @@ end
 function onCreatureSay(cid, type, msg)
 	if((msg == "e o Orshabaal?") or (msg == "e o orshabaal?") or (msg == "e o Orsha?") or (msg == "e o orsha?")) then
 		if math.random(300) <= 50 then
-			selfSay("Orshabaal! Vai levar pau!", cid, true)
+			selfSay("Orshabaal! Vai levar pau!")
 		end
 	end
 end

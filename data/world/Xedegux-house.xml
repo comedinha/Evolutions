@@ -47,16 +47,16 @@
 	<house name="Infernium Flats IX" houseid="104" entryx="233" entryy="263" entryz="9" rent="0" townid="6" size="24" />
 	<house name="Infernium Flats X" houseid="105" entryx="233" entryy="257" entryz="9" rent="0" townid="6" size="24" />
 	<house name="Infernium Flats XI" houseid="106" entryx="233" entryy="251" entryz="9" rent="0" townid="6" size="24" />
-	<house name="Ankor House #1" houseid="1254" entryx="496" entryy="316" entryz="7" rent="0" townid="8" size="70" />
-	<house name="Ankor House #2" houseid="1255" entryx="490" entryy="331" entryz="7" rent="0" townid="8" size="46" />
-	<house name="Ankor House #3" houseid="1256" entryx="484" entryy="329" entryz="7" rent="0" townid="8" size="31" />
-	<house name="Ankor House #4" houseid="1257" entryx="481" entryy="331" entryz="7" rent="0" townid="8" size="29" />
-	<house name="Ankor House #5" houseid="1258" entryx="495" entryy="339" entryz="7" rent="0" townid="8" size="75" />
-	<house name="Ankor House #6" houseid="1259" entryx="490" entryy="357" entryz="7" rent="0" townid="8" size="85" />
-	<house name="Ankor House #7" houseid="1260" entryx="524" entryy="348" entryz="7" rent="0" townid="8" size="167" />
-	<house name="Ankor House #8" houseid="1261" entryx="534" entryy="346" entryz="7" rent="0" townid="8" size="114" />
-	<house name="Ankor House #9" houseid="1262" entryx="533" entryy="329" entryz="7" rent="0" townid="8" size="133" />
-	<house name="Ankor House #10" houseid="1264" entryx="523" entryy="319" entryz="7" rent="0" townid="8" size="109" />
+	<house name="Ankor House #1" houseid="1254" entryx="496" entryy="316" entryz="7" rent="0" townid="8" size="60" />
+	<house name="Ankor House #2" houseid="1255" entryx="490" entryy="331" entryz="7" rent="0" townid="8" size="34" />
+	<house name="Ankor House #3" houseid="1256" entryx="484" entryy="329" entryz="7" rent="0" townid="8" size="24" />
+	<house name="Ankor House #4" houseid="1257" entryx="481" entryy="331" entryz="7" rent="0" townid="8" size="28" />
+	<house name="Ankor House #5" houseid="1258" entryx="495" entryy="339" entryz="7" rent="0" townid="8" size="62" />
+	<house name="Ankor House #6" houseid="1259" entryx="490" entryy="357" entryz="7" rent="0" townid="8" size="70" />
+	<house name="Ankor House #7" houseid="1260" entryx="524" entryy="348" entryz="7" rent="0" townid="8" size="117" />
+	<house name="Ankor House #8" houseid="1261" entryx="534" entryy="346" entryz="7" rent="0" townid="8" size="78" />
+	<house name="Ankor House #9" houseid="1262" entryx="533" entryy="329" entryz="7" rent="0" townid="8" size="96" />
+	<house name="Ankor House #10" houseid="1264" entryx="523" entryy="319" entryz="7" rent="0" townid="8" size="71" />
 	<house name="Yalahar House #1" houseid="1304" entryx="1521" entryy="2537" entryz="7" rent="0" townid="9" size="182" />
 	<house name="Yalahar House #2" houseid="1305" entryx="1518" entryy="2530" entryz="7" rent="0" townid="9" size="116" />
 	<house name="Yalahar House #3" houseid="1306" entryx="1523" entryy="2530" entryz="7" rent="0" townid="9" size="125" />
@@ -217,7 +217,7 @@
 	<house name="Flam House #10" houseid="1532" entryx="409" entryy="69" entryz="6" rent="0" townid="12" size="27" />
 	<house name="Flam House #11" houseid="1533" entryx="392" entryy="67" entryz="6" rent="0" townid="12" size="29" />
 	<house name="Flam House #12" houseid="1534" entryx="392" entryy="85" entryz="6" rent="0" townid="12" size="29" />
-	<house name="Ankor House #11" houseid="1535" entryx="533" entryy="309" entryz="7" rent="0" townid="8" size="212" />
+	<house name="Ankor Mage Guildhall #11" houseid="1535" entryx="533" entryy="309" entryz="7" rent="0" guildhall="true" townid="8" size="137" />
 	<house name="Gromer House #7" houseid="1536" entryx="566" entryy="306" entryz="7" rent="0" townid="8" size="21" />
 	<house name="Yalahar House #45" houseid="1537" entryx="1515" entryy="2514" entryz="6" rent="0" townid="9" size="35" />
 	<house name="Yalahar House #46" houseid="1538" entryx="1515" entryy="2516" entryz="6" rent="0" townid="9" size="35" />

@@ -10,8 +10,10 @@ function onSay(cid, words, param)
 	local storage = 141120131140
 	local p = getPlayerPosition(cid)
 	if(getPlayerStorageValue(cid, storage)-os.time() >= 0) then
-		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Exausted, try in "..getPlayerStorageValue(cid, storage)-os.time().." seconds!")
-		return false
+		if not playerAccountType >= ACCOUNT_TYPE_TUTOR then
+			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Exausted, try in "..getPlayerStorageValue(cid, storage)-os.time().." seconds!")
+			return false
+		end
 	end
 
 	if text == true then

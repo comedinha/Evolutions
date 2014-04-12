@@ -1,8 +1,8 @@
 local playerPosition = {
-	{x = 185, y = 86, z = 8, stackpos = STACKPOS_TOP_CREATURE},
-	{x = 186, y = 86, z = 8, stackpos = STACKPOS_TOP_CREATURE},
-	{x = 187, y = 86, z = 8, stackpos = STACKPOS_TOP_CREATURE},
-	{x = 188, y = 86, z = 8, stackpos = STACKPOS_TOP_CREATURE}
+	{x = 185, y = 86, z = 8},
+	{x = 186, y = 86, z = 8},
+	{x = 187, y = 86, z = 8},
+	{x = 188, y = 86, z = 8}
 }
 
 local newPosition = {
@@ -12,36 +12,26 @@ local newPosition = {
 	{x = 247, y = 76, z = 14}
 }
 
--- Do not modify the declaration lines below.
 function onUse(cid, item, fromPosition, itemEx, toPosition)
-	local player = {}
-	local failed = FALSE
 	if item.itemid == 1945 then
-		for i = 1, 4 do
-			failed = TRUE
-			player[i] = getThingfromPos(playerPosition[i])
-			if player[i].itemid > 0 then
-				if isPlayer(player[i].uid) == TRUE then
-					if getPlayerStorageValue(player[i].uid, 30015) == -1 then
-						if getPlayerLevel(player[i].uid) >= 100 then
-							failed = FALSE
-						end
-					end
-				end
+		local players = {}
+		for _, pos in ipairs(playerPosition) do
+			local player = Tile(pos):getTopCreature()
+			if player == nil or not player:isPlayer() or player:getLevel() < 100 or player:getStorageValue(30015) ~= -1 then
+				Player(cid):sendTextMessage(MESSAGE_STATUS_SMALL, Game.getReturnMessage(RETURNVALUE_NOTPOSSIBLE))
+				return false
 			end
-			if failed == TRUE then
-				doPlayerSendCancel(cid, "Sorry, not possible.")
-				return TRUE
-			end
+			players[#players+1] = player
 		end
-		for i = 1, 4 do
-			doSendMagicEffect(playerPosition[i], CONST_ME_POFF)
-			doTeleportThing(player[i].uid, newPosition[i], FALSE)
-			doSendMagicEffect(newPosition[i], CONST_ME_ENERGYAREA)
+		for i, player in ipairs(players) do
+			Position(playerPosition[i]):sendMagicEffect(CONST_ME_POFF)
+			player:teleportTo(newPosition[i], false)
+			player:getPosition():sendMagicEffect(CONST_ME_ENERGYAREA)
 		end
-		doTransformItem(item.uid, item.itemid + 1)
+		Item(item.uid):transform(1946)
 	elseif item.itemid == 1946 then
-		doTransformItem(item.uid, item.itemid - 1)
+		Item(item.uid):transform(1945)
 	end
-	return TRUE
+
+	return true
 end

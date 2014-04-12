@@ -9,4 +9,5 @@
 	<raid name="ghazbaran" file="ghazbaran.xml" interval2="1300" margin="0" reftype="single" ref="no"/>
 	<raid name="Ferumbras" file="Ferumbras.xml" interval2="2000" margin="0" reftype="single" ref="no"/>
 	<raid name="Morgaroth" file="Morgaroth.xml" interval2="3000" margin="0" reftype="single" ref="no"/>
+	<raid name="Orshabaal" file="Orshabaal.xml" interval2="4000" margin="0" reftype="single" ref="no"/>
 </raids>
