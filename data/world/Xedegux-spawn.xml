@@ -18000,7 +18000,7 @@
 		<monster name="Bonelord" x="3" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="514" centery="458" centerz="8" radius="5">
-		<monster name="Frost Dragon" x="-2" y="1" z="8" spawntime="0" />
+		<monster name="Frost Dragon" x="-2" y="1" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="524" centery="464" centerz="8" radius="5">
 		<monster name="Frost Dragon" x="-2" y="2" z="8" spawntime="60" />
