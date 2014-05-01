@@ -3,9 +3,9 @@
 	<health now="150" max="150"/>
 	<look type="128" head="114" body="240" legs="114" feet="114" corpse="2212"/>
 	<parameters>
-		<parameter key="message_greet" value="Ola |PLAYERNAME|! Eu posso te levar voando para {infernium}, {flam}, {saari} e {dorion}. Para onde deseja voar?" />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|! I can take you flying to {infernium}, {flam}, {saari} and {dorion}. Where you want to fly?" />
 		<parameter key="module_keywords" value="1" />
         <parameter key="keywords" value="mistyc" />
-		<parameter key="keyword_reply1" value="Foi muito horrivel, nao quero comentar sobre o assunto. Nao posso te levar mais la." />
+		<parameter key="keyword_reply1" value="It was really horrible, do not want to comment on the matter. I can not take you there anymore." />
 	</parameters>
 </npc>

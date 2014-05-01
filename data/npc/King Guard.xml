@@ -2,8 +2,4 @@
 <npc name="King Guard" script="king guard.lua" walkinterval="0" floorchange="0" speed="900">
 	<health now="150" max="150"/>
 	<look type="268" head="155" body="155" legs="155" feet="30" addons="3"/>
-    <parameters>
-        <parameter key="message_greet" value="Curve-se para nosso rei!"/>
-        <parameter key="message_farewell" value="Boa Viagem!"/>
-    </parameters>
 </npc>

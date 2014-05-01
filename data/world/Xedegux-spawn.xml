@@ -31252,9 +31252,6 @@
 	<spawn centerx="285" centery="948" centerz="15" radius="1">
 		<monster name="Fish" x="1" y="0" z="15" spawntime="60" />
 	</spawn>
-	<spawn centerx="1312" centery="1409" centerz="15" radius="1">
-		<npc name="Thorgrincormaya" x="-1" y="0" z="15" spawntime="60" />
-	</spawn>
 	<spawn centerx="1525" centery="2467" centerz="15" radius="1" />
 	<spawn centerx="1527" centery="2467" centerz="15" radius="1" />
 	<spawn centerx="1529" centery="2467" centerz="15" radius="1" />

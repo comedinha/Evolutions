@@ -4,7 +4,7 @@
 	<look type="139" head="132" body="79" legs="97" feet="132" corpse="2212"/>
 	<parameters>
 		<parameter key="module_shop" value="1"/>
-		<parameter key="message_greet" value="Hello |PLAYERNAME|. I buy swords, clubs and axes."/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I buy swords, clubs and axes. If you want to sell equipment look for The Blacksmith."/>
 		<parameter key="shop_sellable" value="magic longsword,2390,460;
 		noble axe,7456,10000;
 		warlord sword,2408,360;

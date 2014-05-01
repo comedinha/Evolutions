@@ -5,7 +5,7 @@ local messages = {
 "Dica: Não se engane, os portais abaixo do templo de dorion não são as unicas áreas para caçar, há centenas de outros lugares em Dorion e em outras cidades!",
 "Alissow 5.1 :3",
 "Quer ser premium? Fale trade para o npc alissow e compre o seu!",
-"Dica: Voce ja andou por Venonh? é muito legal por la"
+"Dica: Voce ja andou por Venonh? e muito legal por la"
 }
 
 local i = 0

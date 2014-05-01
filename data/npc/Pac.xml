@@ -3,6 +3,6 @@
 	<health now="100" max="100"/>
 	<look type="131" head="43" body="76" legs="38" feet="58" addons="0"/>
     <parameters> 
-	<parameter key="message_greet" value="Seja bem vindo |PLAYERNAME|!  Você veio atras do {bonus}? ou veio atras do umbral {upgrade}?" />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|!  You came behind the {bonus}? or to {upgrade} umbral?" />
     </parameters> 
 </npc>

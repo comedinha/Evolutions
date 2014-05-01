@@ -4,7 +4,7 @@
 	<look type="472" head="114" body="0" legs="114" feet="0" addons="3"/>
 	<parameters>
 		<parameter key="module_shop" value="1"/>
-		<parameter key="message_greet" value="Ola |PLAYERNAME|. Eu vendo itens especiais. Diga {trade}."/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. Tell {trade}."/>
 		<parameter key="shop_buyable" value="shiny blade,18465,6000000;
 		crystalline axe,18451,6000000"/>
 	</parameters>

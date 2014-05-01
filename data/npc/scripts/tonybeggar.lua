@@ -14,23 +14,23 @@ function creatureSayCallback(cid, type, msg)
 	
 	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
 
-        if msgcontains(msg, 'beggar') then
-            npcHandler:say('Voce quer escutar essa historia agora. Loooonga e triste.', cid)
-                        talk_state = 1
-                        elseif msgcontains(msg, 'yes') and talk_state == 1 then
-                                if getPlayerItemCount(cid,2160) >= 1 then
-                                        doPlayerTakeItem(cid,2160,2)
-                                        npcHandler:say('Ah, droga! Odeio mosquitos... O que voce disse?', cid)
-                                        talk_state = 0
-                                        else
-                                                npcHandler:say('Oh, me desculpe. Me lembrei que preciso fazer algo. Obrigado pelas suas... por seu... pela sua gentileza.', cid)
-                                                talk_state = 0
-                                        end
-                                elseif msgcontains(msg, 'no') and talk_state == 1 then
-                                        npcHandler:say('Ok Adeus!', cid)
-                                        talk_state = 0
-                                end
-								
+	if msgcontains(msg, 'beggar') then
+		npcHandler:say('You want to hear a loooong, sad story? for 10.000?', cid)
+		talk_state = 1
+	elseif msgcontains(msg, 'yes') and talk_state == 1 then
+		if getPlayerItemCount(cid,2160) == 1 then
+			doPlayerRemoveMoney(cid, 10000)
+			npcHandler:say('Ah, damn! I hate mosquitoes... What you said?', cid)
+			talk_state = 0
+		else
+			npcHandler:say('Oh, sorry. I remembered that I need to do something. Bye.', cid)
+			talk_state = 0
+		end
+	elseif msgcontains(msg, 'no') and talk_state == 1 then
+		npcHandler:say('Bye!', cid)
+		talk_state = 0
+	end
+
 	function playerBuyAddonNPC(cid, message, keywords, parameters, node)
     if(not npcHandler:isFocused(cid)) then
         return false

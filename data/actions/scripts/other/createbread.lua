@@ -6,18 +6,9 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		Item(item.uid):transform(item.itemid, item.type - 1)
 		Player(cid):addItem(2693, 1)
 		Item(itemEx.uid):transform(itemEx.itemid, 0)
-	elseif item.itemid == 2694 and isInArray(millstones, itemEx.itemid) then
+	elseif isInArray(millstones, itemEx.itemid) then
 		Item(item.uid):transform(item.itemid, item.type - 1)
 		Player(cid):addItem(2692, 1)
-	elseif item.itemid == 2692 and isInArray(liquidContainers, itemEx.itemid) and itemEx.type == 6 then
-		Item(item.uid):transform(item.itemid, item.type - 1)
-		Player(cid):addItem(cid, 6277, 1)
-	elseif item.itemid == 6277 and itemEx.itemid == 6574 then
-		Item(item.uid):transform(item.itemid, item.type - 1)
-		Player(cid):addItem(cid, 8846, 1)
-	elseif item.itemid == 6277 and itemEx.itemid == 2561 then
-		Item(item.uid):transform(item.itemid, item.type - 1)
-		Player(cid):addItem(cid, 8848, 1)
 	else
 		return false
 	end

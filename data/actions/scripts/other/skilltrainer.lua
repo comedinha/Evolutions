@@ -13,11 +13,12 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 	end
 
 	local player = Player(cid)
-
-	if item.actionid == 1000 then
-		return doPlayerSendTextMessage(cid, 23, "Essa estatua e um enfeite e nao pode treinar")
-	end
 	
+	if item.actionid == 1000 then
+		player:sendTextMessage(MESSAGE_STATUS_SMALL, "This statue and a garnish and cannot train here")
+		return true
+	end
+
 	if player:getPremiumDays() == 0 then
 		player:sendTextMessage(MESSAGE_STATUS_SMALL, Game.getReturnMessage(RETURNVALUE_YOUNEEDPREMIUMACCOUNT))
 		return true

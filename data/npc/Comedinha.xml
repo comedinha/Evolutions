@@ -3,10 +3,10 @@
     <health now="100" max="100"/>
     <look type="128" head="100" body="100" legs="114" feet="114" addons="2"/>
     <parameters>
-		<parameter key="message_greet" value="Ola |PLAYERNAME|! Bem vindo a minha casa. Mas lembre-se, nao toque em nada, se quiser comprar alguma coisa diga {trade} e se quiser algum {bless} é so falar." />
+		<parameter key="message_greet" value="Hello |PLAYERNAME| :3, welcome to my home. But remember, do not touch anything, if you want to buy something say {trade} and if you want some {bless} speak." />
         <parameter key="module_keywords" value="1" />
         <parameter key="keywords" value="bless" />
-		<parameter key="keyword_reply1" value="Eu vendo os blessings {spiritual shielding}, {embrace of tibia}, {fire of the suns}, {wisdom of solitude} e a {spark of the phoenix} quer algum?."/>
+		<parameter key="keyword_reply1" value="I saw the blessings {spiritual shielding}, {embrace of tibia}, {fire of the suns}, {wisdom of solitude} and the {spark of the phoenix} want some?."/>
 
         <parameter key="module_shop" value="1"/>
         <parameter key="shop_buyable" value="scythe,2550,50;cherries,2679,1;candlestick,2048,2;vial of water,2006,5,1;vial of milk,2006,5,6;bar of chocolate,6574,5000;baking tray,2561,20"/> 

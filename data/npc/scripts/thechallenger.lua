@@ -13,13 +13,13 @@ function creatureSayCallback(cid, type, msg)
         local crystalid = 2349
         local storage = 2349
         local getstorage = getPlayerStorageValue(cid, storage)
-        local sorrymessage = "Desculpe, voce nao tem todos os Blue note necessarios para completar as missoes..."
+        local sorrymessage = "Sorry, you do not have all the Blue Notes needed to complete missions!"
         local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
         if msgcontains(msg, 'Blue Note') then
                 if getstorage == 6 then
-                        npcHandler:say("Voce jah completou a quest", cid)
+                        npcHandler:say("You already completed the quest", cid)
                 elseif getstorage < 6 then
-                        npcHandler:say("Voce tem todos os Blue note necessarios?", cid)
+                        npcHandler:say("You have all the Blue Notes needed?", cid)
                         talkState[talkUser] = 1
                 end
         elseif msgcontains(msg, 'quest') then

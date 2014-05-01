@@ -11,7 +11,7 @@ function onThink()                        npcHandler:onThink()                  
 function thinkCallback(cid)
 local rand = math.random(1,100)
 if rand == 1 then
-selfSay('OLHA O PÊXEEEEE. TÁ FRESCOOOOO QUEM VEEEEEM?')
+selfSay('FISSHHH. ITT AAARRREEEE FFREEEEESH, anyone??')
 end
 return true
 end

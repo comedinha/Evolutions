@@ -2,6 +2,6 @@
 	<health now="150" max="150"/>
 	<look type="129" head="114" body="200" legs="114" feet="114" corpse="2212"/>
 	<parameters>
-		<parameter key="message_greet" value="Ola |PLAYERNAME|! Eu posso te levar para {Dorion}, {Yalahar}, {Alfon}, {Anknor}, {Smallville}, {Roshamuul} e {Goroma}. Onde deseja ir?" />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|! I can take you to {Dorion}, {Yalahar}, {Alfon}, {Anknor}, {Smallville}, {Roshamuul} and {Goroma}. Where you want?" />
 	</parameters>
 </npc>

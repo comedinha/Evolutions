@@ -4,8 +4,7 @@
 <health now="200" max="200"/>
 <look type="57" head="20" body="30" legs="40" feet="50"/>
     <parameters>
-		<parameter key="message_greet" value="Seja bem vindo |PLAYERNAME|! Eu posso te {casar} ou te {divorciar}." />
-        <parameter key="module_keywords" value="1" />
+		<parameter key="message_greet" value="Welcome |PLAYERNAME|! I can {marry} or {divorce} you." />
 		
         <parameter key="module_shop" value="1"/>
 		<parameter key="shop_buyable" value="anel,2121,5000;box,10503,5000"/> 

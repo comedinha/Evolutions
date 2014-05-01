@@ -255,7 +255,6 @@
 	<action fromid="13020" toid="13023" script="other/doors.lua" />
 	<action itemid="14405" function="market"/>
 	<action fromid="18488" toid="18492" script="other/skilltrainer.lua" />
-	<action itemid="9930" script="other/rustremover.lua"/>
 	
 	<!-- Custom's -->
 	<!-- Quests -->
@@ -276,7 +275,7 @@
 	
 	<!-- Creating -->
 	<action itemid="16018" script="other/artistic.lua"/> -- Artistc
-	<action itemid="6277" script="other/createbread.lua"/> -- Create Foods
+	<action itemid="6277" script="other/cookie.lua"/> -- Create Foods
 	<action itemid="8848" script="other/cookie.lua"/> -- Create Cookie
 	
 	<!-- Doors -->
@@ -321,4 +320,5 @@
 	<action fromid="9992" toid="10001" script="other/food_special.lua"/>
 	<action itemid="12540" script="other/food_special.lua"/>
 	<action fromid="12542" toid="12544" script="other/food_special.lua"/>
+	<action itemid="9930" script="other/rustremover.lua"/>
 </actions>

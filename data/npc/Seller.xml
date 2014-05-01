@@ -4,8 +4,8 @@
 	<look type="134" head="114" body="113" legs="113" feet="113" corpse="2212"/>
 	<parameters>
 		<parameter key="module_shop" value="1" />
-		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell ropes (50gp), shovels (20gp), backpacks (10gp), fishing rods (100gp), amulet of loss (10k), and torches (2gp). I buy vials (10gp)." />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell ropes, shovels, backpacks, fishing rods and torches. I buy vials." />
 		<parameter key="shop_buyable" value="vial,2006,10;flask,2006,10" />
-		<parameter key="shop_buyable" value="shovel,2554,20;backpack,1988,10;fishing rod,2580,100;torch,2050,2;rope,2120,50;amulet of loss,2173,10000;key ring,5801,1000" />
+		<parameter key="shop_buyable" value="shovel,2554,20;backpack,1988,10;fishing rod,2580,100;torch,2050,2;rope,2120,50;key ring,5801,1000" />
 	</parameters>
 </npc>

@@ -3,13 +3,12 @@
 	<health now="185" max="185"/>
     <look type="66" head="0" body="0" legs="0" feet="0" addons="0"/>
 	<parameters>
-		<parameter key="message_greet" value="Olá |PLAYERNAME|. Eu não posso mais te levar para {Zao}."/>
-		<parameter key="message_farewall" value="Vida Longa e prospera!"/>
-		<parameter key="message_walkaway" value="Vida longa e prospera!"/>
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I can not take you to {Zao}."/>
+		<parameter key="message_farewall" value="Long life and thrives!"/>
+		<parameter key="message_walkaway" value="Long life and thrives!"/>
 		<parameter key="module_keywords" value="1" />
-        <parameter key="keywords" value="cidades;zao" />
-        <parameter key="keyword_reply1" value="Eu não posso mais te levar para {Zao}" />
-		<parameter key="keyword_reply2" value="A cidade foi atacada e dominada pelo exercito do Orshabaal. Ouvi falar que em Alfon tem um barco que te pode levar nos Lizards." />
+        <parameter key="keywords" value="zao" />
+		<parameter key="keyword_reply1" value="The city was attacked and dominated by the Orshabaal. I heard in Alfon has a boat that you can go to Lizards Tower." />
 
 	</parameters>
 </npc>

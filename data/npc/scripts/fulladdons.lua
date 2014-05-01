@@ -239,18 +239,18 @@ local outfit_node = keywordHandler:addKeyword({'second soil guardian addon'}, pl
 	outfit_node:addChildKeywordNode(noNode)
 	
 -- Cave Explorer (done)(custom)
-local outfit_node = keywordHandler:addKeyword({'first cave explorer addon'}, playerBuyAddonNPC, {premium = false, cost = 200000, items = {}, outfit_female = 575, outfit_male = 574, addon = 1, storageID = 10067})
+local outfit_node = keywordHandler:addKeyword({'first cave explorer addon'}, playerBuyAddonNPC, {premium = true, cost = 200000, items = {}, outfit_female = 575, outfit_male = 574, addon = 1, storageID = 10067})
 	outfit_node:addChildKeywordNode(yesNode)
 	outfit_node:addChildKeywordNode(noNode)
-local outfit_node = keywordHandler:addKeyword({'second cave explorer addon'}, playerBuyAddonNPC, {premium = false, cost = 300000, items = {}, outfit_female = 575, outfit_male = 574, addon = 2, storageID = 10068})
+local outfit_node = keywordHandler:addKeyword({'second cave explorer addon'}, playerBuyAddonNPC, {premium = true, cost = 300000, items = {}, outfit_female = 575, outfit_male = 574, addon = 2, storageID = 10068})
 	outfit_node:addChildKeywordNode(yesNode)
 	outfit_node:addChildKeywordNode(noNode)
 	
 -- Dream Warden (done)(custom)
-local outfit_node = keywordHandler:addKeyword({'first dream warden addon'}, playerBuyAddonNPC, {premium = false, cost = 0, items = {{22609,1}}, outfit_female = 578, outfit_male = 577, addon = 1, storageID = 10069})
+local outfit_node = keywordHandler:addKeyword({'first dream warden addon'}, playerBuyAddonNPC, {premium = true, cost = 0, items = {{22609,1}}, outfit_female = 578, outfit_male = 577, addon = 1, storageID = 10069})
 	outfit_node:addChildKeywordNode(yesNode)
 	outfit_node:addChildKeywordNode(noNode)
-local outfit_node = keywordHandler:addKeyword({'second dream warden addon'}, playerBuyAddonNPC, {premium = false, cost = 0, items = {{22610,1}}, outfit_female = 578, outfit_male = 577, addon = 2, storageID = 10070})
+local outfit_node = keywordHandler:addKeyword({'second dream warden addon'}, playerBuyAddonNPC, {premium = true, cost = 0, items = {{22610,1}}, outfit_female = 578, outfit_male = 577, addon = 2, storageID = 10070})
 	outfit_node:addChildKeywordNode(yesNode)
 	outfit_node:addChildKeywordNode(noNode)
 

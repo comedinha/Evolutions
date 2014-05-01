@@ -4,7 +4,7 @@
     <look type="139" head="113" body="57" legs="95" feet="113" addons="3"/> 
     <parameters> 
         <parameter key="module_shop" value="1"/> 
-        <parameter key="message_greet" value="Oi |PLAYERNAME|, Eu posso vender alguns items necessarios para seus addons, diga-me {trade} para ver o que eu posso lhe vender."/>
+        <parameter key="message_greet" value="Hi |PLAYERNAME|, I can sell some necessary items for their addons, Say {trade}."/>
         <parameter key="shop_buyable" value="white piece of cloth,5909,2500;
 		green piece of cloth,5910,2500;
 		red piece of cloth,5911,2500;
