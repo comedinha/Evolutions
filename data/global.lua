@@ -423,6 +423,10 @@ string.split = function(str, sep)
 	return res
 end
 
+function Position.getTile(self)
+	return Tile(self)
+end
+
 function doPlayerAddDialog(cid, id, func)
 	modalWindow = ModalWindow(id, func.title, func.message)
 	if modalWindow:getId() == id then

@@ -19,10 +19,11 @@
 	<!-- Traps -->
 	<movevent event="StepIn" itemid="1510" script="trap.lua"/>
 	<movevent event="StepOut" itemid="1511" script="trap.lua"/>
-	<movevent event="StepIn" itemid="1512" script="trap.lua"/>
-	<movevent event="StepOut" itemid="1513" script="trap.lua"/>
+	<movevent event="StepIn" itemid="1513" script="trap.lua"/>
 	<movevent event="StepIn" itemid="2579" script="trap.lua"/>
 	<movevent event="RemoveItem" itemid="2579" script="trap.lua"/>
+	<movevent event="StepIn" itemid="4208" script="trap.lua"/>
+	<movevent event="StepOut" itemid="4209" script="trap.lua"/>
 
 	<!-- Citizen teleport -->
 	<movevent event="StepIn" itemid="1387" script="citizen.lua"/>
@@ -1056,18 +1057,6 @@
 	<movevent event="StepIn" fromaid="18001" toaid="18075" script="teleport.lua"/>
 	<movevent event="StepIn" fromaid="19001" toaid="19075" script="tilestorage.lua"/>
 	<movevent event="StepIn" fromuid="9238" touid="9239" script="vortex.lua"/>
-	
-	<!-- Drowning -->
-	<movevent event="StepIn" fromid="5406" toid="5410" script="drowning.lua"/>
-	<movevent event="StepIn" fromid="5743" toid="5744" script="drowning.lua"/>
-	<movevent event="StepIn" itemid="5764" script="drowning.lua"/>
-	<movevent event="StepIn" fromid="9671" toid="9673" script="drowning.lua"/>
-	<movevent event="StepIn" itemid="10019" script="drowning.lua"/>
-	<movevent event="StepOut" fromid="5406" toid="5410" script="drowning.lua"/>
-	<movevent event="StepOut" fromid="5743" toid="5744" script="drowning.lua"/>
-	<movevent event="StepOut" itemid="5764" script="drowning.lua"/>
-	<movevent event="StepOut" fromid="9671" toid="9673" script="drowning.lua"/>
-	<movevent event="StepOut" itemid="10019" script="drowning.lua"/>
 
 	<!-- Arena -->
 	<movevent event="StepIn" actionid="42360" script="arenagoblet.lua"/>

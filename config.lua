@@ -23,7 +23,7 @@ motd = "Welcome to The Alissow Server!"
 onePlayerOnlinePerAccount = "yes"
 allowClones = "no"
 serverName = "Alissow"
-statusTimeout = 60000
+statusTimeout = 5000
 replaceKickOnLogin = "yes"
 maxPacketsPerSecond = 25
 

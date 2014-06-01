@@ -13,7 +13,7 @@
 		<flag pushable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
+		<flag targetdistance="2"/>
 		<flag staticattack="90"/>
 		<flag runonhealth="2500"/>
 	</flags>
@@ -70,57 +70,21 @@
 		<summon name="Demon" interval="3000" chance="12" max="3"/>
 	</summons>
 	<voices interval="5000" chance="20">
-		<voice sentence="NO ONE WILL STOP ME THIS TIME!" yell="1"/>
+		<voice sentence="NOONE WILL STOP ME THIS TIME!" yell="1"/>
 		<voice sentence="THE POWER IS MINE!" yell="1"/>
-		<voice sentence="I returned from death and you dream about defeating me?"/>
-		<voice sentence="Witness the first seconds of my eternal world domination!"/>
-		<voice sentence="Even in my weakened state I will crush you all!"/>
 	</voices>
 	<loot>
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2148" countmax="25" chance="100000"/><!-- gold coin -->
+		<item id="2393" chance="16060"/><!-- giant sword -->
+		<item id="2514" chance="12050"/><!-- mastermind shield -->
+		<item id="2472" chance="7000"/><!-- magic plate armor -->
+		<item id="2678" countmax="3" chance="20000"/><!-- coconut -->
+		<item id="2148" countmax="100" chance="100000"/><!-- gold coin -->
+		<item id="2151" countmax="4" chance="12000"/><!-- talon -->
 		<item id="5903" chance="100000"/><!-- ferumbras' hat -->
-		<item id="2148" countmax="184" chance="50000"/><!-- gold coin -->
-		<item id="9971" countmax="2" chance="50000"/><!-- gold ingot -->
-		<item id="2522" chance="25000"/><!-- great shield -->
-		<item id="8903" chance="25000"/><!-- spellbook of lost souls -->
-		<item id="2466" chance="20000"/><!-- golden armor -->
-		<item id="2470" chance="20000"/><!-- golden legs -->
-		<item id="8902" chance="20000"/><!-- spellbook of mind control -->
-		<item id="8868" chance="20000"/><!-- velvet mantle -->
-		<item id="2520" chance="20000"/><!-- demon shield -->
-		<item id="8885" chance="20000"/><!-- divine plate -->
-		<item id="7894" chance="20000"/><!-- magma legs -->
-		<item id="2542" chance="20000"/><!-- tempest shield -->
-		<item id="2127" chance="16666"/><!-- emerald bangle -->
-		<item id="7896" chance="16666"/><!-- glacier kilt -->
-		<item id="7895" chance="16666"/><!-- lightning legs -->
-		<item id="2539" chance="16666"/><!-- phoenix shield -->
-		<item id="8918" chance="16666"/><!-- spellbook of dark mysteries -->
-		<item id="7885" chance="16666"/><!-- terra legs -->
-		<item id="8930" chance="14285"/><!-- emerald sword -->
-		<item id="7405" chance="14285"/><!-- havoc blade -->
-		<item id="7451" chance="14285"/><!-- shadow sceptre -->
-		<item id="2149" countmax="100" chance="14285"/><!-- small emerald -->
-		<item id="7632" countmax="10" chance="14285"/><!-- giant shimmering pearl -->
-		<item id="2472" chance="14285"/><!-- magic plate armor -->
-		<item id="2514" chance="14285"/><!-- mastermind shield -->
-		<item id="7417" chance="14285"/><!-- runed sword -->
-		<item id="8904" chance="14285"/><!-- spellscroll of prophecies -->
-		<item id="7427" chance="11111"/><!-- chaos mace -->
-		<item id="8926" chance="11111"/><!-- demonwing axe -->
-		<item id="8869" chance="11111"/><!-- greenwood coat -->
-		<item id="2146" countmax="98" chance="11111"/><!-- small sapphire -->
-		<item id="2143" countmax="88" chance="11111"/><!-- white pearl -->
-		<item id="7407" chance="10000"/><!-- haunted blade -->
-		<item id="8924" chance="10000"/><!-- hellforged axe -->
-		<item id="8928" chance="10000"/><!-- obsidian truncheon -->
-		<item id="7411" chance="10000"/><!-- ornamented axe -->
-		<item id="7410" chance="10000"/><!-- queen's sceptre -->
-		<item id="2150" countmax="54" chance="10000"/><!-- small amethyst -->
-		<item id="9970" countmax="87" chance="10000"/><!-- small topaz -->
-		<item id="7382" chance="7692"/><!-- demonrage sword -->
-		<item id="7422" chance="7692"/><!-- jade hammer -->
-		<item id="2152" countmax="58" chance="7692"/><!-- platinum coin -->
-		<item id="7423" chance="7692"/><!-- skullcrusher -->
-		<item id="5944" countmax="9" chance="7692"/><!-- soul orb -->
+		<item id="2149" countmax="3" chance="15000"/><!-- small emerald -->
+		<item id="2171" chance="30000"/><!-- platinum amulet -->
+		<item id="2415" chance="6000"/><!-- great axe -->
 	</loot>
 </monster>

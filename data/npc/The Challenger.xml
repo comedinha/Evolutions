@@ -6,7 +6,7 @@
 		<parameter key="message_greet" value="You recovered all {blue note}s?" />
         <parameter key="module_keywords" value="1" />
         <parameter key="keywords" value="prize" />
-        <parameter key="keyword_reply2" value="Not gonna tell you the prize, but I guarantee that is good thing." />
+        <parameter key="keyword_reply1" value="Not gonna tell you the prize, but I guarantee that is good thing." />
 
         <parameter key="module_shop" value="1"/>
         <parameter key="shop_buyable" value="aol,2173,10000"/> 
