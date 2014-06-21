@@ -1,5 +1,5 @@
 function onModalWindow(cid, modalWindowId, buttonId, choiceId)
-	if modalWindowId == 1004 then
+	if modalWindowId == 1003 then
 		if (buttonId == 1) then
 			local pos = 0
 			if (choiceId == 1) then
