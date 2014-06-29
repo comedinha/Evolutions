@@ -8,7 +8,7 @@ function onCreatureDisappear(cid)             npcHandler:onCreatureDisappear(cid
 function onCreatureSay(cid, type, msg)         npcHandler:onCreatureSay(cid, type, msg)     end
 function onThink()                             npcHandler:onThink()                         end
 
-npcHandler:setMessage(MESSAGE_GREET, "Ola |PLAYERNAME|. Voce pode me ajudar? Se voce me ajudar, vou te recompensar com lindos addons e lindas montarias! Basta dizer {addons}, {mounts} ou {ajuda} se voce não sabe o que fazer.")
+npcHandler:setMessage(MESSAGE_GREET, "Hello |PLAYERNAME|. I sell {addons} and {mounts}. For help with addons say {help addon} or with mount {help mount}.")
 
 function playerBuyAddonNPC(cid, message, keywords, parameters, node)
     if(not npcHandler:isFocused(cid)) then
@@ -16,12 +16,12 @@ function playerBuyAddonNPC(cid, message, keywords, parameters, node)
     end
     if (parameters.confirm ~= true) and (parameters.decline ~= true) then
         if(getPlayerPremiumDays(cid) == 0) and (parameters.premium == true) then
-            npcHandler:say('Desculpe, mas este addon e apenas para jogadores premium!', cid)
+            npcHandler:say('Sorry, but this addon only for premium players!', cid)
             npcHandler:resetNpc()
             return true
         end
         if (getPlayerStorageValue(cid, parameters.storageID) ~= -1) then
-            npcHandler:say('Voce ja tem esse addon!', cid)
+            npcHandler:say('You already have this addon!', cid)
             npcHandler:resetNpc()
             return true
         end
@@ -44,7 +44,7 @@ function playerBuyAddonNPC(cid, message, keywords, parameters, node)
         elseif table.maxn(parameters.items) then
             text = items_list
         end
-        npcHandler:say('Trouxeste-me ' .. text .. ' por ' .. keywords[1] .. '?', cid)
+        npcHandler:say('Brought ' .. text .. ' for ' .. keywords[1] .. '?', cid)
         return true
     elseif (parameters.confirm == true) then
         local addonNode = node:getParent()
@@ -69,14 +69,14 @@ function playerBuyAddonNPC(cid, message, keywords, parameters, node)
             doPlayerAddOutfit(cid, addoninfo.outfit_male, addoninfo.addon)
             doPlayerAddOutfit(cid, addoninfo.outfit_female, addoninfo.addon)
             setPlayerStorageValue(cid,addoninfo.storageID,1)
-            npcHandler:say('Aqui esta.', cid)
+            npcHandler:say('Here it is.', cid)
         else
-            npcHandler:say('Voce nao tem os items necessarios ou dinheiro!', cid)
+            npcHandler:say('You do not have the necessary items or money!', cid)
         end
         npcHandler:resetNpc()
         return true
     elseif (parameters.decline == true) then
-        npcHandler:say('Este nao lhe interessa? Experimente outro!', cid)
+        npcHandler:say('This does not interest you? Try another!', cid)
         npcHandler:resetNpc()
         return true
     end
@@ -245,18 +245,9 @@ local outfit_node = keywordHandler:addKeyword({'first cave explorer addon'}, pla
 local outfit_node = keywordHandler:addKeyword({'second cave explorer addon'}, playerBuyAddonNPC, {premium = false, cost = 300000, items = {}, outfit_female = 575, outfit_male = 574, addon = 2, storageID = 10068})
 	outfit_node:addChildKeywordNode(yesNode)
 	outfit_node:addChildKeywordNode(noNode)
-	
--- Dream Warden (done)(custom)
-local outfit_node = keywordHandler:addKeyword({'first dream warden addon'}, playerBuyAddonNPC, {premium = false, cost = 0, items = {{22609,1}}, outfit_female = 578, outfit_male = 577, addon = 1, storageID = 10069})
-	outfit_node:addChildKeywordNode(yesNode)
-	outfit_node:addChildKeywordNode(noNode)
-local outfit_node = keywordHandler:addKeyword({'second dream warden addon'}, playerBuyAddonNPC, {premium = false, cost = 0, items = {{22610,1}}, outfit_female = 578, outfit_male = 577, addon = 2, storageID = 10070})
-	outfit_node:addChildKeywordNode(yesNode)
-	outfit_node:addChildKeywordNode(noNode)
 
-keywordHandler:addKeyword({'addons'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Posso te dar mage, nobleman, warrior, barbarian, druid, wizard, oriental, assassin, shaman, nighmare, jester, yalaharian, warmaster, wayfarer, afflicted, deepling, insectoid, crystal warlord, soil guardian, cave explorer e dream warden addons.'})
-keywordHandler:addKeyword({'ajuda'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Para ter ajuda com addons fale {help addon} com montaria {help mount}.'})
-keywordHandler:addKeyword({'help addon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Para comprar o primeiro addon fale \'first NAME addon\', Para o segundo addon fale \'second NAME addon\'.'})
+keywordHandler:addKeyword({'addons'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell mage, nobleman, warrior, barbarian, druid, wizard, oriental, assassin, shaman, nighmare, jester, yalaharian, warmaster, wayfarer, afflicted, deepling, insectoid, crystal warlord, soil guardian and cave explorer addons.'})
+keywordHandler:addKeyword({'help addon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To buy the first addon talk \'first NAME addon\', for the second addon talk \'second NAME addon\'.'})
 
 function playerBuyMountNPC(cid, message, keywords, parameters, node)
     if(not npcHandler:isFocused(cid)) then
@@ -264,12 +255,12 @@ function playerBuyMountNPC(cid, message, keywords, parameters, node)
     end
     if (parameters.confirm ~= true) and (parameters.decline ~= true) then
         if(getPlayerPremiumDays(cid) >= 1) and (parameters.premium == true) then
-            npcHandler:say('Desculpe, mas esta montaria e apenas para jogadores premium!', cid)
+            npcHandler:say('Sorry, but this mount and only for premium players!', cid)
             npcHandler:resetNpc()
             return true
         end
         if (getPlayerStorageValue(cid, parameters.storageID) ~= -1) then
-            npcHandler:say('Voce ja tem esta montaria!', cid)
+            npcHandler:say('You already have this mount!', cid)
             npcHandler:resetNpc()
             return true
         end
@@ -292,7 +283,7 @@ function playerBuyMountNPC(cid, message, keywords, parameters, node)
         elseif table.maxn(parameters.items) then
             text = items_list
         end
-        npcHandler:say('Trouxeste-me ' .. text .. ' por ' .. keywords[1] .. '?', cid)
+        npcHandler:say('Brought ' .. text .. ' for ' .. keywords[1] .. '?', cid)
         return true
     elseif (parameters.confirm == true) then
         local mountNode = node:getParent()
@@ -316,14 +307,14 @@ function playerBuyMountNPC(cid, message, keywords, parameters, node)
             end
             doPlayerAddMount(cid, mountinfo.mountid)
             setPlayerStorageValue(cid,mountinfo.storageID,1)
-            npcHandler:say('Aqui esta.', cid)
+            npcHandler:say('Here it is.', cid)
         else
-            npcHandler:say('Voce nao tem os items necessarios ou dinheiro!', cid)
+            npcHandler:say('You do not have the necessary items or money!', cid)
         end
         npcHandler:resetNpc()
         return true
     elseif (parameters.decline == true) then
-        npcHandler:say('Este nao lhe interessa? Experimente outro!', cid)
+        npcHandler:say('This does not interest you? Try another!', cid)
         npcHandler:resetNpc()
         return true
     end
@@ -369,8 +360,10 @@ local mount_node = keywordHandler:addKeyword({'uniwheel'}, playerBuyMountNPC, {p
 	mount_node:addChildKeywordNode(yesNode)
 	mount_node:addChildKeywordNode(noNode)
 
-keywordHandler:addKeyword({'mounts'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Posso te dar {blazebringer}, {donkey}, {rented horse} de 1 a 3, {shadow draptor}, {stampor} e a {uniwheel}.'})
-keywordHandler:addKeyword({'help mount'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Para ter a montaria fale um dos nomes da lista (falando {mounts}) e consiga os items nescessários.'})
-keywordHandler:addKeyword({'rented horse'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Existem 3 tipos de rented horse, para compra-los é {rented horse 1}, {rented horse 2} e {rented horse 3} eles são por tempo ilimitado.'})
+keywordHandler:addKeyword({'mounts'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Can I offer you a {blazebringer}, {donkey}, {rented horse} de 1 a 3, {shadow draptor}, {stampor} and {uniwheel}.'})
+keywordHandler:addKeyword({'help mount'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To be mounted speak one of the names from the list ({mounts}) and get the necessary items.'})
+keywordHandler:addKeyword({'rented horse'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'There are 3 types of rented horse, to buy them is {rented horse 1}, {rented horse 2} and {rented horse 3} they are currently indefinitely.'})
+
+-- Put time for rented horse
 
 npcHandler:addModule(FocusModule:new())

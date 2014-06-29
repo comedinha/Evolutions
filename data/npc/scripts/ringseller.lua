@@ -142,14 +142,14 @@ end
 local noNode = KeywordNode:new({'no'}, playerBuyAddonNPC, {decline = true})
 local yesNode = KeywordNode:new({'yes'}, playerBuyAddonNPC, {confirm = true})
 
-local outfit_node = keywordHandler:addKeyword({'first'}, playerBuyAddonNPC, {premium = false, cost = 0, items = {{5878,100}}, outfit_female = 136, outfit_male = 128, addon = 1, storageID = 10009})
+local outfit_node = keywordHandler:addKeyword({'first'}, playerBuyAddonNPC, {premium = false, cost = 0, items = {{22609,1}}, outfit_female = 578, outfit_male = 577, addon = 1, storageID = 10009})
     outfit_node:addChildKeywordNode(yesNode)
     outfit_node:addChildKeywordNode(noNode)
-local outfit_node = keywordHandler:addKeyword({'second'}, playerBuyAddonNPC, {premium = false, cost = 0, items = {{5890,100}, {5902,50}, {2480,1}}, outfit_female = 136, outfit_male = 128, addon = 2, storageID = 10010})
+local outfit_node = keywordHandler:addKeyword({'second'}, playerBuyAddonNPC, {premium = false, cost = 0, items = {{22610,1}}, outfit_female = 578, outfit_male = 577, addon = 2, storageID = 10010})
     outfit_node:addChildKeywordNode(yesNode)
     outfit_node:addChildKeywordNode(noNode)
 	
-keywordHandler:addKeyword({'addon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I can give you {first} and {second} Citizen addon.'})
+keywordHandler:addKeyword({'addon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I can give you {first} and {second} Dream Warden addon.'})
 						
 if(config.pin) then
             bank_pin = {

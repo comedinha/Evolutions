@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Stevan" script="ringseller.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100"/>
-	<look type="128" head="114" body="0" legs="114" feet="0" addons="3"/>
-	<!-- Need fix to add a new outfit and quest -->
+	<look type="577" head="114" body="0" legs="114" feet="0" addons="3"/>
 	<parameters>
 		<parameter key="message_greet" value="Hello |PLAYERNAME|. I'm the banker of the city. Say {help} if you want help. I also sell valuable items. Say {trade}."/>
 		<parameter key="module_shop" value="1"/>

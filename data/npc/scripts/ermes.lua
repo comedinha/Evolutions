@@ -7,12 +7,6 @@ function onCreatureDisappear(cid)        npcHandler:onCreatureDisappear(cid)    
 function onCreatureSay(cid, type, msg)  npcHandler:onCreatureSay(cid, type, msg)    end
 function onThink()                        npcHandler:onThink()                        end
 
-function greetCallback(cid)
-
-return true
-
-end
-
 function playerBuyAddonNPC(cid, message, keywords, parameters, node)
     if(not npcHandler:isFocused(cid)) then
         return false
