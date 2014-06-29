@@ -8,17 +8,11 @@ function onCreatureSay(cid, type, msg)    npcHandler:onCreatureSay(cid, type, ms
 function onThink()                        npcHandler:onThink()                        end
 
 function thinkCallback(cid)
-local rand = math.random(1,100)
-if rand == 1 then
-selfSay('Compro armaduras e escudos, pago muito bem. Além disso, sou o unico que compro.')
-end
-return true
-end
-
-function greetCallback(cid)
-
-return true
-
+	local rand = math.random(1,100)
+	if rand == 1 then
+		selfSay('I buy armor and shields, i pays well. Besides, Im the one who buy.')
+	end
+	return true
 end
 
 local shopModule = ShopModule:new()

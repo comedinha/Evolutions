@@ -10,7 +10,7 @@ function onThink()					npcHandler:onThink()					end
 
 function thinkCallback(cid)
 	if math.random(300) == 1 then
-		selfSay('Posso ajudar?')
+		selfSay('Can I help?')
 	end
 	return true
 end
@@ -29,17 +29,17 @@ function creatureSayCallback(cid, type, msg)
 	end
 
 	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
-	if(msgcontains(msg, 'morar') and msgcontains(msg, 'aqui') or msgcontains(msg, 'set') and msgcontains(msg, 'my') and msgcontains(msg, 'town')) then
-		selfSay('Aqui agora você ira renascer em Dorion!', cid)
+	if(msgcontains(msg, 'set') and msgcontains(msg, 'my') and msgcontains(msg, 'town')) then
+		selfSay('Here now you will be reborn in Dorion!', cid)
 		doPlayerSetTown(cid, 1)
 	elseif(msgcontains(msg, 'buy') and msgcontains(msg, 'all')) then
-		selfSay('Você quer todas as blesses por 50k? No npc Comedinha elas custam 25k', cid)
+		selfSay('You want every blesses for 50k? In the Comedinha they cost 25k', cid)
 		talkState[talkUser] = 1
 		return true
 	elseif(msgcontains(msg, 'yes')) then
 		if(talkState[talkUser] == 1) then
 			if(getPlayerMoney(cid) >= 50000) then
-				selfSay('Aqui está!', cid)
+				selfSay('Here it is!', cid)
 				doPlayerRemoveMoney(cid, 50000)
 				for b = 1, 6 do
 					doPlayerAddBlessing(cid, b)

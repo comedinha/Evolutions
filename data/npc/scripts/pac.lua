@@ -16,7 +16,7 @@ function creatureSayCallback(cid, type, msg)
     local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
 
     if(msgcontains(msg, 'bonus')) then
-        selfSay('Completou alguma quest para o bonus?', cid)
+        selfSay('Completed the quests for the bonus?', cid)
         talkState[talkUser] = 1
     elseif(msgcontains(msg, 'yes') and talkState[talkUser] == 1) then
         if getPlayerStorageValue(cid, 11551) >= 25 then
@@ -25,24 +25,22 @@ function creatureSayCallback(cid, type, msg)
 				doPlayerAddItem(cid, 2160, 10)
 				selfSay('Here you are.', cid)
 			end
-		end
-		if getPlayerStorageValue(cid, 11551) >= 50 then
+		elseif getPlayerStorageValue(cid, 11551) >= 50 then
 			if(getPlayerStorageValue(cid, 11555) == 0) then
 				setPlayerStorageValue(cid, 11555, 1)
 				doPlayerAddItem(cid, 2160, 50)
 				selfSay('Here you are.', cid)
 			end
-		end
-		if getPlayerStorageValue(cid, 11551) >= 75 then
+		elseif getPlayerStorageValue(cid, 11551) >= 75 then
 			if(getPlayerStorageValue(cid, 11555) == 1) then
 				setPlayerStorageValue(cid, 11555, 2)
 				doPlayerAddItem(cid, 2160, 100)
 				selfSay('Here you are.', cid)
 			else
-				selfSay('Voce nao tem nada para ganhar', cid)
+				selfSay('Have you completed all.', cid)
 			end
         end
-		selfSay('Voce completou '..getPlayerStorageValue(cid, 11551)..' quests. E pegou '.. getPlayerStorageValue(cid, 11555)+1 ..' bonus', cid)
+		selfSay('You have completed '..getPlayerStorageValue(cid, 11551)..' quests. And pickup '.. getPlayerStorageValue(cid, 11555)+1 ..' bonus', cid)
         talkState[talkUser] = 0
     elseif(msgcontains(msg, 'no') and isInArray({1}, talkState[talkUser]) == true) then
         talkState[talkUser] = 0
@@ -63,7 +61,7 @@ function playerUpgradeUmbral(cid, message, keywords, parameters, node)
             return true
         end
         if (getPlayerStorageValue(cid, parameters.storageID) ~= -1) then
-            npcHandler:say('Voce ja atualizou algum item e nao pode atualizar outro!', cid)
+            npcHandler:say('You already upgraded an item and can not update another!', cid)
             npcHandler:resetNpc()
             return true
         end
@@ -163,7 +161,7 @@ local upgrade_node = keywordHandler:addKeyword({'umbral spellbook'}, playerUpgra
     upgrade_node:addChildKeywordNode(yesNode)
     upgrade_node:addChildKeywordNode(noNode)
 	
-keywordHandler:addKeyword({'upgrade'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Basta dizer o nome de seu umbral item para eu ver se faco o upgrade.'})
+keywordHandler:addKeyword({'upgrade'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Just say the name of your umbral item to see if I upgrade.'})
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())

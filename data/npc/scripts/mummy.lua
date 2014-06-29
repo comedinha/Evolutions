@@ -7,19 +7,12 @@ function onCreatureDisappear(cid)        npcHandler:onCreatureDisappear(cid)    
 function onCreatureSay(cid, type, msg)  npcHandler:onCreatureSay(cid, type, msg)    end
 function onThink()                        npcHandler:onThink()                        end
 
-
 function thinkCallback(cid)
-local rand = math.random(1,100)
-if rand == 1 then
-selfSay('Grrrr.')
-end
-return true
-end
-
-function greetCallback(cid)
-
-return false
-
+	local rand = math.random(1,100)
+	if rand == 1 then
+		selfSay('Grrrr.')
+	end
+	return true
 end
  
 npcHandler:setCallback(CALLBACK_ONTHINK, thinkCallback)

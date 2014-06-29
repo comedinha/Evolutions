@@ -7,7 +7,6 @@ function onCreatureDisappear(cid) 			npcHandler:onCreatureDisappear(cid) 			end
 function onCreatureSay(cid, type, msg) 			npcHandler:onCreatureSay(cid, type, msg) 		end
 function onThink() 					npcHandler:onThink() 					end
 
--- Don't forget npcHandler = npcHandler in the parameters. It is required for all StdModule functions!
 keywordHandler:addKeyword({'chairs'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell wooden, sofa, red cushioned, green cushioned, tusk and ivory chairs.'})
 keywordHandler:addKeyword({'tables'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell big, square, round, small, stone, tusk, bamboo tables.'})
 keywordHandler:addKeyword({'plants'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'I sell pink and green flowers, also christmas trees.'})

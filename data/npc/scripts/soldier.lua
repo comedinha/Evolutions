@@ -36,16 +36,16 @@ local function lookAtFocus()
 end
 
 function onCreatureSay(cid, type, msg)
-	if((msg == "e o Orshabaal?") or (msg == "e o orshabaal?") or (msg == "e o Orsha?") or (msg == "e o orsha?")) then
+	if(msgcontains(msg, 'orshabaal') or msgcontains(msg, 'orsha')) then
 		if math.random(300) <= 50 then
-			selfSay("Orshabaal! Vai levar pau!")
+			selfSay("Orshabaal will die!")
 		end
 	end
 end
 
 function thinkCallback(cid)
 	if math.random(300) == 1 then
-		selfSay('Orshabaal! Vai levar pau!')
+		selfSay('Orshabaal will die!')
 	end
 	return true
 end

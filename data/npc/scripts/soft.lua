@@ -16,7 +16,7 @@ function creatureSayCallback(cid, type, msg)
 	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
 
 	if(msgcontains(msg, 'reparar') or msgcontains(msg, 'soft boots')) then
-		selfSay('Voce deseja reparar sua worn soft boots por 10000 moedas de ouro?', cid)
+		selfSay('You want to repair your soft boots worn by 10000 gold coins?', cid)
 		talkState[talkUser] = 1
 	elseif(msgcontains(msg, 'yes') and talkState[talkUser] == 1) then
 		if(getPlayerItemCount(cid, 10021) >= 1) then
@@ -25,10 +25,10 @@ function creatureSayCallback(cid, type, msg)
 				doPlayerAddItem(cid, 2640)
 				selfSay('Here you are.', cid)
 			else
-				selfSay('Desculpe, volte quando tiver dinheiro.', cid)
+				selfSay('Sorry, come back when you have money.', cid)
 			end
 		else
-			selfSay('desculpe, voce nao tem este item.', cid)
+			selfSay('Sorry, you do not have this item.', cid)
 		end
 		talkState[talkUser] = 0
 	elseif(msgcontains(msg, 'no') and isInArray({1}, talkState[talkUser]) == TRUE) then

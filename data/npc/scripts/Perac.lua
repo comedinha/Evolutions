@@ -7,19 +7,12 @@ function onCreatureDisappear(cid)        npcHandler:onCreatureDisappear(cid)    
 function onCreatureSay(cid, type, msg)  npcHandler:onCreatureSay(cid, type, msg)    end
 function onThink()                        npcHandler:onThink()                        end
 
-
 function thinkCallback(cid)
-local rand = math.random(1,300)
-if rand == 1 then
-selfSay('Vendo munição e utilitários para paladinos em um ótimo preço, aproveite que está em promoção.')
-end
-return true
-end
-
-function greetCallback(cid)
-
-return true
-
+	local rand = math.random(1,300)
+	if rand == 1 then
+		selfSay('Buy ammo and utilities for paladins at a great price, enjoy! Today 50% off.')
+	end
+	return true
 end
 	
 function playerBuyAddonNPC(cid, message, keywords, parameters, node)

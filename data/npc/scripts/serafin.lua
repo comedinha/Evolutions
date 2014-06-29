@@ -27,8 +27,4 @@ shopModule:addBuyableItem({'potato'}, 8838, 4, 'potato')
 shopModule:addBuyableItem({'white mushroom'}, 2787, 10, 'white mushroom')
 shopModule:addBuyableItem({'juice squeezer'}, 5865, 100, 'juice squeezer')
 
-
-
-
-
 npcHandler:addModule(FocusModule:new())

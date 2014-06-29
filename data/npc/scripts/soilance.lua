@@ -14,8 +14,4 @@ npcHandler:addModule(shopModule)
 shopModule:addBuyableItem({'meat'}, 2666, 3, 'orange')
 shopModule:addBuyableItem({'ham'}, 2671, 5, 'ham')
 
-
-
-
-
 npcHandler:addModule(FocusModule:new())
