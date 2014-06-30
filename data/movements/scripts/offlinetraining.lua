@@ -1,8 +1,8 @@
 modaldialog1 = {
 	title = "Offline Training",
-	message = "Para qual sala você quer ir?",
+	message = "To which room you want to go?",
 	buttons = {
-		{ id = 1, text = "ir" },
+		{ id = 1, text = "go" },
 	},
 	buttonEnter = 1,
 	buttonEscape = 2,

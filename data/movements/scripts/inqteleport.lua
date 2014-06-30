@@ -19,7 +19,7 @@ function onStepIn(cid, item, position, fromPosition)
 		if(getPlayerStorageValue(cid, teleport.action) == 1) then
 			doTeleportThing(cid, teleport[item.actionid])
 			else
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Você ainda nem chegou nessa parte!")
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You have not yet reached here!")
 			doTeleportThing(cid, fromPosition, false)
 		end
 		return true

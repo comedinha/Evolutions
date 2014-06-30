@@ -9,7 +9,7 @@ function onStepIn(cid, item, position, fromPosition)
 		end
 		
 		if(getPlayerStorageValue(cid, piso.action) == -1) then
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Você descobriu esta área!")
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You discovered this area!")
 			setPlayerStorageValue(cid,piso.action,1)
 			setPlayerStorageValue(cid,piso.storage,1)
 			setPlayerStorageValue(cid, 11552, getPlayerStorageValue(cid, 11552)+1)

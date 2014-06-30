@@ -20,7 +20,7 @@ local playersTeleport = {}
 	end
 	for i, v in ipairs(playersTeleport) do
 		doTeleportThing(v, newPlayerPos)
-		doPlayerSendTextMessage(cid, 19, "Boa sorte!")
+		doPlayerSendTextMessage(cid, 19, "Good luck!")
 	end
 	return true
 end

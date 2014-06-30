@@ -8,11 +8,11 @@
 	<!-- Custom -->
 	<!-- Others -->
 	<event type="think" name="MapMark" script="mapmark.lua"/>
-	<event type="login" name="Sorteio" script="sorteio.lua"/>
+	<event type="login" name="Raffle" script="raffle.lua"/>
 	<event type="think" name="Functions" script="functions.lua"/>
 
 	<!-- Modal -->
-	<event type="modalwindow" name="ModalSorteio" script="modal/sorteio.lua"/>
+	<event type="modalwindow" name="ModalRaffle" script="modal/raffle.lua"/>
 	<event type="modalwindow" name="ModalOffline" script="modal/offline.lua"/>
 	<event type="modalwindow" name="ModalRank" script="modal/rank.lua"/>
 	<event type="modalwindow" name="ModalTP" script="modal/tp.lua"/>

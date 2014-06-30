@@ -1,6 +1,5 @@
 -- annihilator chests
 function onUse(cid, item, fromPosition, itemEx, toPosition)
-
    	if item.uid == 5306 then
    		queststatus = getPlayerStorageValue(cid,5310)
    		if queststatus == -1 then
@@ -31,6 +30,5 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 	else
 		return 0
    	end
-
    	return 1
 end

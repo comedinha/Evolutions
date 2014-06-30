@@ -13,20 +13,20 @@ function onModalWindow(cid, modalWindowId, buttonId, choiceId)
 			if (choiceId == 1) then
 				if math.random(100) <= 10 then
 					if(getPlayerPremiumDays(cid) > 360) then
-						doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Voce nao pode ter mais de 360 dias de premium.")
+						doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You can not have more than 360 days of premium.")
 						doSendMagicEffect(getPlayerPosition(cid), CONST_ME_POFF)
 						return false
 					end
 					doPlayerAddPremiumDays(cid, 2)
-					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Voce acaba de ganhar 2 dias de premium, boa sorte.")
+					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You just won 2 days premium.")
 					else
-					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Voce nao conseguiu ganhar!")
+					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You failed to win!")
 				end
 			elseif (choiceId == 2) then
 				for i = 0, #items do
 				if (items[i].chance > math.random(1, 6)) then
 					doPlayerAddItem(cid, items[i].id, items[i].count)
-					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Seu Item e "..getItemName(items[i].id).."!")
+					doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Your prize is "..getItemName(items[i].id).."!")
 					end
 				end
 			end

@@ -57,8 +57,8 @@
 	<talkaction words="/ta" separator=" " script="createitemall.lua" />
 	<talkaction words="/tp" acctype="4" script="tp.lua" />
 	<talkaction words="/e" separator=" " acctype="4" script="event.lua" />
-	<talkaction words="/prender" separator=" " script="prisao.lua" />
-	<talkaction words="/desprender" separator=" " script="prisao.lua" />
+	<talkaction words="/jail" separator=" " script="prision.lua" />
+	<talkaction words="/unjail" separator=" " script="prision.lua" />
 	
 	<talkaction words="/staffrules" separator=" " script="staffrules.lua" />
 	

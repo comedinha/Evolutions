@@ -9,7 +9,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 			end
 			return TRUE
 		else
-			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Voce nao pode entrar nesta sala.")
+			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "You can not enter this room.")
 			return TRUE
 		end
 	elseif (item.actionid == 42357 and getPlayerStorageValue(cid,42351) == 1) then
@@ -20,7 +20,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		end
 		return TRUE
 	else
-		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "Primeiro pague, depois podera entrar.")
+		doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "First pay, then may not enter.")
 		return TRUE
 	end
 	return FALSE

@@ -1,9 +1,9 @@
 modaldialog2 = {
 	title = "Rank",
-	message = "Escolha o rank que você quer visualizar:",
+	message = "Select the rank you want to view:",
 	buttons = {
-		{ id = 1, text = "Ver" },
-		{ id = 2, text = "Cancelar" },
+		{ id = 1, text = "See" },
+		{ id = 2, text = "Cancel" },
 	},
 	buttonEnter = 1,
 	buttonEscape = 2,

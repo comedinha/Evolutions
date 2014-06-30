@@ -1048,7 +1048,7 @@
 	<!-- Custom's -->
 	<!-- Other's -->
 	<movevent event="StepIn" actionid="15000" script="offlinetrainingtile.lua"/>
-	<movevent event="StepIn" fromaid="50001" toaid="50075" script="mensagens.lua"/>
+	<movevent event="StepIn" fromaid="50001" toaid="50075" script="message.lua"/>
 	<movevent event="StepIn" actionid="16000" script="offlinetraining.lua"/>
 	<movevent event="StepIn" fromaid="16001" toaid="16009" script="inqstorage.lua"/>
 	<movevent event="StepIn" fromaid="16011" toaid="16019" script="inqteleport.lua"/>

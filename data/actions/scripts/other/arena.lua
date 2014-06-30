@@ -19,7 +19,7 @@ function onUse(cid, item, frompos, item2, topos)
 						arenacreature = getThingfromPos(arenapos)
 
 						if arenacreature.itemid > 0 then
-							doPlayerSendCancel(cid,"Espere o duelo terminar.")
+							doPlayerSendCancel(cid,"Expect the duel finish.")
 							return 1
 						end
 					end
@@ -40,10 +40,10 @@ function onUse(cid, item, frompos, item2, topos)
 				doPlayerSendTextMessage(player1.uid,18,"FIGHT!")
 				doPlayerSendTextMessage(player2.uid,18,"FIGHT!")
 			else
-				doPlayerSendCancel(cid,"Os dois lutadores devem ter no minimo level 50.")
+				doPlayerSendCancel(cid,"The two fighters must be at least level "..arenalevel..".")
 			end
 		else
-			doPlayerSendCancel(cid,"Voce precisa de 2 jogadores para lutar.")
+			doPlayerSendCancel(cid,"You need 2 players to fight.")
 		end
 	else
 		return 0

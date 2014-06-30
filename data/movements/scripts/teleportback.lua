@@ -14,7 +14,7 @@ function onStepIn(cid, item, position, fromPosition)
 			doTeleportThing(cid, teleport[item.actionid])
 			setPlayerStorageValue(cid,teleport.action,-1)
 			else
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Você ainda não pode voltar por aqui!")
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You can not even back here!")
 			doTeleportThing(cid, fromPosition, false)
 		end
 		return true

@@ -22,7 +22,7 @@ function onStepIn(cid, item, position, fromPosition)
 			doTeleportThing(cid, teleport[item.actionid])
 			setPlayerStorageValue(cid,teleport.back,1)
 			else
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Você deve descobrir a área antes de liberar o Fast Travel!")
+			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You must discover the area before releasing the Fast Travel!")
 			doTeleportThing(cid, fromPosition, false)
 		end
 		return true

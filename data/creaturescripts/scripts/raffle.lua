@@ -1,15 +1,15 @@
 modaldialog = {
-	title = "Quer tentar a sorte?",
-	message = "Selecione o que você quer tentar ganhar:",
+	title = "Want to try your luck?",
+	message = "Select what you want to try to win:",
 	buttons = {
-		{ id = 1, text = "Tentar" },
-		{ id = 2, text = "Cancelar" },
+		{ id = 1, text = "Try" },
+		{ id = 2, text = "Cancel" },
 	},
 	buttonEnter = 1,
 	buttonEscape = 2,
 	choices = {
-		{ id = 1, text = "2 dias de premium!" },
-		{ id = 2, text = "Algum Item!" }
+		{ id = 1, text = "2 premium days!" },
+		{ id = 2, text = "any Item!" }
 	},
 	popup = true
 }
@@ -18,7 +18,7 @@ function onLogin(cid)
 	if getPlayerStorageValue(cid, 11000) == -1 then
 		if math.random(100) <= 50 then
 			doPlayerAddDialog(cid, 1000, modaldialog)
-			registerCreatureEvent(cid, "ModalSorteio")
+			registerCreatureEvent(cid, "ModalRaffle")
 		end
 		setPlayerStorageValue(cid, 11000, 1)
 	end

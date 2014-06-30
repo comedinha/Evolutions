@@ -1,17 +1,17 @@
 modaldialog4 = {
-	title = "Acesso Rapido",
-	message = "Para onde você quer ir?",
+	title = "Quick Access",
+	message = "Where are you going?",
 	buttons = {
-		{ id = 1, text = "Ir" },
-		{ id = 2, text = "Cancelar" },
+		{ id = 1, text = "Go" },
+		{ id = 2, text = "Cancel" },
 	},
 	buttonEnter = 1,
 	buttonEscape = 2,
 	choices = {
-		{ id = 1, text = "Templo" },
+		{ id = 1, text = "Temple" },
 		{ id = 2, text = "Gm Island" },
 		{ id = 3, text = "XedeguX Island" },
-		{ id = 4, text = "Sala de eventos" }
+		{ id = 4, text = "Event Room" }
 	},
 	popup = false
 }

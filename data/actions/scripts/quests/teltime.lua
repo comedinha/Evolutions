@@ -1,4 +1,4 @@
-  local config =
+local config =
 {
     newPos = {x=330, y=633, z=6}, -- New player position
     teleportPos = {x=160, y=51, z=8}, -- Teleport position
@@ -16,7 +16,7 @@ local playerPos = getCreaturePosition(cid)
         doCreatureSay(cid, "The teleport has been created!", TALKTYPE_ORANGE_1)
         addEvent(doRemoveTeleport, config.timeToRemove * 1000)
     elseif item.itemid == 1946 then
-        doPlayerSendCancel(cid, "O teleport foi criado! Se entrar agora só poderá voltar no final do desafio.")
+        doPlayerSendCancel(cid, "The teleport was created! If you get in now can only return at the end of the challenge.")
     return TRUE
     end
 end

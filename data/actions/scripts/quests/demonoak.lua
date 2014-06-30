@@ -5,26 +5,25 @@ function doSummonCreatures (monsters,positions)
 end 
 
 function onUse(cid, item, fromPosition, itemEx, toPosition)
-treepos = {x=159, y=106, z=7, stackpos=1}
-treepos2 = {x=157, y=113, z=7, stackpos=1} --- position of left arm
-treepos3 = {x=159, y=111, z=7, stackpos=1} --- position of crow
-treepos4 = {x=159, y=114, z=7, stackpos=1} --- position of mouth
-monster1 = {x=157, y=109, z=7}
-monster2 = {x=163, y=110, z=7}
-monster3 = {x=155, y=116, z=7}
-monster4 = {x=162, y=116, z=7}
-tree = getThingfromPos(treepos).uid
-tree2 = getThingfromPos(treepos2).uid
-tree3 = getThingfromPos(treepos3).uid
-tree4 = getThingfromPos(treepos4).uid
-playerPos = getCreaturePosition(cid)
-local randomizer = math.random(1,6)
-queststatus = getPlayerStorageValue(cid,8181)
-queststatus2 = getPlayerStorageValue(cid,8282)
-queststatus3 = getPlayerStorageValue(cid,8383)
-queststatus4 = getPlayerStorageValue(cid,8484)
-Level = getPlayerLevel(cid)
-
+	treepos = {x=159, y=106, z=7, stackpos=1}
+	treepos2 = {x=157, y=113, z=7, stackpos=1} --- position of left arm
+	treepos3 = {x=159, y=111, z=7, stackpos=1} --- position of crow
+	treepos4 = {x=159, y=114, z=7, stackpos=1} --- position of mouth
+	monster1 = {x=157, y=109, z=7}
+	monster2 = {x=163, y=110, z=7}
+	monster3 = {x=155, y=116, z=7}
+	monster4 = {x=162, y=116, z=7}
+	tree = getThingfromPos(treepos).uid
+	tree2 = getThingfromPos(treepos2).uid
+	tree3 = getThingfromPos(treepos3).uid
+	tree4 = getThingfromPos(treepos4).uid
+	playerPos = getCreaturePosition(cid)
+	local randomizer = math.random(1,6)
+	queststatus = getPlayerStorageValue(cid,8181)
+	queststatus2 = getPlayerStorageValue(cid,8282)
+	queststatus3 = getPlayerStorageValue(cid,8383)
+	queststatus4 = getPlayerStorageValue(cid,8484)
+	Level = getPlayerLevel(cid)
 	if itemEx.itemid == 2709 and itemEx.actionid == 7787 and Level >= 170 then
 		doRemoveItem(tree)
 		doTeleportThing(cid, toPosition, TRUE)
@@ -117,8 +116,8 @@ Level = getPlayerLevel(cid)
 	elseif itemEx.itemid == 8291 and itemEx.actionid == 8484 and (randomizer >= 4) and queststatus4 == 1 then
 		doSendMagicEffect(playerPos, 45)
 		doCreatureAddHealth(cid, -1000)
-		end
+	end
 	if itemEx.itemid == 8291 and itemEx.actionid == 8484 and queststatus4 == -1 then
 		doSendMagicEffect(toPosition, CONST_ME_POFF)
-		end
+	end
 end

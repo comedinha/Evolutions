@@ -30,7 +30,7 @@ function onSay(cid, words, param)
 		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
 		return false
 	end
-	local slotName = {"Cabeça", "Amuleto", "Backpack", "Armor", "Mao Direita", "Mao Esquerda", "Legs", "Pés", "Ring", "Ammo Slot"}
+	local slotName = {"Head", "Amulet", "Backpack", "Armor", "Right Hand", "Left Hand", "Legs", "Feet", "Ring", "Ammo Slot"}
 	local t = param:split(', ')
 	if(t[1] == 'check') then
 		if getPlayerGroupId(cid) >= 2 then
