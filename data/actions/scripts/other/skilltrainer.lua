@@ -14,10 +14,7 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 
 	local player = Player(cid)
 
-	if item.actionid == 1000 then
-		player:sendTextMessage(MESSAGE_STATUS_SMALL, "This statue and a garnish and cannot train here")
-		return true
-	elseif player:getPremiumDays() == 0 then
+	if player:getPremiumDays() == 0 then
 		player:sendTextMessage(MESSAGE_STATUS_SMALL, Game.getReturnMessage(RETURNVALUE_YOUNEEDPREMIUMACCOUNT))
 		return true
 	end

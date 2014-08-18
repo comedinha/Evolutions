@@ -159,8 +159,8 @@ function isInRange(pos, fromPos, toPos)
 	return pos.x >= fromPos.x and pos.y >= fromPos.y and pos.z >= fromPos.z and pos.x <= toPos.x and pos.y <= toPos.y and pos.z <= toPos.z
 end
 
-function isPremium(cid)
-	return getPlayerPremiumDays(cid) > 0
+function Player:isPremium()
+	return self:getPremiumDays() > 0 or configManager.getBoolean(configKeys.FREE_PREMIUM)
 end
 
 function isNumber(str)
@@ -240,8 +240,6 @@ function doForceSummonCreature(name, pos)
 	end
 	return creature
 end
-
---
 
 if not globalStorageTable then
 	globalStorageTable = {}
@@ -423,8 +421,29 @@ string.split = function(str, sep)
 	return res
 end
 
+string.trim = function(str)
+	return str:match'^()%s*$' and '' or str:match'^%s*(.*%S)'
+end
+
 function Position.getTile(self)
 	return Tile(self)
+end
+
+local slotBits = {
+	[CONST_SLOT_HEAD] = SLOTP_HEAD,
+	[CONST_SLOT_NECKLACE] = SLOTP_NECKLACE,
+	[CONST_SLOT_BACKPACK] = SLOTP_BACKPACK,
+	[CONST_SLOT_ARMOR] = SLOTP_ARMOR,
+	[CONST_SLOT_RIGHT] = SLOTP_RIGHT,
+	[CONST_SLOT_LEFT] = SLOTP_LEFT,
+	[CONST_SLOT_LEGS] = SLOTP_LEGS,
+	[CONST_SLOT_FEET] = SLOTP_FEET,
+	[CONST_SLOT_RING] = SLOTP_RING,
+	[CONST_SLOT_AMMO] = SLOTP_AMMO
+}
+
+function ItemType.usesSlot(self, slot)
+	return bit.band(self:getSlotPosition(), slotBits[slot] or 0) ~= 0
 end
 
 function doPlayerAddDialog(cid, id, func)

@@ -206,6 +206,7 @@ function canPlayerLearnInstantSpell(cid, name) local p = Player(cid) return p ~=
 function getPlayerLearnedInstantSpell(cid, name) local p = Player(cid) return p ~= nil and p:hasLearnedSpell(name) or false end
 function isPlayerGhost(cid) local p = Player(cid) return p ~= nil and p:isInGhostMode() or false end
 function isPlayerPzLocked(cid) local p = Player(cid) return p ~= nil and p:isPzLocked() or false end
+function isPremium(cid) local p = Player(cid) return p ~= nil and p:isPremium() or false end
 function getPlayersByIPAddress(ip, mask)
 	if mask == nil then mask = 0xFFFFFFFF end
 	local masked = bit.band(ip, mask)
@@ -768,3 +769,13 @@ end
 variantToNumber = Variant.getNumber
 variantToString = Variant.getString
 variantToPosition = Variant.getPosition
+
+function doCreateTeleport(itemId, destination, position)
+	local item = Game.createItem(itemId, 1, position)
+	if not item:isTeleport() then
+		item:remove()
+		return false
+	end
+	item:setDestination(destination)
+	return item:getUniqueId()
+end

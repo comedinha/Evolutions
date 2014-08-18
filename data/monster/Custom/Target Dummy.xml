@@ -3,7 +3,6 @@
 	<health now="90000000" max="90000000"/>
 	<look type="304" corpse="9801"/>
 	<targetchange interval="5000" chance="8"/>
-	<strategy attack="100" defense="0"/>
 	<flags>
 		<flag summonable="0"/>
 		<flag attackable="1"/>
@@ -50,14 +49,10 @@
 		<voice sentence="Repairs initiated!"/>
 	</voices>
 	<loot>
-		<item id="8309" countmax="3" chance1="500" chancemax="0"/> <!-- nails -->
-		<item id="2148" countmax="83" chance1="100000" chancemax="0"/> <!-- gps -->
-		<item id="1987" chance="100000">
-			<inside>
-				<item id="5880" chance="700"/> <!-- iron ore -->
-				<item id="9808" chance="900"/> <!-- rusty armor -->
-				<item id="2207" chance="1500"/> <!-- sword ring -->
-			</inside>
-		</item>
+		<item id="8309" countmax="3" chance="500"/> <!-- nails -->
+		<item id="2148" countmax="83" chance="100000"/> <!-- gps -->
+		<item id="5880" chance="700"/> <!-- iron ore -->
+		<item id="9808" chance="900"/> <!-- rusty armor -->
+		<item id="2207" chance="1500"/> <!-- sword ring -->
 	</loot>
 </monster>

@@ -2,7 +2,7 @@
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
 worldType = "pvp"
 hotkeyAimbotEnabled = "yes"
-protectionLevel = 1
+protectionLevel = 50
 killsToRedSkull = 3
 killsToBlackSkull = 6
 pzLocked = 60000
@@ -86,6 +86,10 @@ deSpawnRadius = 50
 
 -- Stamina
 staminaSystem = "yes"
+
+-- Scripts
+warnUnsafeScripts = "no"
+convertUnsafeScripts = "no"
 
 -- Startup
 -- NOTE: defaultPriority only works on Windows and sets process priority.
