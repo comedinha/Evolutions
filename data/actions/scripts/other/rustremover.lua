@@ -1,8 +1,8 @@
-function onUse(cid, item, frompos, item2, topos)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
     local effect_renew = 28
     local effect_broke = 3
     local storage = 0
-    local const = item2.itemid
+    local const = itemEx.itemid
     local pos = getCreaturePosition(cid)
     local itemy = {
                     [9808] = {
@@ -64,19 +64,16 @@ function onUse(cid, item, frompos, item2, topos)
         end  
        
         if storage > 0 then
-            doSendMagicEffect(topos, effect_renew)
-            doTransformItem(item2.uid, itemy[const][storage].id)
+            doSendMagicEffect(toPosition, effect_renew)
+            doTransformItem(itemEx.uid, itemy[const][storage].id)
             doCreatureSay(cid, "You have renewed the ".. itemy[const][storage].name .." !", TALKTYPE_ORANGE_1)
             doRemoveItem(item.uid, 1)
         else
-            doSendMagicEffect(topos, effect_broke)
-            doRemoveItem(item2.uid, 1)
+            doSendMagicEffect(toPosition, effect_broke)
+            doRemoveItem(itemEx.uid, 1)
             doRemoveItem(item.uid, 1)
             doCreatureSay(cid, "The armor was already damaged so badly that it broke when you tried to clean it.", TALKTYPE_ORANGE_1)
-            return 0
         end
-    else
-        return 0
     end
 	return true
 end

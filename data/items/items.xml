@@ -14768,6 +14768,7 @@
 	<item fromid="7967" toid="7968" article="a" name="shapeshifter ring">
 		<attribute key="description" value="It will only work for a few days after the challenge of Kurik has been won." />
 		<attribute key="weight" value="80" />
+		<attribute key="slotType" value="ring" />
 	</item>
 	<item id="7969" article="a" name="dead frost dragon hatchling">
 		<attribute key="containerSize" value="15" />
@@ -22627,6 +22628,7 @@
 	<item fromid="13946" toid="13947" name="The Epic Wisdom">
 		<attribute key="description" value="This hat was handcrafted by Uman the Wise and cursed by Zathroth the Destroyer." />
 		<attribute key="weight" value="805" />
+		<attribute key="slotType" value="head" />
 	</item>
 	<item fromid="13948" toid="13949" name="Imortus">
 		<attribute key="description" value="It knows all secrets of all numbers. It was awarded by fansite Exhiti.com." />
@@ -28528,50 +28530,62 @@
 	</item>
 	<item id="20608" article="a" name="jade Zaoan queen">
 		<attribute key="description" value="A Zaoan chess figure made of jade. It depicts the queen." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20609" article="a" name="jade Zaoan king">
 		<attribute key="description" value="A Zaoan chess figure made of jade. It depicts the king." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20610" article="a" name="jade Zaoan bishop">
 		<attribute key="description" value="A Zaoan chess figure made of jade. It depicts the bishop." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20611" article="a" name="jade Zaoan knight">
 		<attribute key="description" value="A Zaoan chess figure made of jade. It depicts the knight." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20612" article="a" name="jade Zaoan rook">
 		<attribute key="description" value="A Zaoan chess figure made of jade. It depicts the rook." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20613" article="a" name="jade Zaoan pawn">
 		<attribute key="description" value="A Zaoan chess figure made of jade. It depicts the pawn." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20614" article="a" name="obsidian Zaoan queen">
 		<attribute key="description" value="A Zaoan chess figure made of obsidian. It depicts the queen." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20615" article="a" name="obsidian Zaoan king">
 		<attribute key="description" value="A Zaoan chess figure made of obsidian. It depicts the king." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20616" article="a" name="obsidian Zaoan bishop">
 		<attribute key="description" value="A Zaoan chess figure made of obsidian. It depicts the bishop." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20617" article="a" name="obsidian Zaoan knight">
 		<attribute key="description" value="A Zaoan chess figure made of obsidian. It depicts the knight." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20618" article="a" name="obsidian Zaoan rook">
 		<attribute key="description" value="A Zaoan chess figure made of obsidian. It depicts the rook." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20619" article="a" name="obsidian Zaoan pawn">
 		<attribute key="description" value="A Zaoan chess figure made of obsidian. It depicts the pawn." />
+		<attribute key="slotType" value="ammo" />
 		<attribute key="weight" value="500" />
 	</item>
 	<item id="20620" article="a" name="Zaoan chess box">
@@ -29193,6 +29207,7 @@
 	</item>
 	<item id="21469" article="a" name="friendship amulet">
 		<attribute key="description" value="Souvenir from Thais Museum." />
+		<attribute key="slotType" value="necklace" />
 		<attribute key="weight" value="520" />
 	</item>
 	<item id="21470" name="the Mexcalibur">
@@ -29214,6 +29229,7 @@
 	</item>
 	<item id="21475" article="a" name="pannier backpack">
 		<attribute key="containerSize" value="20" />
+		<attribute key="slotType" value="backpack" />
 		<attribute key="weight" value="1800" />
 	</item>
 	<item id="21476" name="Omrabas' talking skull">

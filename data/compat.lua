@@ -97,7 +97,7 @@ function getPlayerIp(cid) local p = Player(cid) return p ~= nil and p:getIp() or
 function getPlayerAccountType(cid) local p = Player(cid) return p ~= nil and p:getAccountType() or false end
 function getPlayerLastLoginSaved(cid) local p = Player(cid) return p ~= nil and p:getLastLoginSaved() or false end
 function getPlayerName(cid) local p = Player(cid) return p ~= nil and p:getName() or false end
-function getPlayerFreeCap(cid) local p = Player(cid) return p ~= nil and p:getFreeCapacity() or false end
+function getPlayerFreeCap(cid) local p = Player(cid) return p ~= nil and (p:getFreeCapacity() / 100) or false end
 function getPlayerPosition(cid) local p = Player(cid) return p ~= nil and p:getPosition() or false end
 function getPlayerMagLevel(cid) local p = Player(cid) return p ~= nil and p:getMagicLevel() or false end
 function getPlayerAccess(cid)
@@ -279,6 +279,7 @@ function doPlayerSetGuildLevel(cid, level) local p = Player(cid) return p ~= nil
 function doPlayerSetGuildNick(cid, nick) local p = Player(cid) return p ~= nil and p:setGuildNick(nick) or false end
 function doShowTextDialog(cid, itemId, text) local p = Player(cid) return p ~= nil and p:showTextDialog(itemId, text) or false end
 function doPlayerAddItemEx(cid, uid, ...) local p = Player(cid) return p ~= nil and p:addItemEx(Item(uid), ...) or false end
+function doPlayerRemoveItem(cid, itemid, count, ...) local p = Player(cid) return p ~= nil and p:removeItem(itemid, count, ...) or false end
 function doPlayerAddPremiumDays(cid, days) local p = Player(cid) return p ~= nil and p:addPremiumDays(days) or false end
 function doPlayerRemovePremiumDays(cid, days) local p = Player(cid) return p ~= nil and p:removePremiumDays(days) or false end
 function doPlayerAddBlessing(cid, blessing) local p = Player(cid) return p ~= nil and p:addBlessing(blessing) or false end
@@ -529,7 +530,7 @@ isItemMoveable = isItemMovable
 isMoveable = isMovable
 
 function getItemName(itemId) return ItemType(itemId):getName() end
-function getItemWeight(itemId, ...) return ItemType(itemId):getWeight(...) end
+function getItemWeight(itemId, ...) return ItemType(itemId):getWeight(...) / 100 end
 function getItemDescriptions(itemId)
 	local itemType = ItemType(itemId)
 	return {
@@ -553,7 +554,7 @@ function getItemWeightByUID(uid, ...)
 	end
 
 	local itemType = ItemType(item:getId())
-	return itemType:isStackable() and itemType:getWeight(item:getCount(), ...) or itemType:getWeight(1, ...)
+	return itemType:isStackable() and (itemType:getWeight(item:getCount(), ...) / 100) or (itemType:getWeight(1, ...) / 100)
 end
 function getItemRWInfo(uid)
 	local item = Item(uid)
@@ -607,6 +608,15 @@ function setHouseOwner(id, guid) local h = House(id) return h ~= nil and h:setOw
 function getHouseRent(id) local h = House(id) return h ~= nil and h:getRent() or nil end
 function getHouseAccessList(id, listId) local h = House(id) return h ~= nil and h:getAccessList(listId) or nil end
 function setHouseAccessList(id, listId, listText) local h = House(id) return h ~= nil and h:setAccessList(listId, listText) or false end
+
+function getHouseByPlayerGUID(playerGUID)
+	for _, house in ipairs(Game.getHouses()) do
+		if house:getOwnerGuid() == playerGUID then
+			return house:getId()
+		end
+	end
+	return nil
+end
 
 function getTileHouseInfo(pos)
 	local t = Tile(pos)
@@ -720,6 +730,58 @@ function doTeleportThing(uid, dest, pushMovement)
 	return false
 end
 
+function getThingPos(uid)
+	local thing
+	if uid >= 0x10000000 then
+		thing = Creature(uid)
+	else
+		thing = Item(uid)
+	end
+
+	if thing == nil then
+		return false
+	end
+
+	local stackpos = 0
+	local tile = thing:getTile()
+	if tile ~= nil then
+		stackpos = tile:getThingIndex(thing)
+	end
+
+	local position = thing:getPosition()
+	position.stackpos = stackpos
+	return position
+end
+
+function doRelocate(fromPos, toPos)
+	if fromPos == toPos then
+		return false
+	end	
+
+	local fromTile = Tile(fromPos)
+	if fromTile == nil then
+		return false
+	end
+
+	if Tile(toPos) == nil then
+		return false
+	end
+
+	for i = fromTile:getThingCount() - 1, 0, -1 do
+		local thing = fromTile:getThing(i)
+		if thing ~= nil then
+			if thing:isItem() then
+				if ItemType(thing:getId()):isMovable() then
+					thing:moveTo(toPos)
+				end
+			elseif thing:isCreature() then
+				thing:teleportTo(toPos)
+			end
+		end
+	end		
+	return true
+end
+
 function getThing(uid)
 	return uid >= 0x10000000 and pushThing(Creature(uid)) or pushThing(Item(uid))
 end
@@ -778,4 +840,21 @@ function doCreateTeleport(itemId, destination, position)
 	end
 	item:setDestination(destination)
 	return item:getUniqueId()
+end
+
+function getSpectators(centerPos, rangex, rangey, multifloor, onlyPlayers)
+	local result = Game.getSpectators(centerPos, multifloor, onlyPlayers or false, rangex, rangex, rangey, rangey)
+	if #result == 0 then
+		return nil
+	end
+
+	for index, spectator in ipairs(result) do
+		result[index] = spectator:getId()
+	end
+	return result
+end
+
+function broadcastMessage(message, messageType)
+	Game.broadcastMessage(message, messageType)
+	print("> Broadcasted message: \"" .. message .. "\".")
 end

@@ -1,5 +1,4 @@
--- annihilator chests
-function onUse(cid, item, fromPosition, itemEx, toPosition)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
    	if item.uid == 5306 then
    		queststatus = getPlayerStorageValue(cid,5310)
    		if queststatus == -1 then

@@ -1,4 +1,4 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 	if item.actionid >= 42361 and item.actionid <= 42365 and getPlayerStorageValue(cid, 42361) ~= 1 then
 		local reward = 0
 		if item.actionid == 42361 then
@@ -47,9 +47,6 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 			doAddContainerItem(reward, 2547, 100)
 			doAddContainerItem(reward, 2311, 50)
 			doAddContainerItem(reward, 2304, 50)
-			
-			
-			
 		end
 		local additem = doPlayerAddItemEx(cid, reward, 0)
 		if additem == RETURNVALUE_NOERROR then

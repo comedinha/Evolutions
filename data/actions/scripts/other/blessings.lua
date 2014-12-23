@@ -1,4 +1,4 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 	if(itemEx.itemid == 11262) then
 		if(getPlayerBlessing(cid, 1)) then
 			doPlayerSendCancel(cid, "You already have been blessed with the Wisdom of Solitude.")

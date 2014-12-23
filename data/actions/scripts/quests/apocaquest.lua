@@ -8,7 +8,7 @@ local playerPos = {
 
 local newPlayerPos = {x=199,y=90,z=10} -- Positon where the players should get teleported when using the switch
 
-function onUse(cid, item, frompos, item2, topos)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 local playersTeleport = {}
 	for i, v in ipairs(playerPos) do
 	local players = getTopCreature(v).uid or getTopCreature(v)

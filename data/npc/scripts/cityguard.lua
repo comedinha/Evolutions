@@ -100,7 +100,7 @@ local function closedis(nid, target, opos)
 end
 
 local function check_target(nid, opos)
-	local position = getThingPos(nid)
+	local position = nid:getPosition()
 	spec = getSpectators(position, area, area,false,false)
 	if spec then
 		for i = 1, #spec do
@@ -126,7 +126,7 @@ end
 function onCreatureAppear(cid)
 	if isNpc(cid) then
 		nid = cid
-		opos = getThingPos(nid)
+		opos = nid:getPosition()
 	end
 end
 

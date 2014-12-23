@@ -4,7 +4,7 @@ function doSummonCreatures (monsters,positions)
 	end
 end 
 
-function onUse(cid, item, fromPosition, itemEx, toPosition)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 	treepos = {x=159, y=106, z=7, stackpos=1}
 	treepos2 = {x=157, y=113, z=7, stackpos=1} --- position of left arm
 	treepos3 = {x=159, y=111, z=7, stackpos=1} --- position of crow

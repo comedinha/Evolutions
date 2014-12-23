@@ -1,5 +1,4 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition)
-
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
    	if item.uid == 15901 then
    		queststatus = getPlayerStorageValue(cid,50089)
    		if queststatus == -1 then

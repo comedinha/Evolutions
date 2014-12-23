@@ -5,7 +5,7 @@ local LeverPos = { x = 90, y = 110, z = 10} -- Lever Position
 local TeleportoutPos = { x = 66, y = 113, z = 10} -- Telporter out pos
 local timeToRemove  = 40 -- Time before quest reset
 
-function onUse(cid, item, frompos, item2, topos)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 	local pinkstone1 = getTileItemById(pinkstonepos1, 1355) -- You can change the ID to any other kind of blocking item
 	local teleport = getTileItemById(TeleportInPos, 1387)
 	if item.itemid == 1945 then

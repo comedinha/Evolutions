@@ -1,5 +1,4 @@
-function onUse(cid, item, frompos, item2, topos)
-
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 	if item.uid == 2217 and item.itemid == 1945 then
 		player1pos = {x=48, y=102, z=6, stackpos=253}
 		player1 = getThingfromPos(player1pos)
@@ -45,9 +44,6 @@ function onUse(cid, item, frompos, item2, topos)
 		else
 			doPlayerSendCancel(cid,"You need 2 players to fight.")
 		end
-	else
-		return 0
    	end
-
-	return 1
+	return true
 end

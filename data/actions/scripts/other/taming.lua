@@ -63,7 +63,7 @@ local function doFailAction(cid, mount, pos, item, itemEx)
 	return action
 end
 
-function onUse(cid, item, fromPosition, itemEx, toPosition)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 	local mount = config[item.itemid]
 	if(mount == nil or getPlayerMount(cid, mount.ID)) then
 		return false

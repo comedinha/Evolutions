@@ -1,4 +1,4 @@
-function onUse(cid, item, frompos, item2, topos)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 	if getPlayerStorageValue(cid, 11550) == -1 then
 		if math.random(100) <= 3 then
 			doPlayerAddItem(cid, 2160, 3)

@@ -1,5 +1,4 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition)
-
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
    	if item.uid == 12901 then
    		queststatus = getPlayerStorageValue(cid,50090)
    		if queststatus == -1 then
@@ -37,5 +36,5 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
    			doPlayerSendTextMessage(cid,MESSAGE_INFO_DESCR, "It is empty.")
    		end
 	end
-   	return 1
+   	return true
 end

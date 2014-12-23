@@ -42,7 +42,7 @@ local config = {
     }
 }
 
-function onUse(cid)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
     local players = {}
     for _, v in ipairs(config) do
  

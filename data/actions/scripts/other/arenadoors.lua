@@ -1,4 +1,4 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 	local cidPosition = getCreaturePosition(cid)
 	if item.actionid ~= 42357 then
 		if (item.actionid == 42366 and getPlayerStorageValue(cid,42355) >= 1) or (item.actionid == 42376 and getPlayerStorageValue(cid,42355) >= 2) or (item.actionid == 42386 and getPlayerStorageValue(cid,42355) == 3) then

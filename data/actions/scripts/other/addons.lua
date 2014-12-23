@@ -1,4 +1,4 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 	if(itemEx.itemid == 18521) then
 		if(getPlayerStorageValue(cid, 10057) == 1) then
 			doPlayerSendCancel(cid, "You already have been recived with the first crystal warlord addon.")

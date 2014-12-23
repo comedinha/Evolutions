@@ -75,6 +75,7 @@ local FOODS = {
 	[8847] = {11, "Yum."}, -- chocolate cake
 	[9005] = {7, "Slurp."}, -- yummy gummy worm
 	[9114] = {5, "Crunch."}, -- bulb of garlic
+	[9996] = {0, "Slurp."}, -- banana chocolate shake
 	[10454] = {0, "Your head begins to feel better."}, -- headache pill
 	[11246] = {15, "Yum."}, -- rice ball
 	[11370] = {3, "Urgh."}, -- terramite eggs
@@ -97,13 +98,12 @@ local FOODS = {
 	[20101] = {12, "Smack."} -- rat cheese
 }
 
-function onUse(cid, item, fromPosition, itemEx, toPosition)
+function onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
 	local food = FOODS[item.itemid]
 	if food == nil then
 		return false
 	end
 
-	local player = Player(cid)
 	local condition = player:getCondition(CONDITION_REGENERATION, CONDITIONID_DEFAULT)
 	if condition and math.floor(condition:getTicks() / 1000 + food[1]) >= 1200 then
 		player:sendTextMessage(MESSAGE_STATUS_SMALL, "You are full.")
@@ -112,6 +112,5 @@ function onUse(cid, item, fromPosition, itemEx, toPosition)
 		player:say(food[2], TALKTYPE_MONSTER_SAY)
 		Item(item.uid):remove(1)
 	end
-
 	return true
 end

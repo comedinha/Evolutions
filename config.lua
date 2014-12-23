@@ -53,7 +53,7 @@ mapAuthor = "Alissow and XedeguX"
 
 -- Market
 marketOfferDuration = 30 * 24 * 60 * 60
-premiumToCreateMarketOffer = "yes"
+premiumToCreateMarketOffer = "no"
 checkExpiredMarketOffersEachMinutes = 60
 maxMarketOffersAtATimePerPlayer = 100
 
@@ -71,6 +71,7 @@ freePremium = "no"
 kickIdlePlayerAfterMinutes = 15
 maxMessageBuffer = 4
 emoteSpells = "no"
+classicEquipmentSlots = "no"
 
 -- Rates
 -- NOTE: rateExp is not used if you have enabled stages in data/XML/stages.xml

@@ -1,4 +1,4 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 	if(getPlayerPremiumDays(cid) > 360) then
 		doPlayerSendCancel(cid, "You can not have more than 360 days of premium.")
 		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)

@@ -6,7 +6,7 @@ local config =
     timeToRemove = 10 -- Seconds
 }
 
-function onUse(cid, item, frompos, item2, topos)
+function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
 local teleport = getTileItemById(config.teleportPos, 1387)
 local playerPos = getCreaturePosition(cid)
     if item.itemid == 1945 then
