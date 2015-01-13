@@ -1,32 +1,31 @@
-local config =
-{
-    newPos = {x=330, y=633, z=6}, -- New player position
-    teleportPos = {x=160, y=51, z=8}, -- Teleport position
-    LeverPos = {x=159, y=52, z=8}, -- Lever position
-    timeToRemove = 10 -- Seconds
+local config = {
+    newPos = {x = 330, y = 633, z = 6},
+    teleportPos = {x = 160, y = 51, z = 8},
+    LeverPos = {x = 159, y = 52, z = 8},
+    timeToRemove = 10
 }
 
-function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
-local teleport = getTileItemById(config.teleportPos, 1387)
-local playerPos = getCreaturePosition(cid)
-    if item.itemid == 1945 then
-        doCreateTeleport(1387, config.newPos, config.teleportPos)
-        doSendMagicEffect(config.teleportPos, CONST_ME_TELEPORT)
-        doSendMagicEffect(playerPos, CONST_ME_GIFT_WRAPS)
-        doCreatureSay(cid, "The teleport has been created!", TALKTYPE_ORANGE_1)
-        addEvent(doRemoveTeleport, config.timeToRemove * 1000)
-    elseif item.itemid == 1946 then
-        doPlayerSendCancel(cid, "The teleport was created! If you get in now can only return at the end of the challenge.")
-    return TRUE
+function onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
+	local teleport = getTileItemById(config.teleportPos, 1387)
+	local playerPos = player:getPosition()
+	if item.itemid == 1945 then
+		doCreateTeleport(1387, config.newPos, config.teleportPos)
+		config.teleportPos:sendMagicEffect(CONST_ME_TELEPORT)
+		playerPos:sendMagicEffect(CONST_ME_GIFT_WRAPS)
+		player:say("The teleport has been created!", TALKTYPE_ORANGE_1)
+		addEvent(doRemoveTeleport, config.timeToRemove * 1000)
+	elseif item.itemid == 1946 then
+		player:sendCancelMessage("The teleport was created! If you get in now can only return at the end of the challenge.")
     end
+	return true
 end
 
 function doRemoveTeleport()
-local teleport = getTileItemById(config.teleportPos, 1387)
-local Lever = getTileItemById(config.LeverPos, 1946)
+	local teleport = config.teleportPos:getItemById(1387)
+	local Lever = config.LeverPos:getItemById(1946)
     if teleport.uid > 0 then
-        doRemoveItem(teleport.uid)
-        doSendMagicEffect(config.teleportPos, CONST_ME_POFF)
-        doTransformItem(Lever.uid, 1945)
+        teleport.uid:remove()
+        config.teleportPos:sendMagicEffect(CONST_ME_POFF)
+        Lever.uid:transform(1945)
     end
 end 

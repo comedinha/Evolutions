@@ -1,71 +1,55 @@
+local config = {
+		[1] = {
+				--equipment spellbook, wand of vortex, magician's robe, mage hat, studded legs, leather boots, scarf, amulet of loss
+				items = {{2175, 1}, {2190, 1}, {8819, 1}, {8820, 1}, {2468, 1}, {2643, 1}, {2661, 1}, {2173, 1}},
+				--container rope, shovel, mana potion, 100 platinum coin
+				container = {{2120, 1}, {2554, 1}, {7620, 1}, {2152, 100}}
+		},
+		[2] = {
+				--equipment spellbook, snakebite rod, magician's robe, mage hat, studded legs, leather boots scarf, amulet of loss
+				items = {{2175, 1}, {2182, 1}, {8819, 1}, {8820, 1}, {2468, 1}, {2643, 1}, {2661, 1}, {2173, 1}},
+				--container rope, shovel, mana potion, 100 platinum coin
+				container = {{2120, 1}, {2554, 1}, {7620, 1}, {2152, 100}}
+		},
+		[3] = {
+				--equipment dwrven shield, 5 spear, ranger's cloak, ranger legs scarf, legion helmet, amulet of loss
+				items = {{2525, 1}, {2389, 5}, {2660, 1}, {8923, 1}, {2643, 1}, {2661, 1}, {2480, 1}, {2173, 1}},
+				--container rope, shovel, health potion, bow, 50 arrow, 100 platinum coin
+				container = {{2120, 1}, {2554, 1}, {7618, 1}, {2456, 1}, {2544, 50}, {2152, 100}}
+		},
+		[4] = {
+				--equipment dwarven shield, steel axe, brass armor, brass helmet, brass legs scarf, amulet of loss
+				items = {{2525, 1}, {8601, 1}, {2465, 1}, {2460, 1}, {2478, 1}, {2643, 1}, {2661, 1}, {2173, 1}},
+				--container jagged sword, daramian mace, rope, shovel, health potion, 100 platinum coin
+				container = {{8602, 1}, {2439, 1}, {2120, 1}, {2554, 1}, {7618, 1}, {2152, 100}}
+		}
+}
+
 function onLogin(player)
-	local sorcItems = {
-			8820, -- mage hat
-			8819, -- magician's robe
-			2190, -- wand of vortex
-			1988, -- backpack
-			2175 -- spellbook
-		}
-	local druidItems = {
-			8820, -- mage hat
-			8819, -- magician's robe
-			2182, -- snakebite rod
-			1988, -- backpack
-			2175 -- spellbook
-		}
-	local pallyItems = {
-			8872, -- belted cape
-			2457, -- steel helmet
-			2525, -- dwarven shield
-			1988, -- backpack
-			2456 -- bow
-		}
-	local kinaItems = {
-			2457, -- steel helmet
-			2463, -- plate armor
-			2525, -- dwarven shield
-			2428, -- orcish axe
-			1988, -- backpack
-			2417, -- battle hammer
-			3963 -- templar scytheblade
-		}
+	local targetVocation = config[player:getVocation():getId()]
+	if not targetVocation then
+		return true
+	end
+
+	if player:getLastLoginSaved() ~= 0 then
+		return true
+	end
 	
-	if getPlayerStorageValue(player, 11551) == -1 then
-		if getPlayerVocation(player) == 1 then
-			-- Sorcerer
-			for i = 1, #sorcItems, 1 do
-				doPlayerAddItem(player, sorcItems[i], 1, FALSE)
-			end
-		
-		elseif getPlayerVocation(player) == 2 then
-			-- Druid
-			for i = 1, #druidItems, 1 do
-				doPlayerAddItem(player, druidItems[i], 1, FALSE)
-			end
-		
-		elseif getPlayerVocation(player) == 3 then
-			-- Paladin
-			for i = 1, #pallyItems, 1 do
-				doPlayerAddItem(player, pallyItems[i], 1, FALSE)
-			end
-			-- 20 arrows
-			doPlayerAddItem(player, 2544, 20, FALSE)
-			-- 3 spears
-			doPlayerAddItem(player, 2389, 3, FALSE)
-		
-		elseif getPlayerVocation(player) == 4 then
-			-- Knight
-			for i = 1, #kinaItems, 1 do
-				doPlayerAddItem(player, kinaItems[i], 1, FALSE)
-			end
-		end
-		
-		-- Common for all
-		doPlayerAddItem(player, 2152, 100, FALSE) -- Platinum Coin
-		doPlayerAddItem(player, 2173, 1, FALSE) -- amulet of loss
-		doPlayerAddItem(player, 2643, 1, FALSE) -- leather boots
-		doPlayerAddItem(player, 2647, 1, FALSE) -- plate legs
-		setPlayerStorageValue(player, 11551, 0)
+	if player:getStorageValue(11551) == -1 then
+		player:setStorageValue(11551, 0)
+	end
+
+	for i = 1, #targetVocation.items do
+		player:addItem(targetVocation.items[i][1], targetVocation.items[i][2])
+	end
+
+	local backpack = player:addItem(1988)
+	if not backpack then
+		return true
+	end
+
+	for i = 1, #targetVocation.container do
+		backpack:addItem(targetVocation.container[i][1], targetVocation.container[i][2])
 	end
 	return true
 end

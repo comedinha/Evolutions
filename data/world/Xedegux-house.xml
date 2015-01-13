@@ -10,14 +10,14 @@
 	<house name="Saari House #1" houseid="36" entryx="260" entryy="199" entryz="7" rent="0" townid="3" size="37" />
 	<house name="Saari House #2" houseid="37" entryx="260" entryy="201" entryz="6" rent="0" townid="3" size="5" />
 	<house name="Alfon Flat I" houseid="38" entryx="62" entryy="282" entryz="7" rent="0" townid="4" size="27" />
-	<house name="Alfon Flat II" houseid="39" entryx="62" entryy="287" entryz="7" rent="0" townid="4" size="27" />
+	<house name="Alfon Flat II" houseid="39" entryx="62" entryy="287" entryz="7" rent="0" townid="4" size="25" />
 	<house name="Alfon Flat III" houseid="40" entryx="62" entryy="292" entryz="7" rent="0" townid="4" size="27" />
 	<house name="Alfon Flat IV" houseid="41" entryx="62" entryy="297" entryz="7" rent="0" townid="4" size="27" />
-	<house name="Alfon Flat V" houseid="42" entryx="62" entryy="302" entryz="7" rent="0" townid="4" size="27" />
+	<house name="Alfon Flat V" houseid="42" entryx="62" entryy="302" entryz="7" rent="0" townid="4" size="25" />
 	<house name="Alfon Flat VI" houseid="43" entryx="64" entryy="282" entryz="7" rent="0" townid="4" size="27" />
-	<house name="Alfon Flat VII" houseid="44" entryx="64" entryy="287" entryz="7" rent="0" townid="4" size="27" />
+	<house name="Alfon Flat VII" houseid="44" entryx="64" entryy="287" entryz="7" rent="0" townid="4" size="25" />
 	<house name="Alfon Flat VIII" houseid="45" entryx="64" entryy="292" entryz="7" rent="0" townid="4" size="27" />
-	<house name="Alfon Flat IX" houseid="46" entryx="64" entryy="297" entryz="7" rent="0" townid="4" size="27" />
+	<house name="Alfon Flat IX" houseid="46" entryx="64" entryy="297" entryz="7" rent="0" townid="4" size="25" />
 	<house name="Alfon Flat X" houseid="47" entryx="64" entryy="302" entryz="7" rent="0" townid="4" size="27" />
 	<house name="Alfon Flat XI" houseid="48" entryx="62" entryy="282" entryz="6" rent="0" townid="4" size="27" />
 	<house name="Alfon Flat XII" houseid="49" entryx="62" entryy="287" entryz="6" rent="0" townid="4" size="27" />
