@@ -4,9 +4,9 @@ enterPosition = {x = 393, y = 667, z = 6}
 blockEnterItemID = 1387
 gateid = 9485
 
-function onSay(cid, words, param)
+function onSay(player, words, param)
 	if(param == '') then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
+		doPlayerSendTextMessage(player, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
 		return true
 	end
 
@@ -20,10 +20,10 @@ function onSay(cid, words, param)
 				doRemoveItem(itemgate.uid)
 			end
 			for _, tmpPlayer in ipairs(Game.getPlayers()) do
-				Player(tmpPlayer):channelSay(cid, TALKTYPE_BROADCAST, "Event created! Portal open in temple.", 0)
+				tmpPlayer:sendPrivateMessage(player, "Event created! Portal open in temple.", TALKTYPE_BROADCAST)
 			end
 		else
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "The portal is already open.")
+			doPlayerSendTextMessage(player, MESSAGE_STATUS_CONSOLE_BLUE, "The portal is already open.")
 		end
 	elseif param == 'close' then
 		if(getTileItemById(gate, gateid).uid == 0) then
@@ -33,10 +33,10 @@ function onSay(cid, words, param)
 				doRemoveItem(item.uid)
 			end
 			for _, tmpPlayer in ipairs(Game.getPlayers()) do
-				Player(tmpPlayer):channelSay(cid, TALKTYPE_BROADCAST, "Portal closed!", 0)
+				tmpPlayer:sendPrivateMessage(player, "Portal closed!", TALKTYPE_BROADCAST)
 			end
 		else
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "The portal is not open.")
+			doPlayerSendTextMessage(player, MESSAGE_STATUS_CONSOLE_BLUE, "The portal is not open.")
 		end
 	end
 	return true
