@@ -11,7 +11,7 @@ local newPosition = {
 	{x = 247, y = 76, z = 14}
 }
 
-function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
+function onUse(cid, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid == 1945 then
 		local players = {}
 		for _, pos in ipairs(playerPosition) do

@@ -321,4 +321,5 @@
 	<action itemid="12540" script="other/food_special.lua"/>
 	<action fromid="12542" toid="12544" script="other/food_special.lua"/>
 	<action itemid="9930" script="other/rustremover.lua"/>
+	<action itemid="13546" script="other/shimmerSwimmer.lua" />
 </actions>

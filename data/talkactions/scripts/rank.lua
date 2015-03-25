@@ -16,8 +16,7 @@ modaldialog2 = {
 		{ id = 6, text = "Shield" },
 		{ id = 7, text = "Fish" },
 		{ id = 8, text = "Magic" },
-		{ id = 9, text = "Level" },
-		--{ id = 10, text = "Frags" }
+		{ id = 9, text = "Level" }
 	},
 	popup = false
 }
