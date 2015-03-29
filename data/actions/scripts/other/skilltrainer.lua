@@ -7,10 +7,7 @@ local statues = {
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local skill = statues[item.itemid]
-	if not skill then
-		return false
-	end
+	local skill = statues[item:getId()]
 	
 	if item.actionid == 1000 then
 		player:sendTextMessage(MESSAGE_STATUS_SMALL, "This statue and a garnish and cannot train here")
