@@ -9,5 +9,4 @@ function onStepIn(creature, item, position, fromPosition)
 		creature:setStorageValue(item.actionid - 1000, 1)
 		creature:setStorageValue(11552, creature:getStorageValue(11552) + 1)
 	end
-	return true
 end

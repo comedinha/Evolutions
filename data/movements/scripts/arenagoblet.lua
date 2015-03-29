@@ -19,5 +19,4 @@ function onStepIn(creature, item, position, fromPosition)
 			goblet:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, "It is given to the courageous victor of the barbarian arena warlord difficulty.\nAwarded to " .. creature:getName() .. ".")
 		end
 	end
-	return true
 end
