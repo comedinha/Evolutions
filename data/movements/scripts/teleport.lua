@@ -1,7 +1,5 @@
-function onStepIn(cid, item, position, fromPosition)
+function onStepIn(creature, item, position, fromPosition)
 	local teleport = {
-		back = 18000,
-		action = item.actionid,
 		[18001] = {x=137, y=49, z=7},
 		[18002] = {x=149, y=151, z=7},
 		[18003] = {x=84, y=175, z=7},
@@ -12,19 +10,16 @@ function onStepIn(cid, item, position, fromPosition)
 		[18008] = {x=56, y=146, z=7}
 	}
 
-	if(item.actionid == teleport.action) then
-		if(not isPlayer(cid)) then
-			doTeleportThing(cid, fromPosition, false)
-			return true
-		end
-	
-		if(getPlayerStorageValue(cid, teleport.action) == 1) then
-			doTeleportThing(cid, teleport[item.actionid])
-			setPlayerStorageValue(cid,teleport.back,1)
-			else
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You must discover the area before releasing the Fast Travel!")
-			doTeleportThing(cid, fromPosition, false)
-		end
+	if not Player(creature) then
+		creature:teleportTo(fromPosition, false)
 		return true
+	end
+
+	if creature:getStorageValue(item.actionid) == 1 then
+		creature:teleportTo(teleport[item.actionid], false)
+		creature:setStorageValue(18000, 1)
+	else
+		creature:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You must discover the area before releasing the Fast Travel!")
+		creature:teleportTo(fromPosition, false)
 	end
 end

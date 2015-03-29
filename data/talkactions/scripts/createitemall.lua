@@ -1,30 +1,51 @@
-function onSay(cid, words, param)
-	if(param == '') then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
+function onSay(player, words, param)
+	if not player:getGroup():getAccess() then
+		return true
+	end
+	
+	if player:getAccountType() < ACCOUNT_TYPE_GOD then
 		return false
 	end
-	if getPlayerGroupId(cid) < 3 then
-		return false
-	end
+	
 	for _, pid in ipairs(Game.getPlayers()) do
-		local t = param:split(", ")
+		local split = param:split(",")
 
-		id = t[1]
-		amount = t[2]
-		if(not t[2]) then
-			amount = 1
+		local itemType = ItemType(split[1])
+		if itemType:getId() == 0 then
+			itemType = ItemType(tonumber(split[1]))
+			if itemType:getId() == 0 then
+				player:sendCancelMessage("There is no item with that id or name.")
+				return false
+			end
 		end
-
-		if(not isPlayerGhost(cid)) then
-			doSendMagicEffect(pos, CONST_ME_MAGIC_RED)
-		end
-
-		item = doCreateItemEx(id, amount)
-		if doPlayerAddItemEx(pid:getName(), item, true) then
-			doPlayerSendTextMessage(pid, MESSAGE_STATUS_CONSOLE_BLUE, "The "..getCreatureName(cid).." give ("..amount.."x) "..getItemName(id).." for all online players.")
+		
+		local count = tonumber(split[2])
+		if count ~= nil then
+			if itemType:isStackable() then
+				count = math.min(10000, math.max(1, count))
+			elseif not itemType:hasSubType() then
+				count = math.min(100, math.max(1, count))
+			else
+				count = math.max(1, count)
+			end
 		else
-			doPlayerSendCancel(cid, "Item wich such name does not exists.")
+			count = 1
 		end
+
+		local result = pid:addItem(itemType:getId(), count)
+		if result ~= nil then
+			if not itemType:isStackable() then
+				if type(result) == "table" then
+					for _, item in ipairs(result) do
+						item:decay()
+					end
+				else
+					result:decay()
+				end
+			end
+		end
+		pid:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "The "..player:getName().." give ("..count.."x) "..itemType:getName().." for all online players.")
+		pid:getPosition():sendMagicEffect(CONST_ME_MAGIC_GREEN)
 	end
 	return true
 end

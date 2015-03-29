@@ -1,6 +1,8 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
-	if itemEx.aid == 122 then
-		doTeleportThing(cid, {x = 32172, y = 32439, z = 8})
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	if itemEx.target == 122 then
+		local position = {x = 32172, y = 32439, z = 8}
+		player:teleportTo(position, true)
+		return true
 	end
-	return FALSE
+	return false
 end

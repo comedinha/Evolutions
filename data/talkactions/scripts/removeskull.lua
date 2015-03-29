@@ -1,22 +1,27 @@
-function onSay(cid, words, param)
+function onSay(player, words, param)
+	if not player:getGroup():getAccess() then
+		return true
+	end
+	
+	if player:getAccountType() < ACCOUNT_TYPE_GOD then
+		return false
+	end
+	
 	if(param == '') then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
 		return false
 	end
-	if getPlayerGroupId(cid) < 3 then
-		return false
-	end
-	local player = Player(param)
-	local god = Player(cid)
-	if isInArray({4, 5}, player:getSkull()) then
-		player:setSkull(0)
-		player:setSkullTime(0)
-		player:getPosition():sendMagicEffect(CONST_ME_MAGIC_GREEN)
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your skull has been removed!")
-		god:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your was removed "..param.." skull!")
+	
+	local target = Player(param)
+	if isInArray({4, 5}, target:getSkull()) then
+		target:setSkull(0)
+		target:setSkullTime(0)
+		target:getPosition():sendMagicEffect(CONST_ME_MAGIC_GREEN)
+		target:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your skull has been removed!")
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your was removed "..param.." skull!")
 	else
-		god:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You can only remove red or black skulls!")
-		god:getPosition():sendMagicEffect(CONST_ME_POFF)
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You can only remove red or black skulls!")
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
 	end
     return false
 end

@@ -1,9 +1,10 @@
-function onSay(cid, words, param)
-	if not Player(cid):getGroup():getAccess() then
-		return false
+function onSay(player, words, param)
+	if not player:getGroup():getAccess() then
+		return true
 	end
+
 	local t = param:split(",")
-	if getPlayerGroupId (cid) == 3 then
+	if player:getAccountType() >= ACCOUNT_TYPE_GOD then
 		if t[1] == 'add' then
 			file = io.open('txt/staffrules.txt','a+')
 			notice = file:write(""..t[2].."\n")
@@ -16,9 +17,10 @@ function onSay(cid, words, param)
 			return false
 		end
 	end
+	
 	file = io.open('txt/staffrules.txt','r')
 	notice = file:read(1000000000)
-	doShowTextDialog(cid, 7528, notice)
+	player:showTextDialog(7528, notice)
 	file:close()
 	return false
 end

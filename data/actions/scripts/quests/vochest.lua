@@ -1,4 +1,4 @@
-function onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if player:getStorageValue(11550) == -1 then
 		if math.random(100) <= 3 then
 			player:addItem(2160, 3)

@@ -1,17 +1,10 @@
-function onStepIn(cid, item, position, fromPosition)
-	local piso = {
-		action = item.actionid,
-		storage = item.actionid +10,
-	}
-	if(item.actionid == piso.action) then
-		if(not isPlayer(cid)) then
-			return true
-		end
-		
-		if(getPlayerStorageValue(cid, piso.action) == -1) then
-			setPlayerStorageValue(cid,piso.action,1)
-			setPlayerStorageValue(cid,piso.storage,1)
-		end
+function onStepIn(creature, item, position, fromPosition)
+	if not Player(creature) then
 		return true
+	end
+
+	if creature:getStorageValue(item.actionid) == -1 then
+		creature:setStorageValue(item.actionid, 1)
+		creature:setStorageValue(item.actionid + 10, 1)
 	end
 end

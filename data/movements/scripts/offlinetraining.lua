@@ -1,4 +1,4 @@
-modaldialog1 = {
+local modaldialog = {
 	title = "Offline Training",
 	message = "To which room you want to go?",
 	buttons = {
@@ -16,8 +16,20 @@ modaldialog1 = {
 	popup = true
 }
 
-function onStepIn(cid, item, position, fromPosition)
-	doPlayerAddDialog(cid, 1001, modaldialog1)
-	registerCreatureEvent(cid, "ModalOffline")
+function onStepIn(creature, item, position, fromPosition)
+	modalWindow = ModalWindow(1001, modaldialog.title, modaldialog.message)
+	if modalWindow:getId() == 1001 then
+		for _, v in ipairs(modaldialog.buttons) do
+        		modalWindow:addButton(v.id, v.text)
+		end
+		for _, v in ipairs(modaldialog.choices) do
+       			modalWindow:addChoice(v.id, v.text)
+		end
+		modalWindow:setDefaultEnterButton(modaldialog.buttonEnter)
+		modalWindow:setPriority(modaldialog.popup)
+		modalWindow:setDefaultEscapeButton(modaldialog.buttonEscape)
+	end
+	modalWindow:sendToPlayer(creature)
+	creature:registerEvent("ModalOffline")
 	return true
 end

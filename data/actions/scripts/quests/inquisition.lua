@@ -1,4 +1,4 @@
-function onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
    	if item.uid == 5610 then
    		if player:getStorageValue(5619) == -1 then
    			player:sendTextMessage(MESSAGE_INFO_DESCR, "You have found a royal crossbow.")

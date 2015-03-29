@@ -1,79 +1,84 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
-    local effect_renew = 28
-    local effect_broke = 3
-    local storage = 0
-    local const = itemEx.itemid
-    local pos = getCreaturePosition(cid)
-    local itemy = {
-                    [9808] = {
-                                [1] = {id = 2464, name = "Chain Armor", chance = 6966},
-                                [2] = {id = 2483, name = "Scale Armor", chance = 3952},
-                                [3] = {id = 2465, name = "Brass Armor", chance = 1502},
-                                [4] = {id = 2463, name = "Plate Armor", chance = 197}
-                            },
-                           
-                    [9809] = {
-                                [1] = {id = 2483, name = "Scale Armor", chance = 6437},                   
-                                [2] = {id = 2464, name = "Chain Armor", chance = 4606},
-                                [3] = {id = 2465, name = "Brass Armor", chance = 3029},
-                                [4] = {id = 2463, name = "Plate Armor", chance = 1559},
-                                [5] = {id = 2476, name = "Knight Armor", chance = 595},
-                                [6] = {id = 8891, name = "Paladin Armor", chance = 283},
-                                [7] = {id = 2487, name = "Crown Armor", chance = 49}
-                            },
-                           
-                    [9810] = {
-                                [1] = {id = 2465, name = "Brass Armor", chance = 6681},
-                                [2] = {id = 2463, name = "Plate Armor", chance = 3767},
-                                [3] = {id = 2476, name = "Knight Armor", chance = 1832},
-                                [4] = {id = 2487, name = "Crown Armor", chance = 177},
-                                [5] = {id = 8891, name = "Paladin Armor", chance = 31},
-                                [6] = {id = 2466, name = "Golden Armor", chance = 10}
-                            },
-                           
-                    [9811] = {
-                                [1] = {id = 2648, name = "Chain Legs", chance = 6949},                   
-                                [2] = {id = 2468, name = "Studded Legs", chance = 3692},
-                                [3] = {id = 2478, name = "Brass Legs", chance = 1307},
-                                [4] = {id = 2647, name = "Plate Legs", chance = 133}
-                            },
-                           
-                    [9812] = {
-                                [1] = {id = 2468, name = "Studded Legs", chance = 5962},
-                                [2] = {id = 2648, name = "Chain Legs", chance = 4037},
-                                [3] = {id = 2478, name = "Brass Legs", chance = 2174},
-                                [4] = {id = 2647, name = "Plate Legs", chance = 1242},
-                                [5] = {id = 2477, name = "Knight Legs", chance = 186},
-                            },
-                           
-                    [9813] = {
-                                [1] = {id = 2478, name = "Brass Legs", chance = 6500},
-                                [2] = {id = 2647, name = "Plate Legs", chance = 3800},
-                                [3] = {id = 2477, name = "Knight Legs", chance = 200},
-                                [4] = {id = 2488, name = "Crown Legs", chance = 52},
-                                [5] = {id = 2470, name = "Golden Legs", chance = 30}
-                            }
-                } 
+local CHAIN_ARMOR, SCALE_ARMOR, BRASS_ARMOR, PLATE_ARMOR, KNIGHT_ARMOR, PALADIN_ARMOR, CROWN_ARMOR, GOLDEN_ARMOR, DRAGON_SCALE_MAIL, MAGIC_PLATE_ARMOR = 2464, 2483, 2465, 2463, 2476, 8891, 2487, 2466, 2492, 2472
+local STUDDED_LEGS, CHAIN_LEGS, BRASS_LEGS, PLATE_LEGS, KNIGHT_LEGS, CROWN_LEGS, GOLDEN_LEGS = 2468, 2648, 2478, 2647, 2477, 2488, 2470
 
-                local random_item = math.random(10000)
-    if itemy[const] then
-        for i = 1, #itemy[const] do
-            if random_item <= itemy[const][i].chance then
-                storage = i
-            end
-        end  
-       
-        if storage > 0 then
-            doSendMagicEffect(toPosition, effect_renew)
-            doTransformItem(itemEx.uid, itemy[const][storage].id)
-            doCreatureSay(cid, "You have renewed the ".. itemy[const][storage].name .." !", TALKTYPE_ORANGE_1)
-            doRemoveItem(item.uid, 1)
-        else
-            doSendMagicEffect(toPosition, effect_broke)
-            doRemoveItem(itemEx.uid, 1)
-            doRemoveItem(item.uid, 1)
-            doCreatureSay(cid, "The armor was already damaged so badly that it broke when you tried to clean it.", TALKTYPE_ORANGE_1)
-        end
-    end
-	return true
+local config = {
+	[9808] = { -- common rusty armor
+		{{1, 30000}},
+		{{30001, 60000}, CHAIN_ARMOR},
+		{{60001, 90000}, SCALE_ARMOR},
+		{{90001, 97000}, BRASS_ARMOR},
+		{{97001, 99000}, PLATE_ARMOR},
+		{{99001, 100000}, KNIGHT_ARMOR}
+	},
+	[9809] = { -- semi-rare rusty armor
+		{{1, 40000}},
+		{{40001, 57500}, CHAIN_ARMOR},
+		{{57501, 70000}, SCALE_ARMOR},
+		{{70001, 81000}, BRASS_ARMOR},
+		{{81001, 90000}, PLATE_ARMOR},
+		{{90001, 96500}, KNIGHT_ARMOR},
+		{{96501, 99500}, PALADIN_ARMOR},
+		{{99501, 100000}, CROWN_ARMOR}
+	},
+	[9810] = { -- rare rusty armor
+		{{1, 50000}},
+		{{50001, 60000}, CHAIN_ARMOR},
+		{{60001, 70000}, SCALE_ARMOR},
+		{{70001, 80000}, BRASS_ARMOR},
+		{{80001, 87500}, PLATE_ARMOR},
+		{{87501, 93000}, KNIGHT_ARMOR},
+		{{93001, 96000}, PALADIN_ARMOR},
+		{{96000, 97000}, CROWN_ARMOR},
+		{{96001, 98500}, GOLDEN_ARMOR},
+		{{98501, 99500}, DRAGON_SCALE_MAIL},
+		{{99501, 100000}, MAGIC_PLATE_ARMOR}
+	},
+	[9811] = { -- common rusty legs
+		{{1, 30000}},
+		{{30001, 60000}, STUDDED_LEGS},
+		{{60001, 85000}, CHAIN_LEGS},
+		{{85001, 98000}, BRASS_LEGS},
+		{{98001, 99500}, PLATE_LEGS},
+		{{99501, 100000}, KNIGHT_LEGS}
+	},
+	[9812] = { -- semi-rare rusty legs
+		{{1, 40000}},
+		{{40001, 60000}, STUDDED_LEGS},
+		{{60001, 75000}, CHAIN_LEGS},
+		{{75001, 87500}, BRASS_LEGS},
+		{{87501, 95500}, PLATE_LEGS},
+		{{95501, 98250}, KNIGHT_LEGS},
+		{{98251, 99250}, CROWN_LEGS},
+		{{99251, 100000}, GOLDEN_LEGS}
+	},
+	[9813] = { -- rare rusty legs
+		{{1, 50000}},
+		{{50001, 75000}, BRASS_LEGS},
+		{{75001, 90000}, PLATE_LEGS},
+		{{90001, 97500}, KNIGHT_LEGS},
+		{{97501, 99000}, CROWN_LEGS},
+		{{99001, 100000}, GOLDEN_LEGS}
+	}
+}
+
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	local targetItem = config[target.itemid]
+	if not targetItem then
+		return true
+	end
+
+	local chance = math.random(100000)
+	for i = 1, #targetItem do
+		if chance >= targetItem[i][1][1] and chance <= targetItem[i][1][2] then
+			if targetItem[i][2] then
+				target:transform(targetItem[i][2])
+				toPosition:sendMagicEffect(CONST_ME_MAGIC_GREEN)
+			else
+				player:say((isInArray({9808, 9809, 9810}, target.itemid) and "The armor was already damaged so badly that it broke when you tried to clean it." or "The legs were already damaged so badly that they broke when you tried to clean them."),TALKTYPE_MONSTER_SAY)
+				target:remove()
+				toPosition:sendMagicEffect(CONST_ME_BLOCKHIT)
+			end
+			return item:remove(1)
+		end
+	end
 end

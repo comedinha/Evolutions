@@ -1,6 +1,5 @@
-function onStepIn(cid, item, position, fromPosition)
+function onStepIn(creature, item, position, fromPosition)
 	local teleport = {
-		action = item.actionid,
 		[17001] = {x=121, y=161, z=15},
 		[17002] = {x=122, y=161, z=15},
 		[17003] = {x=123, y=161, z=15},
@@ -13,11 +12,10 @@ function onStepIn(cid, item, position, fromPosition)
 		[17010] = {x=125, y=143, z=14}
 	}
 
-	if(not isPlayer(cid)) then
+	if(not isPlayer(creature)) then
 		return true
 	end
 
-	doTeleportThing(cid, teleport[item.actionid])
-	doCreatureSay(cid, "LOL?", TALKTYPE_SAY)
-	return true
+	creature:teleportTo(teleport[item.actionid], false)
+	creature:say("LOL?", TALKTYPE_SAY)
 end

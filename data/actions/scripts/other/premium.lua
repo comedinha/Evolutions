@@ -1,11 +1,11 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
-	if(getPlayerPremiumDays(cid) > 360) then
-		doPlayerSendCancel(cid, "You can not have more than 360 days of premium.")
-		doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	if player:getPremiumDays() > 360 then
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		return player:sendCancelMessage("You can not have more than 360 days of premium.")
 	else
-		doPlayerAddPremiumDays(cid, 30)
-		doRemoveItem(item.uid, 1)
-		doPlayerSendCancel(cid, "You just received 30 days of premium.")
+		player:addPremiumDays(30)
+		item:remove(1)
+		return player:sendCancelMessage("You just received 30 days of premium.")
 	end
-	return true
+	return false
 end

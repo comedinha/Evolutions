@@ -1,6 +1,5 @@
 local config = {
 	storage = 030220122041,
-	version = 1, -- Increase this value after adding new marks, so player can step again and receive new map marks
 	marks = {
 		{mark = 5, pos = {x = 100, y = 40, z = 6}, desc = "Dorion Temple"},
 		{mark = 11, pos = {x = 103, y = 64, z = 6}, desc = "Tools Shop!"},
@@ -18,17 +17,14 @@ local config = {
 	}
 }
 
-local f_addMark = doPlayerAddMapMark
-if(not f_addMark) then f_addMark = doAddMapMark end
-
-function onThink(cid, interval)
-	if(isPlayer(cid) ~= TRUE or getPlayerStorageValue(cid, config.storage) == config.version) then
+function onThink(creature, interval)
+	if creature:getStorageValue(config.storage) == 1 then
 		return
 	end
 
 	for _, m  in pairs(config.marks) do
-		f_addMark(cid, m.pos, m.mark, m.desc ~= nil and m.desc or "")
+		creature:addMapMark(m.pos, m.mark, m.desc)
 	end
-	setPlayerStorageValue(cid, config.storage, config.version)
+	creature:setStorageValue(config.storage, 1)
 	return TRUE
 end

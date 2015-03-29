@@ -1,4 +1,4 @@
-function onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.actionid >= 42361 and item.actionid <= 42365 then
 		if player:getStorageValue(42361) ~= 1 then
 			if item.actionid == 42361 then

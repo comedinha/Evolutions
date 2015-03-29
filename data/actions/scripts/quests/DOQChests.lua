@@ -1,4 +1,4 @@
-function onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
    	if item.uid == 12901 then
    		if player:getStorageValue(50090) == -1 then
    			player:sendTextMessage(MESSAGE_INFO_DESCR, "You have found demon legs.")

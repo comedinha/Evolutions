@@ -1,53 +1,53 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
-	if(itemEx.itemid == 11262) then
-		if(getPlayerBlessing(cid, 1)) then
-			doPlayerSendCancel(cid, "You already have been blessed with the Wisdom of Solitude.")
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	if item.itemid == 11262 then
+		if player:hasBlessing(1) then
+			player:getPosition():sendMagicEffect(CONST_ME_POFF)
+			return player:sendCancelMessage("You already have been blessed with the Wisdom of Solitude.")
 		else
-			doPlayerAddBlessing(cid, 1)
-			doRemoveItem(item.uid, 1)
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_FIREWORK)
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You have recived the Wisdom of Solitude.")
+			player:addBlessing(1)
+			item:remove()
+			player:getPosition():sendMagicEffect(CONST_ME_FIREWORK_BLUE)
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You have recived the Wisdom of Solitude.")
 		end
-	elseif(itemEx.itemid == 11258) then
-		if(getPlayerBlessing(cid, 2)) then
-			doPlayerSendCancel(cid, "You already have been blessed with the Spark of the Phoenix.")
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
+	elseif item.itemid == 11258 then
+		if player:hasBlessing(2) then
+			player:getPosition():sendMagicEffect(CONST_ME_POFF)
+			return player:sendCancelMessage("You already have been blessed with the Spark of the Phoenix.")
 		else
-			doPlayerAddBlessing(cid, 2)
-			doRemoveItem(item.uid, 1)
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_FIREWORK)
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You have recived the Spark of the Phoenix.")
+			player:addBlessing(2)
+			item:remove()
+			player:getPosition():sendMagicEffect(CONST_ME_FIREWORK_BLUE)
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You have recived the Spark of the Phoenix.")
 		end
-	elseif(itemEx.itemid == 11261) then
-		if(getPlayerBlessing(cid, 3)) then
-			doPlayerSendCancel(cid, "You already have been blessed with the Fire of the Suns.")
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
+	elseif item.itemid == 11261 then
+		if player:hasBlessing(3) then
+			player:getPosition():sendMagicEffect(CONST_ME_POFF)
+			return player:sendCancelMessage("You already have been blessed with the Fire of the Suns.")
 		else
-			doPlayerAddBlessing(cid, 3)
-			doRemoveItem(item.uid, 1)
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_FIREWORK)
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You have recived the Fire of the Suns.")
+			player:addBlessing(3)
+			item:remove()
+			player:getPosition():sendMagicEffect(CONST_ME_FIREWORK_BLUE)
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You have recived the Fire of the Suns.")
 		end
-	elseif(itemEx.itemid == 11260) then
-		if(getPlayerBlessing(cid, 4)) then
-			doPlayerSendCancel(cid, "You already have been blessed with the Spiritual Shielding.")
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
+	elseif item.itemid == 11260 then
+		if player:hasBlessing(4) then
+			player:getPosition():sendMagicEffect(CONST_ME_POFF)
+			return player:sendCancelMessage("You already have been blessed with the Spiritual Shielding.")
 		else
-			doPlayerAddBlessing(cid, 4)
-			doRemoveItem(item.uid, 1)
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_FIREWORK)
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You have recived the Spiritual Shielding.")
+			player:addBlessing(4)
+			item:remove()
+			player:getPosition():sendMagicEffect(CONST_ME_FIREWORK_BLUE)
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You have recived the Spiritual Shielding.")
 		end
-	elseif(itemEx.itemid == 11259) then
-		if(getPlayerBlessing(cid, 5)) then
-			doPlayerSendCancel(cid, "You already have been blessed with the Embrace of Tibia.")
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_POFF)
+	elseif item.itemid == 11259 then
+		if player:hasBlessing(5) then
+			player:getPosition():sendMagicEffect(CONST_ME_POFF)
+			return player:sendCancelMessage("You already have been blessed with the Embrace of Tibia.")
 		else
-			doPlayerAddBlessing(cid, 5)
-			doRemoveItem(item.uid, 1)
-			doSendMagicEffect(getCreaturePosition(cid), CONST_ME_FIREWORK)
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You have recived the Embrace of Tibia..")
+			player:addBlessing(5)
+			item:remove()
+			player:getPosition():sendMagicEffect(CONST_ME_FIREWORK_BLUE)
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You have recived the Embrace of Tibia.")
 		end
 		return true
 	end

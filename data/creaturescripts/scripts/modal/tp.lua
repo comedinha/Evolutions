@@ -1,4 +1,4 @@
-function onModalWindow(cid, modalWindowId, buttonId, choiceId)
+function onModalWindow(player, modalWindowId, buttonId, choiceId)
 	if modalWindowId == 1003 then
 		if (buttonId == 1) then
 			local pos = 0
@@ -11,7 +11,7 @@ function onModalWindow(cid, modalWindowId, buttonId, choiceId)
 			elseif (choiceId == 4) then
 				pos = {x=393, y=667, z=6}
 			end
-			doTeleportThing(cid, pos)
+			player:teleportTo(pos, false)
 		end
 	end
 	return true

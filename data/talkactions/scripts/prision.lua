@@ -1,4 +1,3 @@
-grouprequired = 2
 jailedstoragevalue_time = 1338
 jailedstoragevalue_bool = 1339
 local jailpos = { 
@@ -11,20 +10,21 @@ local jailpos = {
 	[7] = {x = 59, y = 47, z =5},
 	[8] = {x = 63, y = 52, z =5}
 }
-local unjailpos = { x = 63, y = 54, z =6 }
+local unjailpos = {x = 63, y = 54, z =6}
 jail_list = {}
 jail_list_work = 0
+local default_jail = 30
 
-function checkJailList(param)
+function checkJailList()
 	addEvent(checkJailList, 1000, {})
-	for targetID,player in ipairs(jail_list) do
-		if isPlayer(player) == TRUE then
-			if getPlayerStorageValue(player, jailedstoragevalue_time) < os.time() then
-				doTeleportThing(player, unjailpos, TRUE)
-				setPlayerStorageValue(player, jailedstoragevalue_time, 0)
-				setPlayerStorageValue(player, jailedstoragevalue_bool, 0)
+	for targetID, player in ipairs(jail_list) do
+		if Player(player) then
+			if Player(player):getStorageValue(jailedstoragevalue_time) < os.time() then
+				Player(player):teleportTo(unjailpos, true)
+				Player(player):setStorageValue(jailedstoragevalue_time, 0)
+				Player(player):setStorageValue(Player(player), jailedstoragevalue_bool, 0)
 				table.remove(jail_list,targetID)
-				doPlayerSendTextMessage(player, MESSAGE_STATUS_CONSOLE_ORANGE, 'You got out of jail, try not to do evil things next time to avoid being arrested again. Take care friend.')
+				Player(player):sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, 'You got out of jail, try not to do evil things next time to avoid being arrested again. Take care friend.')
 			end
 		else
 			table.remove(jail_list,targetID)
@@ -32,12 +32,13 @@ function checkJailList(param)
 	end
 end
 
-function onSay(cid, words, param)
-	if not Player(cid):getGroup():getAccess() then
-		return false
+function onSay(player, words, param)
+	if not player:getGroup():getAccess() then
+		return true
 	end
+	
 	if(param == '') then
-		doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Command param required.")
 		return false
 	end
 	local t = param:split(", ")
@@ -50,17 +51,7 @@ function onSay(cid, words, param)
 			jail_time = tonumber(word)
 		end
 	end
-	local isplayer = getPlayerByName(t[1])
-	if isPlayer(isplayer) ~= TRUE then
-		isplayer = getPlayerByName(string.sub(t[1], string.len("jail_time")+1))
-		if isPlayer(isplayer) ~= TRUE then
-			isplayer = getPlayerByName(string.sub(t[1], string.len("jail_time")+2))
-			if isPlayer(isplayer) ~= TRUE then
-				isplayer = getPlayerByName(string.sub(t[1], string.len("jail_time")+3))
-			end
-		end
-	end
-	local default_jail = 30
+	local isplayer = Player(t[1]):getId()
 	if(t[2]) then
 		default_jail = t[2]
 	end
@@ -71,30 +62,30 @@ function onSay(cid, words, param)
 	end
 	
 	if (words == '/jail') then
-		if isPlayer(isplayer) == TRUE then
-			doTeleportThing(isplayer, jailpos[math.random(#jailpos)], TRUE)
-			setPlayerStorageValue(isplayer, jailedstoragevalue_time, os.time()+jail_time)
-			setPlayerStorageValue(isplayer, jailedstoragevalue_bool, 1)
+		if Player(isplayer) then
+			Player(isplayer):teleportTo(jailpos[math.random(#jailpos)], true)
+			Player(isplayer):setStorageValue(jailedstoragevalue_time, os.time()+jail_time)
+			Player(isplayer):setStorageValue(jailedstoragevalue_bool, 1)
 			table.insert(jail_list,isplayer)
-			doPlayerSendTextMessage (cid, MESSAGE_STATUS_CONSOLE_ORANGE, 'You arrested the player '.. getCreatureName(isplayer) ..' until ' .. os.date("%H:%M:%S", getPlayerStorageValue(isplayer, jailedstoragevalue_time)) .. ' (now is: ' .. os.date("%H:%M:%S", os.time()) .. ').')
-			doPlayerSendTextMessage (isplayer, MESSAGE_STATUS_CONSOLE_ORANGE, 'You were arrested for '.. getCreatureName(cid) ..' until ' .. os.date("%H:%M:%S", getPlayerStorageValue(isplayer, jailedstoragevalue_time)) .. ' (now is: ' .. os.date("%H:%M:%S", os.time()) .. ').')
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, 'You arrested the player '.. Player(isplayer):getName() ..' until ' .. os.date("%H:%M:%S", Player(isplayer):getStorageValue(jailedstoragevalue_time)) .. ' (now is: ' .. os.date("%H:%M:%S", os.time()) .. ').')
+			Player(isplayer):sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, 'You were arrested for '.. player:getName() ..' until ' .. os.date("%H:%M:%S", Player(isplayer):getStorageValue(jailedstoragevalue_time)) .. ' (now is: ' .. os.date("%H:%M:%S", os.time()) .. ').')
 		else
-			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "This player does not exist or is offline.")
+			player:sendTextMessage(MESSAGE_INFO_DESCR, "This player does not exist or is offline.")
 		end
 	elseif (words == '/unjail') then
-		if isPlayer(isplayer) == TRUE then
-			if getPlayerStorageValue(isplayer, jailedstoragevalue_bool) == 1 then
-				doTeleportThing(isplayer, unjailpos, TRUE)
-				setPlayerStorageValue(isplayer, jailedstoragevalue_time, 0)
-				setPlayerStorageValue(isplayer, jailedstoragevalue_bool, 0)
+		if Player(isplayer) then
+			if Player(isplayer):getStorageValue(jailedstoragevalue_bool) == 1 then
+				Player(isplayer):teleportTo(unjailpos, true)
+				Player(isplayer):setStorageValue(jailedstoragevalue_time, 0)
+				Player(isplayer):setStorageValue(jailedstoragevalue_bool, 0)
 				table.remove(jail_list,targetID)
-				doPlayerSendTextMessage(isplayer, MESSAGE_STATUS_CONSOLE_ORANGE, 'The player '.. getCreatureName(cid) ..' brought you out of jail. See you soon!')
-				doPlayerSendTextMessage (cid, MESSAGE_STATUS_CONSOLE_ORANGE, 'You removed out the player '.. getCreatureName(isplayer) ..'of the jail.')
+				Player(isplayer):sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, 'The player '.. player:getName() ..' brought you out of jail.')
+				player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, 'You removed out the player '.. Player(isplayer):getName() ..'of the jail.')
 			else
-				doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "This player is not stuck.")
+				player:sendTextMessage(MESSAGE_INFO_DESCR, "This player is not stuck.")
 			end
 		else
-			doPlayerSendTextMessage(cid, MESSAGE_INFO_DESCR, "This player does not exist or is offline.")
+			player:sendTextMessage(MESSAGE_INFO_DESCR, "This player does not exist or is offline.")
 		end
 	end
 	return false

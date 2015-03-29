@@ -1,4 +1,4 @@
-modaldialog4 = {
+local modaldialog = {
 	title = "Quick Access",
 	message = "Where are you going?",
 	buttons = {
@@ -16,10 +16,24 @@ modaldialog4 = {
 	popup = false
 }
 
-function onSay(cid, words, param)
-	if not Player(cid):getGroup():getAccess() then
-		return false
+function onSay(player, words, param)
+	if not player:getGroup():getAccess() then
+		return true
 	end
-	doPlayerAddDialog(cid, 1003, modaldialog4)
-	registerCreatureEvent(cid, "ModalTP")
+	
+	modalWindow = ModalWindow(1003, modaldialog.title, modaldialog.message)
+	if modalWindow:getId() == 1003 then
+		for _, v in ipairs(modaldialog.buttons) do
+			modalWindow:addButton(v.id, v.text)
+		end
+		for _, v in ipairs(modaldialog.choices) do
+			modalWindow:addChoice(v.id, v.text)
+		end
+		modalWindow:setDefaultEnterButton(modaldialog.buttonEnter)
+		modalWindow:setPriority(modaldialog.popup)
+		modalWindow:setDefaultEscapeButton(modaldialog.buttonEscape)
+	end
+	modalWindow:sendToPlayer(player)
+	player:registerEvent("ModalTP")
+	return false
 end

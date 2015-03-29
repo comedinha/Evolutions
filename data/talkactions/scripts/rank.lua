@@ -1,4 +1,4 @@
-modaldialog2 = {
+local modaldialog = {
 	title = "Rank",
 	message = "Select the rank you want to view:",
 	buttons = {
@@ -21,7 +21,19 @@ modaldialog2 = {
 	popup = false
 }
 
-function onSay(cid, words, param)
-	doPlayerAddDialog(cid, 1002, modaldialog2)
-	registerCreatureEvent(cid, "ModalRank")
+function onSay(player, words, param)
+	modalWindow = ModalWindow(1002, modaldialog.title, modaldialog.message)
+	if modalWindow:getId() == 1002 then
+		for _, v in ipairs(modaldialog.buttons) do
+			modalWindow:addButton(v.id, v.text)
+		end
+		for _, v in ipairs(modaldialog.choices) do
+			modalWindow:addChoice(v.id, v.text)
+		end
+		modalWindow:setDefaultEnterButton(modaldialog.buttonEnter)
+		modalWindow:setPriority(modaldialog.popup)
+		modalWindow:setDefaultEscapeButton(modaldialog.buttonEscape)
+	end
+	modalWindow:sendToPlayer(player)
+	player:registerEvent("ModalRank")
 end

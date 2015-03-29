@@ -1,4 +1,4 @@
-function onUse(cid, item, fromPosition, itemEx, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
    	if item.uid == 15901 then
    		if player:getStorageValue(50089) == -1 then
    			player:sendTextMessage(MESSAGE_INFO_DESCR, "You have found Solar Axe.")

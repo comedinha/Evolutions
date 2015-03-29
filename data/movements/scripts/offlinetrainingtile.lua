@@ -1,11 +1,16 @@
-function onStepIn(cid, item, position, fromPosition)
-	OfflineLevel = 8
-	if(getPlayerPremiumDays(cid) < 1) then
-		doTeleportThing(cid, fromPosition, false)
-		return doPlayerSendCancel(cid, "Offline trainer is only for premiuns")
+local config = {
+	offlineLevel = 8,
+	needPremium = false,
+	backPosition = {x = 97, y = 48, z = 9}
+}
+
+function onStepIn(creature, item, position, fromPosition)
+	if config.needPremium == true and creature:getPremiumDays() < 1 then
+		creature:teleportTo(config.backPosition, false)
+		return creature:sendCancelMessage("Offline trainer is only for premiums")
 	end
-	if getPlayerLevel(cid) <= OfflineLevel then
-		doTeleportThing(cid, fromPosition, false)
-		return doPlayerSendCancel(cid, "The level to come here is "..OfflineLevel.."")
+	if creature:getLevel() < config.offlineLevel then
+		creature:teleportTo(config.backPosition, false)
+		return creature:sendCancelMessage("The level to enter here is "..config.offlineLevel.."")
 	end
 end

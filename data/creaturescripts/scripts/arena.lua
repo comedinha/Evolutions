@@ -40,41 +40,41 @@ function getArenaMonsterIdByName(name)
     return 0
 end
 
-function onKill(cid, target)
+function onKill(creature, target)
 	local room = getArenaMonsterIdByName(getCreatureName(target))
 	if room > 0 then
-		setPlayerStorageValue(cid, room, 1)
-		doPlayerSendTextMessage(cid,MESSAGE_EVENT_DEFAULT,'You can enter next room!')
+		creature:setStorageValue(room, 1)
+		creature:sendTextMessage(MESSAGE_EVENT_DEFAULT, "You can enter next room!")
 	end
 	return true
 end
 
-function onLogin(cid)
+function onLogin(player)
 	-- if he did not make full arena 1 he must start from zero
-	if getPlayerStorageValue(cid, 42309) == -1 then
+	if player:getStorageValue(42309) == -1 then
 		for i = 42300, 42309 do
-			setPlayerStorageValue(cid, i, 0)
+			player:setStorageValue(i, 0)
 		end
 	end
 	-- if he did not make full arena 2 he must start from zero
-	if getPlayerStorageValue(cid, 42319) == -1 then
+	if player:getStorageValue(42319) == -1 then
 		for i = 42310, 42319 do
-			setPlayerStorageValue(cid, i, 0)
+			player:setStorageValue(i, 0)
 		end
 	end
 	-- if he did not make full arena 3 he must start from zero
-	if getPlayerStorageValue(cid, 42329) == -1 then
+	if player:getStorageValue(42329) == -1 then
 		for i = 42320, 42329 do
-			setPlayerStorageValue(cid, i, 0)
+			player:setStorageValue(i, 0)
 		end
 	end
-	if getPlayerStorageValue(cid, 42355) == -1 then
-		setPlayerStorageValue(cid, 42355, 0) -- did not arena level
+	if player:getStorageValue(42355) == -1 then
+		player:setStorageValue(42355, 0) -- did not arena level
 	end
-	setPlayerStorageValue(cid, 42350, 0) -- time to kick 0
-	setPlayerStorageValue(cid, 42352, 0) -- is not in arena  
-	if getGlobalStorageValue(9876)+3 < os.time() then
-		setGlobalStorageValue(9876, os.time())
+	player:setStorageValue(42350, 0) -- time to kick 0
+	player:setStorageValue(42352, 0) -- is not in arena  
+	if (Game.getStorageValue(9876) or -1)+3 < os.time() then
+		Game.setStorageValue(9876, os.time())
 	end
 	return true
 end

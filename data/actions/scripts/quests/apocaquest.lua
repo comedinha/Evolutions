@@ -8,7 +8,7 @@ local playerPos = {
 
 local newPlayerPos = {x = 199, y = 90, z = 10}
 
-function onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local playersTeleport = {}
 	for i, v in ipairs(playerPos) do
 	local players = v:getTopCreature().uid or v:getTopCreature()

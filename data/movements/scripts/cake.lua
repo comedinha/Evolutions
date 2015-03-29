@@ -1,10 +1,11 @@
-function onAddItem(moveitem, tileitem, position, cid)
-	if(moveitem.itemid == 2048) then
-		doTransformItem(moveitem.uid, 6280)
-		doSendMagicEffect(position, CONST_ME_HITBYFIRE)
-	elseif(moveitem.itemid == 2679) then
-		doTransformItem(moveitem.uid, 6279)
-		doSendMagicEffect(position, CONST_ME_HITBYFIRE)
+function onAddItem(moveitem, tileitem, position)
+	if moveitem:getId() == 2048 and tileitem:getId() == 6279 then
+		tileitem:remove()
+		moveitem:transform(6280)
+		position:sendMagicEffect(CONST_ME_MAGIC_RED)
+	elseif moveitem:getId() == 2679 and tileitem:getId() == 6278 then
+		tileitem:remove()
+		moveitem:transform(6279)
+		position:sendMagicEffect(CONST_ME_MAGIC_RED)
 	end
-	return true
 end

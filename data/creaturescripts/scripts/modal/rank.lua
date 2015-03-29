@@ -1,4 +1,4 @@
-function onModalWindow(cid, modalWindowId, buttonId, choiceId)
+function onModalWindow(player, modalWindowId, buttonId, choiceId)
 	if modalWindowId == 1002 then
 		if (buttonId == 1) then
 			local str = ""
@@ -67,7 +67,7 @@ function onModalWindow(cid, modalWindowId, buttonId, choiceId)
 					k = k + 1 until not result.next(query)
 				end
 			end
-			doShowTextDialog(cid, 2529, str)
+			player:showTextDialog(2529, str)
 		end
 	end
 	return true

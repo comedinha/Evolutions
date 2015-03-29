@@ -1,4 +1,4 @@
-modaldialog = {
+local modaldialog = {
 	title = "Want to try your luck?",
 	message = "Select what you want to try to win:",
 	buttons = {
@@ -14,13 +14,25 @@ modaldialog = {
 	popup = true
 }
 
-function onLogin(cid)
-	if getPlayerStorageValue(cid, 11000) == -1 then
+function onLogin(player)
+	if player:getStorageValue(11000) == -1 then
 		if math.random(100) <= 50 then
-			doPlayerAddDialog(cid, 1000, modaldialog)
-			registerCreatureEvent(cid, "ModalRaffle")
+			modalWindow = ModalWindow(1000, modaldialog.title, modaldialog.message)
+			if modalWindow:getId() == 1000 then
+				for _, v in ipairs(modaldialog.buttons) do
+					modalWindow:addButton(v.id, v.text)
+				end
+				for _, v in ipairs(modaldialog.choices) do
+					modalWindow:addChoice(v.id, v.text)
+				end
+				modalWindow:setDefaultEnterButton(modaldialog.buttonEnter)
+				modalWindow:setPriority(modaldialog.popup)
+				modalWindow:setDefaultEscapeButton(modaldialog.buttonEscape)
+			end
+			modalWindow:sendToPlayer(player)
+			player:registerEvent("ModalRaffle")
 		end
-		setPlayerStorageValue(cid, 11000, 1)
+		player:setStorageValue(11000, 1)
 	end
 	return true
 end

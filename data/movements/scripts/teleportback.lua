@@ -1,22 +1,16 @@
-function onStepIn(cid, item, position, fromPosition)
-	local teleport = {
-		action = item.actionid,
-		[18000] = {x=100, y=40, z=6}
-	}
+function onStepIn(creature, item, position, fromPosition)
+	local backpos = {x=100, y=40, z=6}
 
-	if(item.actionid == teleport.action) then
-		if not isPlayer(cid) or isPlayerPzLocked(cid) then
-			doTeleportThing(cid, fromPosition, false)
-			return true
-		end
-	
-		if(getPlayerStorageValue(cid, teleport.action) == 1) then
-			doTeleportThing(cid, teleport[item.actionid])
-			setPlayerStorageValue(cid,teleport.action,-1)
-			else
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You can not even back here!")
-			doTeleportThing(cid, fromPosition, false)
-		end
+	if not Player(creature) or creature:isPzLocked() then
+		creature:teleportTo(fromPosition, false)
 		return true
+	end
+
+	if creature:getStorageValue(18000) == 1 then
+		creature:teleportTo(backpos, false)
+		creature:setStorageValue(18000, -1)
+	else
+		creature:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You can not even back here!")
+		creature:teleportTo(fromPosition, false)
 	end
 end

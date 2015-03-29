@@ -201,8 +201,8 @@
 	<action itemid="8473" script="other/potions.lua"/>
 	<action itemid="8474" script="other/potions.lua"/>
 	<action itemid="8704" script="other/potions.lua"/>
-	<action itemid="2692" script="other/createbread.lua"/>
-	<action itemid="2694" script="other/createbread.lua"/>
+	<action itemid="2692" script="other/createfood.lua"/>
+	<action itemid="2694" script="other/createfood.lua"/>
 	<action fromid="6436" toid="6447" script="other/windows.lua"/>
 	<action fromid="6450" toid="6473" script="other/windows.lua"/>
 	<action fromid="6788" toid="6791" script="other/windows.lua"/>
@@ -258,63 +258,60 @@
 	
 	<!-- Custom's -->
 	<!-- Quests -->
-	<action uniqueid="3540" script="quests/vochest.lua"/> -- Vocations
-	<action fromuid="60001" touid="60075" script="quests/scripted.lua"/>  -- Quests gerais
-	<action uniqueid="30016" script="quests/DHQ.lua"/>  -- remove stone
-	<action fromuid="5610" touid="5618" script="quests/inquisition.lua" /> -- inquisition
-	<action fromaid="42361" toaid="42365" script="quests/arenareward.lua"/> -- Arena
-	<action fromaid="42371" toaid="42375" script="quests/arenareward.lua"/> -- Arena
-	<action fromaid="42381" toaid="42385" script="quests/arenareward.lua"/> -- Arena
-	<action uniqueid="5997" script="quests/apocaquest.lua"/> -- Apoca Quest
-	<action fromuid="12901" touid="12904" script="quests/DOQChests.lua" /> -- Demon Oak
-	<action itemid="8293" script="quests/demonoak.lua"/> -- (Demon Oak)
-	<action fromuid="5306" touid="5308" script="quests/poichest.lua" /> -- POI Quest
-	<action uniqueid="1900" script="quests/desert quest.lua" /> -- Desert Quest
-	<action fromuid="15901" touid="15904" script="quests/solaraxequest.lua" /> -- Solar axe
-	<action uniqueid="8977" script="quests/teltime.lua" /> - Tell Time
+	<action uniqueid="3540" script="quests/vochest.lua"/> <!-- Vocations -->
+	<action fromuid="60001" touid="60075" script="quests/scripted.lua"/>  <!-- Quests gerais -->
+	<action uniqueid="30016" script="quests/DHQ.lua"/>  <!-- remove stone -->
+	<action fromuid="5610" touid="5618" script="quests/inquisition.lua" /> <!-- inquisition -->
+	<action fromaid="42361" toaid="42365" script="quests/arenareward.lua"/> <!-- Arena -->
+	<action fromaid="42371" toaid="42375" script="quests/arenareward.lua"/> <!-- Arena -->
+	<action fromaid="42381" toaid="42385" script="quests/arenareward.lua"/> <!-- Arena -->
+	<action uniqueid="5997" script="quests/apocaquest.lua"/> <!-- Apoca Quest -->
+	<action fromuid="12901" touid="12904" script="quests/DOQChests.lua" /> <!-- Demon Oak -->
+	<action itemid="8293" script="quests/demonoak.lua"/> <!-- Demon Oak -->
+	<action fromuid="5306" touid="5308" script="quests/poichest.lua" /> <!-- POI Quest -->
+	<action uniqueid="1900" script="quests/desert quest.lua" /> <!-- Desert Quest -->
+	<action fromuid="15901" touid="15904" script="quests/solaraxequest.lua" /> <!-- Solar axe -->
+	<action uniqueid="8977" script="quests/teltime.lua" /> <!-- Tell Time -->
 	
 	<!-- Creating -->
-	<action itemid="16018" script="other/artistic.lua"/> -- Artistc
-	<action itemid="6277" script="other/cookie.lua"/> -- Create Foods
-	<action itemid="8848" script="other/cookie.lua"/> -- Create Cookie
+	<action itemid="16018" script="other/artistic.lua"/> <!-- Artistc -->
+	<action itemid="6277" script="other/createfood.lua"/> <!-- Create Foods -->
+	<action itemid="8848" script="other/createfood.lua"/> <!-- Create Cookie -->
 	
 	<!-- Doors -->
-	<action actionid="42357" script="other/arenadoors.lua"/> -- Arena
-	<action actionid="42366" script="other/arenadoors.lua"/> -- Arena
-	<action actionid="42376" script="other/arenadoors.lua"/> -- Arena
-	<action actionid="42386" script="other/arenadoors.lua"/> -- Arena
+	<action actionid="42357" script="other/arenadoors.lua"/> <!-- Arena -->
+	<action actionid="42366" script="other/arenadoors.lua"/> <!-- Arena -->
+	<action actionid="42376" script="other/arenadoors.lua"/> <!-- Arena -->
+	<action actionid="42386" script="other/arenadoors.lua"/> <!-- Arena -->
 	
 	<!-- Taming Items -->
-    <action itemid="5907" script="other/taming.lua"/>
+	<action itemid="5907" script="other/taming.lua"/>
 	<action itemid="13247" script="other/taming.lua"/>
 	<action fromid="13291" toid="13295" script="other/taming.lua"/>
 	<action itemid="13298" script="other/taming.lua"/>
 	<action itemid="13305" script="other/taming.lua"/>
 	<action itemid="13307" script="other/taming.lua"/>
+	<action itemid="13498" script="other/taming.lua"/>
 	<action itemid="13508" script="other/taming.lua"/>
 	<action fromid="13535" toid="13539" script="other/taming.lua"/>
 	<action fromid="13938" toid="13939" script="other/taming.lua"/>
-	<action itemid="13498" script="other/taming.lua"/>
 	<action fromid="15545" toid="15546" script="other/taming.lua"/>
 	<action fromid="18447" toid="18449" script="other/taming.lua"/>
 	<action itemid="18516" script="other/taming.lua"/>
 	<action itemid="20138" script="other/taming.lua"/>
-	<action itemid="21452" script="other/taming.lua"/>
 	<action itemid="22608" script="other/taming.lua"/>
 	
 	<!-- Other -->
-	<action uniqueid="55100" script="other/DOQgravestone.lua" /> -- (Demon Oak)
-	<action uniqueid="2217" script="other/arena.lua" /> -- Arena
-	<action actionid="122" script="other/fibula_down.lua"/> - Fibula Down?
-	<action fromid="11258" toid="11262" script="other/blessings.lua"/> -- Blessings
-	<action fromid="18521" toid="18522" script="other/addons.lua"/> -- Addons items
-	<action fromid="18518" toid="18519" script="other/addons.lua"/> -- Addons items
-	<action uniqueid="2133" script="other/shrinetele.lua" /> -- Shrine
-	<action actionid="4850" script="other/castlelever.lua"/> -- Castle Mountain
-	<action actionid="4851" script="other/castlelever.lua"/> -- Castle Mountain
-	<action actionid="4840" script="other/minalever.lua"/> -- Minas Mountain
-	<action actionid="4841" script="other/minalever.lua"/> -- Minas Mountain
-	<action itemid="16101" script="other/premium.lua"/> -- Premium Scroll
+	<action uniqueid="55100" script="other/DOQgravestone.lua" /> <!-- Demon Oak -->
+	<action uniqueid="2217" script="other/arena.lua" /> <!-- Arena -->
+	<action actionid="122" script="other/fibula_down.lua"/> <!-- Fibula Down? -->
+	<action fromid="11258" toid="11262" script="other/blessings.lua"/> <!-- Blessings -->
+	<action fromid="18521" toid="18522" script="other/addons.lua"/> <!-- Addons items -->
+	<action fromid="18518" toid="18519" script="other/addons.lua"/> <!-- Addons items -->
+	<action uniqueid="2133" script="other/shrinetele.lua" /> <!-- Shrine -->
+	<action fromaid="4850" toaid="4851" script="other/levers.lua"/> <!-- Castle Mountain -->
+	<action fromaid="4840" toaid="4841" script="other/levers.lua"/> <!-- Minas Mountain -->
+	<action itemid="16101" script="other/premium.lua"/> <!-- Premium Scroll -->
 	<action itemid="6561" script="other/checkblessings.lua"/>
 	<action itemid="12424" script="other/checkblessings.lua"/>
 	<action fromid="9992" toid="10001" script="other/food_special.lua"/>

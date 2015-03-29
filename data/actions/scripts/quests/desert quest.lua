@@ -34,7 +34,7 @@ local config = {
     }
 }
 
-function onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
     local players = {}
     for _, v in ipairs(config) do
  

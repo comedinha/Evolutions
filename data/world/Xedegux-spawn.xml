@@ -16057,11 +16057,6 @@
 	<spawn centerx="1287" centery="2773" centerz="7" radius="1">
 		<monster name="Cyclops Drone" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="416" centery="20" centerz="8" radius="5">
-		<monster name="The Fastest Turtle" x="0" y="-1" z="8" spawntime="60" />
-		<monster name="The Fastest Turtle" x="-1" y="1" z="8" spawntime="60" />
-		<monster name="The Fastest Turtle" x="1" y="1" z="8" spawntime="60" />
-	</spawn>
 	<spawn centerx="76" centery="29" centerz="8" radius="5">
 		<monster name="Carrion Worm" x="3" y="-1" z="8" spawntime="60" />
 		<monster name="Rotworm" x="4" y="0" z="8" spawntime="60" />
@@ -16120,19 +16115,6 @@
 		<monster name="Draptor" x="-2" y="4" z="8" spawntime="60" />
 		<monster name="Ghoul" x="-3" y="5" z="8" spawntime="60" />
 		<monster name="Demon Skeleton" x="-4" y="7" z="8" spawntime="60" />
-	</spawn>
-	<spawn centerx="408" centery="36" centerz="8" radius="5">
-		<monster name="The Fastest Turtle" x="2" y="0" z="8" spawntime="60" />
-		<monster name="The Fastest Turtle" x="3" y="0" z="8" spawntime="60" />
-		<monster name="The Fastest Turtle" x="4" y="0" z="8" spawntime="60" />
-		<monster name="The Fastest Turtle" x="5" y="0" z="8" spawntime="60" />
-	</spawn>
-	<spawn centerx="420" centery="36" centerz="8" radius="5">
-		<monster name="The Fastest Turtle" x="-1" y="0" z="8" spawntime="60" />
-		<monster name="The Fastest Turtle" x="0" y="0" z="8" spawntime="60" />
-		<monster name="The Fastest Turtle" x="1" y="0" z="8" spawntime="60" />
-		<monster name="The Fastest Turtle" x="2" y="0" z="8" spawntime="60" />
-		<monster name="The Fastest Turtle" x="-4" y="2" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="48" centery="40" centerz="8" radius="5">
 		<monster name="Rotworm" x="3" y="-3" z="8" spawntime="60" />
@@ -22525,11 +22507,8 @@
 		<monster name="Ghoul" x="1" y="2" z="10" spawntime="60" />
 		<monster name="Ghoul" x="3" y="3" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="209" centery="91" centerz="10" radius="5">
-		<monster name="Apocalypse" x="-3" y="0" z="10" spawntime="30" />
-	</spawn>
-	<spawn centerx="218" centery="91" centerz="10" radius="5">
-		<monster name="Tibia Bug" x="2" y="-1" z="10" spawntime="30" />
+	<spawn centerx="217" centery="91" centerz="10" radius="1">
+		<monster name="Apocalypse" x="0" y="0" z="10" spawntime="30" />
 	</spawn>
 	<spawn centerx="310" centery="108" centerz="10" radius="30">
 		<monster name="Demon" x="2" y="-12" z="10" spawntime="30" />

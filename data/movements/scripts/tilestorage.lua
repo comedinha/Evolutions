@@ -1,19 +1,13 @@
-function onStepIn(cid, item, position, fromPosition)
-	local piso = {
-		action = item.actionid,
-		storage = item.actionid -1000,
-	}
-	if(item.actionid == piso.action) then
-		if(not isPlayer(cid)) then
-			return true
-		end
-		
-		if(getPlayerStorageValue(cid, piso.action) == -1) then
-			doPlayerSendTextMessage(cid, MESSAGE_STATUS_CONSOLE_BLUE, "You discovered this area!")
-			setPlayerStorageValue(cid,piso.action,1)
-			setPlayerStorageValue(cid,piso.storage,1)
-			setPlayerStorageValue(cid, 11552, getPlayerStorageValue(cid, 11552)+1)
-		end
+function onStepIn(creature, item, position, fromPosition)
+	if not Player(creature) then
 		return true
 	end
+	
+	if creature:getStorageValue(item.actionid) == -1 then
+		creature:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You discovered this area!")
+		creature:setStorageValue(item.actionid, 1)
+		creature:setStorageValue(item.actionid - 1000, 1)
+		creature:setStorageValue(11552, creature:getStorageValue(11552) + 1)
+	end
+	return true
 end

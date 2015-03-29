@@ -1,4 +1,4 @@
-function onUse(player, item, fromPosition, itemEx, toPosition, isHotkey)
+function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.uid == 60001 then
 		if player:getStorageValue(60001) == -1 then
 			player:sendTextMessage(MESSAGE_INFO_DESCR, "You have found a red bag.")
