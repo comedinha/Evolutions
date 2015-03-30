@@ -12,8 +12,8 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		player2 = getThingfromPos(config.player2enterpos)
 		if player1.itemid > 0 and player2.itemid > 0 then
 			if Player(player1.uid):getLevel() >= config.level and Player(player2.uid):getLevel() >= config.level then
-				for arenax = 33,46 do
-					for arenay = 98,107 do
+				for arenax = 33, 46 do
+					for arenay = 98, 107 do
 						arenacreature = getThingfromPos({x=arenax, y=arenay, z=6, stackpos=255})
 						if arenacreature.itemid > 0 then
 							return player:sendCancelMessage("Expect the duel finish.")

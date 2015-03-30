@@ -16,7 +16,7 @@ function thinkCallback(cid)
 end
 
 function greetCallback(cid)
-return true
+	return true
 end
 
 local node1 = keywordHandler:addKeyword({'twist of fate'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Do you want to buy the sixth blessing (Twist of Fate) for 2000 (plus level depending amount) gold?'})
@@ -29,25 +29,25 @@ function creatureSayCallback(cid, type, msg)
 	end
 
 	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or cid
-	if(msgcontains(msg, 'set') and msgcontains(msg, 'my') and msgcontains(msg, 'town')) then
+	if msgcontains(msg, 'set') and msgcontains(msg, 'my') and msgcontains(msg, 'town') then
 		selfSay('Here now you will be reborn in Dorion!', cid)
 		doPlayerSetTown(cid, 1)
-	elseif(msgcontains(msg, 'buy') and msgcontains(msg, 'all')) then
+	elseif msgcontains(msg, 'buy') and msgcontains(msg, 'all') then
 		selfSay('You want every blesses for 50k? In the Comedinha they cost 25k', cid)
 		talkState[talkUser] = 1
-		return true
-	elseif(msgcontains(msg, 'yes')) then
-		if(talkState[talkUser] == 1) then
-			if(getPlayerMoney(cid) >= 50000) then
-				selfSay('Here it is!', cid)
-				doPlayerRemoveMoney(cid, 50000)
-				for b = 1, 6 do
-					doPlayerAddBlessing(cid, b)
-				end
+	elseif msgcontains(msg, 'yes') and talkState[talkUser] == 1 then
+		if getPlayerMoney(cid) >= 50000 then
+			selfSay('Here it is!', cid)
+			doPlayerRemoveMoney(cid, 50000)
+			for b = 1, 6 do
+				doPlayerAddBlessing(cid, b)
 			end
+		else
+			selfSay('You have no money!', cid)
+			talkState[talkUser] = 0
 		end
 		talkState[talkUser] = 0
-	elseif(msgcontains(msg, 'no') and isInArray({1}, talkState[talkUser])) then
+	elseif msgcontains(msg, 'no') and isInArray({1}, talkState[talkUser])	then
 		selfSay('Ok then.', cid)
 		talkState[talkUser] = 0
 	end
