@@ -34,12 +34,5 @@ function onThink(creature, interval)
 			creature:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You completed all the quests and became a God. Try talk with the Pac in venonh")
 		end
 	end
-	if creature:getStorageValue(30018) == 1 then
-		playerVoc = creature:getVocation():getId()
-		if playerVoc <= 4 then
-			local promotedVoc = playerVoc:getPromotion():getId()
-			creature:setVocation(promotedVoc)
-		end
-	end
 	return true
 end
