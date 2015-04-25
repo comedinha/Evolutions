@@ -8567,9 +8567,6 @@
 		<monster name="Nomad" x="-14" y="21" z="7" spawntime="60" />
 		<monster name="Tortoise" x="15" y="26" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="188" centery="145" centerz="7" radius="1">
-		<monster name="Dragon" x="0" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="284" centery="147" centerz="7" radius="5">
 		<monster name="Omruc" x="-2" y="-2" z="7" spawntime="60" />
 		<monster name="Morguthis" x="4" y="0" z="7" spawntime="60" />
@@ -8615,9 +8612,6 @@
 	<spawn centerx="1315" centery="157" centerz="7" radius="2">
 		<monster name="Seagull" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="203" centery="158" centerz="7" radius="1">
-		<monster name="Dragon" x="0" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="130" centery="160" centerz="7" radius="5">
 		<monster name="Terramite" x="1" y="-1" z="7" spawntime="30" />
 	</spawn>
@@ -8636,8 +8630,13 @@
 		<monster name="Crab" x="1" y="2" z="7" spawntime="60" />
 		<monster name="Island Troll" x="-2" y="3" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="191" centery="170" centerz="7" radius="1">
-		<monster name="Dragon" x="0" y="0" z="7" spawntime="300" />
+	<spawn centerx="192" centery="170" centerz="7" radius="5">
+		<monster name="Dragon" x="-1" y="0" z="7" spawntime="300" />
+	</spawn>
+	<spawn centerx="197" centery="170" centerz="7" radius="30">
+		<monster name="Dragon" x="-9" y="-24" z="7" spawntime="300" />
+		<monster name="Dragon" x="7" y="-13" z="7" spawntime="300" />
+		<monster name="Dragon" x="3" y="5" z="7" spawntime="300" />
 	</spawn>
 	<spawn centerx="277" centery="172" centerz="7" radius="1">
 		<npc name="Frodo" x="0" y="0" z="7" spawntime="800" direction="2" />
@@ -8647,9 +8646,6 @@
 	</spawn>
 	<spawn centerx="1333" centery="173" centerz="7" radius="2">
 		<monster name="Island Troll" x="0" y="1" z="7" spawntime="60" />
-	</spawn>
-	<spawn centerx="199" centery="175" centerz="7" radius="1">
-		<monster name="Dragon" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="57" centery="176" centerz="7" radius="5">
 		<monster name="Cyclops" x="-5" y="4" z="7" spawntime="60" />
