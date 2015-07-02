@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Soya" script="loot.lua" walkinterval="2000" floorchange="0">
-	<health now="150" max="150"/>
-	<look type="139" head="132" body="79" legs="97" feet="132" corpse="2212"/>
+	<health now="150" max="150" />
+	<look type="139" head="132" body="79" legs="97" feet="132" corpse="2212" />
 	<parameters>
-		<parameter key="module_shop" value="1"/>
-		<parameter key="message_greet" value="Hello |PLAYERNAME|. I buy swords, clubs and axes. If you want to sell equipment look for The Blacksmith."/>
+		<parameter key="module_shop" value="1" />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I buy swords, clubs and axes. If you want to sell equipment look for The Blacksmith." />
 		<parameter key="shop_sellable" value="magic longsword,2390,460;
 		noble axe,7456,10000;
 		warlord sword,2408,360;
@@ -77,6 +77,6 @@
 		dragon slayer,7402,15000;
 		drakinata,11305,10000;
 		sai,11306,16500;
-		glorious axe,7454,2500"/>
+		glorious axe,7454,2500" />
 	</parameters>
 </npc>

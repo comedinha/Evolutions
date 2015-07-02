@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <creaturescripts>
-	<event type="login" name="PlayerLogin" script="login.lua"/>
-	<event type="logout" name="PlayerLogout" script="logout.lua"/>
-	<event type="login" name="FirstItems" script="firstitems.lua"/>
-	<event type="login" name="RegenerateStamina" script="regeneratestamina.lua"/>
-	<event type="death" name="PlayerDeath" script="playerdeath.lua"/>
-	<event type="death" name="DropLoot" script="droploot.lua"/>
-	<event type="extendedopcode" name="ExtendedOpcode" script="extendedopcode.lua"/>
+	<event type="login" name="PlayerLogin" script="login.lua" />
+	<event type="logout" name="PlayerLogout" script="logout.lua" />
+	<event type="login" name="FirstItems" script="firstitems.lua" />
+	<event type="login" name="RegenerateStamina" script="regeneratestamina.lua" />
+	<event type="death" name="PlayerDeath" script="playerdeath.lua" />
+	<event type="death" name="DropLoot" script="droploot.lua" />
+	<event type="extendedopcode" name="ExtendedOpcode" script="extendedopcode.lua" />
 
 	<!-- Custom -->
 	<!-- Others -->
-	<event type="think" name="MapMark" script="mapmark.lua"/>
-	<event type="login" name="Raffle" script="raffle.lua"/>
-	<event type="think" name="Functions" script="functions.lua"/>
+	<event type="think" name="MapMark" script="mapmark.lua" />
+	<event type="login" name="Raffle" script="raffle.lua" />
+	<event type="think" name="Functions" script="functions.lua" />
 
 	<!-- Modal -->
-	<event type="modalwindow" name="ModalRaffle" script="modal/raffle.lua"/>
-	<event type="modalwindow" name="ModalOffline" script="modal/offline.lua"/>
-	<event type="modalwindow" name="ModalRank" script="modal/rank.lua"/>
-	<event type="modalwindow" name="ModalTP" script="modal/tp.lua"/>
+	<event type="modalwindow" name="ModalRaffle" script="modal/raffle.lua" />
+	<event type="modalwindow" name="ModalOffline" script="modal/offline.lua" />
+	<event type="modalwindow" name="ModalRank" script="modal/rank.lua" />
+	<event type="modalwindow" name="ModalTP" script="modal/tp.lua" />
 	
 	<!-- Arena -->
-	<event type="login" name="Arena" script="arena.lua"/>
-	<event type="kill" name="ArenaKill" script="arena.lua"/>
+	<event type="login" name="Arena" script="arena.lua" />
+	<event type="kill" name="ArenaKill" script="arena.lua" />
 </creaturescripts>

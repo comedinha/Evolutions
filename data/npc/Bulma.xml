@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <npc name="Bulma" script="default.lua" walkinterval="2000" floorchange="0"> 
-    <health now="100" max="100"/> 
-    <look type="139" head="113" body="57" legs="95" feet="113" addons="3"/> 
+    <health now="100" max="100" /> 
+    <look type="139" head="113" body="57" legs="95" feet="113" addons="3" /> 
     <parameters> 
-        <parameter key="module_shop" value="1"/> 
-        <parameter key="message_greet" value="Hi |PLAYERNAME|, I can sell some necessary items for their addons, Say {trade}."/>
+        <parameter key="module_shop" value="1" /> 
+        <parameter key="message_greet" value="Hi |PLAYERNAME|, I can sell some necessary items for their addons, Say {trade}." />
         <parameter key="shop_buyable" value="white piece of cloth,5909,2500;
 		green piece of cloth,5910,2500;
 		red piece of cloth,5911,2500;
@@ -101,6 +101,6 @@
 		nail case,21452,100000;
 		nightmare horn,22608,100000;
 		dream warden claw,22609,5000000;
-		dream warden mask,22610,5000000"/>
+		dream warden mask,22610,5000000" />
     </parameters> 
 </npc> 

@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="The Fastest Turtle" nameDescription="a The fastest turtle" race="venom" experience="100000" speed="1000" manacost="0">
-	<health now="180000" max="180000"/>
-	<look type="303" head="20" body="30" legs="40" feet="50" corpse="9780"/>
-	<targetchange interval="5000" chance="8"/>
+	<health now="180000" max="180000" />
+	<look type="303" head="20" body="30" legs="40" feet="50" corpse="9780" />
+	<targetchange interval="5000" chance="8" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="85"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="85" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="100" attack="100"/>
+		<attack name="melee" interval="2000" skill="100" attack="100" />
 		<attack name="fire" interval="1000" chance="10" length="7" spread="0" min="-50" max="-850">
-			<attribute key="areaEffect" value="explosion"/>
+			<attribute key="areaEffect" value="explosion" />
 		</attack>
 	</attacks>
-	<defenses armor="35" defense="45"/>
+	<defenses armor="35" defense="45" />
 	<elements>
-		<element icePercent="1"/>
-		<element energyPercent="1"/>
-		<element deathPercent="1"/>
+		<element icePercent="1" />
+		<element energyPercent="1" />
+		<element deathPercent="1" />
 	</elements>
 	<immunities>
-    <immunity physical="1"/>
-    <immunity holy="1"/>
-    <immunity energy="1"/>
-    <immunity fire="1"/>
-    <immunity death="1"/>
-    <immunity earth="1"/>
-    <immunity ice="1"/>
-    <immunity poison="1"/>
-    <immunity lifedrain="1"/>
-    <immunity outfit="1"/>
-    <immunity drunk="1"/>
-    <immunity invisible="1"/>
+    <immunity physical="1" />
+    <immunity holy="1" />
+    <immunity energy="1" />
+    <immunity fire="1" />
+    <immunity death="1" />
+    <immunity earth="1" />
+    <immunity ice="1" />
+    <immunity poison="1" />
+    <immunity lifedrain="1" />
+    <immunity outfit="1" />
+    <immunity drunk="1" />
+    <immunity invisible="1" />
 	</immunities>
 	<voices interval="5000" chance="10">
-		<voice sentence="Ahhnn? human? kill everyone? or let live? I am wrong? I am Confused!" yell="1"/>
-		<voice sentence="where is my leader? Is he on the cover of a book? I am Confused..." yell="1"/>
+		<voice sentence="Ahhnn? human? kill everyone? or let live? I am wrong? I am Confused!" yell="1" />
+		<voice sentence="where is my leader? Is he on the cover of a book? I am Confused..." yell="1" />
 	</voices>
 	<loot>
-		<item id="2148" count="100" chance="100000"/><!-- gold coin -->
-		<item id="2148" count="50" chance="100000"/><!-- gold coin -->
-		<item id="2151" countmax="13" chance="6500"/><!-- Talons -->
+		<item id="2148" count="100" chance="100000" /><!-- gold coin -->
+		<item id="2148" count="50" chance="100000" /><!-- gold coin -->
+		<item id="2151" countmax="13" chance="6500" /><!-- Talons -->
 	</loot>
 </monster>

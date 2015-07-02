@@ -1,6 +1,6 @@
 <npc name="Capitao Jhon" script="capitao jhon.lua" walkinterval="5000" floorchange="0" speechbubble="1">
-	<health now="150" max="150"/>
-	<look type="129" head="114" body="3" legs="114" feet="114" corpse="2212"/>
+	<health now="150" max="150" />
+	<look type="129" head="114" body="3" legs="114" feet="114" corpse="2212" />
 	<parameters>
 		<parameter key="message_greet" value="Hello |PLAYERNAME|! I can take you to {Dorion}, {Yalahar}, {Alfon}, {Venonh}, {Anknor}, {Smallville} and {Goroma}. Where you want?" />
 	</parameters>

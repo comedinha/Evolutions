@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Harbor" script="default.lua" walkinterval="1000" floorchange="0">
-    <health now="100" max="100"/>
-    <look type="134" head="96" body="99" legs="99" feet="115" addons="2"/>
+    <health now="100" max="100" />
+    <look type="134" head="96" body="99" legs="99" feet="115" addons="2" />
     <parameters>
 		<parameter key="message_greet" value="Hello |PLAYERNAME|! This is our army, any apparition of {Orshabaal} will attack with all our resources." />
         <parameter key="module_keywords" value="1" />
@@ -9,7 +9,7 @@
         <parameter key="keyword_reply1" value="A years ago one Orshabaal attacked our village, of course, we had to fight and after days of struggle we managed defeat the creature. He comes to trying to steal a {ancient rune}." />
         <parameter key="keyword_reply2" value="This stone is safe here in the village for hundreds of years, it protects us from any kind of threat, except from Orshabaal, one of the only monsters that ancient rune can not protect us." />
 
-        <parameter key="module_shop" value="1"/>
+        <parameter key="module_shop" value="1" />
         <parameter key="shop_sellable" value="chain helmet,2458,52;" />
         <parameter key="shop_buyable" value="brass armor,2465,150;" />
     </parameters>

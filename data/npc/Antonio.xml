@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Antonio" script="default.lua" walkinterval="1000" floorchange="0">
-    <health now="100" max="100"/>
-    <look type="128" head="96" body="99" legs="76" feet="115" addons="1"/>
+    <health now="100" max="100" />
+    <look type="128" head="96" body="99" legs="76" feet="115" addons="1" />
     <parameters>
 		<parameter key="message_greet" value="Humph. A tourist. Get out of here, this place not is for tourists like you. If you don't know skirt of our village." />
         <parameter key="module_keywords" value="1" />
@@ -11,7 +11,7 @@
         <parameter key="keyword_reply3" value="|PLAYERNAME|, There is a legend about a monster that inhabits the forests of this village, ask other residents here." />
         <parameter key="keyword_reply4" value="All tourists who left to explore this village not returned. And then you better go, before it's too late." />
 
-        <parameter key="module_shop" value="1"/>
+        <parameter key="module_shop" value="1" />
         <parameter key="shop_sellable" value="chain helmet,2458,17;" />
         <parameter key="shop_buyable" value="brass armor,2465,450;" />
     </parameters>

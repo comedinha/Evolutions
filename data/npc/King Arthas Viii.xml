@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="King Arthas VIII" script="promotion.lua" walkinterval="5000" floorchange="0">
-    <health now="100" max="100"/>
-    <look type="332" head="21" body="87" legs="107" feet="95" addons="0"/>
+    <health now="100" max="100" />
+    <look type="332" head="21" body="87" legs="107" feet="95" addons="0" />
     <parameters>
-        <parameter key="message_greet" value="Hello young stranger. I am your King! New in town??"/>
+        <parameter key="message_greet" value="Hello young stranger. I am your King! New in town??" />
         <parameter key="module_keywords" value="1" />
         <parameter key="keywords" value="hail king;job;promote;history" />
         <parameter key="keyword_reply1" value="Get lucky, |PLAYERNAME|." />

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Kenny" script="kenny.lua" walkinterval="2000" floorchange="0">
-    <health now="100" max="100"/>
-    <look type="251" head="77" body="77" legs="77" feet="77" addons="3"/>
+    <health now="100" max="100" />
+    <look type="251" head="77" body="77" legs="77" feet="77" addons="3" />
     <parameters>
-        <parameter key="message_greet" value="Hello. Mmm mhm hmmhm |PLAYERNAME|? mhmh mhm {trade} mmm hmhm hmmhm hmhm {mail} mhmh."/>
-        <parameter key="message_farewell" value="mhmhmmhhmmhm, |PLAYERNAME|."/>
+        <parameter key="message_greet" value="Hello. Mmm mhm hmmhm |PLAYERNAME|? mhmh mhm {trade} mmm hmhm hmmhm hmhm {mail} mhmh." />
+        <parameter key="message_farewell" value="mhmhmmhhmmhm, |PLAYERNAME|." />
         <parameter key="module_keywords" value="1" />
         <parameter key="keywords" value="mail;letters;parcels;help;" />
         <parameter key="keyword_reply1" value="mhmhmhmhmhm hmmhmh hm  {letters} hmm {parcels} mh mhmhm. mhmhmhh hh mmh {letters} mhm {parcels} mmhmhmhhm hmmh mhm hhm h hm {trade}." />
@@ -12,7 +12,7 @@
         <parameter key="keyword_reply3" value="Mmhmhhmhm h mhh  mhmmh {help} hm mhmh  m hmhhm." />
         <parameter key="keyword_reply4" value="hmmhhm hh mhhm hm hm hmh {letters} hmhm {parcels} hmmh  mh mhmh. M mhmhmh h mhmh  {letters} mhm {parcels} mhmh  hmhmhmhmh hmhmhmhm hm {trade}." />
 
-        <parameter key="module_shop" value="1"/>
+        <parameter key="module_shop" value="1" />
         <parameter key="shop_buyable" value="parcel,2595,15;letter,2597,8;label,2599,1;" />
     </parameters>
 </npc>

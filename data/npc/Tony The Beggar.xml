@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Tony" script="tonybeggar.lua" walkinterval="5000" floorchange="0" speechbubble="1">
-    <health now="100" max="100"/>
-    <look type="153" head="58" body="58" legs="76" feet="76" addons="3"/>
+    <health now="100" max="100" />
+    <look type="153" head="58" body="58" legs="76" feet="76" addons="3" />
     <parameters>
-        <parameter key="message_greet" value="Hello |PLAYERNAME|! I am Tony, but call me {beggar}."/>
-        <parameter key="message_farewell" value="Bye |PLAYERNAME|!"/>
+        <parameter key="message_greet" value="Hello |PLAYERNAME|! I am Tony, but call me {beggar}." />
+        <parameter key="message_farewell" value="Bye |PLAYERNAME|!" />
     </parameters>
 </npc>

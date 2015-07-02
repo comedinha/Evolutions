@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Scout Knowles" script="Perac.lua" floorchange="0" access="5" level="1" maglevel="1">
-	<health now="150" max="150"/>
-	<look type="129" head="120" body="120" legs="114" feet="114" addons="3"/>
+	<health now="150" max="150" />
+	<look type="129" head="120" body="120" legs="114" feet="114" addons="3" />
 	<parameters>
 		<parameter key="module_shop" value="3" />
 		<parameter key="shop_buyable" value="crossbow,2455,500;
@@ -24,7 +24,7 @@
 		drill bolt,18304,24;
 		mycological bow,18454,70000;
 		elvish bow,7438,3000;
-		bow,2456,400"/>
+		bow,2456,400" />
 		<parameter key="shop_sellable" value="crossbow,2455,250;
 		crystal crossbow,18453,35000;
 		ornate crossbow,15644,12000;
@@ -47,6 +47,6 @@
 		hive bow,15643,28000;
 		silkweaver bow,8857,12000;
 		elvish bow,7438,2000;
-		bow,2456,200"/>
+		bow,2456,200" />
 	</parameters>
 </npc>

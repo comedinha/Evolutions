@@ -1,6 +1,7 @@
 <raid>
-<announce delay="0" type="event" message="An ancient evil is awakening in the mines beneath Formorgar."/>
-<announce delay="200000" type="event" message="Demonic entities are entering the mortal realm in the Formorgar mines."/>
-<announce delay="400000" type="event" message="Ghazbaran, The demonic master has revealed itself in the mines of Hrodmir."/>
-<singlespawn delay="600000" name="Ghazbaran" ref="yes" x="473" y="410" z="11" />
+	<announce delay="0" type="event" message="An ancient evil is awakening in the mines beneath Formorgar." />
+	<announce delay="200000" type="event" message="Demonic entities are entering the mortal realm in the Formorgar mines." />
+	<announce delay="400000" type="event" message="Ghazbaran, The demonic master has revealed itself in the mines of Hrodmir." />
+
+	<singlespawn delay="600000" name="Ghazbaran" ref="yes" x="473" y="410" z="11" />
 </raid>

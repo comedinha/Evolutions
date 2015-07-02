@@ -1,6 +1,7 @@
 <raid>
-<announce delay="0" type="event" message="The seals on Ferumbras old cidatel are glowing. Prepare for HIS return mortals." />
-<announce delay="300000" type="event" message="Ferumbras return is at hand. The Mistyc soldiers calls for Heroes to fight that evil." />
-<announce delay="600000" type="event" message="Ferumbras has returned to his citadel once more. Stop him before its too late." />
-<singlespawn delay="600000" name="Ferumbras" ref="yes" x="541" y="88" z="4" />
+	<announce delay="0" type="event" message="The seals on Ferumbras old cidatel are glowing. Prepare for HIS return mortals." />
+	<announce delay="300000" type="event" message="Ferumbras return is at hand. The Mistyc soldiers calls for Heroes to fight that evil." />
+	<announce delay="600000" type="event" message="Ferumbras has returned to his citadel once more. Stop him before its too late." />
+
+	<singlespawn delay="600000" name="Ferumbras" ref="yes" x="541" y="88" z="4" />
 </raid>

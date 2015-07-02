@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Perac" script="Perac.lua" floorchange="0" access="5" level="1" maglevel="1">
-	<health now="150" max="150"/>
-	<look type="128" head="79" body="118" legs="115" feet="114" corpse="2212"/>
+	<health now="150" max="150" />
+	<look type="128" head="79" body="118" legs="115" feet="114" corpse="2212" />
 	<parameters>
 		<parameter key="module_shop" value="3" />
 		<parameter key="shop_sellable" value="crossbow,2455,150;bow,2456,130" />

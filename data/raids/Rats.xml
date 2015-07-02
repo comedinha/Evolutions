@@ -1,9 +1,10 @@
 <raid>
-<announce delay="0" type="event" message="Bager is having trouble in hes food shop with a few rats! Help him get rid of them!" />
-<singlespawn delay="1000" name="Rat" x="113" y="56" z="6" />
-<singlespawn delay="2000" name="Rat" x="112" y="56" z="6" />
-<singlespawn delay="3000" name="Cave Rat" ref="yes" x="111" y="56" z="6" />
-<singlespawn delay="4000" name="Rat" x="110" y="56" z="6" />
-<singlespawn delay="5000" name="Rat" x="113" y="57" z="6" />
-<singlespawn delay="6000" name="Rat" x="113" y="58" z="6" />
+	<announce delay="0" type="event" message="Bager is having trouble in hes food shop with a few rats! Help him get rid of them!" />
+
+	<singlespawn delay="1000" name="Rat" x="113" y="56" z="6" />
+	<singlespawn delay="2000" name="Rat" x="112" y="56" z="6" />
+	<singlespawn delay="3000" name="Cave Rat" ref="yes" x="111" y="56" z="6" />
+	<singlespawn delay="4000" name="Rat" x="110" y="56" z="6" />
+	<singlespawn delay="5000" name="Rat" x="113" y="57" z="6" />
+	<singlespawn delay="6000" name="Rat" x="113" y="58" z="6" />
 </raid>

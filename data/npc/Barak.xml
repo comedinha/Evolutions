@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Barak" script="barak.lua" walkinterval="2000" floorchange="0" speechbubble="3">
-    <look type="541" head="113" body="113" legs="113" feet="113" addons="3"/>
+    <look type="541" head="113" body="113" legs="113" feet="113" addons="3" />
     <parameters>
-        <parameter key="message_greet" value="Hello |PLAYERNAME|. Can I get you something?"/>
+        <parameter key="message_greet" value="Hello |PLAYERNAME|. Can I get you something?" />
     </parameters>
 </npc>

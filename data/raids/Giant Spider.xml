@@ -1,11 +1,12 @@
 <raid>
-<announce delay="0" type="event" message="The mating season of the giant spiders is at hand. Leave the Monty Fields as fast as you can." />
-<announce delay="200000" type="event" message="Giant spiders have gathered in the Dorion spider cave for their mating season. Beware!" />
-<singlespawn delay="200000" name="Giant Spider" x="79" y="181" z="5" />
-<singlespawn delay="200000" name="Giant Spider" x="76" y="186" z="5" />
-<singlespawn delay="200000" name="Giant Spider" x="84" y="194" z="5" />
-<singlespawn delay="200000" name="Giant Spider" x="92" y="189" z="5" />
-<singlespawn delay="200000" name="Giant Spider" x="89" y="185" z="6" />
-<singlespawn delay="200000" name="Giant Spider" x="64" y="179" z="6" />
-<singlespawn delay="200000" name="The Old Widow" ref="yes" x="68" y="182" z="6" />
+	<announce delay="0" type="event" message="The mating season of the giant spiders is at hand. Leave the Monty Fields as fast as you can." />
+	<announce delay="200000" type="event" message="Giant spiders have gathered in the Dorion spider cave for their mating season. Beware!" />
+
+	<singlespawn delay="200000" name="Giant Spider" x="79" y="181" z="5" />
+	<singlespawn delay="200000" name="Giant Spider" x="76" y="186" z="5" />
+	<singlespawn delay="200000" name="Giant Spider" x="84" y="194" z="5" />
+	<singlespawn delay="200000" name="Giant Spider" x="92" y="189" z="5" />
+	<singlespawn delay="200000" name="Giant Spider" x="89" y="185" z="6" />
+	<singlespawn delay="200000" name="Giant Spider" x="64" y="179" z="6" />
+	<singlespawn delay="200000" name="The Old Widow" ref="yes" x="68" y="182" z="6" />
 </raid>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <raid>
-  <!--Announcements-->
-  <announce delay="1000" type="Event" message="The ancient volcano on Goroma slowly becomes active once again." />
-  <announce delay="30000" type="Event" message="There is an evil presence at the volcano of Goroma." />
-  <announce delay="60000" type="Event" message="Evil Cultists have called an ancient evil into the volcano on Goroma. Beware of its power mortals." />
-  <!--Single Spawns-->
-  <singlespawn delay="60000" name="Morgaroth" ref="yes" x="1266" y="256" z="14" />
+	<announce delay="1000" type="Event" message="The ancient volcano on Goroma slowly becomes active once again." />
+	<announce delay="30000" type="Event" message="There is an evil presence at the volcano of Goroma." />
+	<announce delay="60000" type="Event" message="Evil Cultists have called an ancient evil into the volcano on Goroma. Beware of its power mortals." />
+
+	<singlespawn delay="60000" name="Morgaroth" ref="yes" x="1266" y="256" z="14" />
 </raid>

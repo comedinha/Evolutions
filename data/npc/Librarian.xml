@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Librarian" script="default.lua" walkinterval="5000" floorchange="0">
-    <health now="100" max="100"/>
-    <look type="128" head="107" body="107" legs="114" feet="114" addons="2"/>
+    <health now="100" max="100" />
+    <look type="128" head="107" body="107" legs="114" feet="114" addons="2" />
     <parameters>
 		<parameter key="message_greet" value="Hi |PLAYERNAME|! Feel free in their choice of books." />
     </parameters>

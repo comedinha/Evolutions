@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Oldrak" script="oldrak.lua" walkinterval="2000" floorchange="0">
-    <look type="432" head="20" body="30" legs="40" feet="50" addons="3"/>
+    <look type="432" head="20" body="30" legs="40" feet="50" addons="3" />
     <parameters>
-        <parameter key="module_shop" value="1"/>
-        <parameter key="shop_sellable" value="hallowed axe,8293,10000;"/>
-        <parameter key="shop_buyable" value="hallowed axe,8293,50000;"/>
-        <parameter key="message_greet" value="Hello |PLAYERNAME|. I can release the hallowed axe, item very useful in some quests. Say {trade}."/>
+        <parameter key="module_shop" value="1" />
+        <parameter key="shop_sellable" value="hallowed axe,8293,10000;" />
+        <parameter key="shop_buyable" value="hallowed axe,8293,50000;" />
+        <parameter key="message_greet" value="Hello |PLAYERNAME|. I can release the hallowed axe, item very useful in some quests. Say {trade}." />
     </parameters>
 </npc>

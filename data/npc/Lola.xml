@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Lola" script="furniture.lua" walkinterval="2000" floorchange="0">
-	<health now="150" max="150"/>
-	<look type="142" head="114" body="0" legs="95" feet="114" corpse="2212"/>
+	<health now="150" max="150" />
+	<look type="142" head="114" body="0" legs="95" feet="114" corpse="2212" />
 	<parameters>
-		<parameter key="module_shop" value="1"/>
-		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell chairs, tables, plants, containers, pillows, tapestries and more. Everything for 500 gold pieces, just {trade}."/>
+		<parameter key="module_shop" value="1" />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. I sell chairs, tables, plants, containers, pillows, tapestries and more. Everything for 500 gold pieces, just {trade}." />
 		<parameter key="shop_buyable" value="red cushioned chair kit,3901,40;
 		green cushioned chair kit,3902,40;
 		wooden chair kit,3903,15;
@@ -92,6 +92,6 @@
 		wooden stake,5941,10000;
 		trophy stand,7936,50;
 		box,1738,10;
-		chest,1740,10"/>
+		chest,1740,10" />
 	</parameters>
 </npc>

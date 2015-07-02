@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Ermes" script="ermes.lua" walkinterval="2000" floorchange="0">
-	<health now="150" max="150"/>
-	<look type="472" head="114" body="0" legs="114" feet="0" addons="3"/>
+	<health now="150" max="150" />
+	<look type="472" head="114" body="0" legs="114" feet="0" addons="3" />
 	<parameters>
-		<parameter key="module_shop" value="1"/>
-		<parameter key="message_greet" value="Hello |PLAYERNAME|. Tell {trade}."/>
+		<parameter key="module_shop" value="1" />
+		<parameter key="message_greet" value="Hello |PLAYERNAME|. Tell {trade}." />
 		<parameter key="shop_buyable" value="shiny blade,18465,6000000;
-		crystalline axe,18451,6000000"/>
+		crystalline axe,18451,6000000" />
 	</parameters>
 </npc>

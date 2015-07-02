@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <npc name="Fallen" script="tapete fallen.lua" walkinterval="5000" floorchange="0" speechbubble="1">
-	<health now="150" max="150"/>
-	<look type="128" head="114" body="240" legs="114" feet="114" corpse="2212"/>
+	<health now="150" max="150" />
+	<look type="128" head="114" body="240" legs="114" feet="114" corpse="2212" />
 	<parameters>
 		<parameter key="message_greet" value="Hello |PLAYERNAME|! I can take you flying to {infernium}, {flam}, {saari} and {dorion}. Where you want to fly?" />
 		<parameter key="module_keywords" value="1" />
