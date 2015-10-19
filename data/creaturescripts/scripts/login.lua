@@ -32,10 +32,8 @@ function onLogin(player)
 	-- Events
 	player:registerEvent("PlayerDeath")
 	player:registerEvent("DropLoot")
-	player:registerEvent("Arena")
 	player:registerEvent("ArenaKill")
 	player:registerEvent("MapMark")
-	player:registerEvent("FirstItems")
 	player:registerEvent("Functions")
 	return true
 end
