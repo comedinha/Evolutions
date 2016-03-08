@@ -425,6 +425,7 @@
 		<attribute key="attack" value="5" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="smallstone" />
+		<attribute key="maxHitChance" value="76" />
 		<attribute key="range" value="4" />
 	</item>
 	<item id="1295" article="a" name="stone">
@@ -3220,6 +3221,7 @@
 		<attribute key="attack" value="25" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="spear" />
+		<attribute key="maxHitChance" value="76" />
 		<attribute key="range" value="3" />
 	</item>
 	<item id="2390" article="a" name="magic longsword">
@@ -3293,6 +3295,7 @@
 		<attribute key="attack" value="30" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="throwingstar" />
+		<attribute key="maxHitChance" value="76" />
 		<attribute key="range" value="4" />
 	</item>
 	<item id="2400" article="a" name="magic sword">
@@ -3369,6 +3372,7 @@
 		<attribute key="attack" value="25" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="throwingknife" />
+		<attribute key="maxHitChance" value="76" />
 		<attribute key="range" value="4" />
 	</item>
 	<item id="2411" article="a" name="poison dagger">
@@ -4149,7 +4153,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="bolt" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="87" />
 	</item>
 	<item id="2544" article="an" name="arrow">
 		<attribute key="weight" value="70" />
@@ -4158,7 +4162,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="arrow" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 	</item>
 	<item id="2545" article="a" name="poison arrow">
 		<attribute key="weight" value="80" />
@@ -4167,7 +4171,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="poisonarrow" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 	</item>
 	<item id="2546" article="a" name="burst arrow">
 		<attribute key="weight" value="90" />
@@ -4176,7 +4180,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="burstarrow" />
-		<attribute key="hitChance" value="100" />
+		<attribute key="maxHitChance" value="100" />
 	</item>
 	<item id="2547" article="a" name="power bolt">
 		<attribute key="weight" value="80" />
@@ -4185,7 +4189,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="powerbolt" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 	</item>
 	<item id="2548" article="a" name="pitchfork">
 		<attribute key="weight" value="2500" />
@@ -4324,7 +4328,7 @@
 		<attribute key="type" value="mailbox" />
 	</item>
 	<item id="2594" article="a" name="depot chest">
-		<attribute key="containerSize" value="30" />
+		<attribute key="containerSize" value="17" />
 	</item>
 	<item id="2595" article="a" name="parcel">
 		<attribute key="type" value="container" />
@@ -7329,6 +7333,7 @@
 		<attribute key="attack" value="32" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="huntingspear" />
+		<attribute key="maxHitChance" value="80" />
 		<attribute key="range" value="3" />
 	</item>
 	<item id="3966" article="a" name="banana staff">
@@ -9172,7 +9177,7 @@
 	<item id="5791" article="a" name="stuffed dragon">
 		<attribute key="weight" value="850" />
 	</item>
-	<item fromid="5792" toid="5797" article="a" name="dice">
+	<item fromid="5792" toid="5797" article="a" name="die">
 		<attribute key="weight" value="200" />
 	</item>
 	<item id="5798" article="an" name="abacus">
@@ -11397,7 +11402,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="infernalbolt" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 	</item>
 	<item id="6530" article="a" name="worn soft boots">
 		<attribute key="description" value="Someone specialised in shoes might be able to repair them for you." />
@@ -12393,7 +12398,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="piercingbolt" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="87" />
 	</item>
 	<item id="7364" article="a" name="sniper arrow">
 		<attribute key="weight" value="70" />
@@ -12411,7 +12416,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="onyxarrow" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="94" />
 	</item>
 	<item id="7366" article="a" name="viper star">
 		<attribute key="weight" value="200" />
@@ -12419,13 +12424,15 @@
 		<attribute key="hitChance" value="80" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="greenstar" />
-		<attribute key="range" value="5" />
+		<attribute key="maxHitChance" value="76" />
+		<attribute key="range" value="4" />
 	</item>
 	<item id="7367" article="an" name="enchanted spear">
 		<attribute key="weight" value="2000" />
 		<attribute key="attack" value="38" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="enchantedspear" />
+		<attribute key="maxHitChance" value="80" />
 		<attribute key="range" value="4" />
 	</item>
 	<item id="7368" article="an" name="assassin star">
@@ -12434,7 +12441,7 @@
 		<attribute key="maxHitChance" value="96" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="redstar" />
-		<attribute key="range" value="5" />
+		<attribute key="range" value="4" />
 	</item>
 	<item id="7369" article="a" name="golden trophy">
 		<attribute key="weight" value="3500" />
@@ -12474,6 +12481,7 @@
 		<attribute key="attack" value="35" />
 		<attribute key="weaponType" value="distance" />
 		<attribute key="shootType" value="royalspear" />
+		<attribute key="maxHitChance" value="80" />
 		<attribute key="range" value="3" />
 	</item>
 	<item id="7379" name="brutetamer's staff">
@@ -14142,7 +14150,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="flasharrow" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 	</item>
 	<item id="7839" article="a" name="shiver arrow">
 		<attribute key="weight" value="70" />
@@ -14152,7 +14160,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="shiverarrow" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 	</item>
 	<item id="7840" article="a" name="flaming arrow">
 		<attribute key="weight" value="70" />
@@ -14162,7 +14170,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="flammingarrow" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 	</item>
 	<item id="7841" article="a" name="straw mat">
 		<attribute key="type" value="bed" />
@@ -14211,7 +14219,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="shootType" value="eartharrow" />
 		<attribute key="ammoType" value="arrow" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="91" />
 	</item>
 	<item fromid="7851" toid="7853" article="an" name="archway" />
 	<item id="7854" article="an" name="earth spike sword">
@@ -24087,7 +24095,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="tarsalarrow" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="94" />
 	</item>
 	<item id="15649" article="a" name="vortex bolt">
 		<attribute key="weight" value="80" />
@@ -24096,7 +24104,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="vortexbolt" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="89" />
 	</item>
 	<item id="15650" article="a" name="swarmer drum">
 		<attribute key="weight" value="3200" />
@@ -25295,7 +25303,7 @@
 		<attribute key="weaponType" value="ammunition" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="envenomedarrow" />
-		<attribute key="maxHitChance" value="90" />
+		<attribute key="maxHitChance" value="93" />
 	</item>
 	<item id="18438" article="a" name="dead dragonling">
 		<attribute key="containerSize" value="25" />
@@ -30092,10 +30100,10 @@
 		<attribute key="floorchange" value="west" />
 	</item>
 	<item id="22589" article="a" name="stair">
-		<attribute key="floorchange" value="eastex" />
+		<attribute key="floorchange" value="eastalt" />
 	</item>
 	<item id="22590" article="a" name="stair">
-		<attribute key="floorchange" value="southex" />
+		<attribute key="floorchange" value="southalt" />
 	</item>
 	<item id="22595" article="a" name="stair">
 		<attribute key="floorchange" value="down" />
@@ -30213,6 +30221,44 @@
 	<item id="22699" article="a" name="cake tapestry">
 		<attribute key="weight" value="1000" />
 	</item>
+	<item id="23722" article="a" name="light stone shower rune">
+		<attribute key="type" value="rune" />
+		<attribute key="runeSpellName" value="adori infir mas tera" />
+		<attribute key="weight" value="210" />
+		<attribute key="charges" value="4" />
+	</item>
+	<item id="23723" article="a" name="lightest missile rune">
+		<attribute key="type" value="rune" />
+		<attribute key="runeSpellName" value="adori infir vis" />
+		<attribute key="weight" value="210" />
+		<attribute key="charges" value="4" />
+	</item>
+	<item id="23839" article="a" name="simple arrow">
+		<attribute key="weight" value="60" />
+		<attribute key="slotType" value="ammo" />
+		<attribute key="attack" value="20" />
+		<attribute key="weaponType" value="ammunition" />
+		<attribute key="ammoType" value="arrow" />
+		<attribute key="shootType" value="simplearrow" />
+		<attribute key="maxHitChance" value="91" />
+	</item>
+	<item id="25453" article="a" name="depot box I" />
+	<item id="25454" article="a" name="depot box II" />
+	<item id="25455" article="a" name="depot box III" />
+	<item id="25456" article="a" name="depot box IV" />
+	<item id="25457" article="a" name="depot box V" />
+	<item id="25458" article="a" name="depot box VI" />
+	<item id="25459" article="a" name="depot box VII" />
+	<item id="25460" article="a" name="depot box VIII" />
+	<item id="25461" article="a" name="depot box IX" />
+	<item id="25462" article="a" name="depot box X" />
+	<item id="25463" article="a" name="depot box XI" />
+	<item id="25464" article="a" name="depot box XII" />
+	<item id="25465" article="a" name="depot box XIII" />
+	<item id="25466" article="a" name="depot box XIV" />
+	<item id="25467" article="a" name="depot box XV" />
+	<item id="25468" article="a" name="depot box XVI" />
+	<item id="25469" article="a" name="depot box XVII" />
 	<item id="30001" name="water" />
 	<item id="30002" name="blood" />
 	<item id="30003" name="beer" />
